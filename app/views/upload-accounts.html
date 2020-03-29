@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Upload your accounts
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "types-of-accounts"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Upload your accounts</h1>
+
+      <p class="govuk-body">Accounts must be in an iXBRL format.</p>
+      {% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+
+      {{ govukFileUpload({
+        id: "file-upload-1",
+        name: "file-upload-1",
+        label: {
+          text: "Upload a file"
+        }
+      }) }}
+      {{ govukButton({
+      text: "Continue",
+      href: "uploaded"
+    }) }}
+    </div>
+  </div>
+{% endblock %}

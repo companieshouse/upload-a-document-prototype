@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Upload your accounts
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "auth-screen"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      {{ govukCheckboxes({
+        idPrefix: "waste",
+        name: "waste",
+        fieldset: {
+          legend: {
+            text: "What types of accounts do you want to upload?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--xl"
+          }
+        },
+        hint: {
+          text: "Select all that apply."
+        },
+        items: [
+          {
+            value: "carcasses",
+            text: "Accounts"
+          },
+          {
+            value: "mines",
+            text: "Guarantee statement by parent undertaking of subsidiary (AA06)"
+          },
+          {
+            value: "farm",
+            text: "Dormant company accounts (AA02/DCA)"
+          },
+          {
+            value: "farm",
+            text: "Resolution"
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+      text: "Continue",
+      href: "upload-accounts"
+    }) }}
+    </div>
+  </div>
+{% endblock %}
