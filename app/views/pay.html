@@ -41,9 +41,12 @@
   html: "This filing costs £1.00.<br/><br/>  <a href='#'>Pay online</a> and then enter the payment reference below "
 }) }}
 
-      <a target="_blank" class="govuk-button js-button" href="https://www.gov.uk/payments/companies-house/test" data-module="govuk-button">
+      <a target="_blank" class="govuk-button js-button govuk-!-margin-bottom-0" href="https://www.gov.uk/payments/companies-house/test" data-module="govuk-button">
         Make payment
       </a>
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+      <h2 class="govuk-heading-l">Payment reference</h2>
+      <p class="govuk-body">Enter payment reference. If you've closed the browser tab you can get the reference from your confirmation email.</p>
       <div class="payment-reference">
         {{ govukInput({
   label: {
