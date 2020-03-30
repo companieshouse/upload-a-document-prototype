@@ -4,14 +4,14 @@
     items: [
       {
         text: "Home",
+        href: "/"
+      },
+      {
+        text: "Companies House Search",
         href: "#"
       },
       {
-        text: "Section",
-        href: "#"
-      },
-      {
-        text: "Subsection"
+        text: "Emergency filing service"
       }
     ]
   }) }}
@@ -23,9 +23,10 @@
       <p>Use this service to upload emergency filing service for a company as a presenter.</p>
       <p class="govuk-body">You'll need:</p>
       <ul class="govuk-list govuk-list--bullet">
-        <li>an email address</li>
-        <li>the company number</li>
-        <li>the forms you want to submit filled out</li>
+        <li>an account with Companies House</li>
+        <li>the authorisation code for the company</li>
+        <li>the filled forms you want to upload</li>
+        <li>a payment method depending on the form being uploaded</li>
       </ul>
       {{ govukButton({
         text: "Start now",
@@ -36,8 +37,6 @@
       <h2 class="govuk-heading-m">Before you start</h2>
       <p class="govuk-body">Read the guidance for
         <a class="govuk-link" href="#">uploading company accounts as a presenter</a>.</p>
-      <p class="govuk-body">The online service is also available in
-        <a class="govuk-link" href="#">Welsh (Cymraeg)</a>.</p>
     </div>
     <div class="govuk-grid-column-one-third">
       <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
