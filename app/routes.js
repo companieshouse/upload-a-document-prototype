@@ -8,6 +8,7 @@ router.get('/', function (req, res) {
   })
 })
 
+// Company number
 router.get('/company-number', function (req, res) {
   res.render('company-number', {
   })
@@ -29,8 +30,9 @@ router.post('/company-number', function (req, res) {
   }
 })
 
-router.get('/company-number', function (req, res) {
-  res.render('company-number', {
+// Auth
+router.get('/auth-screen', function (req, res) {
+  res.render('auth-screen', {
   })
 })
 
@@ -49,4 +51,5 @@ router.post('/auth-screen', function (req, res) {
     res.redirect('types-of-accounts')
   }
 })
+
 module.exports = router
