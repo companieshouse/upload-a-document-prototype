@@ -8,24 +8,45 @@ router.get('/', function (req, res) {
   })
 })
 
-router.get('/obliged-entity-type', function (req, res) {
-  res.render('obliged-entity-type', {
+router.get('/company-number', function (req, res) {
+  res.render('company-number', {
   })
 })
 
-router.post('/obliged-entity-type', function (req, res) {
+router.post('/company-number', function (req, res) {
   var errors = []
-  if (typeof req.session.data['obliged-type'] === 'undefined') {
+  if (typeof req.session.data['company-number'] === 'undefined') {
     errors.push({
-      text: 'Select what type of obliged entity you are',
-      href: '#obliged-type'
+      text: 'Error text',
+      href: '#company-number'
     })
-    res.render('obliged-entity-type', {
+    res.render('company-number', {
       errorType: true,
       errorList: errors
     })
   } else {
-    res.redirect('obliged-entity-details-organisation')
+    res.redirect('confirm-company')
+  }
+})
+
+router.get('/company-number', function (req, res) {
+  res.render('company-number', {
+  })
+})
+
+router.post('/auth-screen', function (req, res) {
+  var errors = []
+  if (typeof req.session.data['auth'] === 'undefined') {
+    errors.push({
+      text: 'Error message',
+      href: '#auth'
+    })
+    res.render('auth-screen', {
+      errorType: true,
+      errorList: errors
+    })
+  } else {
+    res.redirect('types-of-accounts')
   }
 })
 module.exports = router
