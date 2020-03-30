@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block pageTitle %}
+  GOV.UK Pay
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Payment required</h1>
+      {{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Form uploaded"
+      },
+      value: {
+        html: "<a target='_blank' href='public/upload/SH06.pdf'>SH06 Form</a>"
+      }
+    },
+    {
+      key: {
+        text: "Form type"
+      },
+      value: {
+        text: "Notify a cancellation of shares (SH06)"
+      }
+    }
+  ]
+}) }}
+      {{ govukInsetText({
+  html: "This filing cost £1.00.<br/><br/>  <a href='#'>Pay online</a> and then enter the payment reference below "
+}) }}
+      {{ govukInput({
+  label: {
+    text: "Payment reference"
+  },
+  id: "event-name",
+  name: "event-name"
+}) }}
+      {{ govukButton({
+	     	text: "Submit filing",
+	     	href: "confirmation"
+	     }) }}
+      <br/>
+      {{ govukButton({
+  text: "Upload another form",
+  classes: "govuk-button--secondary"
+}) }}
+    </div>
+  </div>
+{% endblock %}

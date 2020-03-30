@@ -6,7 +6,7 @@
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
-    href: "types-of-accounts"
+    href: "upload-accounts"
   }) }}
 {% endblock %}
 
@@ -16,19 +16,20 @@
 
       <h1 class="govuk-heading-xl">Upload your forms</h1>
 
-      <p class="govuk-body">Forms must be complete before uploading.</p>
+      <p class="govuk-body">Forms must be complete before uploading. Some forms may require payment which you can make through this service.
+      </p>
       {% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
 
       {{ govukFileUpload({
         id: "file-upload-1",
         name: "file-upload-1",
         label: {
-          text: "Upload a file"
+          text: "Upload form"
         }
       }) }}
       {{ govukButton({
       text: "Continue",
-      href: "uploaded"
+      href: "types-of-accounts"
     }) }}
     </div>
   </div>
