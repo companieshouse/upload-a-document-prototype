@@ -38,9 +38,14 @@
   ]
 }) }}
       {{ govukInsetText({
-  html: "This filing cost £1.00.<br/><br/>  <a href='#'>Pay online</a> and then enter the payment reference below "
+  html: "This filing costs £1.00.<br/><br/>  <a href='#'>Pay online</a> and then enter the payment reference below "
 }) }}
-      {{ govukInput({
+
+      <a target="_blank" class="govuk-button js-button" href="https://www.gov.uk/payments/companies-house/test" data-module="govuk-button">
+        Make payment
+      </a>
+      <div class="payment-reference">
+        {{ govukInput({
   label: {
     text: "Payment reference"
   },
@@ -48,19 +53,20 @@
   name: "event-name"
 }) }}
 
-      {{ govukWarningText({
+        {{ govukWarningText({
   text: "The form will be rejected if the reference number is not valid.",
   iconFallbackText: "Warning"
 }) }}
-      {{ govukButton({
+        {{ govukButton({
 	     	text: "Submit filing",
 	     	href: "confirmation"
 	     }) }}
-      <br/>
-      {{ govukButton({
+        <br/>
+        {{ govukButton({
   text: "Upload another form",
   classes: "govuk-button--secondary"
 }) }}
+      </div>
     </div>
   </div>
 {% endblock %}

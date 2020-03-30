@@ -7,4 +7,8 @@ if (window.console && window.console.info) {
 
 $(document).ready(function () {
   window.GOVUKFrontend.initAll()
+  $('.js-button').click(function () {
+    $('.js-button').css('display', 'none')
+    $('.payment-reference').css('display', 'block')
+  })
 })
