@@ -14,18 +14,18 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
-      {{ govukCheckboxes({
+      {{ govukRadios({
         idPrefix: "waste",
         name: "waste",
         fieldset: {
           legend: {
-            text: "What types of forms do you want to upload?",
+            text: "What type of form do you want to upload?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl"
           }
         },
         hint: {
-          text: "Select all that apply."
+          text: "Choose from the list below."
         },
         items: [
           {
