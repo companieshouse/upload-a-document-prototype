@@ -47,6 +47,11 @@
   id: "event-name",
   name: "event-name"
 }) }}
+
+      {{ govukWarningText({
+  text: "The form will be rejected if the reference number is not valid.",
+  iconFallbackText: "Warning"
+}) }}
       {{ govukButton({
 	     	text: "Submit filing",
 	     	href: "confirmation"
