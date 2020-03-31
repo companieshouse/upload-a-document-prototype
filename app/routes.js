@@ -18,11 +18,11 @@ router.post('/company-number', function (req, res) {
   var errors = []
   if (typeof req.session.data['company-number'] === 'undefined') {
     errors.push({
-      text: 'Error text',
+      text: 'Enter the company number ',
       href: '#company-number'
     })
     res.render('company-number', {
-      errorType: true,
+      errorNum: true,
       errorList: errors
     })
   } else {
