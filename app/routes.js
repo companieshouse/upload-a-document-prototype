@@ -16,7 +16,7 @@ router.get('/company-number', function (req, res) {
 
 router.post('/company-number', function (req, res) {
   var errors = []
-  if (typeof req.session.data['company-number'] === 'undefined') {
+  if (typeof req.session.data['company-number'] === ' ') {
     errors.push({
       text: 'Enter the company number ',
       href: '#company-number'
