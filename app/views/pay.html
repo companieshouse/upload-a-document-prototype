@@ -16,7 +16,7 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">Payment required</h1>
+      <h1 class="govuk-heading-xl">Pay for the form</h1>
       {{ govukSummaryList({
   rows: [
     {
@@ -38,27 +38,21 @@
   ]
 }) }}
       {{ govukInsetText({
-  html: "This filing costs £1.00.<br/><br/>  <a href='#'>Pay online</a> and then enter the payment reference below "
+  html: "This filing costs £1.00.<br/><br/>  <a target='_blank' href='https://www.gov.uk/payments/companies-house/test'>Pay online</a> and then enter the payment reference below "
 }) }}
 
-      <a target="_blank" class="govuk-button js-button govuk-!-margin-bottom-0" href="https://www.gov.uk/payments/companies-house/test" data-module="govuk-button">
-        Make payment
-      </a>
-      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-      <h2 class="govuk-heading-l">Payment reference</h2>
-      <p class="govuk-body">Enter payment reference. If you've closed the browser tab you can get the reference from your confirmation email.</p>
       <div class="payment-reference">
         {{ govukInput({
   label: {
-    text: "Payment reference"
+    text: "Enter payment reference"
   },
   id: "event-name",
   name: "event-name"
 }) }}
 
-        {{ govukWarningText({
-  text: "The form will be rejected if the reference number is not valid.",
-  iconFallbackText: "Warning"
+        {{ govukDetails({
+  summaryText: "Help with payment reference",
+  text: "Enter the payment reference exactly as shown on the Gov Pay confirmation screen/email. We will not accept the form if the reference is incorrect."
 }) }}
         {{ govukButton({
 	     	text: "Submit filing",
