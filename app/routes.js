@@ -8,6 +8,28 @@ router.get('/', function (req, res) {
   })
 })
 
+// Sign in
+router.get('/sign-in', function (req, res) {
+  res.render('sign-in', {
+  })
+})
+
+router.post('/sign-in', function (req, res) {
+  var errors = []
+  if (req.session.data['sign-in'] === '') {
+    errors.push({
+      text: 'Enter the company number',
+      href: '#sign-in'
+    })
+    res.render('sign-in', {
+      errorNum: true,
+      errorList: errors
+    })
+  } else {
+    res.redirect('company-number')
+  }
+})
+
 // Company number
 router.get('/company-number', function (req, res) {
   res.render('company-number', {
@@ -16,7 +38,7 @@ router.get('/company-number', function (req, res) {
 
 router.post('/company-number', function (req, res) {
   var errors = []
-  if (req.session.data['company-number'] == '') {
+  if (req.session.data['company-number'] === '') {
     errors.push({
       text: 'Enter the company number',
       href: '#company-number'
@@ -38,17 +60,17 @@ router.get('/auth-screen', function (req, res) {
 
 router.post('/auth-screen', function (req, res) {
   var errors = []
-  if (typeof req.session.data['auth'] === 'undefined') {
+  if (req.session.data['authNumber'] === '') {
     errors.push({
-      text: 'Error message',
-      href: '#auth'
+      text: 'Enter the company authentication number',
+      href: '#auth-number'
     })
     res.render('auth-screen', {
-      errorType: true,
+      errorAuth: true,
       errorList: errors
     })
   } else {
-    res.redirect('types-of-accounts')
+    res.redirect('upload-accounts')
   }
 })
 
