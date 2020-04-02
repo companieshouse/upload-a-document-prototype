@@ -14,12 +14,12 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
-      <h1 class="govuk-heading-xl">Upload the company document</h1>
+      <h1 class="govuk-heading-xl">Upload the completed document</h1>
 
       {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
 {{ govukInsetText({
-  text: "You must complete the document before uploading it. If your document has a fee, you can pay for it in this service."
+  html: "You must complete the document before uploading it.<br/><br/> If the document has a fee, you can pay for it in this service."
 }) }}
 
       {% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
