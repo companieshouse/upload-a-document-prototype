@@ -25,7 +25,7 @@ id: "event-name",
 name: "event-name"
 }) }}
       {{ govukInsetText({
-html: "This filing costs £1.00.<br/><br/>  <a target='_blank' href='https://www.gov.uk/payments/companies-house/test'>Pay online</a> and then enter the payment reference below "
+html: "<strong><a target='_blank' href='https://www.gov.uk/payments/companies-house/test'>Pay online</a> and then enter the payment reference above </strong>"
 }) }}
       {{ govukDetails({
 summaryText: "Help with payment reference",
@@ -47,6 +47,14 @@ text: "Enter the payment reference exactly as shown on the Gov Pay confirmation 
       },
       value: {
         text: "Notify a cancellation of shares (SH06)"
+      }
+    },
+    {
+      key: {
+        text: "Fee amount"
+      },
+      value: {
+        html: "£1.00"
       }
     }
   ]
