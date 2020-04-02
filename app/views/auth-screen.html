@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% from "govuk/components/input/macro.njk" import govukInput %}
 {% block pageTitle %}
-  Tell us your company authentication number
+  Tell us your company authentication code
 {% endblock %}
 {% block beforeContent %}
   {{ govukBackLink({
@@ -20,7 +20,7 @@
       }) }}
           {{ govukInput({
             label: {
-            text: "Company authentication number? ",
+            text: "Enter the company authentication code",
             classes: "govuk-label--xl"
             },
               classes: "govuk-input--width-5",
@@ -30,25 +30,25 @@
             id: "auth-number",
             name: "authNumber",
             errorMessage: {
-              text: "Enter the company authentication number"
+              text: "Enter the company authentication code"
             }
           }) }}
         {% else %}
           {{ govukInput({
           label: {
-          text: "Company authentication number? ",
+          text: "Enter the company authentication code ",
           classes: "govuk-label--xl"
           },
             classes: "govuk-input--width-5",
           hint: {
-            text: "The authentication code is a 6 digit alphanumeric code issued by us to each company."
+            text: "This is the 6 character code issued by us to COMPANY NAME."
           },
           id: "auth-number",
           name: "authNumber"
         }) }}
         {% endif %}
         {{ govukDetails({
-            summaryText: "Help with authentication number",
+            summaryText: "Help with authentication code",
             html: "<p>Use the <a target='blank' href='https://beta.companieshouse.gov.uk/'>Companies House service</a> to find it.</p>"
         }) }}
         {{ govukButton({

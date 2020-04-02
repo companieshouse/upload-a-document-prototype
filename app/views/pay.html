@@ -16,20 +16,20 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">Pay for the form</h1>
+      <h1 class="govuk-heading-xl">Pay for the document</h1>
       {{ govukSummaryList({
   rows: [
     {
       key: {
-        text: "Form uploaded"
+        text: "Document uploaded"
       },
       value: {
-        html: "<a target='_blank' href='public/upload/SH06.pdf'>SH06 Form</a>"
+        html: "<a target='_blank' href='public/upload/SH06.pdf'>SH06 document</a>"
       }
     },
     {
       key: {
-        text: "Form type"
+        text: "Document type"
       },
       value: {
         text: "Notify a cancellation of shares (SH06)"
@@ -38,13 +38,13 @@
   ]
 }) }}
       {{ govukInsetText({
-  html: "This filing costs £1.00.<br/><br/>  <a target='_blank' href='https://www.gov.uk/payments/companies-house/test'>Pay online</a> and then enter the payment reference below "
+  html: "This document costs £1.00.<br/><br/>  <a target='_blank' href='https://www.gov.uk/payments/companies-house/test'>Pay online</a> and then enter the payment reference below "
 }) }}
 
       <div class="payment-reference">
         {{ govukInput({
   label: {
-    text: "Enter payment reference"
+    text: "Payment reference"
   },
   id: "event-name",
   name: "event-name"

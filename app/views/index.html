@@ -11,7 +11,7 @@
         href: "#"
       },
       {
-        text: "Emergency filing service"
+        text: "Upload a document to Companies House"
       }
     ]
   }) }}
@@ -19,15 +19,24 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">Emergency filing service</h1>
-      <p>Use this service to upload emergency filing service for a company as a presenter.</p>
+      <h1 class="govuk-heading-xl">Upload a document to Companies House</h1>
+      <p>Use this service to file a company document online. You can also pay for the document if it has a fee.</p>
+      {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+{{ govukInsetText({
+  text: "This service has been created to enable paperless filing in response to the coronavirus (COVID-19) outbreak."
+}) }}
+
       <p class="govuk-body">You'll need:</p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>an account with Companies House</li>
-        <li>the authorisation code for the company</li>
-        <li>the filled forms you want to upload</li>
-        <li>a payment method depending on the form being uploaded</li>
-      </ul>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>the prepared document or <a href="#" class="https://www.gov.uk/topic/company-registration-filing/forms">Companies House form</a></li>
+      <li>an email address </li>
+      <li>the company authorisation code </li>
+      <li>a credit or debit card if the document has a fee</li>
+
+
+    </ul>
+
       {{ govukButton({
         text: "Start now",
         href: "sign-in",
@@ -36,7 +45,16 @@
       }) }}
       <h2 class="govuk-heading-m">Before you start</h2>
       <p class="govuk-body">Read the guidance for
-        <a class="govuk-link" href="#">uploading company accounts as a presenter</a>.</p>
+        <a class="govuk-link" href="#">uploading documents to Companies House</a>.</p>
+
+        <p class="govuk-body">There are different services available if you need to:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="#" class="https://www.gov.uk/file-your-company-annual-accounts">file company accounts</a></li>
+        <li><a href="#" class="https://www.gov.uk/file-your-confirmation-statement-with-companies-house">file a confirmation statement</a></li>
+        <li><a href="#" class="https://guidedfiling.companieshouse.gov.uk/start?t=DS01">close a company</a></li>
+        <li><a href="#" class="https://www.gov.uk/limited-company-formation/register-your-company?step-by-step-nav=37e4c035-b25c-4289-b85c-c6d36d11a763">register a company</a></li>
+
+      </ul>
     </div>
     <div class="govuk-grid-column-one-third">
       <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->

@@ -14,17 +14,21 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
-      <h1 class="govuk-heading-xl">Upload your forms</h1>
+      <h1 class="govuk-heading-xl">Upload the company document</h1>
 
-      <p class="govuk-body">Forms must be complete before uploading. Some forms may require payment which you can make through this service.
-      </p>
+      {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+{{ govukInsetText({
+  text: "You must complete the document before uploading it. If your document has a fee, you can pay for it in this service."
+}) }}
+
       {% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
 
       {{ govukFileUpload({
         id: "file-upload-1",
         name: "file-upload-1",
         label: {
-          text: "Upload form"
+          text: "Upload document"
         }
       }) }}
       {{ govukButton({
