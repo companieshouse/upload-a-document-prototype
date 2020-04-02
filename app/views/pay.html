@@ -17,6 +17,20 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">Pay for the form</h1>
+      {{ govukInput({
+label: {
+  text: "Enter payment reference"
+},
+id: "event-name",
+name: "event-name"
+}) }}
+      {{ govukInsetText({
+html: "This filing costs £1.00.<br/><br/>  <a target='_blank' href='https://www.gov.uk/payments/companies-house/test'>Pay online</a> and then enter the payment reference below "
+}) }}
+      {{ govukDetails({
+summaryText: "Help with payment reference",
+text: "Enter the payment reference exactly as shown on the Gov Pay confirmation screen/email. We will not accept the form if the reference is incorrect."
+}) }}
       {{ govukSummaryList({
   rows: [
     {
@@ -37,32 +51,13 @@
     }
   ]
 }) }}
-      {{ govukInsetText({
-  html: "This filing costs £1.00.<br/><br/>  <a target='_blank' href='https://www.gov.uk/payments/companies-house/test'>Pay online</a> and then enter the payment reference below "
-}) }}
 
       <div class="payment-reference">
-        {{ govukInput({
-  label: {
-    text: "Enter payment reference"
-  },
-  id: "event-name",
-  name: "event-name"
-}) }}
 
-        {{ govukDetails({
-  summaryText: "Help with payment reference",
-  text: "Enter the payment reference exactly as shown on the Gov Pay confirmation screen/email. We will not accept the form if the reference is incorrect."
-}) }}
         {{ govukButton({
 	     	text: "Submit filing",
 	     	href: "confirmation"
 	     }) }}
-        <br/>
-        {{ govukButton({
-  text: "Upload another form",
-  classes: "govuk-button--secondary"
-}) }}
       </div>
     </div>
   </div>
