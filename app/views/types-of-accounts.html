@@ -6,7 +6,7 @@
 {% block beforeContent %}
   {{ govukBackLink({
       text: "Back",
-      href: "upload-accounts"
+      href: "auth-screen"
     }) }}
 {% endblock %}
 
@@ -19,7 +19,7 @@
         name: "waste",
         fieldset: {
           legend: {
-            text: "What type of form did you upload?",
+            text: "What type of document are you uploading?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl"
           }
@@ -97,7 +97,7 @@
 
       {{ govukButton({
       text: "Continue",
-      href: "pay"
+      href: "upload-accounts"
     }) }}
     </div>
   </div>
