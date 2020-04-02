@@ -17,9 +17,35 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">Pay for the document</h1>
+      {{ govukInsetText({
+      html: "You must now <a target='_blank' href='https://www.gov.uk/payments/companies-house/test'>pay for the document online</a> (opens in a new tab).<br/><br/>
+      After you have paid, come back to this service and enter the payment reference. "
+      }) }}
+      <div class="payment-reference">
+        {{ govukInput({
+  label: {
+    text: "Payment reference"
+  },
+  id: "event-name",
+  name: "event-name"
+}) }}
+
+        {{ govukDetails({
+  summaryText: "Help with payment reference",
+  html: "<a target='_blank' href='https://www.gov.uk/payments/companies-house/test'>Pay for the document</a> using the GOV.UK Pay service. <br/><br/>When you have paid you will be shown a payment reference on the confirmation screen.<br/><br/> Copy the reference and return to this service to enter it into the payment reference field."
+}) }}
+
+
       {{ govukSummaryList({
   rows: [
-    {
+  {
+    key: {
+      text: "Fee"
+    },
+    value: {
+      html: "£1.00"
+    }
+  },{
       key: {
         text: "Document uploaded"
       },
@@ -37,30 +63,14 @@
     }
   ]
 }) }}
-      {{ govukInsetText({
-  html: "This document costs £1.00.<br/><br/>  <a target='_blank' href='https://www.gov.uk/payments/companies-house/test'>Pay online</a> and then enter the payment reference below "
-}) }}
 
-      <div class="payment-reference">
-        {{ govukInput({
-  label: {
-    text: "Payment reference"
-  },
-  id: "event-name",
-  name: "event-name"
+{{ govukButton({
+text: "Submit document",
+href: "confirmation"
 }) }}
-
-        {{ govukDetails({
-  summaryText: "Help with payment reference",
-  text: "Enter the payment reference exactly as shown on the Gov Pay confirmation screen/email. We will not accept the form if the reference is incorrect."
-}) }}
+<br/>
         {{ govukButton({
-	     	text: "Submit filing",
-	     	href: "confirmation"
-	     }) }}
-        <br/>
-        {{ govukButton({
-  text: "Upload another form",
+  text: "Upload another document",
   classes: "govuk-button--secondary"
 }) }}
       </div>
