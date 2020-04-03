@@ -70,7 +70,7 @@ router.post('/auth-screen', function (req, res) {
       errorList: errors
     })
   } else {
-    res.redirect('upload-accounts')
+    res.redirect('types-of-accounts')
   }
 })
 

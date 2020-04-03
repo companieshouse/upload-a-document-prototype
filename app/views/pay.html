@@ -9,7 +9,7 @@
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
-    href: "types-of-accounts"
+    href: "upload-accounts"
   }) }}
 {% endblock %}
 
@@ -59,6 +59,14 @@
       },
       value: {
         text: "Notify a cancellation of shares (SH06)"
+      }
+    },
+    {
+      key: {
+        text: "Fee amount"
+      },
+      value: {
+        html: "£1.00"
       }
     }
   ]
