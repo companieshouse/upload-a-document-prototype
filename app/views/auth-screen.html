@@ -41,16 +41,14 @@
           },
             classes: "govuk-input--width-5",
           hint: {
-            text: "You need the authenticaton code to submit company information for (COMPANY NAME)."
+            text: "You need the authentication code to submit company information for (COMPANY NAME)."
           },
           id: "auth-number",
           name: "authNumber"
         }) }}
         {% endif %}
-        {{ govukDetails({
-            summaryText: "Request an authentication code",
-            html: "<p>Request an <a target='blank' href='https://ewf.companieshouse.gov.uk/?_ga=2.259791299.813501771.1566987875-1638653194.1563432911'>authentication code</a> in WebFiling. We will send the code to the registered office address.</p>"
-        }) }}
+        <p class="govuk-body"><a target='blank' href='https://ewf.companieshouse.gov.uk/?_ga=2.259791299.813501771.1566987875-1638653194.1563432911'>Request an authentication code</a></p>
+      
         {{ govukButton({
          text: "Continue"
        }) }}
