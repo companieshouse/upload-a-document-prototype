@@ -62,7 +62,7 @@ router.post('/auth-screen', function (req, res) {
   var errors = []
   if (req.session.data['authNumber'] === '') {
     errors.push({
-      text: 'Enter the company authentication number',
+      text: 'Enter the company authentication code',
       href: '#auth-number'
     })
     res.render('auth-screen', {
