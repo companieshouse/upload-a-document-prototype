@@ -17,9 +17,9 @@
       <h1 class="govuk-heading-xl">Upload the completed document</h1>
 
       {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-
+<p>You can upload one document. You must complete the document before uploading it.</p>
 {{ govukInsetText({
-  html: "You must complete the document before uploading it.<br/><br/> If the document has a fee, you can pay for it in this service."
+  html: "If the document has a fee, you can pay for it in this service."
 }) }}
 
       {% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
