@@ -35,8 +35,7 @@
   html: "When you have paid, you will be shown a payment reference on the confirmation screen.<br/><br/> Copy the reference and return to this service.<br/><br/>Enter the reference into the payment reference box."
 }) }}
 
-
-      {{ govukSummaryList({
+        {{ govukSummaryList({
   rows: [
   {
       key: {
@@ -65,15 +64,11 @@
   ]
 }) }}
 
-{{ govukButton({
+        {{ govukButton({
 text: "Submit document",
 href: "confirmation"
 }) }}
-<br/>
-        {{ govukButton({
-  text: "Upload another document",
-  classes: "govuk-button--secondary"
-}) }}
+
       </div>
     </div>
   </div>
