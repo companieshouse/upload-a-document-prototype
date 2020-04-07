@@ -35,39 +35,36 @@
   iconFallbackText: "Warning"
 }) }}
       <p class="govuk-body">We will process the document. All documents are registered with the date they are uploaded to Companies House, as long as they are in an acceptable format.</p>
-      <p>
-        <a href="https://www.gov.uk/government/news/follow-companies-for-free">Follow the company</a>
-        to get an email notification when the document has been processed.</p>
       <p>If the document isn't in an acceptable format, we will email you to let you know what to do next.</p>
-      <h2 class="govuk-heading-l">Feedback</h2>
+<p>      <h2 class="govuk-heading-l">Help us to improve the service</h2>
       {{ govukRadios({
   idPrefix: "where-do-you-live",
   name: "where-do-you-live",
   fieldset: {
     legend: {
-      text: "Overall, how would you describe your experience with the form?"
+      text: "How would you describe your experience with this new service?"
     }
   },
   items: [
     {
       value: "england",
-      text: "Very satisfied"
+      text: "Very good"
     },
     {
       value: "scotland",
-      text: "Satisfied"
+      text: "Good"
     },
     {
       value: "wales",
-      text: "Nither satisfied or dissatisfied"
+      text: "Neither good or bad"
     },
     {
       value: "northern-ireland",
-      text: "Dissatisfied"
+      text: "Bad"
     },
     {
       value: "northern-ireland",
-      text: "Very dissatisfied"
+      text: "Very bad"
     }
   ]
 }) }}
@@ -79,7 +76,7 @@
     text: "How can we improve this service?"
   },
   hint: {
-    text: "To help us improve this service, include as much information as possible. For example if a question was confusing, let us know which one."
+    text: "For example, if a question was confusing let us know which one."
   }
 }) }}
       {{ govukButton({
