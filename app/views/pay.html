@@ -17,45 +17,136 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">Pay for the document</h1>
+      <div
+        data-module="gemstepnav"
+        class="gem-c-step-nav gem-c-step-nav--large gem-c-step-nav--active"
+        data-remember=""
+        data-id="7c08bbbf-a1ca-4cf5-850d-d9f2c796c750"
+        data-show-text="show"
+        data-hide-text="hide"
+        data-show-all-text="Show all"
+        data-hide-all-text="Hide all">
+        <ol class="gem-c-step-nav__steps">
+          <li class="gem-c-step-nav__step js-step" id="check-if-you-re-eligible" data-track-count="stepNavSection">
+            <div class="gem-c-step-nav__header js-toggle-panel" data-position="1">
+              <h2 class="gem-c-step-nav__title">
+                <span class="gem-c-step-nav__circle gem-c-step-nav__circle--number">
+                  <span class="gem-c-step-nav__circle-inner">
+                    <span class="gem-c-step-nav__circle-background">
+                      <span class="gem-c-step-nav__circle-step-label visuallyhidden">Step</span>
+                      1<span class="gem-c-step-nav__circle-step-colon visuallyhidden" aria-hidden="true">:</span>
+                    </span>
+                  </span>
+                </span>
 
-      {{ govukInsetText({
-      html: "You must now <a target='_blank' href='https://www.gov.uk/payments/companies-house/test'>pay for the document online</a> (opens in a new tab).<br/><br/>
-      After you have paid, come back to this service and enter the payment reference. "
+                <span class="js-step-title">
+                  <button class="gem-c-step-nav__button gem-c-step-nav__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-check-if-you-re-eligible-1">
+                    <span class="js-step-title-text">
+                      Pay for the document online (opens in a new tab)
+                    </span>
+                  </button>
+                </span>
+              </h2>
+            </div>
+
+            <div class="gem-c-step-nav__panel js-panel" id="step-panel-check-if-you-re-eligible-1">
+              <p class="gem-c-step-nav__paragraph">After you have paid, come back to this service and enter the payment reference.</p>
+              <a target='_blank' class="govuk-button blue-btn" href='https://www.gov.uk/payments/companies-house/test' data-module="govuk-button">
+                Pay for the document online
+              </a>
+            </div>
+
+          </li>
+          <li class="gem-c-step-nav__step js-step" id="create-an-account-and-make-a-claim" data-track-count="stepNavSection">
+            <div class="gem-c-step-nav__header js-toggle-panel" data-position="2">
+              <h2 class="gem-c-step-nav__title">
+                <span class="gem-c-step-nav__circle gem-c-step-nav__circle--number">
+                  <span class="gem-c-step-nav__circle-inner">
+                    <span class="gem-c-step-nav__circle-background">
+                      <span class="gem-c-step-nav__circle-step-label visuallyhidden">Step</span>
+                      2<span class="gem-c-step-nav__circle-step-colon visuallyhidden" aria-hidden="true">:</span>
+                    </span>
+                  </span>
+                </span>
+
+                <span class="js-step-title">
+                  <button class="gem-c-step-nav__button gem-c-step-nav__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-create-an-account-and-make-a-claim-2">
+                    <span class="js-step-title-text">
+                      Enter the payment reference
+                    </span>
+                  </button>
+                </span>
+              </h2>
+            </div>
+
+            <div class="gem-c-step-nav__panel js-panel" id="step-panel-create-an-account-and-make-a-claim-2">
+
+              <div class="govuk-form-group govuk-!-margin-bottom-0 govuk-!-padding-bottom-6">
+                <label class="govuk-label" for="event-name">
+                  Payment reference
+                </label>
+                <input class="govuk-input" id="event-name" name="event-name" type="text">
+              </div>
+
+            </div>
+
+          </li>
+          <li class="gem-c-step-nav__step js-step" id="apply-for-an-advance-on-your-first-payment" data-track-count="stepNavSection">
+            <div class="gem-c-step-nav__header js-toggle-panel" data-position="4">
+              <h2 class="gem-c-step-nav__title">
+                <span class="gem-c-step-nav__circle gem-c-step-nav__circle--number">
+                  <span class="gem-c-step-nav__circle-inner">
+                    <span class="gem-c-step-nav__circle-background">
+                      <span class="gem-c-step-nav__circle-step-label visuallyhidden">Step</span>
+                      3<span class="gem-c-step-nav__circle-step-colon visuallyhidden" aria-hidden="true">:</span>
+                    </span>
+                  </span>
+                </span>
+
+                <span class="js-step-title">
+                  <button class="gem-c-step-nav__button gem-c-step-nav__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-apply-for-an-advance-on-your-first-payment-4">
+                    <span class="js-step-title-text">
+                      Submit the document
+                    </span>
+                  </button>
+                </span>
+              </h2>
+            </div>
+
+            <div class="gem-c-step-nav__panel js-panel" id="step-panel-apply-for-an-advance-on-your-first-payment-4">
+              {{ govukTable({
+        head: [
+          {
+            text: "Document type"
+          },
+          {
+            text: "File attached"
+          }
+        ],
+        rows: [
+          [
+            {
+              text: "SH06"
+            },
+            {
+              html: "<a target='_blank' href='public/upload/SH06.pdf'>SH06 document</a>"
+            }
+          ]
+        ]
+      }) }}
+              {{ govukButton({
+      text: "Submit document",
+      href: "confirmation"
       }) }}
 
-      <div class="payment-reference">
-        {{ govukInput({
-  label: {
-    text: "Payment reference"
-  },
-  id: "event-name",
-  name: "event-name"
-}) }}
+            </div>
 
-        {{ govukDetails({
-  summaryText: "Help with payment reference",
-  html: "When you have paid, you will be shown a payment reference on the confirmation screen.<br/><br/> Copy the reference and return to this service.<br/><br/>Enter the reference into the payment reference box."
-}) }}
+          </li>
 
-        {{ govukSummaryList({
-  rows: [
-  {
-      key: {
-        text: "Document uploaded"
-      },
-      value: {
-        html: "<a target='_blank' href='public/upload/SH06.pdf'>SH06 document</a>"
-      }
-    }
-  ]
-}) }}
-
-        {{ govukButton({
-text: "Submit document",
-href: "confirmation"
-}) }}
-
+        </ol>
       </div>
+
     </div>
   </div>
+</div>
 {% endblock %}
