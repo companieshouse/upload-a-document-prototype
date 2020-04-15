@@ -2,6 +2,12 @@
 {% block pageTitle %}
   Upload a document to Companies House
 {% endblock %}
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "index.html"
+  }) }}
+{% endblock %}
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -11,7 +17,7 @@
       <p class="govuk-body-l">This guide is for companies that need to file a dissolution, incorporation, liquidation or shares document online that would usually be sent to us in a paper format.
       </p>
       {{ govukInsetText({
-  text: "This guidance has been created for the interim service to enable paperless filing in response to the coronavirus (COVID-19) outbreak."
+  text: "This guidance has been created for the interim Upload a Document to Companies House service to enable paperless filing in response to the coronavirus (COVID-19) outbreak."
 }) }}
       <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible govuk-!-margin-bottom-3">
       <p class="govuk-body-s govuk-!-margin-bottom-1">Published 8 April 2020</p>
@@ -25,7 +31,7 @@
           <a class="govuk-link govuk-body-s" href="">How to prepare the document</a>
         </li>
         <li>
-          <a class="govuk-link govuk-body-s" href="">Documents that can be uploaded</a>
+          <a class="govuk-link govuk-body-s" href="">Documents you can upload</a>
         </li>
         <li>
           <a class="govuk-link govuk-body-s" href="">Documents that have a fee</a>
@@ -40,18 +46,16 @@
       <h2 class="govuk-heading-l">How to prepare the document
             </h2><p class="govuk-body">You must complete the document in advance and save it to the device you are using so that it is ready to upload.</p>
 <h3 class="govuk-heading-m">Companies House form</h3>
+<h4 class="govuk-heading-s">You can complete the form electronically:</h4>
 <ol class="govuk-list govuk-list--number">
   <li><a href="https://www.gov.uk/topic/company-registration-filing/forms" class="govuk-link">Find the Companies House form</a> that you need and download it.</li>
   <li>Complete the form.</li>
-</ol>
-<p class="govuk-body">You can do this:</p>
-<h4 class="govuk-heading-s">Electronically:</h4>
-<ul class="govuk-list govuk-list--bullet">
   <li>Type the information directly onto the form.</li>
   <li>Save the form to the device you are using so that it is ready to upload.</li></<p></p>
 </ul>
-<h4 class="govuk-heading-s">Using a pen:</h4>
-<ul class="govuk-list govuk-list--bullet">
+</ol>
+<h4 class="govuk-heading-s">You can complete the form using a pen:</h4>
+<ul class="govuk-list govuk-list--number">
   <li>Print the form.</li>
   <li>Fill in the information directly onto the form using a pen.</li>
   <li>Scan the completed form.</li>
@@ -64,19 +68,11 @@
 </ol>
 <h3 class="govuk-heading-m">Other types of document</h3>
 <ol class="govuk-list govuk-list--number">
-  <li>Prepare the document you want to send us in advance.</li>
+  <li>Prepare the document in advance.</li>
   <li>Save the document to the device you are using so that it is ready to upload.</li>
 </ol>
-<h4 class="govuk-heading-s">You can upload:</h4>
-<ul class="govuk-list govuk-list--bullet">
-  <li>letters</li>
-  <li>certificates</li>
-  <li>notices</li>
-  <li>resolutions</li>
-  <li>reports</li>
-  <li>documents that are not created by Companies House</li></<p><br />
   </ul>
-  <h2 class="govuk-heading-l">Documents that can be uploaded
+  <h2 class="govuk-heading-l">Documents you can upload
         </h2>
         {{ govukAccordion({
           id: "accordion-default",
@@ -176,7 +172,7 @@
         <h2 class="govuk-heading-l">Documents that have a fee
               </h2>
 
-      <p class="govuk-body">You can use this service to pay for the document if it has a fee.
+      <p class="govuk-body">You can use this service to pay for the document you are uploading if it has a fee.
       </p>
       <p class="govuk-body">You will need a credit or debit card.
       </p>
@@ -202,12 +198,12 @@
       </p>
       <p class="govuk-body">We will process the uploaded document.
       </p>
-<h3 class="govuk-heading-m">If the document is acceptable for filing:</h3>
+<h3 class="govuk-heading-m">If your document is acceptable for filing:</h3>
 <ol class="govuk-list govuk-list--bullet">
         <li>you will receive an email to confirm the document was accepted.</li>
         <li>the document will be registered with the date it was uploaded to Companies House.</li>
       </ol>
-      <h3 class="govuk-heading-m">If the document is not acceptable for filing:</h3>
+      <h3 class="govuk-heading-m">If your document is not acceptable for filing:</h3>
       <ol class="govuk-list govuk-list--bullet">
               <li>we will email you to let you know what to do next.</li>
             </ol>
@@ -215,7 +211,7 @@
     </h2>
     <p class="govuk-body">Email <a class="govuk-link" href="mailto:enquiries@companieshouse.gov.uk"> enquiries@companieshouse.gov.uk</a>
     </p>
-    <p class="govuk-body">For the welfare of our employees during the coronavirus (COVID-19) outbreak, our telephone contact centre is now closed.
+    <p class="govuk-body">Our telephone contact centre is now closed to protect the welfare of our employees during the coronavirus (COVID-19) outbreak.
     </p>
   </div>
 </div>
