@@ -47,10 +47,10 @@
           name: "authNumber"
         }) }}
         {% endif %}
-        <p class="govuk-body">
-          <a target='blank' href='https://ewf.companieshouse.gov.uk/?_ga=2.259791299.813501771.1566987875-1638653194.1563432911'>Request an authentication code</a>
-        </p>
-
+        {{ govukDetails({
+        summaryText: "Help with authentication code",
+        html: "<p>Read the <a target='blank' href='https://www.gov.uk/guidance/company-authentication-codes-for-online-filing'>guidance about how to request an authentication code</a> (opens in a new tab/window).</p>"
+       }) }}
         {{ govukButton({
          text: "Continue"
        }) }}
