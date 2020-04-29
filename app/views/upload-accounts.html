@@ -2,46 +2,34 @@
 {% block pageTitle %}
   Upload the completed document
 {% endblock %}
-
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
     href: "types-of-accounts"
   }) }}
 {% endblock %}
-
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-
       <h1 class="govuk-heading-xl">Upload the completed document</h1>
-
-      {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
       <p class="govuk-body">You should:</p>
-      <ul class="govuk-list govuk-list--bullet">
-
-        </li>
-        <li>upload one document
-        </li>
-        <li>complete the document before uploading it
-        </li>
-        <li>include supporting evidence (form RP07 or LL RP07 only)
-        </li>
-      </ul>
-        <p>If you need to upload multiple documents, such as evidence, you must upload it as one PDF document (including the form).</p>
-      {% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
-
-      {{ govukFileUpload({
+      <ul class="govuk-list govuk-list--bullet"></li>
+      <li>upload one document</li>
+      <li>complete the document before uploading it</li>
+      <li>include supporting evidence (form RP07 or LL RP07 only)</li>
+    </ul>
+    <p>If you need to upload multiple documents, such as evidence, you must upload it as one PDF document (including the form).</p>
+    {{ govukFileUpload({
         id: "file-upload-1",
         name: "file-upload-1",
         label: {
           text: "Upload document"
         }
       }) }}
-      {{ govukButton({
-      text: "Continue",
-      href: "pay"
-    }) }}
-    </div>
+    {{ govukButton({
+        text: "Continue",
+        href: "pay"
+      }) }}
   </div>
+</div>
 {% endblock %}

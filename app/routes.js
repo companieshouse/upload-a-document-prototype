@@ -26,7 +26,6 @@ router.post('/sign-in', function (req, res) {
       href: '#email-error'
     })
   }
-
   if (req.session.data['password'] === '') {
     passwordHasError = true
     errors.push({
