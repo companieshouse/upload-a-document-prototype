@@ -70,7 +70,7 @@ router.post('/auth-screen', function (req, res) {
       errorList: errors
     })
   } else {
-    res.redirect('types-of-accounts')
+    res.redirect('confirmation')
   }
 })
 
