@@ -119,7 +119,7 @@ router.post('/auth-screen', function (req, res) {
       errorList: errors
     })
   } else {
-    res.redirect('confirmation')
+    res.redirect('pay')
   }
 })
 
