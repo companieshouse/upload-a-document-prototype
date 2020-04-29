@@ -16,17 +16,54 @@ router.get('/sign-in', function (req, res) {
 
 router.post('/sign-in', function (req, res) {
   var errors = []
-  if (req.session.data['sign-in'] === '') {
+  var emailHasError = false
+  var passwordHasError = false
+
+  if (req.session.data['email'] === '') {
+    emailHasError = true
     errors.push({
-      text: 'Enter the company number',
-      href: '#sign-in'
+      text: 'Enter your email address',
+      href: '#email-error'
     })
+  }
+  if (req.session.data['password'] === '') {
+    passwordHasError = true
+    errors.push({
+      text: 'Enter your password',
+      href: '#password-error'
+    })
+  }
+
+  if (emailHasError || passwordHasError) {
     res.render('sign-in', {
-      errorNum: true,
+      errorEmail: emailHasError,
+      errorPassword: passwordHasError,
       errorList: errors
     })
   } else {
     res.redirect('company-number')
+  }
+})
+
+// Type of document
+router.get('/types-of-accounts', function (req, res) {
+  res.render('types-of-accounts', {
+  })
+})
+
+router.post('/types-of-accounts', function (req, res) {
+  var errors = []
+  if (typeof req.session.data['type'] === 'undefined') {
+    errors.push({
+      text: 'Select the *type of form that you want to upload* ',
+      href: '#type'
+    })
+    res.render('types-of-accounts', {
+      errorType: true,
+      errorList: errors
+    })
+  } else {
+    res.redirect('upload-accounts')
   }
 })
 
@@ -38,9 +75,21 @@ router.get('/company-number', function (req, res) {
 
 router.post('/company-number', function (req, res) {
   var errors = []
+  var str = req.session.data['company-number']
+  var n = str.length
+
   if (req.session.data['company-number'] === '') {
     errors.push({
       text: 'Enter the company number',
+      href: '#company-number'
+    })
+    res.render('company-number', {
+      errorNum: true,
+      errorList: errors
+    })
+  } else if (n !== 8) {
+    errors.push({
+      text: 'Company number must be 8 characters ',
       href: '#company-number'
     })
     res.render('company-number', {
@@ -70,7 +119,7 @@ router.post('/auth-screen', function (req, res) {
       errorList: errors
     })
   } else {
-    res.redirect('types-of-accounts')
+    res.redirect('pay')
   }
 })
 

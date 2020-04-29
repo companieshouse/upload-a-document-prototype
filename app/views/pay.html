@@ -9,7 +9,7 @@
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
-    href: "upload-accounts"
+    href: "auth"
   }) }}
 {% endblock %}
 
@@ -92,61 +92,13 @@
             </div>
 
           </li>
-          <li class="gem-c-step-nav__step js-step" id="apply-for-an-advance-on-your-first-payment" data-track-count="stepNavSection">
-            <div class="gem-c-step-nav__header js-toggle-panel" data-position="4">
-              <h2 class="gem-c-step-nav__title">
-                <span class="gem-c-step-nav__circle gem-c-step-nav__circle--number">
-                  <span class="gem-c-step-nav__circle-inner">
-                    <span class="gem-c-step-nav__circle-background">
-                      <span class="gem-c-step-nav__circle-step-label visuallyhidden">Step</span>
-                      3<span class="gem-c-step-nav__circle-step-colon visuallyhidden" aria-hidden="true">:</span>
-                    </span>
-                  </span>
-                </span>
-
-                <span class="js-step-title">
-                  <button class="gem-c-step-nav__button gem-c-step-nav__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-apply-for-an-advance-on-your-first-payment-4">
-                    <span class="js-step-title-text">
-                      Submit the document
-                    </span>
-                  </button>
-                </span>
-              </h2>
-            </div>
-
-            <div class="gem-c-step-nav__panel js-panel" id="step-panel-apply-for-an-advance-on-your-first-payment-4">
-              {{ govukTable({
-        head: [
-          {
-            text: "Document type"
-          },
-          {
-            text: "File attached"
-          }
-        ],
-        rows: [
-          [
-            {
-              text: "SH06"
-            },
-            {
-              html: "<a target='_blank' href='public/upload/SH06.pdf'>SH06 document</a>"
-            }
-          ]
-        ]
-      }) }}
-              {{ govukButton({
-      text: "Submit document",
-      href: "confirmation"
-      }) }}
-
-            </div>
-
-          </li>
 
         </ol>
       </div>
-
+      {{ govukButton({
+text: "Continue",
+href: "confirmation"
+}) }}
     </div>
   </div>
 </div>

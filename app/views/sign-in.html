@@ -18,7 +18,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-one-half">
       <h1 class="govuk-heading-xl">Sign in to Companies House</h1>
-      <form action="CHS-signin" method="post">
+      <form action="/sign-in" method="post">
         {% if errorEmail == true or errorPassword == true %}
           {{ govukErrorSummary({
               titleText: "There is a problem",
@@ -71,12 +71,9 @@
         type: "password"
         }) }}
         {% endif %}
-
         {{ govukButton({
-        text: "Sign in",
-        href: "company-number"
-      }) }}
-
+        text: "Sign in"
+        }) }}
         <p>
           <a href="" class="govuk-link govuk-link--no-visited-state">Register a new account</a>
         </p>
