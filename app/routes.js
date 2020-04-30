@@ -63,7 +63,7 @@ router.post('/types-of-accounts', function (req, res) {
       errorList: errors
     })
   } else {
-    res.redirect('upload-accounts')
+    res.redirect('auth-screen')
   }
 })
 
@@ -119,7 +119,7 @@ router.post('/auth-screen', function (req, res) {
       errorList: errors
     })
   } else {
-    res.redirect('pay')
+    res.redirect('upload-accounts')
   }
 })
 
