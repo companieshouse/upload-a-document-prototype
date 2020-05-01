@@ -1,12 +1,11 @@
 {% extends "layout.html" %}
-{% from "govuk/components/input/macro.njk" import govukInput %}
 {% block pageTitle %}
   Enter the company authentication code
 {% endblock %}
 {% block beforeContent %}
   {{ govukBackLink({
   text: "Back",
-  href: "upload-accounts"
+  href: "types-of-accounts"
 }) }}
 {% endblock %}
 {% block content %}
