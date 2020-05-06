@@ -55,8 +55,8 @@
               <a target='_blank' class="govuk-button blue-btn" href='https://www.gov.uk/payments/companies-house/test' data-module="govuk-button">
                 Pay for the document online
               </a>
-            </div>
 
+            </div>
           </li>
           <li class="gem-c-step-nav__step js-step" id="create-an-account-and-make-a-claim" data-track-count="stepNavSection">
             <div class="gem-c-step-nav__header js-toggle-panel" data-position="2">
@@ -84,10 +84,20 @@
 
               <div class="govuk-form-group govuk-!-margin-bottom-0 govuk-!-padding-bottom-6">
                 <label class="govuk-label" for="event-name">
-                  Payment reference
-                </label>
-                <input class="govuk-input govuk-input--width-10" id="event-name" name="event-name" type="text">
-              </div>
+                  {{ govukInput({
+  label: {
+    text: "Payment reference"
+  },
+  hint: {
+    text: "The 10 character reference shown on the confirmation screen after you have paid for the document."
+  },
+  classes: "govuk-input--width-10",
+  id: "national-insurance-number",
+  name: "national-insurance-number",
+  attributes: {
+    spellcheck: "false"
+  }
+}) }}
 
             </div>
 
@@ -96,7 +106,7 @@
         </ol>
       </div>
       {{ govukButton({
-text: "Continue",
+text: "Submit document",
 href: "confirmation"
 }) }}
     </div>

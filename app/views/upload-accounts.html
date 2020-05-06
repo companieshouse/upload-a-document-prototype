@@ -16,14 +16,14 @@
       <ul class="govuk-list govuk-list--bullet">
 
         </li>
-        <li>upload one PDF document
+        <li>upload one Companies House form in PDF format
         </li>
-        <li>complete the document before uploading it
-        </li>
-        <li>include supporting evidence (form RP07 or LL RP07 only)
+        <li>complete the form before uploading it
         </li>
       </ul>
-        <p>If you need to upload multiple documents, such as evidence, you must upload it as one PDF document (including the form).</p>
+      {{ govukInsetText({
+  text: "If your form needs supporting evidence (RP07 and LL RP07) you must merge the completed form and evidence into one PDF file and upload them as a single document."
+}) }}
       {% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
 
       {{ govukFileUpload({
