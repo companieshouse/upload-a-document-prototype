@@ -45,51 +45,70 @@ RP07 Application to change a company’s disputed registered office address{% ex
       <p class="govuk-body">Limited companies and limited liability partnerships (LLPs) can use this service to:</p>
       {{ govukAccordion({
   id: "accordion-default",
+  classes: "form-type-accordion",
   items: [
     {
       heading: {
-        text: "Apply for a rectification by the registrar of companies (RP02A or LL RP02A for LLPs)"
+        text: "Apply for a rectification by the registrar of companies"
       },
+      summary: {
+  text: "RP02A or LL RP02A for LLPs"
+},
       content: {
         html: "<p class='govuk-body'>Use this form to tell us about a correction on the register where inaccurate information was delivered on or after 1 October 2009.</p>"
       }
     },
     {
       heading: {
-        text: "Correct a director’s date of birth which was incorrectly stated on incorporation (RPCH01 or LL RPCH01 for LLPs)"
+        text: "Correct a director’s date of birth which was incorrectly stated on incorporation"
       },
+      summary: {
+  text: "RPCH01 or LL RPCH01 for LLPs"
+},
       content: {
         html: "<p class='govuk-body'>Use this form to correct a director’s date of birth which was stated incorrectly on the incorporation document.</p><p class='govuk-body'>You must also submit a form RP02A before sending this form to change the register (LL RP02A for LLPs).</p>"
       }
     },
       {
       heading: {
-        text: "Apply for rectification of a change of registered address (RP02B or LL RP02B for LLPs)"
+        text: "Apply for rectification of a change of registered address"
       },
+      summary: {
+  text: "RP02B or LL RP02B for LLPs"
+},
       content: {
         html: "<p class='govuk-body'>Use this form to correct a change of registered office or UK establishment address that was delivered on or after 1 October 2009.</p>"
       }
     },
       {
       heading: {
-        text: "Object to a request to rectify the register (RP03 or LL RP03 for LLPs)"
+        text: "Object to a request to rectify the register"
       },
+      summary: {
+  text: "RP03 or LL RP03 for LLPs"
+},
       content: {
         html: "<p class='govuk-body'>Use this form to tell us that you object to an application to correct the register.</p>"
       }
     },
       {
       heading: {
-        text: "Apply to remove material about a director (RP06)"
+        text: "Apply to remove material about a director"
       },
+      summary: {
+  text: "RP06"
+},
       content: {
         html: "<p class='govuk-body'>Use this form to apply to remove the notice of a director’s appointment, if that director did not give permission to act.</p>"
       }
     },
       {
       heading: {
-        text: "Apply to change a company’s disputed registered office address (RP07 or LL RP07 for LLPs)"
+        text: "Apply to change a company’s disputed registered office address"
       },
+      summary: {
+  text: "RP07 or LL RP07 for LLPs"
+},
       content: {
         html: "<p class='govuk-body'>Use this form to apply to change a company’s registered office address if there is a dispute over the address.</p>"
       }

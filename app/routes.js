@@ -76,7 +76,6 @@ router.get('/types-of-forms/insolvency/insolvency', function (req, res) {
 
 router.post('/types-of-forms/insolvency/insolvency', function (req, res) {
   var errors = []
-  var typeInsolve = req.session.data['typeInsolve']
   if (typeof req.session.data['typeInsolve'] === 'undefined') {
     errors.push({
       text: 'Select the *type of form that you want to upload* ',
@@ -86,8 +85,8 @@ router.post('/types-of-forms/insolvency/insolvency', function (req, res) {
       errorType: true,
       errorList: errors
     })
-  } if (typeInsolve === 'none') {
-    res.redirect('/types-of-forms/insolvency/none-of-these')
+  } else {
+    res.redirect('/auth-screen')
   }
 })
 

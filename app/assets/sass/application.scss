@@ -908,3 +908,7 @@ $govuk-assets-path: '/govuk/assets/';
 .blue-btn:hover {
   background: #003078;
 }
+
+.form-type-accordion .govuk-accordion__section-button {
+  font-size: 1.3rem;
+}
