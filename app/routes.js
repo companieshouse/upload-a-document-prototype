@@ -53,6 +53,7 @@ router.get('/types-of-accounts', function (req, res) {
 
 router.post('/types-of-accounts', function (req, res) {
   var errors = []
+  var value = req.session.data['type']
   if (typeof req.session.data['type'] === 'undefined') {
     errors.push({
       text: 'Select the *type of form that you want to upload* ',
@@ -62,8 +63,31 @@ router.post('/types-of-accounts', function (req, res) {
       errorType: true,
       errorList: errors
     })
-  } else {
-    res.redirect('auth-screen')
+  } if (value === 'insolvency') {
+    res.redirect('types-of-forms/insolvency/insolvency')
+  }
+})
+
+// Insolvency
+router.get('/types-of-forms/insolvency/insolvency', function (req, res) {
+  res.render('types-of-forms/insolvency/insolvency', {
+  })
+})
+
+router.post('/types-of-forms/insolvency/insolvency', function (req, res) {
+  var errors = []
+  var typeInsolve = req.session.data['typeInsolve']
+  if (typeof req.session.data['typeInsolve'] === 'undefined') {
+    errors.push({
+      text: 'Select the *type of form that you want to upload* ',
+      href: '#typeInsolve'
+    })
+    res.render('types-of-forms/insolvency/insolvency', {
+      errorType: true,
+      errorList: errors
+    })
+  } if (typeInsolve === 'none') {
+    res.redirect('/types-of-forms/insolvency/none-of-these')
   }
 })
 

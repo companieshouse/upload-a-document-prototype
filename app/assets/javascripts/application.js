@@ -7,4 +7,7 @@ if (window.console && window.console.info) {
 
 $(document).ready(function () {
   window.GOVUKFrontend.initAll()
+  $('.hide').click(function () {
+    $('.govuk-radios__hint').toggle()
+  })
 })

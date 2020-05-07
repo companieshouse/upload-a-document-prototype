@@ -1,0 +1,558 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  What type of document are you uploading?
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "../../types-of-accounts"
+    }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/insolvency/insolvency" method="post">
+        <h1 class="govuk-heading-xl">Insolvency Forms</h1>
+        {{ govukRadios({
+idPrefix: "typeInsolve",
+name: "typeInsolve",
+fieldset: {
+  legend: {
+    text: "In adminstration"
+  }
+},
+
+items: [
+  {
+    value: "carcasses",
+    text: "AM01 - Give notice of administrators appointment"
+  },
+  {
+    value: "mines",
+    text: "AM21 - Give notice of end of administration"
+  },
+  {
+    value: "mines",
+    text: "AM22 - Give notice of a move from adminisitration to creditors' voluntary liquidation"
+  },
+  {
+    value: "mines",
+    text: "AM23 - Give notice of move from administration to dissolution"
+  },
+  {
+    value: "mines",
+    text: "AM01(Scot) - Give notice of administrator's appointment for a Scottish company"
+  },
+  {
+    value: "mines",
+    text: "AM20(Scot) -  Give notice of automatic end of administration for a Scottish company"
+  },
+  {
+    value: "mines",
+    text: "AM21(Scot) - Give notice of end of administration for a Scottish company"
+  },
+  {
+    value: "mines",
+    text: "AM22(Scot) - Move a Scottish company from administration to dissolution"
+  },
+  {
+    value: "mines",
+    text: "AM24(Scot) - Give notice of a court order in respect of date of dissolution"
+  },
+  {
+    value: "mines",
+    text: "AM25(Scot) - Give notice of court order ending administration "
+  }
+]
+}) }}
+        {{ govukRadios({
+idPrefix: "typeInsolve",
+name: "typeInsolve",
+fieldset: {
+legend: {
+text: "Company Voluntary Arrangement Moratorium"
+}
+},
+
+items: [
+{
+value: "carcasses",
+text: "VAM1 - Give notice of the commencement of moratorium"
+},
+{
+value: "mines",
+text: "VAM7 - Give notice of the end of moratorium"
+},
+{
+value: "mines",
+text: "VAM1(Scot) - Give notice of the commencement of moratorium for a Scottish company"
+},
+{
+value: "mines",
+text: "VAM7(Scot) - Give notice of the end of moratorium for a Scottish company"
+},
+{
+value: "mines",
+text: "VAM8(Scot) - Give notice of disposal of charged property during a moratorium for a Scottish company"
+}
+]
+}) }}
+        {{ govukRadios({
+idPrefix: "typeInsolve",
+name: "typeInsolve",
+fieldset: {
+legend: {
+text: "Members Voluntary Liquidation /  Creditors Voluntary Liquidation"
+}
+},
+
+items: [
+{
+value: "carcasses",
+text: "600 - Appoint liquidator in voluntary winding up"
+},
+{
+value: "mines",
+text: "LIQ01 - Give notice of statutory declaration of solvency"
+},
+{
+value: "mines",
+text: "LIQ02 - Give notice of statement of affairs"
+},
+{
+value: "mines",
+text: "LIQ13 - Give notice of final account prior to dissolution in MVL"
+},
+{
+value: "mines",
+text: "LIQ14 - Give notice of final account prior to dissolution in CVL"
+},
+{
+value: "mines",
+text: "LIQ04(Scot) - Give notice of order deferring the date of dissolution for a Scottish company"
+},
+{
+value: "mines",
+text: "LIQ13(Scot) - Final account prior to dissolution in MVL for a Scottish company"
+},
+{
+value: "mines",
+text: "LIQ15(Scot) - Give notice of a court order staying or sisting proceedings in a CVL or MVL winding up"
+},
+{
+value: "mines",
+text: "600a - Appoint liquidator in voluntary winding up for the Gazette"
+}
+]
+}) }}
+        {{ govukRadios({
+idPrefix: "typeInsolve",
+name: "typeInsolve",
+fieldset: {
+legend: {
+text: "Winding up by the Court"
+}
+},
+
+items: [
+{
+value: "carcasses",
+text: "WU01(Scot) - Give notice of a court order in a winding up for a Scottish company"
+},
+{
+value: "mines",
+text: "WU02(Scot) - Give notice of order of appointment of a provisional liquidator for a Scottish company"
+},
+{
+value: "mines",
+text: "WU15(Scot) - Give notice of the final account prior to the disolution of a Scottish company"
+},
+{
+value: "mines",
+text: "WU16(Scot) - Early dissolution of a Scottish company in a winding up by the court"
+},
+{
+value: "mines",
+text: "WU01 - Notice of court order in a winding up"
+},
+{
+value: "mines",
+text: "WU02 - Give notice of order of appointment of provisional liquidator"
+},
+{
+value: "mines",
+text: "WU04 - Give notice of the appointment of liquidator in a winding-up by the court"
+},
+{
+value: "mines",
+text: "WU15 - Give notice of the final account prior to dissolution"
+},
+{
+value: "mines",
+text: "WU17(Scot) - Defer the dissolution of a Scottish company in a winding up by the court"
+},
+{
+value: "mines",
+text: "WU18(Scot) - Give notice of a court order staying or sisting proceedings in a winding up order by the court"
+}
+]
+}) }}
+        {{ govukRadios({
+idPrefix: "typeInsolve",
+name: "typeInsolve",
+fieldset: {
+legend: {
+text: "Receivership"
+}
+},
+
+items: [
+{
+value: "carcasses",
+text: "REC1 - Notice of administrative receiver's report"
+},
+{
+value: "mines",
+text: "REC1(Scot) - Notice of administrative receiver's report"
+},
+{
+value: "mines",
+text: "RM01 - Notice of appointment of receiver or manager"
+},
+{
+value: "mines",
+text: "RM02 - Notice of ceasing to act as receiver or manager"
+},
+{
+value: "mines",
+text: "RM01(Scot) - Notice of appointment of Administrative Receiver, Receiver or Manager"
+}
+]
+}) }}
+        {{ govukRadios({
+idPrefix: "typeInsolve",
+name: "typeInsolve",
+fieldset: {
+legend: {
+text: "Company Voluntary Arrangement"
+}
+},
+
+items: [
+{
+value: "carcasses",
+text: "CVA1 - Give notice of voluntary arrangement taking effect"
+}
+]
+}) }}
+        {{ govukRadios({
+idPrefix: "typeInsolve",
+name: "typeInsolve",
+fieldset: {
+legend: {
+text: "Company Voluntary Arrangement and Moratoria"
+}
+},
+
+items: [
+{
+value: "carcasses",
+text: "1.11(NI) - Commencement of moratorium"
+},
+{
+value: "mines",
+text: "1.14(NI) - Ending of moratoria"
+},
+{
+value: "mines",
+text: "1.1(NI) - Notice to registrar of companies of voluntary arrangement taking place"
+},
+{
+value: "mines",
+text: "1.4(NI) - Notice of completion of voluntary arrangement taking effect"
+},
+{
+value: "mines",
+text: "1.14 - Give notice of ending moratorium"
+},
+{
+value: "mines",
+text: "1.11 - Give notice of commencement of moratorium"
+},
+{
+value: "mines",
+text: "1.1 - Give notice of voluntary arrangement taking effect"
+},
+{
+value: "mines",
+text: "1.4 - Give notice of completion or termination of voluntary arrangement"
+},
+{
+value: "mines",
+text: "1.11(Scot) - Notice of commencement of moratorium"
+},
+{
+value: "mines",
+text: "1.14(Scot) - Notice of end of moratorium"
+},
+{
+value: "mines",
+text: "1.1(Scot) - Notice of voluntary arrangement taking place"
+},
+{
+value: "mines",
+text: "1.4(Scot) - Notice of termination or full implementation of CVA"
+}
+]
+}) }}
+        {{ govukRadios({
+idPrefix: "typeInsolve",
+name: "typeInsolve",
+fieldset: {
+legend: {
+text: "In Administration"
+}
+},
+
+items: [
+{
+value: "carcasses",
+text: "2.12B(NI) - Notice of administrator's appointment"
+},
+{
+value: "mines",
+text: "2.33B(NI) - Notice of court order ending administration"
+},
+{
+value: "mines",
+text: "2.12B - Give notice of administrators appointment"
+},
+{
+value: "mines",
+text: "2.33B - Give notice of court ending administration"
+},
+{
+value: "mines",
+text: "2.30B - Notice of automatic end of administration"
+},
+{
+value: "mines",
+text: "2.32B - Notice of end of administration"
+},
+{
+value: "mines",
+text: "2.34B - Notice of move from administration to creditors voluntary liquidation"
+},
+{
+value: "mines",
+text: "2.35B - Notice of move from administration to dissolution"
+},
+{
+value: "mines",
+text: "2.11B(Scot) - Notice of appointment of Administrative Receiver, Receiver or Manager"
+},
+{
+value: "mines",
+text: "2.23B(Scot) - Notice of end of administration"
+},
+{
+value: "mines",
+text: "2.24B(Scot) - Notice of administrative receiver's report"
+},
+{
+value: "mines",
+text: "2.25B(Scot) - Notice of move from administration to creditors' voluntary liquidation"
+},
+{
+value: "mines",
+text: "2.26B(Scot) - Notice of move from administration to dissolution"
+},
+{
+value: "mines",
+text: "2.27B(Scot) - Notice of court order in respect of date of dissolutio"
+}
+]
+}) }}
+        {{ govukRadios({
+idPrefix: "typeInsolve",
+name: "typeInsolve",
+fieldset: {
+legend: {
+text: "Receivership"
+}
+},
+
+items: [
+{
+value: "carcasses",
+text: "3.10 - Administrative receiver's report"
+}
+]
+}) }}
+        {{ govukRadios({
+idPrefix: "typeInsolve",
+name: "typeInsolve",
+fieldset: {
+legend: {
+text: "Liquidation"
+}
+},
+
+items: [
+{
+value: "carcasses",
+text: "4.44(NI) - Notice of Final Meeting of Creditors"
+},
+{
+value: "mines",
+text: "4.71(NI) - Declaration of Solvency"
+},
+{
+value: "mines",
+text: "4.72(NI) - Return of final meeting in a members voluntary winding up"
+},
+{
+value: "mines",
+text: "4.19(NI) - Statement of Affairs Voluntary Liquidation"
+},
+{
+value: "mines",
+text: "4.20(NI) - Statement of Affairs Creditors Voluntary Wind Up"
+},
+{
+value: "mines",
+text: "4.21(NI) - Statement of Affairs"
+},
+{
+value: "mines",
+text: "4.70(NI) - Order of court on appeal against secretary's of state's decision"
+},
+{
+value: "mines",
+text: "4.73(NI) - Return of final meeting in a creditors' voluntary winding-up"
+},
+{
+value: "mines",
+text: "4.70 - Declaration of solvency"
+},
+{
+value: "mines",
+text: "4.71 - Give notice of final meeting in members voluntary winding up"
+},
+{
+value: "mines",
+text: "4.72 - Give notice of final meeting in creditors' voluntary winding up"
+},
+{
+value: "mines",
+text: "4.31 - Give notice of appointment of liquidator"
+},
+{
+value: "mines",
+text: "4.15A - Give notice of appointment of provisional liquidator"
+},
+{
+value: "mines",
+text: "4.43 - Give notice of the final meeting of creditors"
+},
+{
+value: "mines",
+text: "4.28 - Notice of order deferring the date of dissolution in MVL / CVL"
+},
+{
+value: "mines",
+text: "4.26 - Notice of final account prior to dissolution in MVL (final account attached)"
+},
+{
+value: "mines",
+text: "4.26(Scot) - Notice of court order staying/sisting proceedings in a winding up in MVL or CVL"
+},
+{
+value: "mines",
+text: "4.31 - Notice of appointment of liquidator in winding up by the court"
+},
+{
+value: "mines",
+text: "4.2(Scot) - Notice of court order in a winding-up (& Court Order attachment)"
+},
+{
+value: "mines",
+text: "4.9(Scot) - Notice od order of appointment of provisional liquidator in a winding-up by the court (& Court Order attachment)"
+},
+{
+value: "mines",
+text: "4.17(Scot) - Notice of final account prior to dissolution in a winding up by the court"
+},
+{
+value: "mines",
+text: "4.28(Scot) - Notice of court order for early dissolution in a winding up by the court"
+},
+{
+value: "mines",
+text: "4.27(Scot) - Notice of court order staying or sisting proceedings in a winding up by the court"
+}
+]
+}) }}
+        {{ govukRadios({
+idPrefix: "typeInsolve",
+name: "typeInsolve",
+fieldset: {
+legend: {
+text: "Others"
+}
+},
+
+items: [
+{
+value: "carcasses",
+text: "LRESSP - Extraordinary resolution to wind up"
+},
+{
+value: "mines",
+text: "LRESEX - Special resolution to wind up"
+},
+{
+value: "mines",
+text: "COCOMP - Order of court to wind up"
+},
+{
+value: "mines",
+text: "COLIQ - Deferment of dissolution"
+},
+{
+value: "mines",
+text: "VL1 - Notice of appointment of liquidator voluntary winding-up (members or creditors)"
+},
+{
+value: "mines",
+text: "LRESM (NI)) - Members Voluntary Liquidation Resolution"
+},
+{
+value: "mines",
+text: "LRESC (NI)) - Creditors Voluntary Liquidation Resolution"
+},
+{
+value: "mines",
+text: "F14 - Notice of a winding up order"
+},
+{
+value: "mines",
+text: "Form 1 (Scot) - Notice of appointment of Administrative Receiver, Receiver or Manager"
+},
+{
+value: "mines",
+text: "Form 3.5(Scot) - Notice of adminstrative receiver's report"
+}
+]
+}) }}
+        {{ govukButton({
+text: "Continue"
+}) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
