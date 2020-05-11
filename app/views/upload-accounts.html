@@ -14,11 +14,12 @@
       <h1 class="govuk-heading-xl">Upload the completed document</h1>
       <p class="govuk-body">You should:</p>
       <ul class="govuk-list govuk-list--bullet"></li>
-      <li>upload one document</li>
+      <li>upload one document or Companies House form in PDF format</li>
       <li>complete the document before uploading it</li>
-      <li>include supporting evidence (form RP07 or LL RP07 only)</li>
+      {{ govukInsetText({
+        text: "If your document needs supporting evidence you must merge it with the evidence into one PDF file and upload them as a single document."
+      }) }}
     </ul>
-    <p>If you need to upload multiple documents, such as evidence, you must upload it as one PDF document (including the form).</p>
     {{ govukFileUpload({
         id: "file-upload-1",
         name: "file-upload-1",
