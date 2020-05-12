@@ -65,6 +65,8 @@ router.post('/types-of-accounts', function (req, res) {
     })
   } if (value === 'insolvency') {
     res.redirect('types-of-forms/insolvency/insolvency')
+  } if (value === 'reg') {
+    res.redirect('types-of-forms/reg')
   }
 })
 
