@@ -14,7 +14,7 @@ RP07 Application to change a company’s disputed registered office address{% ex
       <span class="govuk-caption-xl">Guidance</span>
       <h1 class="govuk-heading-xl">Upload a document to Companies House
       </h1>
-      <p class="govuk-body-l">How to file a registrar's powers document online that would usually be sent to us in a paper format.
+      <p class="govuk-body-l">How to file certain registrar's powers or insolvency documents online that would usually be sent to us in a paper format.
       </p>
       {{ govukInsetText({
         text: "This guidance has been created for the interim Upload a document to Companies House service to enable paperless filing in response to the coronavirus (COVID-19) outbreak."
@@ -33,6 +33,9 @@ RP07 Application to change a company’s disputed registered office address{% ex
           <a class="govuk-link govuk-body-s" href="">How to prepare the document</a>
         </li>
         <li>
+          <a class="govuk-link govuk-body-s" href="">How to prepare documents that need evidence</a>
+        </li>
+        <li>
           <a class="govuk-link govuk-body-s" href="">What happens next</a>
         </li>
         <li>
@@ -41,7 +44,7 @@ RP07 Application to change a company’s disputed registered office address{% ex
       </ul>
       <h2 class="govuk-heading-l">Documents you can upload
       </h2>
-      <h3 class="govuk-heading-m">Registar Powers</h3>
+      <h3 class="govuk-heading-m">Registrar's Powers documents</h3>
       <p class="govuk-body">Limited companies and limited liability partnerships (LLPs) can use this service to:</p>
       {{ govukAccordion({
   id: "accordion-default",
@@ -52,7 +55,7 @@ RP07 Application to change a company’s disputed registered office address{% ex
         text: "Apply for a rectification by the registrar of companies"
       },
       summary: {
-  text: "RP02A or LL RP02A for LLPs"
+  text: "RP02A or LL RP02A"
 },
       content: {
         html: "<p class='govuk-body'>Use this form to tell us about a correction on the register where inaccurate information was delivered on or after 1 October 2009.</p>"
@@ -63,7 +66,7 @@ RP07 Application to change a company’s disputed registered office address{% ex
         text: "Correct a director’s date of birth which was incorrectly stated on incorporation"
       },
       summary: {
-  text: "RPCH01 or LL RPCH01 for LLPs"
+  text: "RPCH01 or LL RPCH01"
 },
       content: {
         html: "<p class='govuk-body'>Use this form to correct a director’s date of birth which was stated incorrectly on the incorporation document.</p><p class='govuk-body'>You must also submit a form RP02A before sending this form to change the register (LL RP02A for LLPs).</p>"
@@ -74,7 +77,7 @@ RP07 Application to change a company’s disputed registered office address{% ex
         text: "Apply for rectification of a change of registered address"
       },
       summary: {
-  text: "RP02B or LL RP02B for LLPs"
+  text: "RP02B or LL RP02B"
 },
       content: {
         html: "<p class='govuk-body'>Use this form to correct a change of registered office or UK establishment address that was delivered on or after 1 October 2009.</p>"
@@ -85,7 +88,7 @@ RP07 Application to change a company’s disputed registered office address{% ex
         text: "Object to a request to rectify the register"
       },
       summary: {
-  text: "RP03 or LL RP03 for LLPs"
+  text: "RP03 or LL RP03"
 },
       content: {
         html: "<p class='govuk-body'>Use this form to tell us that you object to an application to correct the register.</p>"
@@ -107,7 +110,7 @@ RP07 Application to change a company’s disputed registered office address{% ex
         text: "Apply to change a company’s disputed registered office address"
       },
       summary: {
-  text: "RP07 or LL RP07 for LLPs"
+  text: "RP07 or LL RP07"
 },
       content: {
         html: "<p class='govuk-body'>Use this form to apply to change a company’s registered office address if there is a dispute over the address.</p>"
@@ -115,26 +118,6 @@ RP07 Application to change a company’s disputed registered office address{% ex
     }
   ]
 }) }}
-
-      <p class="govuk-body">You must include evidence to support your application. Your evidence can be copies of original documents. For this online service you must upload evidence in a single PDF that includes the form and the evidence that is required.
-        Applications submitted without evidence will be rejected.</p>
-      <h4 class="govuk-heading-s">The evidence we need for a person or company where the address is being used without permission</h4>
-      <p class="govuk-body">We can accept:</p>
-      <ul class="govuk-list govuk-list--bullet"></li>
-      <li>documents showing the applicant’s rights in the address, such as leasehold or freehold
-      </li>
-      <li>a written agreement allowing the applicant to use the address
-      </li>
-      <li>a utility bill sent to the applicant at the address and dated within the last 6 months
-      </li>
-    </ul>
-    <h4 class="govuk-heading-s">The evidence we need for a service provider who had a contract with the company which is now terminated</h4>
-    <p class="govuk-body">We can accept:</p>
-    <ul class="govuk-list govuk-list--bullet"></li>
-    <li>written evidence of the start and end of the contract. This might be the company’s request for service, an invoice that shows proof of payment or other evidence of the company’s involvement
-    </li>
-    <li>a copy of the signed contract and the termination letter
-    </li>
   </ul>
   <h2 class="govuk-heading-l">How to prepare the document
   </h2>
@@ -145,7 +128,7 @@ RP07 Application to change a company’s disputed registered office address{% ex
       <a href="https://www.gov.uk/topic/company-registration-filing/forms" class="govuk-link">Find the Companies House form</a>
       that you need and download it.</li>
     <li>Type the information directly onto the form.</li>
-    <li>Print the form if it requires a signature and sign the form using a pen.</li>
+    <li>Print the form if it requires a signature and sign the form using black ink.</li>
     <li>Scan the completed form.</li>
     <li>Save the form to the device you are using so that it is ready to upload.</li>
   </<p>
@@ -155,9 +138,33 @@ RP07 Application to change a company’s disputed registered office address{% ex
 <h4 class="govuk-heading-s">You can complete the form using a pen:</h4>
 <ul class="govuk-list govuk-list--number">
 <li>Print the form.</li>
-<li>Fill in the information directly onto the form using a pen.</li>
+<li>Fill in the information directly onto the form using black ink.</li>
 <li>Scan the completed form.</li>
 <li>Save the scanned form to the device you are using so that it is ready to upload.</li>
 </ul>
 </ol>
-</ol></ul></ol><h2 class="govuk-heading-l">What happens next</h2><p class="govuk-body">An examiner will process the uploaded document to check if it's acceptable for filing.</p><p class="govuk-body">If your document is acceptable for filing, the document will be registered with the date it was uploaded to Companies House.</li></ol><p class="govuk-body">If your document is not acceptable for filing we will email you to let you know what to do next.</p></ol><h2 class="govuk-heading-l">Contact us</h2><p class="govuk-body">Email us at<a class="govuk-link" href="mailto:enquiries@companieshouse.gov.uk">enquiries@companieshouse.gov.uk</a>and we'll answer as soon as possible.</p><p class="govuk-body">Our telephone contact centre is now closed to protect the welfare of our employees during the coronavirus (COVID-19) outbreak.</p></div></div>{% endblock %}
+<h2 class="govuk-heading-l">How to prepare documents that need evidence
+</h2>
+      <h3 class="govuk-heading-m">RP07 and LL RP07</h3>
+<p class="govuk-body">You must include evidence to support your application. Your evidence can be copies of original documents. For this online service you must upload evidence in a single PDF that includes the form and the evidence that is required.
+  Applications submitted without evidence will be rejected.</p>
+<h4 class="govuk-heading-s">The evidence we need for a person or company where the address is being used without permission</h4>
+<p class="govuk-body">We can accept:</p>
+<ul class="govuk-list govuk-list--bullet"></li>
+<li>documents showing the applicant’s rights in the address, such as leasehold or freehold
+</li>
+<li>a written agreement allowing the applicant to use the address
+</li>
+<li>a utility bill sent to the applicant at the address and dated within the last 6 months
+</li>
+</ul>
+<h4 class="govuk-heading-s">The evidence we need for a service provider who had a contract with the company which is now terminated</h4>
+<p class="govuk-body">We can accept:</p>
+<ul class="govuk-list govuk-list--bullet"></li>
+<li>written evidence of the start and end of the contract. This might be the company’s request for service, an invoice that shows proof of payment or other evidence of the company’s involvement
+</li>
+<li>a copy of the signed contract and the termination letter
+</li>
+</ul>
+</ol></ul></ol><h2 class="govuk-heading-l">What happens next</h2><p class="govuk-body">An examiner will process the uploaded document to check if it's acceptable for filing.</p><p class="govuk-body">If your document is acceptable for filing, the document will be registered with the date it was uploaded to Companies House.</li></ol><p class="govuk-body">If your document is not acceptable for filing we will email you to let you know what to do next.</p></ol>
+<h2 class="govuk-heading-l">Contact us</h2><p class="govuk-body">Email us at <a class="govuk-link" href="mailto:enquiries@companieshouse.gov.uk">enquiries@companieshouse.gov.uk</a> and we'll answer as soon as possible.</p><p class="govuk-body">Our telephone contact centre is now closed to protect the welfare of our employees during the coronavirus (COVID-19) outbreak.</p></div></div>{% endblock %}
