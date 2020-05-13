@@ -46,12 +46,12 @@ router.post('/sign-in', function (req, res) {
 })
 
 // Type of document
-router.get('/types-of-accounts', function (req, res) {
-  res.render('types-of-accounts', {
+router.get('/types-of-forms/form-types', function (req, res) {
+  res.render('types-of-forms/form-types', {
   })
 })
 
-router.post('/types-of-accounts', function (req, res) {
+router.post('/types-of-forms/form-types', function (req, res) {
   var errors = []
   var value = req.session.data['type']
   if (typeof req.session.data['type'] === 'undefined') {
@@ -59,14 +59,14 @@ router.post('/types-of-accounts', function (req, res) {
       text: 'Select the *type of form that you want to upload* ',
       href: '#type'
     })
-    res.render('types-of-accounts', {
+    res.render('/types-of-forms/form-types', {
       errorType: true,
       errorList: errors
     })
   } if (value === 'insolvency') {
-    res.redirect('types-of-forms/insolvency/insolvency')
+    res.redirect('insolvency/insolvency')
   } if (value === 'reg') {
-    res.redirect('types-of-forms/reg')
+    res.redirect('reg/reg')
   }
 })
 

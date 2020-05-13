@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  Upload a document to Companies House
+  {{serviceName}}
 {% endblock %}
 {% block beforeContent %}
   {{ govukBackLink({
@@ -12,7 +12,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <span class="govuk-caption-xl">Guidance</span>
-      <h1 class="govuk-heading-xl">Upload a document to Companies House
+      <h1 class="govuk-heading-xl">{{serviceName}}
       </h1>
       <p class="govuk-body-l">How to file certain registrar's powers or insolvency documents online that would usually be sent to us in a paper format.
       </p>
