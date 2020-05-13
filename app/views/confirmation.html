@@ -17,10 +17,7 @@
       <p>Make a note of your reference number in case you need to contact us about your document.</p>
       <p class="govuk-body">An examiner will process the uploaded document to check if it’s acceptable for filing. Documents are registered with the date they are uploaded to Companies House as long as they are acceptable.</p>
       <p>If the document is not acceptable for filing, we will email you to let you know what to do next.</p>
-      {{ govukWarningText({
-        text: "Due to the impact of coronavirus (COVID-19) it’s taking longer than usual to process documents.",
-        iconFallbackText: "Warning"
-      }) }}
+      {% include "includes/coronavirus.html" %}
       {% include "includes/feedback.html" %}
     </div>
   </div>
