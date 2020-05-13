@@ -1,6 +1,7 @@
+{% set title = "Document uploaded successfully" %}
 {% extends "layout.html" %}
 {% block pageTitle %}
-  Document uploaded successfully
+  {{title}}
 {% endblock %}
 {% block beforeContent %}
   {% include "includes/user.html" %}
@@ -10,7 +11,7 @@
     <div class="govuk-grid-column-two-thirds">
       {% set buttonHref = "Your reference number is Y2345678" %}
       {{ govukPanel({
-        titleText: "Document uploaded successfully",
+        titleText: title,
         html: buttonHref
       }) }}
       <h2 class="govuk-heading-m">What happens next?</h2>
