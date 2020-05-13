@@ -12,14 +12,8 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <h1 class="govuk-heading-xl">Upload the completed document</h1>
-      <p class="govuk-body">You should:</p>
-      <ul class="govuk-list govuk-list--bullet"></li>
-      <li>upload one document or Companies House form in PDF format</li>
-      <li>complete the document before uploading it</li>
-      {{ govukInsetText({
-        text: "If your document needs supporting evidence you must merge the document and evidence into one PDF file. Then upload them as a single document."
-      }) }}
-    </ul>
+      <p class="govuk-body">You must complete each document before uploading it in PDF format.</p>
+            <p class="govuk-body">You can upload up to 5 documents.</p>
     {{ govukFileUpload({
         id: "file-upload-1",
         name: "file-upload-1",
