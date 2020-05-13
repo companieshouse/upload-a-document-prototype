@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  What type of document are you uploading?
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "../../types-of-accounts"
+    }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/insolvency/insolvency" method="post">
+        {{ govukRadios({
+idPrefix: "typeInsolve",
+name: "typeInsolve",
+fieldset: {
+  legend: {
+    text: "In adminstration",
+    isPageHeading: true,
+classes: "govuk-fieldset__legend--xl"
+  }
+},
+
+items: [
+  {
+    value: "carcasses",
+    text: "AM01 - Give notice of administrators appointment"
+  },
+  {
+    value: "mines",
+    text: "AM21 - Give notice of end of administration"
+  },
+  {
+    value: "mines",
+    text: "AM22 - Give notice of a move from adminisitration to creditors' voluntary liquidation"
+  },
+  {
+    value: "mines",
+    text: "AM23 - Give notice of move from administration to dissolution"
+  },
+  {
+    value: "mines",
+    text: "AM01(Scot) - Give notice of administrator's appointment for a Scottish company"
+  },
+  {
+    value: "mines",
+    text: "AM20(Scot) -  Give notice of automatic end of administration for a Scottish company"
+  },
+  {
+    value: "mines",
+    text: "AM21(Scot) - Give notice of end of administration for a Scottish company"
+  },
+  {
+    value: "mines",
+    text: "AM22(Scot) - Move a Scottish company from administration to dissolution"
+  },
+  {
+    value: "mines",
+    text: "AM24(Scot) - Give notice of a court order in respect of date of dissolution"
+  },
+  {
+    value: "mines",
+    text: "AM25(Scot) - Give notice of court order ending administration "
+  }
+]
+}) }}
+
+        {{ govukButton({
+text: "Continue"
+}) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
