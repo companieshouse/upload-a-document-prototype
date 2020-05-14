@@ -12,6 +12,7 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
+      <span class="govuk-caption-xl">ZLC LTD</span>
       <h1 class="govuk-heading-xl">{{title}}</h1>
       <p class="govuk-body">You must complete each document before uploading it in PDF format.</p>
       <p class="govuk-body">You can upload up to 5 documents.</p>
@@ -25,6 +26,10 @@
       {{ govukButton({
         text: "Submit document",
         href: "payment-required"
+      }) }}
+      {{ govukButton({
+        text: "Upload another document type",
+        classes: "govuk-button--secondary"
       }) }}
     </div>
   </div>

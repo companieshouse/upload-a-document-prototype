@@ -92,6 +92,28 @@ router.post('/types-of-forms/insolvency/insolvency', function (req, res) {
   }
 })
 
+// Reg
+router.get('/types-of-forms/reg/reg', function (req, res) {
+  res.render('types-of-forms/reg/reg', {
+  })
+})
+
+router.post('/types-of-forms/reg/reg', function (req, res) {
+  var errors = []
+  if (typeof req.session.data['reg'] === 'undefined') {
+    errors.push({
+      text: 'Select the *type of form that you want to upload* ',
+      href: '#typeInsolve'
+    })
+    res.render('types-of-forms/reg/reg', {
+      errorType: true,
+      errorList: errors
+    })
+  } else {
+    res.redirect('/auth-screen')
+  }
+})
+
 // Company number
 router.get('/company-number', function (req, res) {
   res.render('company-number', {

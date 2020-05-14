@@ -13,25 +13,25 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <form action="/types-of-accounts" method="post">
+      <form action="/types-of-forms/reg/reg" method="post">
         {% if errorType == true %}
           {{ govukErrorSummary({
-    titleText: "There is a problem",
-    errorList: errorList
-  }) }}
+            titleText: "There is a problem",
+            errorList: errorList
+          }) }}
           {{ govukRadios({
-    idPrefix: "type",
-    name: "type",
-    errorMessage: {
-      text: "Select the *type of form that you want to upload* "
-    },
-    fieldset: {
-      legend: {
-        text: "Registrar's Powers Forms",
-        isPageHeading: true,
-        classes: "govuk-fieldset__legend--xl"
-      }
-     },
+            idPrefix: "reg",
+            name: "reg",
+            errorMessage: {
+              text: "Select the *type of form that you want to upload* "
+            },
+            fieldset: {
+              legend: {
+                text: "Registrar's Powers Forms",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--xl"
+              }
+           },
      items: [
        {
          value: "carcasses",
@@ -45,8 +45,8 @@
    }) }}
         {% else %}
           {{ govukRadios({
-idPrefix: "type",
-name: "type",
+idPrefix: "reg",
+name: "reg",
 fieldset: {
   legend: {
     text: "Registrar's Powers Forms",
