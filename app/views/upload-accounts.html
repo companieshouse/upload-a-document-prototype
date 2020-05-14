@@ -13,7 +13,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <span class="govuk-caption-xl">Company name: ZLC LTD</span>
-      <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">{{title}}</h1>
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">{{title}}</h1>
       <ul class="govuk-list govuk-list--bullet">
         <li>You must complete each document before uploading it in PDF format.</li>
         <li>You can upload up to 5 documents.</li>
@@ -25,10 +25,12 @@
           text: "Upload document"
         }
       }) }}
-      {{ govukButton({
+      <div>
+        {{ govukButton({
         text: "Submit document",
         href: "payment-required"
       }) }}
+      </div>
       {{ govukButton({
         text: "Upload another document type",
         classes: "govuk-button--secondary"
