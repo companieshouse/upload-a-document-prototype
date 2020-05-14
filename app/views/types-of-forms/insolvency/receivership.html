@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  What type of document are you uploading?
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "../../types-of-accounts"
+    }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/insolvency/insolvency" method="post">
+        {{ govukRadios({
+          idPrefix: "typeInsolve",
+          name: "typeInsolve",
+          fieldset: {
+            legend: {
+              text: "Receivership",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "carcasses",
+              text: "REC1 - Notice of administrative receiver's report"
+            },
+            {
+              value: "mines",
+              text: "REC1(Scot) - Notice of administrative receiver's report"
+            },
+            {
+              value: "mines",
+              text: "RM01 - Notice of appointment of receiver or manager"
+            },
+            {
+              value: "mines",
+              text: "RM02 - Notice of ceasing to act as receiver or manager"
+            },
+            {
+              value: "mines",
+              text: "RM01(Scot) - Notice of appointment of Administrative Receiver, Receiver or Manager"
+            }
+          ]
+        }) }}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

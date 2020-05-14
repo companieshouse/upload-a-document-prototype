@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  What type of document are you uploading?
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "../../types-of-accounts"
+    }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/insolvency/insolvency" method="post">
+        {{ govukRadios({
+          idPrefix: "typeInsolve",
+          name: "typeInsolve",
+          fieldset: {
+            legend: {
+              text: "Company Voluntary Arrangement Moratorium",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "carcasses",
+              text: "VAM1 - Give notice of the commencement of moratorium"
+            },
+            {
+              value: "mines",
+              text: "VAM7 - Give notice of the end of moratorium"
+            },
+            {
+              value: "mines",
+              text: "VAM1(Scot) - Give notice of the commencement of moratorium for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "VAM7(Scot) - Give notice of the end of moratorium for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "VAM8(Scot) - Give notice of disposal of charged property during a moratorium for a Scottish company"
+            }
+          ]
+        }) }}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}
