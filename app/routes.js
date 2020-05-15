@@ -84,6 +84,7 @@ router.get('/types-of-forms/insolvency/insolvency', function (req, res) {
 
 router.post('/types-of-forms/insolvency/insolvency', function (req, res) {
   var errors = []
+  var value = req.session.data['typeInsolve']
   if (typeof req.session.data['typeInsolve'] === 'undefined') {
     errors.push({
       text: 'Select the *type of form that you want to upload* ',
@@ -93,8 +94,26 @@ router.post('/types-of-forms/insolvency/insolvency', function (req, res) {
       errorType: true,
       errorList: errors
     })
+  } if (value === 'in-admin') {
+    res.redirect('in-adminstration')
+  } if (value === 'cvam') {
+    res.redirect('cvam')
+  } if (value === 'mvl') {
+    res.redirect('mvl')
+  } if (value === 'wuc') {
+    res.redirect('wuc')
+  } if (value === 'receivership') {
+    res.redirect('receivership')
+  } if (value === 'cva') {
+    res.redirect('cva')
+  } if (value === 'in-admin-two') {
+    res.redirect('in-admin')
+  } if (value === 'receivership-two') {
+    res.redirect('receivership-three')
+  } if (value === 'liquidation') {
+    res.redirect('liquidation')
   } else {
-    res.redirect('/auth-screen')
+    res.redirect('others')
   }
 })
 
