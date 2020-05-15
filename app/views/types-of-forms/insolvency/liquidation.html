@@ -1,0 +1,128 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  What type of document are you uploading?
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "../../types-of-accounts"
+    }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/insolvency/insolvency" method="post">
+        {{ govukRadios({
+          idPrefix: "typeInsolve",
+          name: "typeInsolve",
+          fieldset: {
+            legend: {
+              text: "Liquidation",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "carcasses",
+              text: "4.44(NI) - Notice of Final Meeting of Creditors"
+            },
+            {
+              value: "mines",
+              text: "4.71(NI) - Declaration of Solvency"
+            },
+            {
+              value: "mines",
+              text: "4.72(NI) - Return of final meeting in a members voluntary winding up"
+            },
+            {
+              value: "mines",
+              text: "4.19(NI) - Statement of Affairs Voluntary Liquidation"
+            },
+            {
+              value: "mines",
+              text: "4.20(NI) - Statement of Affairs Creditors Voluntary Wind Up"
+            },
+            {
+              value: "mines",
+              text: "4.21(NI) - Statement of Affairs"
+            },
+            {
+              value: "mines",
+              text: "4.70(NI) - Order of court on appeal against secretary's of state's decision"
+            },
+            {
+              value: "mines",
+              text: "4.73(NI) - Return of final meeting in a creditors' voluntary winding-up"
+            },
+            {
+              value: "mines",
+              text: "4.70 - Declaration of solvency"
+            },
+            {
+              value: "mines",
+              text: "4.71 - Give notice of final meeting in members voluntary winding up"
+            },
+            {
+              value: "mines",
+              text: "4.72 - Give notice of final meeting in creditors' voluntary winding up"
+            },
+            {
+              value: "mines",
+              text: "4.31 - Give notice of appointment of liquidator"
+            },
+            {
+              value: "mines",
+              text: "4.15A - Give notice of appointment of provisional liquidator"
+            },
+            {
+              value: "mines",
+              text: "4.43 - Give notice of the final meeting of creditors"
+            },
+            {
+              value: "mines",
+              text: "4.28 - Notice of order deferring the date of dissolution in MVL / CVL"
+            },
+            {
+              value: "mines",
+              text: "4.26 - Notice of final account prior to dissolution in MVL (final account attached)"
+            },
+            {
+              value: "mines",
+              text: "4.26(Scot) - Notice of court order staying/sisting proceedings in a winding up in MVL or CVL"
+            },
+            {
+              value: "mines",
+              text: "4.31 - Notice of appointment of liquidator in winding up by the court"
+            },
+            {
+              value: "mines",
+              text: "4.2(Scot) - Notice of court order in a winding-up (& Court Order attachment)"
+            },
+            {
+              value: "mines",
+              text: "4.9(Scot) - Notice od order of appointment of provisional liquidator in a winding-up by the court (& Court Order attachment)"
+            },
+            {
+              value: "mines",
+              text: "4.17(Scot) - Notice of final account prior to dissolution in a winding up by the court"
+            },
+            {
+              value: "mines",
+              text: "4.28(Scot) - Notice of court order for early dissolution in a winding up by the court"
+            },
+            {
+              value: "mines",
+              text: "4.27(Scot) - Notice of court order staying or sisting proceedings in a winding up by the court"
+            }
+          ]
+        }) }}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

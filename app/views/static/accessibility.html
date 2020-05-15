@@ -3,21 +3,7 @@
   Report a PSC register discrepancy
 {% endblock %}
 {% block beforeContent %}
-  {{ govukBreadcrumbs({
-  items: [
-    {
-      text: "Home",
-      href: "https://www.gov.uk/"
-    },
-    {
-      text: "Companies House Search",
-      href: "https://beta.companieshouse.gov.uk/"
-    },
-    {
-      text: "Report a discrepancy"
-    }
-  ]
-  }) }}
+  {% include "includes/breadcrumb.html" %}
 {% endblock %}
 {% block content %}
   <div class="govuk-grid-row">
