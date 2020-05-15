@@ -13,7 +13,7 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <form action="/types-of-forms/insolvency/insolvency" method="post">
+      <form action="/types-of-forms/insolvency/mvl" method="post">
         {{ govukRadios({
           idPrefix: "typeInsolve",
           name: "typeInsolve",
@@ -26,39 +26,39 @@
           },
           items: [
             {
-              value: "carcasses",
+              value: "600",
               text: "600 - Appoint liquidator in voluntary winding up"
             },
             {
-              value: "mines",
+              value: "liq01",
               text: "LIQ01 - Give notice of statutory declaration of solvency"
             },
             {
-              value: "mines",
+              value: "liq02",
               text: "LIQ02 - Give notice of statement of affairs"
             },
             {
-              value: "mines",
+              value: "liq13",
               text: "LIQ13 - Give notice of final account prior to dissolution in MVL"
             },
             {
-              value: "mines",
+              value: "liq14",
               text: "LIQ14 - Give notice of final account prior to dissolution in CVL"
             },
             {
-              value: "mines",
+              value: "liq04",
               text: "LIQ04(Scot) - Give notice of order deferring the date of dissolution for a Scottish company"
             },
             {
-              value: "mines",
+              value: "liq13",
               text: "LIQ13(Scot) - Final account prior to dissolution in MVL for a Scottish company"
             },
             {
-              value: "mines",
+              value: "liq15",
               text: "LIQ15(Scot) - Give notice of a court order staying or sisting proceedings in a CVL or MVL winding up"
             },
             {
-              value: "mines",
+              value: "600a",
               text: "600a - Appoint liquidator in voluntary winding up for the Gazette"
             }
           ]
