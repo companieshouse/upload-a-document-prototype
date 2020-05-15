@@ -14,9 +14,9 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <span class="govuk-caption-xl">Company name: ZLC LTD</span>
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">{{title}}</h1>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>You must complete each document before uploading it in PDF format.</li>
-        <li>You can upload up to 5 documents.</li>
+        <p class="govuk-body">You must complete each document before uploading it in PDF format.</p>
+      <p class="govuk-body">You can upload up to 5 documents of the same type. If you need to upload a different document type, you must return to this service after submitting your current documents.</p>
+        <p class="govuk-body">If you are uploading form RP07 or LL RP07, you must upload supporting evidence after uploading the form and submit the form and evidence together.</p>
       </ul>
       {{ govukFileUpload({
         id: "file-upload-1",
@@ -26,7 +26,7 @@
         }
       }) }}
       {{ govukButton({
-        text: "Submit document",
+        text: "Submit",
         href: "payment-required"
       }) }}
     </div>
