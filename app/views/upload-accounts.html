@@ -1,4 +1,4 @@
-{% set title = "Upload the completed document" %}
+{% set title = "Upload a completed document" %}
 {% extends "layout.html" %}
 {% block pageTitle %}
   {{title}}
@@ -14,10 +14,17 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <span class="govuk-caption-xl">Company name: ZLC LTD</span>
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">{{title}}</h1>
-        <p class="govuk-body">You must complete each document before uploading it in PDF format.</p>
-      <p class="govuk-body">You can upload up to 5 documents of the same type. If you need to upload a different document type, you must return to this service after submitting your current documents.</p>
-        <p class="govuk-body">If you are uploading form RP07 or LL RP07, you must upload supporting evidence after uploading the form and submit the form and evidence together.</p>
+      <p class="govuk-body">You must:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>complete the document before uploading it
+        </li>
+        <li>use a PDF format
+        </li>
       </ul>
+        <p class="govuk-body">You can upload up to 5 documents but they must be the same type.</p>
+      {{ govukInsetText({
+        text: "If you are submitting form RP07 or LL RP07, you must upload supporting evidence after uploading the form and submit the form and evidence together."
+      }) }}
       {{ govukFileUpload({
         id: "file-upload-1",
         name: "file-upload-1",
