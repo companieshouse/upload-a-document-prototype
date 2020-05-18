@@ -13,7 +13,7 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <form action="/types-of-forms/insolvency/insolvency" method="post">
+      <form action="/types-of-forms/insolvency/in-adminstration" method="post">
         {{ govukRadios({
           idPrefix: "typeInsolve",
           name: "typeInsolve",
@@ -26,43 +26,43 @@
           },
           items: [
             {
-              value: "carcasses",
+              value: "am01",
               text: "AM01 - Give notice of administrators appointment"
             },
             {
-              value: "mines",
+              value: "am21",
               text: "AM21 - Give notice of end of administration"
             },
             {
-              value: "mines",
+              value: "am22",
               text: "AM22 - Give notice of a move from adminisitration to creditors' voluntary liquidation"
             },
             {
-              value: "mines",
+              value: "am23",
               text: "AM23 - Give notice of move from administration to dissolution"
             },
             {
-              value: "mines",
+              value: "am01s",
               text: "AM01(Scot) - Give notice of administrator's appointment for a Scottish company"
             },
             {
-              value: "mines",
+              value: "am20s",
               text: "AM20(Scot) -  Give notice of automatic end of administration for a Scottish company"
             },
             {
-              value: "mines",
+              value: "am21s",
               text: "AM21(Scot) - Give notice of end of administration for a Scottish company"
             },
             {
-              value: "mines",
+              value: "am22s",
               text: "AM22(Scot) - Move a Scottish company from administration to dissolution"
             },
             {
-              value: "mines",
+              value: "am24s",
               text: "AM24(Scot) - Give notice of a court order in respect of date of dissolution"
             },
             {
-              value: "mines",
+              value: "am25s",
               text: "AM25(Scot) - Give notice of court order ending administration "
             }
           ]

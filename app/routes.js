@@ -195,4 +195,104 @@ router.post('/auth-screen', function (req, res) {
   }
 })
 
+// CVA
+router.get('/types-of-forms/insolvency/cva', function (req, res) {
+  res.render('types-of-forms/insolvency/cva', {
+  })
+})
+
+router.post('/types-of-forms/insolvency/cva', function (req, res) {
+  res.redirect('../../auth-screen')
+})
+
+// CVAM
+router.get('/types-of-forms/insolvency/cvam', function (req, res) {
+  res.render('types-of-forms/insolvency/cvam', {
+  })
+})
+
+router.post('/types-of-forms/insolvency/cvam', function (req, res) {
+  res.redirect('../../auth-screen')
+})
+
+// in-admin
+router.get('/types-of-forms/insolvency/in-admin', function (req, res) {
+  res.render('types-of-forms/insolvency/in-admin', {
+  })
+})
+
+router.post('/types-of-forms/insolvency/in-admin', function (req, res) {
+  res.redirect('../../auth-screen')
+})
+
+// in-admin
+router.get('/types-of-forms/insolvency/in-adminstration', function (req, res) {
+  res.render('types-of-forms/insolvency/in-adminstration', {
+  })
+})
+
+router.post('/types-of-forms/insolvency/in-adminstration', function (req, res) {
+  res.redirect('../../auth-screen')
+})
+
+// in-admin
+router.get('/types-of-forms/insolvency/liquidation', function (req, res) {
+  res.render('types-of-forms/insolvency/liquidation', {
+  })
+})
+
+router.post('/types-of-forms/insolvency/liquidation', function (req, res) {
+  res.redirect('../../auth-screen')
+})
+
+// in-admin
+router.get('/types-of-forms/insolvency/mvl', function (req, res) {
+  res.render('types-of-forms/insolvency/mvl', {
+  })
+})
+
+router.post('/types-of-forms/insolvency/mvl', function (req, res) {
+  res.redirect('../../auth-screen')
+})
+
+// in-admin
+router.get('/types-of-forms/insolvency/others', function (req, res) {
+  res.render('types-of-forms/insolvency/others', {
+  })
+})
+
+router.post('/types-of-forms/insolvency/others', function (req, res) {
+  res.redirect('../../auth-screen')
+})
+
+// in-admin
+router.get('/types-of-forms/insolvency/receivership-three', function (req, res) {
+  res.render('types-of-forms/insolvency/receivership-three', {
+  })
+})
+
+router.post('/types-of-forms/insolvency/receivership-three', function (req, res) {
+  res.redirect('../../auth-screen')
+})
+
+// in-admin
+router.get('/types-of-forms/insolvency/receivership', function (req, res) {
+  res.render('types-of-forms/insolvency/receivership', {
+  })
+})
+
+router.post('/types-of-forms/insolvency/receivership', function (req, res) {
+  res.redirect('../../auth-screen')
+})
+
+// in-admin
+router.get('/types-of-forms/insolvency/wuc', function (req, res) {
+  res.render('types-of-forms/insolvency/wuc', {
+  })
+})
+
+router.post('/types-of-forms/insolvency/wuc', function (req, res) {
+  res.redirect('../../auth-screen')
+})
+
 module.exports = router

@@ -13,7 +13,7 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <form action="/types-of-forms/insolvency/insolvency" method="post">
+      <form action="/types-of-forms/insolvency/cvam" method="post">
         {{ govukRadios({
           idPrefix: "typeInsolve",
           name: "typeInsolve",
@@ -26,23 +26,23 @@
           },
           items: [
             {
-              value: "carcasses",
+              value: "vam1",
               text: "VAM1 - Give notice of the commencement of moratorium"
             },
             {
-              value: "mines",
+              value: "vam7",
               text: "VAM7 - Give notice of the end of moratorium"
             },
             {
-              value: "mines",
+              value: "vam1s",
               text: "VAM1(Scot) - Give notice of the commencement of moratorium for a Scottish company"
             },
             {
-              value: "mines",
+              value: "vam7s",
               text: "VAM7(Scot) - Give notice of the end of moratorium for a Scottish company"
             },
             {
-              value: "mines",
+              value: "vam8s",
               text: "VAM8(Scot) - Give notice of disposal of charged property during a moratorium for a Scottish company"
             }
           ]
