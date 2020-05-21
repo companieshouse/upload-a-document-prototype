@@ -73,6 +73,10 @@ router.post('/types-of-forms/form-types', function (req, res) {
     res.redirect('../auth-screen')
   } if (value === 'reg') {
     res.redirect('reg/reg')
+  } if (value === 'slp') {
+    res.redirect('slp/limited-partnerships')
+  } if (value === 'sqp') {
+    res.redirect('sqp/scottish-limited-partnership')
   }
 })
 
@@ -131,6 +135,38 @@ router.post('/types-of-forms/reg/reg', function (req, res) {
       href: '#typeInsolve'
     })
     res.render('types-of-forms/reg/reg', {
+      errorType: true,
+      errorList: errors
+    })
+  } else {
+    res.redirect('/auth-screen')
+  }
+})
+
+router.post('/types-of-forms/slp/limited-partnerships', function (req, res) {
+  var errors = []
+  if (typeof req.session.data['reg'] === 'undefined') {
+    errors.push({
+      text: 'Select the *type of form that you want to upload* ',
+      href: '#typeInsolve'
+    })
+    res.render('types-of-forms/slp/limited-partnerships', {
+      errorType: true,
+      errorList: errors
+    })
+  } else {
+    res.redirect('/auth-screen')
+  }
+})
+
+router.post('/types-of-forms/sqp/scottish-limited-partnerships', function (req, res) {
+  var errors = []
+  if (typeof req.session.data['reg'] === 'undefined') {
+    errors.push({
+      text: 'Select the *type of form that you want to upload* ',
+      href: '#typeInsolve'
+    })
+    res.render('types-of-forms/sqp/scottish-limited-partnerships', {
       errorType: true,
       errorList: errors
     })

@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  What type of document are you uploading?
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "confirm-company"
+    }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/slp/limited-partnerships" method="post">
+        {% if errorType == true %}
+          {{ govukErrorSummary({
+            titleText: "There is a problem",
+            errorList: errorList
+          }) }}
+          {{ govukRadios({
+            idPrefix: "slp",
+            name: "slp",
+            errorMessage: {
+              text: "Select the *type of form that you want to upload* "
+            },
+            fieldset: {
+              legend: {
+    text: "Limited partnerships forms",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--xl"
+              }
+           },
+           items: [
+             {
+               value: "carcasses",
+               text: "Register a Limited Partnership (LP5)"
+             },
+             {
+               value: "mines",
+               text: "Register a Limited Partnership as Private Fund Limited Partnership (LP7)"
+             },
+             {
+               value: "mines",
+               text: "Make changes to a Limited Partnership (LP6)"
+             },
+             {
+               value: "mines",
+               text: "Designate as a Private Fund Limited Partnership (LP8)"
+             }
+           ]
+   }) }}
+        {% else %}
+          {{ govukRadios({
+idPrefix: "reg",
+name: "reg",
+fieldset: {
+  legend: {
+    text: "Scottish limited partnerships types",
+    isPageHeading: true,
+    classes: "govuk-fieldset__legend--xl"
+  }
+},
+
+items: [
+  {
+    value: "carcasses",
+    text: "Registering a Scottish limited partnership"
+  },
+  {
+    value: "mines",
+    text: "Making changes to a Scottish limited partnership"
+  },
+  {
+    value: "mines",
+    text: "Confirmation statement"
+  },
+  {
+    value: "mines",
+    text: "People with significant control (PSC)"
+  },
+  {
+    value: "mines",
+    text: "Registrar's powers"
+  },
+  {
+    value: "mines",
+    text: "Registering a Scottish qualifying partnership"
+  },
+  {
+    value: "mines",
+    text: "Making changes to a Scottish qualifying partnership"
+  },
+  {
+    value: "mines",
+    text: "People with significant control (PSC)"
+  }
+]
+}) }}
+        {% endif %}
+        {{ govukButton({
+text: "Continue"
+}) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}
