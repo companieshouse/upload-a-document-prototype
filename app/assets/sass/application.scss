@@ -237,3 +237,9 @@ $govuk-assets-path: '/govuk/assets/';
   background: #f3f2f1;
   color: #0b0c0c;
 }
+
+.rejected {
+  background: transparent;
+  border: 6px solid #d4351c;
+  color: #d4351c;
+}

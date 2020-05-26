@@ -4,7 +4,8 @@
     <div class="govuk-grid-column-two-thirds">
       {% set buttonHref = "Your reference number is Y2345678" %}
       {{ govukPanel({
-        titleText: "Document uploaded successfully",
+        titleText: "Submission rejected",
+        classes: "rejected",
         html: buttonHref
       }) }}
       {{ govukTable({
@@ -35,17 +36,20 @@
     ]
   ]
 }) }}
-
+      <p class="govuk-body">Your submission was rejected because:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Reason 1</li>
+        <li>Reason 2</li>
+        <li>Reason 3</li>
+      </ul>
       <h2 class="govuk-heading-m">What happens next</h2>
-      <p class="govuk-body">An examiner will proccess the uploaded document to check if it's acceptable for filing. Documents are registered with the date they are uploaded to Companies House as long as they are acceptable.</p>
-      <p class="govuk-body">If the documents is not acceptable for filing, we will email you to let you know what to do next.</p>
-      {{ govukWarningText({
-        text: "Warning: Due to the impact of coronavirus (COVID-19), it's taking longer than usual to process documents",
-        iconFallbackText: "Warning"
-      }) }}
-      <p class="govuk-body">If you need to contact Companies House about your submission, please email
+      <p class="govuk-body">You should correct the document and resubmit it at
+        <a href="https://beta.companieshouse.gov.uk/efs-submission/start">https://beta.companieshouse.gov.uk/efs-submission/start</a>.</p>
+      <h2 class="govuk-heading-m">Contact us</h2>
+      <p class="govuk-body">If you have a question about your submission you can email us at
         <a href="mailto:enquiries@companieshouse.gov.uk">enquiries@companieshouse.gov.uk</a>
-        and someone will reply as soon as possible.</p>
+        and we'll answer as soon as possible.</p>
+      <p>Our telephone contact centre is now closed to protect the welfare of our employees during the coronavirus (COVID-19) outbreak.</p>
     </div>
   </div>
 {% endblock %}
