@@ -4,6 +4,21 @@
 {% endblock %}
 
 {% block beforeContent %}
+  {{ govukBreadcrumbs({
+items: [
+{
+text: "Form types",
+href: "#"
+},
+{
+text: "Insolvency form categories",
+href: "#"
+},
+{
+text: "Company voluntary arrangement"
+}
+]
+}) }}
   {{ govukBackLink({
       text: "Back",
       href: "../../types-of-accounts"
