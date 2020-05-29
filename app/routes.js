@@ -70,7 +70,7 @@ router.post('/types-of-forms/form-types', function (req, res) {
   } if (value === 'articles') {
     res.redirect('../auth-screen')
   } if (value === 'constitution') {
-    res.redirect('../auth-screen')
+    res.redirect('constitution/change-of-constitution')
   } if (value === 'reg') {
     res.redirect('reg/reg')
   } if (value === 'slp') {
