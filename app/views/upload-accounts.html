@@ -18,12 +18,13 @@
       <ul class="govuk-list govuk-list--bullet">
         <li>complete the document before uploading it
         </li>
-        <li>use a PDF format
+        <li>upload one document using a PDF format
         </li>
-        <li>upload supporting evidence as well as the form and submit the form and evidence together (form RP07 and LL RP07 only)
         </li>
       </ul>
-        <p class="govuk-body">You can upload up to 5 documents but they must be the same type.</p>
+      {{ govukInsetText({
+        text: "If you are uploading a document that requires supporting evidence, you can upload up to 10 files including the completed document and the evidence."
+      }) }}
       {{ govukFileUpload({
         id: "file-upload-1",
         name: "file-upload-1",
