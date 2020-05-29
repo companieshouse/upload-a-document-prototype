@@ -28,7 +28,7 @@
           name: "typeInsolve",
           fieldset: {
             legend: {
-              text: "Insolvency form categories",
+              text: "Insolvency categories",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--xl"
             }
@@ -36,66 +36,37 @@
           items: [
             {
               value: "in-admin",
-              text: "In adminstration",
+              text: "Administration",
               hint: {
-               text: "AM forms"
-              }
-            },
-            {
-              value: "in-admin-two",
-              text: "In administration",
-              hint: {
-               text: "2. forms"
-              }
-            },
-            {
-              value: "receivership-two",
-              text: "Receivership",
-              hint: {
-               text: "3. forms"
-              }
-            },
-            {
-              value: "liquidation",
-              text: "Liquidation",
-              hint: {
-               text: "4. forms"
-              }
-            },
-            {
-              value: "cva",
-              text: "Company voluntary arrangement",
-              hint: {
-               text: "CVA forms"
-              }
-            },
-            {
-              value: "cvam",
-              text: "Company voluntary arrangement moratorium",
-              hint: {
-               text: "VAM forms"
-              }
-            },
-            {
-              value: "mvl",
-              text: "Members' voluntary liquidation and creditors' voluntary liquidation",
-              hint: {
-               text: "LR, COLIQ, 600, LIQ, VL1 and Scottish 1 and 3.5 forms "
+               text: "AM and 2. forms"
               }
             },
             {
               value: "receivership",
               text: "Receivership",
               hint: {
-               text: "REC and RM forms"
+               text: "REC, RM and 3. forms"
               }
             },
-
+            {
+              value: "liquidation",
+              text: "Liquidation",
+              hint: {
+               text: "Resolutions and deferment, 600, LIQ, 4., VL1 and Scottish 1 and 3.5 forms"
+              }
+            },
+            {
+              value: "cva",
+              text: "Company voluntary arrangement",
+              hint: {
+               text: "CVA and VAM forms"
+              }
+            },
             {
               value: "wuc",
-              text: "Winding up by the court",
+              text: "Winding up",
               hint: {
-               text: "WU, COCOMP and F14 forms"
+               text: "Court order, F14 and WU forms"
               }
             }
           ]
