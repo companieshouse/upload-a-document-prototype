@@ -66,7 +66,7 @@ router.post('/types-of-forms/form-types', function (req, res) {
   } if (value === 'insolvency') {
     res.redirect('insolvency/insolvency')
   } if (value === 'resolutions') {
-    res.redirect('../auth-screen')
+    res.redirect('resolutions/resolutions')
   } if (value === 'articles') {
     res.redirect('../auth-screen')
   } if (value === 'constitution') {
