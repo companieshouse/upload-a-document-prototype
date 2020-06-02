@@ -20,22 +20,22 @@
         </li>
         <li>upload one document using a PDF format
         </li>
-        </li>
-      </ul>
-      {{ govukInsetText({
+      </li>
+    </ul>
+    {{ govukInsetText({
         text: "If you are uploading a document that requires supporting evidence, you can upload up to 10 files including the completed document and the evidence."
       }) }}
-      {{ govukFileUpload({
+    {{ govukFileUpload({
         id: "file-upload-1",
         name: "file-upload-1",
         label: {
           text: "Upload document"
         }
       }) }}
-  {{ govukButton({
-        text: "Submit",
+    {{ govukButton({
+        text: "Submit document",
         href: "confirmation"
       }) }}
-</div>
+  </div>
 </div>
 {% endblock %}
