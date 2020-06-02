@@ -47,7 +47,7 @@
       </ul>
       <h2 class="govuk-heading-l">Documents you can upload
       </h2>
-      <h3 class="govuk-heading-m">Registrar's Powers documents</h3>
+      <h3 class="govuk-heading-m">Registrar's Powers</h3>
       <p class="govuk-body">Limited companies and limited liability partnerships (LLPs) can use this service to:</p>
       {{ govukAccordion({
         id: "accordion-default",
@@ -121,12 +121,34 @@
           }
         ]
       }) }}
-      <h3 class="govuk-heading-m">Statement of company's objects, articles and resolutions</h3>
+      <h3 class="govuk-heading-m">Change of constitution</h3>
       <p class="govuk-body">Limited companies and limited liability partnerships (LLPs) can use this service to:</p>
       {{ govukAccordion({
         id: "accordion-default",
         classes: "form-type-accordion",
         items: [
+          {
+            heading: {
+              text: "Give notice of restriction on the company's articles"
+            },
+            summary: {
+              text: "CC01"
+            },
+            content: {
+              html: "<p class='govuk-body'>Use this form to notify the existence of restriction to amend the company's articles.</p>"
+            }
+          },
+          {
+            heading: {
+              text: "Give notice of removal of restriction on company's articles"
+            },
+            summary: {
+              text: "CC02"
+            },
+            content: {
+              html: "<p class='govuk-body'>Use this form to notify the removal of restriction to amend the company's articles.</p>"
+            }
+          },
           {
             heading: {
               text: "File a statement of company's objects"
@@ -136,6 +158,28 @@
             },
             content: {
               html: "<p class='govuk-body'>Use this form to give notice of the change of company's objects.</p>"
+            }
+          },
+          {
+            heading: {
+              text: "Change constitution by enactment"
+            },
+            summary: {
+              text: "CC05"
+            },
+            content: {
+              html: "<p class='govuk-body'>Use this form for a change of constitution by legal instrument.</p>"
+            }
+          },
+          {
+            heading: {
+              text: "Change constitution by order of court or other authority"
+            },
+            summary: {
+              text: "CC06"
+            },
+            content: {
+              html: "<p class='govuk-body'>Use this form for a change of constitution by an order of court or other authority.</p>"
             }
           },
           {
@@ -191,7 +235,7 @@
 
       <h2 class="govuk-heading-l">Documents that need evidence</h2>
       <h3 class="govuk-heading-m">RP07 and LL RP07</h3>
-      <p class="govuk-body">You must include evidence to support your application. Your evidence can be copies of original documents.
+      <p class="govuk-body">You must include evidence to support your application. Your evidence can be copies of original documents. You can upload up to 10 files including the completed document and the evidence.
         Applications submitted without evidence will be rejected.</p>
       <h4 class="govuk-heading-s">The evidence we need for a person or company where the address is being used without permission</h4>
       <p class="govuk-body">We can accept:</p>
