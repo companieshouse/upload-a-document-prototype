@@ -4,9 +4,20 @@
 {% endblock %}
 
 {% block beforeContent %}
+  {{ govukBreadcrumbs({
+items: [
+  {
+    text: "Form types",
+    href: "../form-types"
+  },
+  {
+    text: "Change of constitution"
+  }
+]
+}) }}
   {{ govukBackLink({
       text: "Back",
-      href: "confirm-company"
+      href: "../form-types"
     }) }}
 {% endblock %}
 

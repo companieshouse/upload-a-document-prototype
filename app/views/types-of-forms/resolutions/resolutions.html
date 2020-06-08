@@ -4,37 +4,28 @@
 {% endblock %}
 
 {% block beforeContent %}
+  {{ govukBreadcrumbs({
+items: [
+{
+text: "Form types",
+href: "../form-types"
+},
+{
+text: "Resolutions"
+}
+]
+}) }}
   {{ govukBackLink({
       text: "Back",
-      href: "confirm-company"
+      href: "../form-types"
     }) }}
 {% endblock %}
 
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <form action="/types-of-forms/slp/limited-partnerships" method="post">
+      <form action="/types-of-forms/resolutions/resolutions" method="post">
         <h1 class="govuk-heading-xl">Resolutions</h1>
-        <h2 class="govuk-heading-m">You can upload your resolution:</h2>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>To alter the Articles of Association</li>
-          <li>To adopt the Articles of Association</li>
-          <li>To be exempt from the Appointing of Auditors</li>
-          <li>To increase authorised share capital</li>
-          <li>To decrease authorised share capital</li>
-          <li>To reduce issued share capital</li>
-          <li>For the financial assistance in the acquisition of shares</li>
-          <li>For the authority to purchase own shares out of capital</li>
-          <li>For the authority to purchase a number of shares</li>
-          <li>For the allotment of securities</li>
-          <li>To remove pre-emption rights</li>
-          <li>To vary share rights or name</li>
-          <li>For the redemption of redeemable shares</li>
-          <li>To redenominate shares</li>
-          <li>To reduce share capital on re-denomination</li>
-          <li>need to identify wording for generic RES13</li>
-          <li>need to identify wording for RES14</li>
-        </ul>
         <h2 class="govuk-heading-m">You cannot upload your resolution:</h2>
         <ul class="govuk-list govuk-list--bullet">
           <li>to change name of company</li>

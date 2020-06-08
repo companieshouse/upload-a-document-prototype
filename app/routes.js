@@ -175,6 +175,10 @@ router.post('/types-of-forms/sqp/scottish-limited-partnerships', function (req, 
   }
 })
 
+router.post('/types-of-forms/resolutions/resolutions', function (req, res) {
+  res.redirect('/auth-screen')
+})
+
 // Company number
 router.get('/company-number', function (req, res) {
   res.render('company-number', {
