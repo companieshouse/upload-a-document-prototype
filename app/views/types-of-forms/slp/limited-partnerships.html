@@ -4,6 +4,17 @@
 {% endblock %}
 
 {% block beforeContent %}
+  {{ govukBreadcrumbs({
+items: [
+{
+  text: "Form types",
+  href: "../form-types"
+},
+{
+  text: "Limited partnerships"
+}
+]
+}) }}
   {{ govukBackLink({
       text: "Back",
       href: "../form-types"
@@ -74,7 +85,7 @@ idPrefix: "reg",
 name: "reg",
 fieldset: {
   legend: {
-    html: "<span class='govuk-caption-xl'>Limited partnerships forms</span>
+    html: "<span class='govuk-caption-xl'>Limited partnerships</span>
 Select a document",
     isPageHeading: true,
     classes: "govuk-fieldset__legend--xl"
