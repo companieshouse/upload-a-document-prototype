@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  What type of document are you uploading?
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+items: [
+{
+  text: "Form types",
+  href: "../form-types"
+},
+{
+  text: "Limited partnerships"
+}
+]
+}) }}
+  {{ govukBackLink({
+      text: "Back",
+      href: "../form-types"
+    }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/slp/limited-partnerships" method="post">
+        {% if errorType == true %}
+          {{ govukErrorSummary({
+            titleText: "There is a problem",
+            errorList: errorList
+          }) }}
+          {{ govukRadios({
+            idPrefix: "slp",
+            name: "slp",
+            errorMessage: {
+              text: "Select the *type of form that you want to upload* "
+            },
+            fieldset: {
+              legend: {
+                html: "<span class='govuk-caption-xl'>Limited partnerships forms</span>
+            Select a document",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--xl"
+              }
+           },
+           items: [
+             {
+               value: "carcasses",
+               text: "LP5 - Register a limited partnership"
+             },
+             {
+               value: "mines",
+               text: "LP7 - Register a limited partnership as private fund limited partnership"
+             },
+             {
+               value: "mines",
+               text: "LP6 - Make changes to a limited partnership"
+             },
+             {
+               value: "mines",
+               text: "LP8 - Designate as a private fund limited partnership"
+             },
+             {
+               value: "carcasses",
+               text: "LP5 - Register a limited partnership"
+             },
+             {
+               value: "mines",
+               text: "LP7 - Register a limited partnership as private fund limited partnership"
+             },
+             {
+               value: "mines",
+               text: "LP6 - Make changes to a limited partnership"
+             },
+             {
+               value: "mines",
+               text: "LP8 - Designate as a private fund limited partnership"
+             }
+           ]
+   }) }}
+        {% else %}
+          {{ govukRadios({
+idPrefix: "reg",
+name: "reg",
+fieldset: {
+  legend: {
+    html: "<span class='govuk-caption-xl'>Limited partnerships</span>
+Select a document",
+    isPageHeading: true,
+    classes: "govuk-fieldset__legend--xl"
+  }
+},
+
+items: [
+{
+  value: "carcasses",
+  text: "LP5 - Register a limited partnership"
+},
+{
+  value: "mines",
+  text: "LP7 - Register a limited partnership as private fund limited partnership"
+},
+{
+  value: "mines",
+  text: "LP6 - Make changes to a limited partnership"
+},
+{
+  value: "mines",
+  text: "LP8 - Designate as a private fund limited partnership"
+}
+]
+}) }}
+        {% endif %}
+        {{ govukButton({
+text: "Continue"
+}) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}
