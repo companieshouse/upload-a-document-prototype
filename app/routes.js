@@ -235,6 +235,31 @@ router.post('/auth-screen', function (req, res) {
   }
 })
 
+// Supporting evidence question
+router.get('/question-upload-supporting', function (req, res) {
+  res.render('question-upload-supporting', {
+  })
+})
+
+router.post('/question-upload-supporting', function (req, res) {
+  var errors = []
+  var value = req.session.data['supporting-documents']
+  if (req.session.data['supporting-documents'] === '') {
+    errors.push({
+      text: 'Enter the company authentication code',
+      href: '#auth-number'
+    })
+    res.render('question-upload-supporting', {
+      errorAuth: true,
+      errorList: errors
+    })
+  } if (value === 'yes') {
+    res.redirect('upload-supporting-documents')
+  } else {
+    res.redirect('confirmation')
+  }
+})
+
 // CVA
 router.get('/types-of-forms/insolvency/cva', function (req, res) {
   res.render('types-of-forms/insolvency/cva', {
