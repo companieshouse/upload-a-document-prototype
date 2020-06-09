@@ -1,0 +1,23 @@
+{% set title = "Do you want to upload supporting evidence?" %}
+{% extends "layout.html" %}
+{% block pageTitle %}
+  {{title}}
+{% endblock %}
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "company-number"
+}) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">{{title}}</h1>
+
+      {{ govukButton({
+        text: "Confirm and continue",
+        href: "/types-of-forms/form-types"
+      }) }}
+    </div>
+  </div>
+{% endblock %}
