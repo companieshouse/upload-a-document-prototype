@@ -1,7 +1,4 @@
 {% extends "layout.html" %}
-{% block beforeContent %}
-  {% include "includes/breadcrumb.html" %}
-{% endblock %}
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -9,8 +6,7 @@
       <p class="govuk-body-l">Use this service to file certain documents online that would usually be sent to us in a paper format.</p>
       <p class="govuk-body">Only limited companies and limited liability partnerships (LLPs) can use this service.</p>
       <p class="govuk-body">
-        <a class="govuk-link" href="static/guidance">Read the guidance to find out how to use this service</a>,
-        including which documents you can file.</p>
+        <a class="govuk-link" href="static/guidance">Read the guidance to find out how to use this service</a>, including which documents you can file.</p>
       {{ govukInsetText({
         text: "This interim service has been created to enable paperless filing in response to the coronavirus (COVID-19) outbreak."
       }) }}
@@ -23,40 +19,39 @@
         </li>
       </ul>
       <p class="govuk-body">For some document types, you'll need:</p>
-      <ul class="govuk-list govuk-list--bullet">
-        </li>
-        <li>the company authentication code
-        </li>
-        <li>to pay for the document before uploading it
-        </li>
-        <li>to include supporting evidence
-        </li>
-      </ul>
-      {{ govukButton({
+      <ul class="govuk-list govuk-list--bullet"></li>
+      <li>the company authentication code
+      </li>
+      <li>to pay for the document before uploading it
+      </li>
+      <li>to include supporting evidence
+      </li>
+    </ul>
+    {{ govukButton({
         text: "Start now",
         href: "sign-in",
         classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-8",
         isStartButton: true
       }) }}
-      <h2 class="govuk-heading-m">Before you start</h2>
-      <p class="govuk-body">There are different services available if you need to:</p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="https://www.gov.uk/limited-company-formation/register-your-company" class="govuk-link">register a company</a>
-        </li>
-        <li>
-          <a href="https://www.gov.uk/file-your-company-annual-accounts" class="govuk-link">file company accounts</a>
-        </li>
-        <li>
-          <a href="https://www.gov.uk/file-your-confirmation-statement-with-companies-house" class="govuk-link">file a confirmation statement</a>
-        </li>
-        <li>
-          <a href="https://www.gov.uk/file-changes-to-a-company-with-companies-house" class="govuk-link">make changes to a company</a>
-        </li>
-        <li>
-          <a href="https://guidedfiling.companieshouse.gov.uk/start?t=DS01" class="govuk-link">close a company</a>
-        </li>
-      </ul>
-    </div>
+    <h2 class="govuk-heading-m">Before you start</h2>
+    <p class="govuk-body">There are different services available if you need to:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a href="https://www.gov.uk/limited-company-formation/register-your-company" class="govuk-link">register a company</a>
+      </li>
+      <li>
+        <a href="https://www.gov.uk/file-your-company-annual-accounts" class="govuk-link">file company accounts</a>
+      </li>
+      <li>
+        <a href="https://www.gov.uk/file-your-confirmation-statement-with-companies-house" class="govuk-link">file a confirmation statement</a>
+      </li>
+      <li>
+        <a href="https://www.gov.uk/file-changes-to-a-company-with-companies-house" class="govuk-link">make changes to a company</a>
+      </li>
+      <li>
+        <a href="https://guidedfiling.companieshouse.gov.uk/start?t=DS01" class="govuk-link">close a company</a>
+      </li>
+    </ul>
   </div>
+</div>
 {% endblock %}
