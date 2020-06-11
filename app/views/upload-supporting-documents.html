@@ -1,4 +1,4 @@
-{% set title = "Upload supporting evidence" %}
+{% set title = "" %}
 {% extends "layout.html" %}
 {% block pageTitle %}
   {{title}}
@@ -12,12 +12,16 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">{{title}}</h1>
       {{ govukFileUpload({
         id: "file-upload-1",
+        hint: {
+          text: "You can upload up to 9 files"
+        },
         name: "file-upload-1",
         label: {
-          text: "Upload evidence"
+          text: "Upload supporting evidence",
+          isPageHeading: true,
+          classes: "govuk-label--xl"
         }
       }) }}
       {{ govukButton({
