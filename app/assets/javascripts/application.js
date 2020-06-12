@@ -10,4 +10,11 @@ $(document).ready(function () {
   $('.hide').click(function () {
     $('.govuk-radios__hint').toggle()
   })
+  $('input[name="supporting-documents"]').on('change', function () {
+    if ($(this).val() === 'no') {
+      $('.test').text('Submit document')
+    } else {
+      $('.test').text('Continue')
+    }
+  })
 })
