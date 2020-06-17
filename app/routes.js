@@ -73,10 +73,12 @@ router.post('/types-of-forms/form-types', function (req, res) {
     res.redirect('constitution/change-of-constitution')
   } if (value === 'reg') {
     res.redirect('reg/reg')
+  } if (value === 'lp') {
+    res.redirect('lp/limited-partnerships')
   } if (value === 'slp') {
-    res.redirect('slp/limited-partnerships')
+    res.redirect('slp/scottish-limited-partnership')
   } if (value === 'sqp') {
-    res.redirect('sqp/scottish-limited-partnership')
+    res.redirect('sqp/sqp-forms')
   }
 })
 
@@ -141,6 +143,14 @@ router.post('/types-of-forms/reg/reg', function (req, res) {
   } else {
     res.redirect('/auth-screen')
   }
+})
+
+router.post('/types-of-forms/slp/scottish-limited-partnership', function (req, res) {
+  res.redirect('/auth-screen')
+})
+
+router.post('/types-of-forms/sqp/sqp-forms', function (req, res) {
+  res.redirect('/auth-screen')
 })
 
 router.post('/types-of-forms/slp/limited-partnerships', function (req, res) {
