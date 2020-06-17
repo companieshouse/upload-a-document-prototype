@@ -146,11 +146,11 @@ router.post('/types-of-forms/reg/reg', function (req, res) {
 })
 
 router.post('/types-of-forms/slp/scottish-limited-partnership', function (req, res) {
-  res.redirect('/auth-screen')
+  res.redirect('/upload-accounts')
 })
 
 router.post('/types-of-forms/sqp/sqp-forms', function (req, res) {
-  res.redirect('/auth-screen')
+  res.redirect('/upload-accounts')
 })
 
 router.post('/types-of-forms/slp/limited-partnerships', function (req, res) {
