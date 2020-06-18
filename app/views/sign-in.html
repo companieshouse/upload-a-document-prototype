@@ -1,23 +1,18 @@
+{% set title = "Sign in to Companies House" %}
 {% extends "layout.html" %}
-
-{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
 {% block pageTitle %}
-  Sign in to Companies House
+  {{title}}
 {% endblock %}
-
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
     href: "index"
   }) }}
 {% endblock %}
-
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-one-half">
-      <h1 class="govuk-heading-xl">Sign in to Companies House</h1>
+      <h1 class="govuk-heading-xl">{{title}}</h1>
       <form action="/sign-in" method="post">
         {% if errorEmail == true or errorPassword == true %}
           {{ govukErrorSummary({

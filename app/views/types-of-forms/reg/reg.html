@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  What type of document are you uploading?
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "../form-types"
+    }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/reg/reg" method="post">
+        {% if errorType == true %}
+          {{ govukErrorSummary({
+            titleText: "There is a problem",
+            errorList: errorList
+          }) }}
+          {{ govukRadios({
+            idPrefix: "reg",
+            name: "reg",
+            errorMessage: {
+              text: "Select the *type of form that you want to upload* "
+            },
+            fieldset: {
+              legend: {
+                html: "<span class='govuk-caption-xl'>Registrar's powers</span>
+            Select a document",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--xl"
+              }
+           },
+     items: [
+       {
+         value: "carcasses",
+         text: "Reg"
+       },
+       {
+         value: "mines",
+         text: "Insolvency"
+       }
+     ]
+   }) }}
+        {% else %}
+          {{ govukRadios({
+idPrefix: "reg",
+name: "reg",
+fieldset: {
+  legend: {
+    html: "<span class='govuk-caption-xl'>Registrar's powers</span>
+Select a document",
+    isPageHeading: true,
+    classes: "govuk-fieldset__legend--xl"
+  }
+},
+
+items: [
+  {
+    value: "carcasses",
+    text: "RP02A - Apply for rectification by the registrar of companies"
+  },
+  {
+    value: "mines",
+    text: "RP02B - Apply for rectification of a change of registered address"
+  },
+  {
+    value: "mines",
+    text: "RP03 - Object to a request to rectify the register"
+  },
+  {
+    value: "mines",
+    text: "RP06 - Apply to remove material about a director"
+  },
+  {
+    value: "mines",
+    text: "RP07 - Apply to change a company's disputed registered office address"
+  },
+  {
+    value: "mines",
+    text: "RPCH01 - Correct a director's date of birth"
+  },
+  {
+    value: "mines",
+    text: "LL RP02A - Apply for rectification by the registrar for a limited liability partnership"
+  },
+  {
+    value: "mines",
+    text: "LL RPCH01 - Correct the date of birth of an LLP member"
+  },
+  {
+    value: "mines",
+    text: "LL RP02B - Apply for rectification of change of registered address of a limited liability partnership"
+  },
+  {
+    value: "mines",
+    text: "LL RP03 - Notice of an objection to a request for the Registrar of Companies to rectify the Register for a Limited Liability Partnership "
+  },
+  {
+    value: "mines",
+    text: "LL RP07 - Apply to change a disputed registered office address of a limited liability partnership"
+  }
+]
+}) }}
+        {% endif %}
+        {{ govukButton({
+text: "Continue"
+}) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

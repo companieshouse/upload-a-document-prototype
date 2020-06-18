@@ -1,6 +1,7 @@
+{% set title = "Upload the completed document" %}
 {% extends "layout.html" %}
 {% block pageTitle %}
-  Upload the completed document
+  {{title}}
 {% endblock %}
 {% block beforeContent %}
   {{ govukBackLink({
@@ -11,22 +12,19 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <h1 class="govuk-heading-xl">Upload the completed document</h1>
-      <p class="govuk-body">You should:</p>
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">{{title}}</h1>
+      <p class="govuk-body">You must:</p>
       <ul class="govuk-list govuk-list--bullet">
-
+        <li>complete the document before uploading it
         </li>
-        <li>upload one Companies House form in PDF format
+        <li>upload one document using a PDF format
         </li>
-        <li>complete the form before uploading it
-        </li>
-      </ul>
-      {{ govukInsetText({
-  text: "If your form needs supporting evidence (RP07 and LL RP07) you must merge the completed form and evidence into one PDF file and upload them as a single document."
-}) }}
-      {% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
-
-      {{ govukFileUpload({
+      </li>
+    </ul>
+    {{ govukInsetText({
+        text: "Some documents require supporting evidence. You can upload evidence on the next screen after have uploaded your document."
+      }) }}
+    {{ govukFileUpload({
         id: "file-upload-1",
         name: "file-upload-1",
         label: {
@@ -35,7 +33,7 @@
       }) }}
     {{ govukButton({
         text: "Continue",
-        href: "pay"
+        href: "payment"
       }) }}
   </div>
 </div>

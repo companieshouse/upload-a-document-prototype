@@ -1,0 +1,146 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  What type of document are you uploading?
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "../../types-of-accounts"
+    }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/insolvency/in-adminstration" method="post">
+        {{ govukRadios({
+          idPrefix: "typeInsolve",
+          name: "typeInsolve",
+          fieldset: {
+            legend: {
+              html: "<span class='govuk-caption-xl'>Administration</span>
+Select a document",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "am01",
+              text: "AM01 - Give notice of administrator's appointment"
+            },
+            {
+              value: "am01s",
+              text: "AM01 (Scotland) - Give notice of administrator's appointment"
+            },
+            {
+              value: "am20s",
+              text: "AM20 (Scotland) -  Give notice of automatic end of administration"
+            },
+            {
+              value: "am21",
+              text: "AM21 - Give notice of end of administration"
+            },
+            {
+              value: "am21s",
+              text: "AM21 (Scotland) - Give notice of end of administration"
+            },
+            {
+              value: "am22",
+              text: "AM22 - Give notice of a move from administration to creditors' voluntary liquidation"
+            },
+            {
+              value: "am22s",
+              text: "AM22 (Scotland) - Give notice of move from administration to creditors’ voluntary liquidation"
+            },
+            {
+              value: "am23",
+              text: "AM23 - Give notice of move from administration to dissolution"
+            },
+            {
+              value: "am24s",
+              text: "AM24 (Scotland) - Give notice of a court order in respect of date of dissolution"
+            },
+            {
+              value: "am25",
+              text: "AM25 - Give notice of court order ending adminstration"
+            },
+            {
+              value: "am25s",
+              text: "AM25 (Scotland) - Give notice of court order ending administration"
+            },
+            {
+              value: "211bs",
+              text: "2.11B (Scotland) - Notice of appointment of administrator"
+            },
+            {
+              value: "212b",
+              text: "2.12B - Give notice of administrator's appointment"
+            },
+
+            {
+              value: "212b",
+              text: "2.12B (Northern Ireland) - Notice of administrator's appointment"
+            },
+            {
+              value: "223bs",
+              text: "2.23B (Scotland) - Notice of end of administration"
+            },
+            {
+              value: "224bs",
+              text: "2.24B (Scotland) - Notice of administrative receiver's report"
+            },
+            {
+              value: "225bs",
+              text: "2.25B (Scotland) - Notice of move from administration to creditors' voluntary liquidation"
+            },
+            {
+              value: "226bs",
+              text: "2.26B (Scotland) - Notice of move from administration to dissolution"
+            },
+            {
+              value: "227bs",
+              text: "2.27B (Scotland) - Notice of court order in respect of date of dissolution"
+            },
+            {
+              value: "230b",
+              text: "2.30B - Notice of automatic end of administration"
+            },
+            {
+              value: "232b",
+              text: "2.32B - Notice of end of administration"
+            },
+            {
+              value: "233b",
+              text: "2.33B - Give notice of court ending administration"
+            },
+
+                        {
+                          value: "233b",
+                          text: "2.33B (Northern Ireland) - Notice of court order ending administration"
+                        },
+            {
+              value: "234b",
+              text: "2.34B - Notice of move from administration to creditors' voluntary liquidation"
+            },
+            {
+              value: "235b",
+              text: "2.35B - Notice of move from administration to dissolution"
+            }
+
+
+
+
+
+
+
+          ]
+        }) }}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

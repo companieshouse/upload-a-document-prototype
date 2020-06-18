@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  What type of document are you uploading?
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "../../types-of-accounts"
+    }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/insolvency/cva" method="post">
+        {{ govukRadios({
+          idPrefix: "typeInsolve",
+          name: "typeInsolve",
+          fieldset: {
+            legend: {
+              html: "<span class='govuk-caption-xl'>Company voluntary arrangement</span>
+Select a document",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "cva1",
+              text: "CVA1 - Give notice of voluntary arrangement taking effect"
+            },
+
+            {
+              value: "vam1",
+              text: "VAM1 - Give notice of the commencement of moratorium"
+            },
+            {
+              value: "vam1s",
+              text: "VAM1 (Scotland) - Give notice of the commencement of moratorium"
+            },
+            {
+              value: "vam7",
+              text: "VAM7 - Give notice of the end of moratorium"
+            },
+
+            {
+              value: "vam7s",
+              text: "VAM7 (Scotland) - Give notice of the end of moratorium"
+            },
+            {
+              value: "vam8s",
+              text: "VAM8 (Scotland) - Give notice of disposal of charged property during a moratorium"
+            }
+          ]
+        }) }}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

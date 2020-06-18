@@ -1,0 +1,121 @@
+{% extends "layout-gov.html" %}
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "#"
+    },
+    {
+      text: "Business and industry",
+      href: "#"
+    }
+  ]
+}) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Form</span>
+      <h1 class="govuk-heading-l">Apply for a registration of a limited partnership (LP5)</h1>
+      <p class="govuk-body-l">Use this form as an application for registration of a limited partnership</p>
+    </div>
+  </div>
+  <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-3">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-body-s govuk-!-margin-bottom-1">
+        Published 1 June 2009
+      </p>
+      <p class="govuk-body-s govuk-!-margin-bottom-1">
+        Last updated 6 April 2017 -
+        <a href="#" class="govuk-link">see all updates</a>
+      </p>
+      <p class="govuk-body-s">From:
+        <a class="govuk-link govuk-!-font-weight-bold" href="https://www.gov.uk/government/organisations/companies-house">Companies House</a>
+      </p>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m govuk-!-margin-top-4">Documents</h2>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-quarter govuk-auto-width">
+          <img class="preview-image" src="/public/images/thumbnail_LP5_.pdf.png"/>
+        </div>
+        <div class="govuk-grid-column-three-quarters">
+          <h2 class="govuk-heading-m govuk-!-font-weight-regular">
+            <a href="/public/pdf/LP5.pdf" clas="govuk-link">LP5 Application for registration of a limited partnership</a>
+          </h2>
+          <p class="govuk-body govuk-body-s">
+            PDF, 35.1KB, 3 pages
+          </p>
+        </div>
+      </div>
+      <h3 class=" govuk-heading-m govuk-!-margin-top-8">Details</h3>
+      <div class="govuk-inset-text">
+        You can continue to use form LP5 to register a limited partnership in Scotland until 24 July 2017
+      </div>
+      <p class="govuk-body">You can use this form as an application for registration of a limited partnership. There is a cost of £20 to file it.</p>
+      <div class="gem-c-govspeak">
+        <div class="call-to-action">
+          <p>To apply for registration of a limited partnership which is to be designated as a private fund limited partnership, use form LP7</p>
+        </div>
+      </div>
+      <h3 class="govuk-heading-m">How to pay the fee</h3>
+      <p class="govuk-body">You must pay the appropriate fee using GOV.UK Pay before sending your LP5 application. It costs £32 for each document listed in your application.</p>
+      <div class="gem-c-govspeak">
+        <div class="call-to-action">
+          <p>
+            <a href="#" class="govuk-link">Pay the fee for your LP5 application</a>
+          </p>
+        </div>
+      </div>
+      <p class="govuk-body">Once the payment is complete, you’ll get a payment reference.</p>
+      {{ govukInsetText({
+        text: "You must include the payment reference when you send us your SR01 application."
+      }) }}
+      <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-3">
+      <p class="govuk-body-s govuk-!-margin-bottom-1">
+        Published 1 June 2009
+      </p>
+      <p class="govuk-body-s govuk-!-margin-bottom-1">
+        Last updated 6 April 2017 -
+        <a href="#" class="govuk-link">see all updates</a>
+      </p>
+      <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-3 govuk-!-margin-top-8 blue-line">
+      <h4 class="govuk-heading-s">Explore the topic</h4>
+      <a href="#" class="govuk-link govuk-!-font-weight-bold">Business and industry</a>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <h4 class="govuk-heading-s">
+        Related content
+      </h4>
+      <ul class="govuk-list">
+        <li>
+          <a href="#" class="govuk-link">Register a limited partnership</a>
+        </li>
+        <li>
+          <a href="#" class="govuk-link">Register a limited liability partnership (LL IN01)</a>
+        </li>
+        <li>
+          <a href="#" class="govuk-link">Limited liability partnership incorporation and names</a>
+        </li>
+        <li>
+          <a href="#" class="govuk-link">Companies House forms for limited partnerships</a>
+        </li>
+        <li>
+          <a href="#" class="govuk-link">Specify the nature of a change in the limited partnership (LP6)</a>
+        </li>
+      </ul>
+      <h4 class="govuk-heading-s">
+        Collection
+      </h4>
+      <ul class="govuk-list">
+        <li>
+          <a href="#" class="govuk-link">Companies House forms for limited partnerships</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+{% endblock %}

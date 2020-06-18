@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Insolvency form categories
+{% endblock %}
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "../form-types"
+    }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/insolvency/insolvency" method="post">
+        {{ govukRadios({
+          idPrefix: "typeInsolve",
+          name: "typeInsolve",
+          fieldset: {
+            legend: {
+              text: "What type of insolvency document are you uploading?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "in-admin",
+              text: "Administration",
+              hint: {
+               text: "AM and 2. forms"
+              }
+            },
+            {
+              value: "receivership",
+              text: "Receivership",
+              hint: {
+               text: "REC, RM and 3. forms"
+              }
+            },
+            {
+              value: "liquidation",
+              text: "Liquidation",
+              hint: {
+               text: "Resolutions and deferment, 600, LIQ, 4., VL1 and Scottish 1 and 3.5 forms"
+              }
+            },
+            {
+              value: "cva",
+              text: "Company voluntary arrangement",
+              hint: {
+               text: "CVA and VAM forms"
+              }
+            },
+            {
+              value: "wuc",
+              text: "Winding up",
+              hint: {
+               text: "Court order, F14 and WU forms"
+              }
+            }
+          ]
+        }) }}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

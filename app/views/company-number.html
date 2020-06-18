@@ -1,13 +1,13 @@
+{% set title = "Tell us your company number" %}
 {% extends "layout.html" %}
-{% from "govuk/components/input/macro.njk" import govukInput %}
 {% block pageTitle %}
-  Tell us your company number
+  {{title}}
 {% endblock %}
 {% block beforeContent %}
   {{ govukBackLink({
-  text: "Back",
-  href: "sign-in"
-}) }}
+    text: "Back",
+    href: "sign-in"
+  }) }}
 {% endblock %}
 {% block content %}
   <div class="govuk-grid-row">
@@ -15,45 +15,45 @@
       <form action="/company-number" method="post">
         {% if errorNum == true %}
           {{ govukErrorSummary({
-          titleText: "There is a problem",
-          errorList: errorList
-        }) }}
+            titleText: "There is a problem",
+            errorList: errorList
+          }) }}
           {{ govukInput({
-        label: {
-        text: "What is the company number? ",
-        classes: "govuk-label--xl"
-        },
-        hint: {
-          text: "This is the 8 character reference issued by Companies House when the company was set up."
-        },
-          classes: "govuk-input--width-10",
-        id: "company-number",
-        name: "company-number",
-        errorMessage: {
-          text: "Enter the company number"
-        }
-      }) }}
+            label: {
+              text: "What is the company number? ",
+              classes: "govuk-label--xl"
+            },
+            hint: {
+              text: "This is the 8 character reference issued by Companies House when the company was set up."
+            },
+            classes: "govuk-input--width-10",
+            id: "company-number",
+            name: "company-number",
+            errorMessage: {
+              text: "Enter the company number"
+            }
+          }) }}
         {% else %}
           {{ govukInput({
-          label: {
-          text: "What is the company number? ",
-          classes: "govuk-label--xl"
-          },
-          hint: {
-            text: "This is the 8 character reference issued by Companies House when the company was set up."
-          },
+            label: {
+              text: "What is the company number? ",
+              classes: "govuk-label--xl"
+            },
+            hint: {
+              text: "This is the 8 character reference issued by Companies House when the company was set up."
+            },
             classes: "govuk-input--width-10",
-          id: "company-number",
-          name: "company-number"
-        }) }}
+              id: "company-number",
+              name: "company-number"
+            }) }}
         {% endif %}
         {{ govukDetails({
-        summaryText: "Help with company number",
-        html: "<p>Use the <a target='blank' href='https://beta.companieshouse.gov.uk/'>Companies House service</a> to find the company number (opens in a new tab or window).</p>"
-       }) }}
+          summaryText: "Help with company number",
+          html: "<p>Use the <a target='blank' href='https://beta.companieshouse.gov.uk/'>Companies House service</a> to find the company number (opens in a new tab/window).</p>"
+        }) }}
         {{ govukButton({
-         text: "Continue"
-       }) }}
+          text: "Continue"
+        }) }}
       </form>
     </div>
   </div>

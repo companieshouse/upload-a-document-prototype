@@ -1,6 +1,7 @@
+{% set title = "Confirm this is the correct company" %}
 {% extends "layout.html" %}
 {% block pageTitle %}
-  Confirm this is the correct company
+  {{title}}
 {% endblock %}
 {% block beforeContent %}
   {{ govukBackLink({
@@ -11,7 +12,7 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">Confirm this is the correct company</h1>
+      <h1 class="govuk-heading-xl">{{title}}</h1>
       {{ govukTable({
         firstCellIsHeader: true,
         classes: "align-top",
@@ -53,7 +54,7 @@
             text: "Company type"
           },
           {
-            text: "Private limited Company"
+            text: "Private Limited Company"
           }
         ],
         [
@@ -61,14 +62,14 @@
             text: "Registered office address"
           },
           {
-            html: "Delta 606 Welton Road,<br/> Delta Office Park,<br/> Swindon,<br/> United Kingdom,<br/> SN5 7XF"
+            html: "Delta 606 Welton Road<br/> Delta Office Park<br/> Swindon<br/> United Kingdom<br/> SN5 7XF"
           }
         ]
         ]
       }) }}
       {{ govukButton({
-        text: "Confirm",
-        href: "types-of-accounts"
+        text: "Confirm and continue",
+        href: "/types-of-forms/form-types"
       }) }}
     </div>
   </div>

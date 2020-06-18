@@ -1,0 +1,274 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  {{serviceName}}
+{% endblock %}
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "index.html"
+  }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">Guidance</span>
+      <h1 class="govuk-heading-xl">{{serviceName}}
+      </h1>
+      <p class="govuk-body-l">How to file certain documents online that would usually be sent to us in a paper format.
+      </p>
+      {{ govukInsetText({
+        text: "This guidance has been created for the interim Upload a document to Companies House service to enable paperless filing in response to the coronavirus (COVID-19) outbreak."
+      }) }}
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible govuk-!-margin-bottom-3">
+      <p class="govuk-body-s govuk-!-margin-bottom-1">Published 8 April 2020</p>
+      <p class="govuk-body-s">From:
+        <a class="govuk-link govuk-!-font-weight-bold" href="https://www.gov.uk/government/organisations/companies-house">Companies House</a>
+      </p>
+      <p class="govuk-body-s govuk-!-margin-bottom-2">Contents</p>
+      <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-8">
+        <li>
+          <a class="govuk-link govuk-body-s" href="">Documents you can upload</a>
+        </li>
+        <li>
+          <a class="govuk-link govuk-body-s" href="">How to prepare the document</a>
+        </li>
+        <li>
+          <a class="govuk-link govuk-body-s" href="">Documents that need evidence</a>
+        </li>
+        <li>
+          <a class="govuk-link govuk-body-s" href="">Documents that have a fee</a>
+        </li>
+        <li>
+          <a class="govuk-link govuk-body-s" href="">What happens next</a>
+        </li>
+        <li>
+          <a class="govuk-link govuk-body-s" href="">Contact us</a>
+        </li>
+      </ul>
+      <h2 class="govuk-heading-l">Documents you can upload
+      </h2>
+      <h3 class="govuk-heading-m">Registrar's powers</h3>
+      <p class="govuk-body">Limited companies and limited liability partnerships (LLPs) can use this service to:</p>
+      {{ govukAccordion({
+        id: "accordion-default",
+        classes: "form-type-accordion",
+        items: [
+          {
+            heading: {
+              text: "Apply for a rectification by the registrar of companies"
+            },
+            summary: {
+              text: "RP02A or LL RP02A"
+            },
+            content: {
+              html: "<p class='govuk-body'>Use this form to tell us about a correction on the register where inaccurate information was delivered on or after 1 October 2009.</p>"
+            }
+          },
+          {
+            heading: {
+              text: "Correct a director’s date of birth which was incorrectly stated on incorporation"
+            },
+            summary: {
+              text: "RPCH01 or LL RPCH01"
+            },
+            content: {
+              html: "<p class='govuk-body'>Use this form to correct a director’s date of birth which was stated incorrectly on the incorporation document.</p><p class='govuk-body'>You must also submit a form RP02A before sending this form to change the register (LL RP02A for LLPs).</p>"
+            }
+          },
+          {
+            heading: {
+              text: "Apply for rectification of a change of registered address"
+            },
+            summary: {
+              text: "RP02B or LL RP02B"
+            },
+            content: {
+              html: "<p class='govuk-body'>Use this form to correct a change of registered office or UK establishment address that was delivered on or after 1 October 2009.</p>"
+            }
+          },
+          {
+            heading: {
+              text: "Object to a request to rectify the register"
+            },
+            summary: {
+              text: "RP03 or LL RP03"
+            },
+            content: {
+              html: "<p class='govuk-body'>Use this form to tell us that you object to an application to correct the register.</p>"
+            }
+          },
+          {
+            heading: {
+              text: "Apply to remove material about a director"
+            },
+            summary: {
+              text: "RP06"
+            },
+            content: {
+              html: "<p class='govuk-body'>Use this form to apply to remove the notice of a director’s appointment, if that director did not give permission to act.</p>"
+            }
+          },
+          {
+            heading: {
+              text: "Apply to change a company’s disputed registered office address"
+            },
+            summary: {
+              text: "RP07 or LL RP07"
+            },
+            content: {
+              html: "<p class='govuk-body'>Use this form to apply to change a company’s registered office address if there is a dispute over the address. You must include supporting evidence.</p>"
+            }
+          }
+        ]
+      }) }}
+      <h3 class="govuk-heading-m">Change of constitution</h3>
+      <p class="govuk-body">Limited companies and limited liability partnerships (LLPs) can use this service to:</p>
+      {{ govukAccordion({
+        id: "accordion-default",
+        classes: "form-type-accordion",
+        items: [
+          {
+            heading: {
+              text: "Give notice of restriction on the company's articles"
+            },
+            summary: {
+              text: "CC01"
+            },
+            content: {
+              html: "<p class='govuk-body'>Use this form to notify the existence of restriction to amend the company's articles.</p>"
+            }
+          },
+          {
+            heading: {
+              text: "Give notice of removal of restriction on company's articles"
+            },
+            summary: {
+              text: "CC02"
+            },
+            content: {
+              html: "<p class='govuk-body'>Use this form to notify the removal of restriction to amend the company's articles.</p>"
+            }
+          },
+          {
+            heading: {
+              text: "File a statement of company's objects"
+            },
+            summary: {
+              text: "CC04"
+            },
+            content: {
+              html: "<p class='govuk-body'>Use this form to give notice of the change of company's objects.</p>"
+            }
+          },
+          {
+            heading: {
+              text: "Change constitution by enactment"
+            },
+            summary: {
+              text: "CC05"
+            },
+            content: {
+              html: "<p class='govuk-body'>Use this form for a change of constitution by legal instrument.</p>"
+            }
+          },
+          {
+            heading: {
+              text: "Change constitution by order of court or other authority"
+            },
+            summary: {
+              text: "CC06"
+            },
+            content: {
+              html: "<p class='govuk-body'>Use this form for a change of constitution by an order of court or other authority.</p>"
+            }
+          },
+          {
+            heading: {
+              text: "File a resolution"
+            },
+            summary: {
+              text: ""
+            },
+            content: {
+              html: "<p class='govuk-body'>A copy of the amending resolution must be submitted within 15 days of the resolution being passed.</p>"
+            }
+          },
+          {
+            heading: {
+              text: "File a set of articles"
+            },
+            summary: {
+              text: ""
+            },
+            content: {
+              html: "<p class='govuk-body'>A copy of the revised articles must be submitted within 15 days of the amendment taking effect.</p>"
+            }
+          }
+        ]
+      }) }}
+      <h2 class="govuk-heading-l">How to prepare the document</h2>
+      <p class="govuk-body">You must complete the document in advance. Save it to the device you are using in a PDF format so that it is ready to upload.</p>
+      <h3 class="govuk-heading-m">Companies House forms</h3>
+      <h4 class="govuk-heading-s">You can complete the form electronically:</h4>
+      <ol class="govuk-list govuk-list--number">
+        <li>
+          <a href="https://www.gov.uk/topic/company-registration-filing/forms" class="govuk-link">Find the Companies House form</a>
+          that you need and download it.</li>
+        <li>Type the information directly onto the form.</li>
+        <li>Save the form to the device you are using so that it is ready to upload.</li>
+      </ol>
+      <h4 class="govuk-heading-s">You can complete the form using a pen:</h4>
+      <ul class="govuk-list govuk-list--number">
+        <li>Print the form.</li>
+        <li>Fill in the information directly onto the form using black ink.</li>
+        <li>Scan the completed form.</li>
+        <li>Save the scanned form to the device you are using so that it is ready to upload.</li>
+      </ul>
+            <h3 class="govuk-heading-m">Signatures</h3>
+            <p class="govuk-body">We can accept signatures that are:</p>
+            <ul class="govuk-list govuk-list--bullet"></li>
+            <li>digitally generated</li>
+            <li>typed directly into the form</li>
+            <li>scanned onto the form</li>
+            <li>hand-written in black ink</li>
+                </ul>
+
+      <h2 class="govuk-heading-l">Documents that need evidence</h2>
+      <h3 class="govuk-heading-m">RP07 and LL RP07</h3>
+      <p class="govuk-body">You must include evidence to support your application. Your evidence can be copies of original documents. You can upload up to 10 files including the completed document and the evidence.
+        Applications submitted without evidence will be rejected.</p>
+      <h4 class="govuk-heading-s">The evidence we need for a person or company where the address is being used without permission</h4>
+      <p class="govuk-body">We can accept:</p>
+      <ul class="govuk-list govuk-list--bullet"></li>
+      <li>documents showing the applicant’s rights in the address, such as leasehold or freehold</li>
+      <li>a written agreement allowing the applicant to use the address</li>
+      <li>a utility bill sent to the applicant at the address and dated within the last 6 months</li>
+    </ul>
+    <h4 class="govuk-heading-s">The evidence we need for a service provider who had a contract with the company which is now terminated</h4>
+    <p class="govuk-body">We can accept:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>written evidence of the start and end of the contract. This might be the company’s request for service, an invoice that shows proof of payment or other evidence of the company’s involvement</li>
+      <li>a copy of the signed contract and the termination letter</li>
+    </ul>
+    <h2 class="govuk-heading-l">Documents that have a fee</h2>
+    <p class="govuk-body">Some documents have a filing fee. If the document you are uploading has a filing fee, it will be shown at the end of the form.</p>
+    </ul>
+    <h3 class="govuk-heading-m">How to pay for the document</h3>
+  <p class="govuk-body">You must pay for your document online before you upload it.</p>
+    <p class="govuk-body">How to pay:</p>
+    <ul class="govuk-list govuk-list--number">
+      <li>Go to the payment link shown at the end of the form you are uploading.</li>
+      <li>After you have paid, make a note of the payment reference number.</li>
+      <li>Enter the payment reference number at the end of the form you are uploading. You will also find this in your confirmation email.</li>
+      <li>You will also be asked to enter the payment reference number in this service after you have uploaded your document.</li>
+    </ul>
+    <h2 class="govuk-heading-l">What happens next</h2>
+    <p class="govuk-body">You will receive a confirmation email to let you know if your document has been uploaded. An examiner will then process the uploaded document to check if it's acceptable for filing.</p>
+    <p class="govuk-body">If your document is acceptable for filing, the document will be registered with the date it was uploaded to Companies House.</p>
+    <p class="govuk-body">If your document is not acceptable for filing we will email you to let you know what to do next.</p>
+    <h2 class="govuk-heading-l">Contact us</h2>
+    <p class="govuk-body">Email us at <a class="govuk-link" href="mailto:enquiries@companieshouse.gov.uk">enquiries@companieshouse.gov.uk</a> and we'll answer as soon as possible.</p>
+    <p class="govuk-body">Our telephone contact centre is now closed to protect the welfare of our employees during the coronavirus (COVID-19) outbreak.</p>
+  </div>
+</div>
+{% endblock %}

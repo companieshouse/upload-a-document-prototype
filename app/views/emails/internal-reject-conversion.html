@@ -1,0 +1,62 @@
+{% extends "emails/layout-email.html" %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {% set buttonHref = "The customer reference number is Y2345678" %}
+      {{ govukPanel({
+        titleText: "Document rejected",
+        classes: "rejected",
+        html: buttonHref
+      }) }}
+      {{ govukTable({
+  rows: [
+    [
+      {
+        text: "Company number"
+      },
+      {
+        text: "SC393288"
+      }
+    ],
+    [
+      {
+        text: "Company name"
+      },
+      {
+        text: "ZLC LTD"
+      }
+    ],
+    [
+      {
+        text: "Type of document"
+      },
+      {
+        text: "RP07"
+      }
+    ],
+    [
+      {
+        text: "Date rejected"
+      },
+      {
+        text: "2 Jan 2020"
+      }
+    ]
+  ]
+}) }}
+      <p class="govuk-body">This submission was rejected because one or more of the uploaded documents failed to convert from a PDF file into a TIFF file.</p>
+      <p class="govuk-body">The conversion was failed by:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Document 1.pdf</li>
+        <li>Document 2.pdf</li>
+        <li>Document 3.pdf</li>
+      </ul>
+      <p class="govuk-body">The customer will need to rectify any documents that failed the conversion, then resubmit with any other documents that were part of this submission.</p>
+      <h2 class="govuk-heading-m">Customer contact details</h2>
+      <p class="govuk-body">Contact the customer to advise them at
+        <a href="mailto:person@gmail.com">person@gmail.com</a>
+      </p>
+
+    </div>
+  </div>
+{% endblock %}

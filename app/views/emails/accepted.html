@@ -1,0 +1,57 @@
+{% extends "emails/layout-email.html" %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {% set buttonHref = "Your reference number is Y2345678" %}
+      {{ govukPanel({
+        titleText: "Document accepted",
+        html: buttonHref
+      }) }}
+      {{ govukTable({
+  rows: [
+    [
+      {
+        text: "Company number"
+      },
+      {
+        text: "SC393288"
+      }
+    ],
+    [
+      {
+        text: "Company name"
+      },
+      {
+        text: "ZLC LTD"
+      }
+    ],
+    [
+      {
+        text: "Type of document"
+      },
+      {
+        text: "RP07"
+      }
+    ],
+    [
+      {
+        text: "Date submitted"
+      },
+      {
+        text: "1 Jan 2020"
+      }
+    ]
+  ]
+}) }}
+      <p class="govuk-body">The document you uploaded was accepted for filing.</p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p class="govuk-body">Documents that usually appear as part of a company’s filing history will show on the public record in the next few days.</p>
+      <h2 class="govuk-heading-m">Contact us</h2>
+      <p class="govuk-body">If you have a question you can email us at
+        <a href="mailto:enquiries@companieshouse.gov.uk">enquiries@companieshouse.gov.uk</a>
+        and someone will reply as soon as possible.</p>
+        <p>Our telephone contact centre is now closed to protect the welfare of our employees during the coronavirus (COVID-19) outbreak.</p>
+    </div>
+  </div>
+{% endblock %}

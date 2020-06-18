@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  What type of document are you uploading?
+{% endblock %}
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "../confirm-company"
+    }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/form-types" method="post">
+        {% if errorType == true %}
+          {{ govukErrorSummary({
+            titleText: "There is a problem",
+            errorList: errorList
+          }) }}
+          {{ govukRadios({
+            idPrefix: "type",
+            name: "type",
+            errorMessage: {
+              text: "Select the *type of form that you want to upload* "
+            },
+            fieldset: {
+              legend: {
+                text: "What type of document are you uploading?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--xl"
+              }
+             },
+             items: [
+               {
+                 value: "reg",
+                 text: "Registrar's powers"
+               },
+               {
+                 value: "resolutions",
+                 text: "Resolutions"
+               },
+               {
+                 value: "articles",
+                 text: "Articles"
+               },
+               {
+                 value: "constitution",
+                 text: "Change of constitution"
+               },
+               {
+                 value: "insolvency",
+                 text: "Insolvency"
+               }
+             ]
+           }) }}
+        {% else %}
+          {{ govukRadios({
+        idPrefix: "type",
+        name: "type",
+        fieldset: {
+          legend: {
+            text: "What type of document are you uploading?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--xl"
+          }
+        },
+
+        items: [
+
+
+       {
+                          value: "lp",
+                          text: "Limited partnership",
+                          hint: {
+                           text: "LP forms"
+                          }
+                        },
+                        {
+                          value: "slp",
+                          text: "Scottish limited partnership",
+                          hint: {
+                           text: "SLP forms"
+                          }
+                        },
+                        {
+                          value: "sqp",
+                          text: "Scottish qualifying partnership",
+                          hint: {
+                           text: "SQP forms"
+                          }
+                        },
+        {
+          value: "reg",
+          text: "Registrar's powers",
+          hint: {
+           text: "RP forms"
+          }
+        },
+        {
+          value: "constitution",
+          text: "Change of constitution",
+          hint: {
+           text: "CC forms"
+          }
+        },
+        {
+          value: "articles",
+          text: "Articles"
+        },
+        {
+          value: "resolutions",
+          text: "Resolutions"
+        },
+
+
+                {
+                  value: "insolvency",
+                  text: "Insolvency"
+                }
+        ]
+        }) }}
+        {% endif %}
+        {{ govukButton({
+      text: "Continue"
+    }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}
