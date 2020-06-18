@@ -266,7 +266,7 @@ router.post('/question-upload-supporting', function (req, res) {
   } if (value === 'yes') {
     res.redirect('upload-supporting-documents')
   } else {
-    res.redirect('confirmation')
+    res.redirect('check')
   }
 })
 
