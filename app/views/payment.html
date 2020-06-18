@@ -12,10 +12,17 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <!-- <form action="/auth-screen" method="post"> {% if errorAuth == true %} {{ govukErrorSummary({ titleText: "There is a problem", errorList: errorList }) }} {{ govukInput({ label: { text: "Enter the company authentication code", classes:
+      <form action="/auth-screen" method="post">
+        {% if errorAuth == true %}
+          {{ govukErrorSummary({ titleText: "There is a problem", errorList: errorList }) }}
+          {{ govukInput({ label: { text: "Enter the company authentication code", classes:
       "govuk-label--xl" }, classes: "govuk-input--width-5", hint: { text: "You need the authentication code to submit company information for ZLC Ltd." }, id: "auth-number", name: "authNumber", errorMessage: { text: "Enter the company authentication code"
-      } }) }} {% else %} {{ govukInput({ label: { text: "Enter the payment reference number", classes: "govuk-label--xl" }, classes: "govuk-input--width-20", hint: { text: " You can find it on the payment confirmation screen and the email you received
-      after you paid. " }, id: "auth-number", name: "authNumber" }) }} {% endif %} </form> -->
+      } }) }}
+        {% else %}
+          {{ govukInput({ label: { text: "Enter the payment reference number", classes: "govuk-label--xl" }, classes: "govuk-input--width-20", hint: { text: " You can find it on the payment confirmation screen and the email you received
+      after you paid. " }, id: "auth-number", name: "authNumber" }) }}
+        {% endif %}
+      </form>
       {{ govukButton({ text: "Continue", href: "question-upload-supporting" }) }}
     </div>
   </div>
