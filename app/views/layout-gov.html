@@ -106,23 +106,116 @@
 {% if useAutoStoreData %}
   {% block footer %}
     {{ govukFooter({
-      meta: {
+    navigation: [
+      {
+        title: "Services and information",
+        columns: 2,
         items: [
           {
-            href: "https://govuk-prototype-kit.herokuapp.com/",
-            text: "GOV.UK Prototype Kit " + releaseVersion
+            href: "#1",
+            text: "Benefits"
           },
           {
-            href: "/prototype-admin/clear-data",
-            text: "Clear data"
+            href: "#2",
+            text: "Births, deaths, marriages and care"
           },
           {
-            href: "static/accessibility.html",
-            text: "Accessibility statement"
+            href: "#3",
+            text: "Business and self-employed"
+          },
+          {
+            href: "#4",
+            text: "Childcare and parenting"
+          },
+          {
+            href: "#5",
+            text: "Citizenship and living in the UK"
+          },
+          {
+            href: "#6",
+            text: "Crime, justice and the law"
+          },
+          {
+            href: "#6",
+            text: "Disabled people"
+          },
+          {
+            href: "#6",
+            text: "Driving and transport"
+          },
+          {
+            href: "#6",
+            text: "Education and learning"
+          },
+          {
+            href: "#6",
+            text: "Environment and countryside"
+          },
+          {
+            href: "#6",
+            text: "Housing and local services"
+          },
+          {
+            href: "#6",
+            text: "Money and tax"
+          },
+          {
+            href: "#6",
+            text: "Passports, travel and living abroad"
+          },
+          {
+            href: "#6",
+            text: "Visas and immigration"
+          },
+          {
+            href: "#6",
+            text: "Working, jobs and pensions"
+          }
+        ]
+      },
+      {
+        title: "Departments and policy",
+        items: [
+          {
+            href: "#1",
+            text: "How government works"
+          },
+          {
+            href: "#2",
+            text: "Departments"
+          },
+          {
+            href: "#3",
+            text: "Worldwide"
+          },
+          {
+            href: "#3",
+            text: "Services"
+          },
+          {
+            href: "#3",
+            text: "Guidance and regulation"
+          },
+          {
+            href: "#3",
+            text: "News and communications"
+          },
+          {
+            href: "#3",
+            text: "Research and statistics"
+          },
+          {
+            href: "#3",
+            text: "Policy papers and consultations"
+          },
+          {
+            href: "#3",
+            text: "Transparency and freedom of information releases"
           }
         ]
       }
-    }) }}
+    ]
+  }) }}
   {% endblock %}
 {% endif %}
 
