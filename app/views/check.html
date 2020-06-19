@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-l">Check your details before sending your uploaded documents</h1>
+
+      <h2 class="govuk-heading-m">Personal details</h2>
+
+      {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-9',
+        rows: [
+          {
+            key: {
+              text: "Your email"
+            },
+            value: {
+              text: "interactiondesign@companieshouse.gov.uk"
+            }
+          },
+          {
+            key: {
+              text: "Company name"
+            },
+            value: {
+              html: "ZLC LTD"
+            }
+          },
+          {
+            key: {
+              text: "Company number"
+            },
+            value: {
+              text: "SC393288"
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">Uploaded documents</h2>
+
+      {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-9',
+        rows: [
+          {
+            key: {
+              text: "Document type"
+            },
+            value: {
+              text: "LP5 - Register a limited partnership "
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Remove",
+                  visuallyHiddenText: "contact details"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Document uploaded"
+            },
+            value: {
+              html: "<a href='#'> lp5.pdf</a>"
+            }
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Upload another document",
+        classes: "govuk-button--secondary"
+      }) }}
+
+      {{ govukButton({
+          text: "Submit uploaded documents",
+          href: "confirmation"
+        }) }}
+
+    </form>
+
+  </div>
+</div>
+{% endblock %}
