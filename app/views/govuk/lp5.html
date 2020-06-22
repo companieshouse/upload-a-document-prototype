@@ -1,4 +1,7 @@
 {% extends "layout-gov.html" %}
+{% block pageTitle %}
+  Apply for a registration of a limited partnership (LP5) - GOV.UK
+{% endblock %}
 {% block beforeContent %}
   {{ govukBreadcrumbs({
   items: [
@@ -67,7 +70,7 @@
       <div class="gem-c-govspeak">
         <div class="call-to-action">
           <p>
-            <a href="#" class="govuk-link">Pay the fee for your LP5 application</a>
+            <a href="https://www.gov.uk/payments/companies-house/apply-for-registration-of-limited-partnership-lp5-payment" target="_blank" rel="noopener noreferrer" class="govuk-link">Pay the fee for your LP5 application</a>
           </p>
         </div>
       </div>
@@ -76,7 +79,7 @@
         text: "You must make a note of the payment reference number. We will ask you to enter it when you upload the form."
       }) }}
       <p class="govuk-body">After you have paid the fee you can
-        <a href="https://https://efs-second-version.herokuapp.com/" class="govuk-link">upload the document to Companies House</a>.</p>
+        <a href="/" class="govuk-link">upload the document to Companies House</a>.</p>
       <div class="gem-c-govspeak">
         <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-3">
         <p class="govuk-body-s govuk-!-margin-bottom-1">
@@ -92,10 +95,10 @@
       </div>
     </div>
     <div class="govuk-grid-column-one-third">
-      <h4 class="govuk-heading-s">
+      <h4 class="govuk-heading-s border-top govuk-!-padding-top-3">
         Related content
       </h4>
-      <ul class="govuk-list">
+      <ul class="govuk-list govuk-!-font-size-16">
         <li>
           <a href="#" class="govuk-link">Register a limited partnership</a>
         </li>
@@ -115,7 +118,7 @@
       <h4 class="govuk-heading-s">
         Collection
       </h4>
-      <ul class="govuk-list">
+      <ul class="govuk-list govuk-!-font-size-16">
         <li>
           <a href="#" class="govuk-link">Companies House forms for limited partnerships</a>
         </li>

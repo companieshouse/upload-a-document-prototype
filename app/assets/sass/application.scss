@@ -543,6 +543,10 @@ $govuk-assets-path: '/govuk/assets/';
   border-width: 2px;
 }
 
+.border-top {
+  border-top: 2px #1d70b8 solid;
+}
+
 .govuk-auto-width {
   width: auto;
 }
