@@ -12,19 +12,11 @@
 
       <h1 class="govuk-heading-l">Check your details before submitting your uploaded document</h1>
 
-      <h2 class="govuk-heading-m">Personal details</h2>
+      <h2 class="govuk-heading-m">Company details</h2>
 
       {{ govukSummaryList({
         classes: 'govuk-!-margin-bottom-9',
         rows: [
-          {
-            key: {
-              text: "Your email"
-            },
-            value: {
-              text: "interactiondesign@companieshouse.gov.uk"
-            }
-          },
           {
             key: {
               text: "Company name"
@@ -44,7 +36,7 @@
         ]
       }) }}
 
-      <h2 class="govuk-heading-m">Uploaded document</h2>
+      <h2 class="govuk-heading-m">Document details</h2>
 
       {{ govukSummaryList({
         classes: 'govuk-!-margin-bottom-9',
@@ -60,7 +52,6 @@
               items: [
                 {
                   href: "#",
-                  text: "Remove",
                   visuallyHiddenText: "contact details"
                 }
               ]
@@ -79,7 +70,7 @@
               text: "Payment reference"
             },
             value: {
-              html: "111-222-333-444"
+              html: "2P3 2AM3 AVA"
             }
           }
         ]
