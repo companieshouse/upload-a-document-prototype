@@ -12,25 +12,25 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Enter the payment reference number</h1>
+      <p class="govuk-body">You can find this on the payment confirmation screen and the email you received after you paid the fee.</p>
+      {{ govukInsetText({
+        text: "If you have not paid the fee yet, you must return to the page you downloaded the document from and follow the payment instructions."
+      }) }}
       <form action="/auth-screen" method="post">
-        <h1 class="govuk-heading-xl">Enter the payment reference number</h1>
-        <p class="govuk-body">You can find this on the payment confirmation screen and the email you received after you paid the fee.</p>
-        {{ govukInsetText({
-          text: "If you have not paid the fee yet, you must return to the page you downloaded the document from and follow the payment instructions."
-        }) }}
         {{ govukInput({
           label: {
             text: "Payment reference number"
           },
           classes: "govuk-input--width-20",
-         id: "auth-number",
-         name: "authNumber"
-       }) }}
+          id: "auth-number",
+          name: "authNumber"
+        }) }}
+        {{ govukButton({
+         text: "Continue",
+         href: "question-upload-supporting"
+        }) }}
       </form>
-      {{ govukButton({
-        text: "Continue",
-        href: "question-upload-supporting"
-      }) }}
     </div>
   </div>
 {% endblock %}

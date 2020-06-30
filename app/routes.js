@@ -145,6 +145,7 @@ router.post('/types-of-forms/reg/reg', function (req, res) {
   }
 })
 
+// SLP Forms
 router.post('/types-of-forms/slp/scottish-limited-partnership', function (req, res) {
   res.redirect('/upload-accounts')
 })
@@ -169,6 +170,7 @@ router.post('/types-of-forms/slp/limited-partnerships', function (req, res) {
   }
 })
 
+// SQP Forms
 router.post('/types-of-forms/sqp/scottish-limited-partnerships', function (req, res) {
   var errors = []
   if (typeof req.session.data['reg'] === 'undefined') {
@@ -223,7 +225,7 @@ router.post('/company-number', function (req, res) {
   }
 })
 
-// Auth
+// Authentication
 router.get('/auth-screen', function (req, res) {
   res.render('auth-screen', {
   })
@@ -280,27 +282,7 @@ router.post('/types-of-forms/insolvency/cva', function (req, res) {
   res.redirect('../../auth-screen')
 })
 
-// CVAM
-router.get('/types-of-forms/insolvency/cvam', function (req, res) {
-  res.render('types-of-forms/insolvency/cvam', {
-  })
-})
-
-router.post('/types-of-forms/insolvency/cvam', function (req, res) {
-  res.redirect('../../auth-screen')
-})
-
-// in-admin
-router.get('/types-of-forms/insolvency/in-admin', function (req, res) {
-  res.render('types-of-forms/insolvency/in-admin', {
-  })
-})
-
-router.post('/types-of-forms/insolvency/in-admin', function (req, res) {
-  res.redirect('../../auth-screen')
-})
-
-// in-admin
+// Insolvency - Adminstration Forms
 router.get('/types-of-forms/insolvency/in-adminstration', function (req, res) {
   res.render('types-of-forms/insolvency/in-adminstration', {
   })
@@ -310,7 +292,7 @@ router.post('/types-of-forms/insolvency/in-adminstration', function (req, res) {
   res.redirect('../../auth-screen')
 })
 
-// in-admin
+// Insolvency - Liquidation Forms
 router.get('/types-of-forms/insolvency/liquidation', function (req, res) {
   res.render('types-of-forms/insolvency/liquidation', {
   })
@@ -320,37 +302,7 @@ router.post('/types-of-forms/insolvency/liquidation', function (req, res) {
   res.redirect('../../auth-screen')
 })
 
-// in-admin
-router.get('/types-of-forms/insolvency/mvl', function (req, res) {
-  res.render('types-of-forms/insolvency/mvl', {
-  })
-})
-
-router.post('/types-of-forms/insolvency/mvl', function (req, res) {
-  res.redirect('../../auth-screen')
-})
-
-// in-admin
-router.get('/types-of-forms/insolvency/others', function (req, res) {
-  res.render('types-of-forms/insolvency/others', {
-  })
-})
-
-router.post('/types-of-forms/insolvency/others', function (req, res) {
-  res.redirect('../../auth-screen')
-})
-
-// in-admin
-router.get('/types-of-forms/insolvency/receivership-three', function (req, res) {
-  res.render('types-of-forms/insolvency/receivership-three', {
-  })
-})
-
-router.post('/types-of-forms/insolvency/receivership-three', function (req, res) {
-  res.redirect('../../auth-screen')
-})
-
-// in-admin
+// Insolvency - Receivership Forms
 router.get('/types-of-forms/insolvency/receivership', function (req, res) {
   res.render('types-of-forms/insolvency/receivership', {
   })
@@ -360,7 +312,7 @@ router.post('/types-of-forms/insolvency/receivership', function (req, res) {
   res.redirect('../../auth-screen')
 })
 
-// in-admin
+// Insolvency - WUC Forms
 router.get('/types-of-forms/insolvency/wuc', function (req, res) {
   res.render('types-of-forms/insolvency/wuc', {
   })

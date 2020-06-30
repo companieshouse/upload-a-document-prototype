@@ -23,48 +23,48 @@
         {% if errorEmail == true %}
           {{ govukInput({
             label: {
-            text: "Email address"
-          },
-          id: "email",
-          type: "email",
-          name: "email",
-          autocomplete: "email",
-          errorMessage: {
-            text: "Enter your email address"
-          }
+              text: "Email address"
+            },
+            id: "email",
+            type: "email",
+            name: "email",
+            autocomplete: "email",
+            errorMessage: {
+              text: "Enter your email address"
+            }
           }) }}
         {% else %}
           {{ govukInput({
             label: {
-            text: "Email address"
-          },
-          type: "email",
-          autocomplete: "email",
-          id: "email",
-          name: "email"
+              text: "Email address"
+            },
+            type: "email",
+            autocomplete: "email",
+            id: "email",
+            name: "email"
           }) }}
         {% endif %}
         {% if errorPassword == true %}
           {{ govukInput({
-          label: {
-          text: "Password"
-        },
-        id: "password",
-        name: "password",
-        type: "password",
-        errorMessage: {
-            text: "Enter your password"
-          }
-        }) }}
+            label: {
+              text: "Password"
+            },
+            id: "password",
+            name: "password",
+            type: "password",
+            errorMessage: {
+              text: "Enter your password"
+            }
+          }) }}
         {% else %}
           {{ govukInput({
-          label: {
-          text: "Password"
-        },
-        id: "password",
-        name: "password",
-        type: "password"
-        }) }}
+            label: {
+              text: "Password"
+            },
+            id: "password",
+            name: "password",
+            type: "password"
+          }) }}
         {% endif %}
         {{ govukButton({
         text: "Sign in"

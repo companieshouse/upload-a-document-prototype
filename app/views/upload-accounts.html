@@ -23,18 +23,18 @@
     </ul>
     {{ govukInsetText({
         text: "Some documents require supporting evidence. You can upload evidence later in this service if required."
-      }) }}
+    }) }}
     {{ govukFileUpload({
         id: "file-upload-1",
         name: "file-upload-1",
         label: {
           text: "Upload document"
         }
-      }) }}
+    }) }}
     {{ govukButton({
         text: "Continue",
         href: "payment"
-      }) }}
+    }) }}
   </div>
 </div>
 {% endblock %}

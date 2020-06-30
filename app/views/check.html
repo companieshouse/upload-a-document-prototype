@@ -5,15 +5,11 @@
     href: "#"
   }) }}
 {% endblock %}
-
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-
       <h1 class="govuk-heading-l">Check your details before submitting your uploaded document</h1>
-
       <h2 class="govuk-heading-m">Company details</h2>
-
       {{ govukSummaryList({
         classes: 'govuk-!-margin-bottom-9',
         rows: [
@@ -35,11 +31,9 @@
           }
         ]
       }) }}
-
       <h2 class="govuk-heading-m">Document details</h2>
-
       {{ govukSummaryList({
-        classes: 'govuk-!-margin-bottom-9',
+        classes: 'govuk-!-margin-bottom-4',
         rows: [
           {
             key: {
@@ -75,19 +69,32 @@
           }
         ]
       }) }}
-
       {{ govukButton({
         text: "Upload another document",
-        classes: "govuk-button--secondary"
+        classes: "govuk-button--secondary govuk-!-margin-bottom-9"
       }) }}
-
+      {{ govukCheckboxes({
+        idPrefix: "waste",
+        name: "waste",
+        fieldset: {
+          legend: {
+            text: "Confirm authorisation",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "carcasses",
+            text: "I confirm I am authorised to send this document for filing."
+          }
+        ]
+      }) }}
       {{ govukButton({
           text: "Submit document",
           href: "confirmation"
         }) }}
-
     </form>
-
   </div>
 </div>
 {% endblock %}

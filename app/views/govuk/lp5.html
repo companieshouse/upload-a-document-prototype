@@ -4,17 +4,17 @@
 {% endblock %}
 {% block beforeContent %}
   {{ govukBreadcrumbs({
-  items: [
-    {
-      text: "Home",
-      href: "#"
-    },
-    {
-      text: "Business and industry",
-      href: "#"
-    }
-  ]
-}) }}
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Business and industry",
+        href: "#"
+      }
+    ]
+  }) }}
 {% endblock %}
 {% block content %}
   <div class="govuk-grid-row">
@@ -57,7 +57,6 @@
       </div>
       <h3 class=" govuk-heading-m govuk-!-margin-top-8">Details</h3>
       <p class="govuk-body">You must pay the £20 fee online before you upload and submit this document.</p>
-
       <div class="govuk-inset-text">
         You can continue to use form LP5 to register a limited partnership in Scotland until 24 July 2017
       </div>
@@ -73,58 +72,60 @@
       </p>
       <h4 class="govuk-heading-s">2. Pay for the document</h4>
       <p>
-        <a href="" target="_blank" rel="noopener noreferrer" class="govuk-link">Pay the £20 fee for your LP5 application online</a>
+        <a href="https://www.gov.uk/payments/companies-house/apply-for-registration-of-limited-partnership-lp5-payment" target="_blank" rel="noopener noreferrer" class="govuk-link">Pay the £20 fee for your LP5 application online</a>
         using GOV.UK Pay (opens in a new tab or window).
       </p>
       <h4 class="govuk-heading-s">3. Make a note of your payment reference number</h4>
       <p>This will be shown on the confirmation screen and confirmation email after you have paid the fee. You will need this to upload your document.</p>
       <h4 class="govuk-heading-s">4. Upload the document</h4>
       <p>
-        <p>Use the <a href="/" class="govuk-link">Upload a document to Companies House</a> service to send us your document online.</p>
+        <p>Use the
+          <a href="/" class="govuk-link">Upload a document to Companies House</a>
+          service to send us your document online.</p>
 
-      <div class="gem-c-govspeak">
-        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-3">
-        <p class="govuk-body-s govuk-!-margin-bottom-1">
-          Published 1 June 2009
-        </p>
-        <p class="govuk-body-s govuk-!-margin-bottom-1">
-          Last updated 6 April 2017 -
-          <a href="#" class="govuk-link">see all updates</a>
-        </p>
-        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-3 govuk-!-margin-top-8 blue-line">
-        <h4 class="govuk-heading-s">Explore the topic</h4>
-        <a href="#" class="govuk-link govuk-!-font-weight-bold">Business and industry</a>
+        <div class="gem-c-govspeak">
+          <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-3">
+          <p class="govuk-body-s govuk-!-margin-bottom-1">
+            Published 1 June 2009
+          </p>
+          <p class="govuk-body-s govuk-!-margin-bottom-1">
+            Last updated 6 April 2017 -
+            <a href="#" class="govuk-link">see all updates</a>
+          </p>
+          <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-3 govuk-!-margin-top-8 blue-line">
+          <h4 class="govuk-heading-s">Explore the topic</h4>
+          <a href="#" class="govuk-link govuk-!-font-weight-bold">Business and industry</a>
+        </div>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h4 class="govuk-heading-s border-top govuk-!-padding-top-3">
+          Related content
+        </h4>
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a href="#" class="govuk-link">Register a limited partnership</a>
+          </li>
+          <li>
+            <a href="#" class="govuk-link">Register a limited liability partnership (LL IN01)</a>
+          </li>
+          <li>
+            <a href="#" class="govuk-link">Limited liability partnership incorporation and names</a>
+          </li>
+          <li>
+            <a href="#" class="govuk-link">Companies House forms for limited partnerships</a>
+          </li>
+          <li>
+            <a href="#" class="govuk-link">Specify the nature of a change in the limited partnership (LP6)</a>
+          </li>
+        </ul>
+        <h4 class="govuk-heading-s">
+          Collection
+        </h4>
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a href="#" class="govuk-link">Companies House forms for limited partnerships</a>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="govuk-grid-column-one-third">
-      <h4 class="govuk-heading-s border-top govuk-!-padding-top-3">
-        Related content
-      </h4>
-      <ul class="govuk-list govuk-!-font-size-16">
-        <li>
-          <a href="#" class="govuk-link">Register a limited partnership</a>
-        </li>
-        <li>
-          <a href="#" class="govuk-link">Register a limited liability partnership (LL IN01)</a>
-        </li>
-        <li>
-          <a href="#" class="govuk-link">Limited liability partnership incorporation and names</a>
-        </li>
-        <li>
-          <a href="#" class="govuk-link">Companies House forms for limited partnerships</a>
-        </li>
-        <li>
-          <a href="#" class="govuk-link">Specify the nature of a change in the limited partnership (LP6)</a>
-        </li>
-      </ul>
-      <h4 class="govuk-heading-s">
-        Collection
-      </h4>
-      <ul class="govuk-list govuk-!-font-size-16">
-        <li>
-          <a href="#" class="govuk-link">Companies House forms for limited partnerships</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-{% endblock %}
+  {% endblock %}
