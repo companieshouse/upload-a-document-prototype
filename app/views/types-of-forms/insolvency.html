@@ -25,7 +25,8 @@
             },
             fieldset: {
               legend: {
-                text: "What type of document are you uploading?",
+                html: "<span class='govuk-caption-xl'>Insolvency</span>
+  What type of document are you uploading?",
                 isPageHeading: true,
                 classes: "govuk-fieldset__legend--xl"
               }
@@ -34,7 +35,10 @@
 
                      {
                        value: "insolvency",
-                       text: "Insolvency (2016)"
+                       text: "Insolvency (2016)",
+                       hint: {
+                  text: "Forms in accordance with Insolvency (England and Wales) Rules 2016"
+                }
                      },
                      {
                        value: "insolvency-old",
@@ -48,7 +52,8 @@
         name: "typeI",
         fieldset: {
           legend: {
-            text: "What type of document are you uploading?",
+            html: "<span class='govuk-caption-xl'>Insolvency</span>
+What type of document are you uploading?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl"
           }
@@ -58,7 +63,10 @@
 
                 {
                   value: "insolvency",
-                  text: "Insolvency (2016)"
+                  text: "Insolvency (2016)",
+                  hint: {
+             text: "England and Wales rules 2016"
+           }
                 },
                 {
                   value: "insolvency-old",
