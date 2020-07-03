@@ -145,7 +145,7 @@ router.post('/types-of-forms/insolvency', function (req, res) {
   } if (value === 'insolvency-old') {
     res.redirect('insolvency-1986/insolvency')
   } else {
-    res.redirect('others')
+    res.redirect('insolvency-scot/insolvency')
   }
 })
 
@@ -161,6 +161,8 @@ router.post('/types-of-forms/insolvency-1986/insolvency', function (req, res) {
       errorType: true,
       errorList: errors
     })
+  } if (value === 'notice-of-disclaimer') {
+    res.redirect('notice-of-disclaimer')
   } if (value === 'cvam') {
     res.redirect('cvam')
   } if (value === 'in-admin') {
@@ -177,6 +179,39 @@ router.post('/types-of-forms/insolvency-1986/insolvency', function (req, res) {
     res.redirect('insolvency-euscot')
   } if (value === 'insolvency-euni') {
     res.redirect('insolvency-euni')
+  } else {
+    res.redirect('others')
+  }
+})
+
+router.post('/types-of-forms/insolvency-scot/insolvency', function (req, res) {
+  var errors = []
+  var value = req.session.data['typeInsolveS']
+  if (typeof req.session.data['typeInsolveS'] === 'undefined') {
+    errors.push({
+      text: 'Select the *type of form that you want to upload* ',
+      href: '#typeInsolve'
+    })
+    res.render('types-of-forms/insolvency-scot/insolvency', {
+      errorType: true,
+      errorList: errors
+    })
+  } if (value === 'in-admin') {
+    res.redirect('in-admin')
+  } if (value === 'committees') {
+    res.redirect('committees')
+  } if (value === 'cva') {
+    res.redirect('cva')
+  } if (value === 'cvam') {
+    res.redirect('cvam')
+  } if (value === 'exempting') {
+    res.redirect('exempting')
+  } if (value === 'mvl') {
+    res.redirect('mvl')
+  } if (value === 'receivership') {
+    res.redirect('receivership')
+  } if (value === 'wuc') {
+    res.redirect('wuc')
   } else {
     res.redirect('others')
   }

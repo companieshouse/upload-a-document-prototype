@@ -13,7 +13,7 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <form action="/types-of-forms/insolvency/receivership" method="post">
+      <form action="/types-of-forms/insolvency/wuc" method="post">
         {{ govukRadios({
           idPrefix: "typeInsolve",
           name: "typeInsolve",
@@ -27,28 +27,24 @@ Select a document",
           },
           items: [
             {
-              value: "carcasses",
-              text: "REC1 - Notice of administrative receiver's report"
-            },
-            {
-              value: "carcasses",
-              text: "REC2 - Give notice of summary of receipts and payments"
+              value: "mines",
+              text: "REC1(Scot) - Notice of receiver's report for a Scottish company"
             },
             {
               value: "mines",
-              text: "REC3 - Give notice of order of disposal of charged property"
+              text: "REC3 (Scot) - Notice of authorisation to dispose of secured property in receivership"
             },
             {
               value: "mines",
-              text: "REC4 - Give notice of statement of affairs in administrative receivership"
+              text: "REC5 (Scot) - Give notice of a deceased receiver for a Scottish company"
             },
             {
               value: "mines",
-              text: "REC5 - Give notice of deceased administrative receiver"
+              text: "RM01 (Scot) - Notice of appointment of a receiver for a Scottish company"
             },
             {
               value: "mines",
-              text: "RM02 - Notice of ceasing to act as receiver or manager"
+              text: "RM02 (Scot) - Notice of ceasing to act as a receiver for a Scottish company"
             }
           ]
         }) }}

@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  Receivership forms
+  Members' voluntary liquidation (MVL) and creditors' voluntary liquidation (CVL) forms
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,13 +13,13 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <form action="/types-of-forms/insolvency/receivership" method="post">
+      <form action="/types-of-forms/insolvency/wuc" method="post">
         {{ govukRadios({
           idPrefix: "typeInsolve",
           name: "typeInsolve",
           fieldset: {
             legend: {
-              html: "<span class='govuk-caption-xl'>Receivership</span>
+              html: "<span class='govuk-caption-xl'>Members' voluntary liquidation (MVL) and creditors' voluntary liquidation (CVL)</span>
 Select a document",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--xl"
@@ -27,28 +27,20 @@ Select a document",
           },
           items: [
             {
-              value: "carcasses",
-              text: "REC1 - Notice of administrative receiver's report"
-            },
-            {
-              value: "carcasses",
-              text: "REC2 - Give notice of summary of receipts and payments"
+              value: "mines",
+              text: "LIQ04 (Scot) - Give notice of order deferring the date of dissolution for a Scottish company"
             },
             {
               value: "mines",
-              text: "REC3 - Give notice of order of disposal of charged property"
+              text: "LIQ13 (Scot) - Final account prior to dissolution in MVL for a Scottish company"
             },
             {
               value: "mines",
-              text: "REC4 - Give notice of statement of affairs in administrative receivership"
+              text: "LIQ14 (Scot) - Final account prior to dissolution in CVL for a Scottish company"
             },
             {
               value: "mines",
-              text: "REC5 - Give notice of deceased administrative receiver"
-            },
-            {
-              value: "mines",
-              text: "RM02 - Notice of ceasing to act as receiver or manager"
+              text: "LIQ15 (Scot) - Give notice of a court order staying or sisting proceedings in a CVL or MVL winding up"
             }
           ]
         }) }}

@@ -1,0 +1,137 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Members' voluntary liquidation (MVL) and creditors' voluntary liquidation (CVL) forms
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "insolvency"
+    }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/insolvency/wuc" method="post">
+        {{ govukRadios({
+          idPrefix: "typeInsolve",
+          name: "typeInsolve",
+          fieldset: {
+            legend: {
+              html: "<span class='govuk-caption-xl'>Members' voluntary liquidation (MVL) and creditors' voluntary liquidation (CVL)</span>
+Select a document",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "mines",
+              text: "AM01 (Scot) - Give notice of administrator's appointment for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "AM02 (Scot) - Give notice of statement of affairs in administration for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "AM03 (Scot) - Give notice of administrator's proposals for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "AM04 (Scot) - Give notice of the extension of time to deliver administrator's proposals for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "AM05 (Scot) - Give notice of extension of time to seek approval for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "AM06 (Scot) - Give notice of approval of administrator's proposals for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "AM07 (Scot) - Give notice of creditor's decision on administrator's proposals for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "AM08 (Scot) - Give notice of revision of administrator's proposals for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "AM09 (Scot) - Give notice of result of a creditor's decision for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "AM10 (Scot) - Give notice of administrator's progress report for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "AM11 (Scot) - Appoint a replacement or additional administrator for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "AM12 (Scot) - Give notice of order limiting disclosure for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "AM13 (Scot) - Rescission or amendment of order limiting disclosure for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "AM14 (Scot) - Give notice of an order to dispose of charged property for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "AM15 (Scot) - Resignation of administrator for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "AM16 (Scot) - Give notice of order removing administrator from office for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "AM17 (Scot) - Give notice of vacation of office for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "AM18 (Scot) - Give notice of a deceased administrator for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "AM19 (Scot) - Extend the period of administration for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "AM20 (Scot) - Give notice of automatic end of administration for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "AM21 (Scot) - Give notice of end of administration for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "AM22 (Scot) - Move a Scottish company from administration to creditors' voluntary liquidation"
+            },
+            {
+              value: "mines",
+              text: "AM23 (Scot) - Move a Scottish company from administration to dissolution"
+            },
+            {
+              value: "mines",
+              text: "AM24 (Scot) - Give notice of a court order in respect of date of dissolution"
+            },
+            {
+              value: "mines",
+              text: "AM25 (Scot) - Give notice of court order ending administration"
+            }
+          ]
+        }) }}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

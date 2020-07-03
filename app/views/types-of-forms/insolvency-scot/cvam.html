@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Company voluntary arrangement moratorium forms
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "insolvency"
+    }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/insolvency/wuc" method="post">
+        {{ govukRadios({
+          idPrefix: "typeInsolve",
+          name: "typeInsolve",
+          fieldset: {
+            legend: {
+              html: "<span class='govuk-caption-xl'>Company voluntary arrangement moratorium</span>
+Select a document",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "mines",
+              text: "VAM1 (Scot) - Give notice of the commencement of moratorium for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "VAM2 (Scot) - Give notice of continuation of moratorium for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "VAM3 (Scot) - Give notice of decision extending or further extending moratorium for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "VAM4 (Scot) - Give notice of a court order in relation to a moratorium for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "VAM5 (Scot) - Withdrawal of nominee's consent to act for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "VAM6 (Scot) - Appoint a replacement nominee for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "VAM7(Scot) - Give notice of the end of moratorium for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "VAM8 (Scot) - Give notice of disposal of charged property during a moratorium for a Scottish company"
+            },
+            {
+              value: "mines",
+              text: "VAMC (Scot) - Give notice of a court order in respect of a voluntary arrangement or moratorium for a Scottish company"
+            }
+          ]
+        }) }}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}
