@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  Company voluntary arrangement forms
+  Insolvency across EU member states: England and Wales forms
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,13 +13,13 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <form action="/types-of-forms/insolvency/cva" method="post">
+      <form action="/types-of-forms/insolvency-1986/insolvency-euni" method="post">
         {{ govukRadios({
           idPrefix: "typeInsolve",
           name: "typeInsolve",
           fieldset: {
             legend: {
-              html: "<span class='govuk-caption-xl'>Company voluntary arrangement</span>
+              html: "<span class='govuk-caption-xl'>Insolvency across EU member states: England and Wales</span>
 Select a document",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--xl"
@@ -28,20 +28,24 @@ Select a document",
           items: [
             {
               value: "cva1",
-              text: "CVA1 - Give notice of voluntary arrangement taking effect"
+              text: "IE01 - Give notice of approval of an undertaking for assets in another member state"
             },
 
             {
               value: "vam1",
-              text: "CVA2 - Give notice of order of revocation or suspension of voluntary arrangement"
+              text: "IE02 - Give notice of approval of a proposed undertaking to local creditors in the UK"
             },
             {
               value: "vam1s",
-              text: "CVA3 - Give notice of supervisor's progress report in voluntary arrangement"
+              text: "IE03 - Give notice of an order opening group co-ordination proceedings"
             },
             {
               value: "vam7",
-              text: "CVA4 - Give notice of termination or full implementation of voluntary arrangement"
+              text: "IE04 - Give a statement of insolvency proceedings in another member state with consent to dissolution"
+            },
+            {
+              value: "vam7s",
+              text: "IE05 - Give a statement of insolvency proceedings in another member state without consent to dissolution"
             }
           ]
         }) }}

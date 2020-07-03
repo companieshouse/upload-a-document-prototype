@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  Company voluntary arrangement forms
+  Receivership forms
 {% endblock %}
 
 {% block beforeContent %}
@@ -19,7 +19,7 @@
           name: "typeInsolve",
           fieldset: {
             legend: {
-              html: "<span class='govuk-caption-xl'>Company voluntary arrangement</span>
+              html: "<span class='govuk-caption-xl'>Receivership</span>
 Select a document",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--xl"
@@ -28,20 +28,33 @@ Select a document",
           items: [
             {
               value: "cva1",
-              text: "CVA1 - Give notice of voluntary arrangement taking effect"
+              text: "3.3 - Make statement of affairs in administrative receivership"
             },
 
             {
               value: "vam1",
-              text: "CVA2 - Give notice of order of revocation or suspension of voluntary arrangement"
+              text: "3.4 - Amend certificate of constitution of creditors' committee"
             },
             {
               value: "vam1s",
-              text: "CVA3 - Give notice of supervisor's progress report in voluntary arrangement"
+              text: "3.5 - Give notice of change in membership of creditors' committee"
             },
             {
               value: "vam7",
-              text: "CVA4 - Give notice of termination or full implementation of voluntary arrangement"
+              text: "3.6(CH) - Give notice of abstract or receipts and payments"
+            },
+
+            {
+              value: "vam7s",
+              text: "3.7 - Give notice of administrative receiver's death"
+            },
+            {
+              value: "vam8s",
+              text: "3.8 - Give notice of order to dispose of charged property"
+            },
+            {
+              value: "vam8s",
+              text: "3.10 - Give notice of administrative receiver's report"
             }
           ]
         }) }}

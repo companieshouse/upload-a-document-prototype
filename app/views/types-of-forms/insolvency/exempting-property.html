@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  Company voluntary arrangement forms
+  Exempting property forms
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,13 +13,13 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <form action="/types-of-forms/insolvency/cva" method="post">
+      <form action="/types-of-forms/insolvency/exempting-property" method="post">
         {{ govukRadios({
           idPrefix: "typeInsolve",
           name: "typeInsolve",
           fieldset: {
             legend: {
-              html: "<span class='govuk-caption-xl'>Company voluntary arrangement</span>
+              html: "<span class='govuk-caption-xl'>Exempting property</span>
 Select a document",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--xl"
@@ -28,20 +28,7 @@ Select a document",
           items: [
             {
               value: "cva1",
-              text: "CVA1 - Give notice of voluntary arrangement taking effect"
-            },
-
-            {
-              value: "vam1",
-              text: "CVA2 - Give notice of order of revocation or suspension of voluntary arrangement"
-            },
-            {
-              value: "vam1s",
-              text: "CVA3 - Give notice of supervisor's progress report in voluntary arrangement"
-            },
-            {
-              value: "vam7",
-              text: "CVA4 - Give notice of termination or full implementation of voluntary arrangement"
+              text: "NOCP - Give notice of a court order under section 176A (5)"
             }
           ]
         }) }}

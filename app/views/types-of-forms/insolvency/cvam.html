@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Company voluntary arrangement moratorium forms
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "insolvency"
+    }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/insolvency/cvam" method="post">
+        {{ govukRadios({
+          idPrefix: "typeInsolve",
+          name: "typeInsolve",
+          fieldset: {
+            legend: {
+              html: "<span class='govuk-caption-xl'>Company voluntary arrangement moratorium</span>
+Select a document",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "cva1",
+              text: "VAM1 - Give notice of the commencement of moratorium"
+            },
+
+            {
+              value: "vam1",
+              text: "VAM2 - Give notice of continuation of moratorium"
+            },
+            {
+              value: "vam1s",
+              text: "VAM3 - Give notice of decision extending or further extending moratorium"
+            },
+            {
+              value: "vam7",
+              text: "VAM4 - Give notice of court order in relation to a moratorium"
+            },
+            {
+              value: "vam7",
+              text: "VAM5 - Give notice of the withdrawal of nominee's consent to act"
+            },
+            {
+              value: "vam7",
+              text: "VAM6 - Give notice of the appointment of a replacement nominee"
+            },
+            {
+              value: "vam7",
+              text: "VAM7 - Give notice of the end of moratorium"
+            },
+            {
+              value: "vam7",
+              text: "VAMC - Give notice of a court order in respect of a voluntary arrangement or moratorium"
+            }
+          ]
+        }) }}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  In administration forms
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "insolvency"
+    }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/insolvency/cva" method="post">
+        {{ govukRadios({
+          idPrefix: "typeInsolve",
+          name: "typeInsolve",
+          fieldset: {
+            legend: {
+              html: "<span class='govuk-caption-xl'>In administration</span>
+Select a document",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "cva1",
+              text: "2.12B(CH) - Give notice of administrator's appointment"
+            },
+
+            {
+              value: "vam1",
+              text: "2.16B - Give notice of statement of affairs"
+            },
+            {
+              value: "vam1s",
+              text: "2.17B - Give notice of a statement of administrator's proposals"
+            },
+            {
+              value: "vam7",
+              text: "2.18B(CH) - Give notice of extension of time period"
+            },
+
+            {
+              value: "vam7s",
+              text: "F2.18 - Give notice of deemed approval of proposals"
+            },
+            {
+              value: "vam8s",
+              text: "2.22B(CH) - Give notice of administrator's revised proposals"
+            },
+            {
+              value: "vam8s",
+              text: "2.23B(CH) - Give notice of result of creditors' meeting"
+            },
+            {
+              value: "vam8s",
+              text: "2.24B(CH) - Give notice of administrator's report ()"
+            },
+            {
+              value: "vam8s",
+              text: "2.26B(CH) - Amend certificate of constitution of creditors' committee"
+            },
+            {
+              value: "vam8s",
+              text: "2.28B - Give notice of order to deal with charged property"
+            },
+            {
+              value: "vam8s",
+              text: "2.30B(CH) - Give notice of the automatic end of administration"
+            },
+            {
+              value: "vam8s",
+              text: "2.31B - Give notice of the extension of period of administration"
+            },
+            {
+              value: "vam8s",
+              text: "2.32B(CH) - Give notice of the end of administration"
+            },
+            {
+              value: "vam8s",
+              text: "2.33B - Give notice of court ending administration"
+            },
+            {
+              value: "vam8s",
+              text: "2.34B - Give notice of move from administration"
+            },
+            {
+              value: "vam8s",
+              text: "2.35B - Give notice of move from administration to dissolution"
+            },
+            {
+              value: "vam8s",
+              text: "2.36B - Give notice to registrar in respect of dissolution date"
+            },
+            {
+              value: "vam8s",
+              text: "2.38B(CH) - Give notice of resignation by administrator"
+            },
+            {
+              value: "vam8s",
+              text: "2.39B - Give notice of vacation of office by administrator"
+            },
+            {
+              value: "vam8s",
+              text: "2.40B - Appoint replacement or additional administrator"
+            }
+          ]
+        }) }}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

@@ -64,7 +64,7 @@ router.post('/types-of-forms/form-types', function (req, res) {
       errorList: errors
     })
   } if (value === 'insolvency') {
-    res.redirect('insolvency/insolvency')
+    res.redirect('insolvency')
   } if (value === 'resolutions') {
     res.redirect('resolutions/resolutions')
   } if (value === 'articles') {
@@ -96,28 +96,87 @@ router.post('/types-of-forms/insolvency/insolvency', function (req, res) {
       text: 'Select the *type of form that you want to upload* ',
       href: '#typeInsolve'
     })
+    res.render('/types-of-forms/insolvency/insolvency', {
+      errorType: true,
+      errorList: errors
+    })
+  } if (value === 'cvam') {
+    res.redirect('cvam')
+  } if (value === 'cva') {
+    res.redirect('cva')
+  } if (value === 'in-admin') {
+    res.redirect('in-adminstration')
+  } if (value === 'receivership') {
+    res.redirect('receivership')
+  } if (value === 'mva') {
+    res.redirect('mva')
+  } if (value === 'wuc') {
+    res.redirect('wuc')
+  } if (value === 'committees') {
+    res.redirect('committees')
+  } if (value === 'notice-of-disclaimer') {
+    res.redirect('notice-of-disclaimer')
+  } if (value === 'exempting-property') {
+    res.redirect('exempting-property')
+  } else {
+    res.redirect('others')
+  }
+})
+
+router.get('/types-of-forms/insolvency', function (req, res) {
+  res.render('types-of-forms/insolvency', {
+  })
+})
+
+router.post('/types-of-forms/insolvency', function (req, res) {
+  var errors = []
+  var value = req.session.data['typeI']
+  if (typeof req.session.data['typeI'] === 'undefined') {
+    errors.push({
+      text: 'Select the *type of form that you want to upload* ',
+      href: '#typeInsolve'
+    })
+    res.render('types-of-forms/insolvency', {
+      errorType: true,
+      errorList: errors
+    })
+  } if (value === 'insolvency') {
+    res.redirect('insolvency/insolvency')
+  } if (value === 'insolvency-old') {
+    res.redirect('insolvency-1986/insolvency')
+  } else {
+    res.redirect('others')
+  }
+})
+
+router.post('/types-of-forms/insolvency-1986/insolvency', function (req, res) {
+  var errors = []
+  var value = req.session.data['typeInsolve']
+  if (typeof req.session.data['typeInsolve'] === 'undefined') {
+    errors.push({
+      text: 'Select the *type of form that you want to upload* ',
+      href: '#typeInsolve'
+    })
     res.render('types-of-forms/insolvency/insolvency', {
       errorType: true,
       errorList: errors
     })
-  } if (value === 'in-admin') {
-    res.redirect('in-adminstration')
   } if (value === 'cvam') {
     res.redirect('cvam')
-  } if (value === 'mvl') {
-    res.redirect('mvl')
-  } if (value === 'wuc') {
-    res.redirect('wuc')
+  } if (value === 'in-admin') {
+    res.redirect('in-admin')
   } if (value === 'receivership') {
     res.redirect('receivership')
-  } if (value === 'cva') {
-    res.redirect('cva')
-  } if (value === 'in-admin-two') {
-    res.redirect('in-admin')
-  } if (value === 'receivership-two') {
-    res.redirect('receivership-three')
   } if (value === 'liquidation') {
     res.redirect('liquidation')
+  } if (value === 'liquidation-ews') {
+    res.redirect('liquidation-ews')
+  } if (value === 'insolvency-euew') {
+    res.redirect('insolvency-euew')
+  } if (value === 'insolvency-euscot') {
+    res.redirect('insolvency-euscot')
+  } if (value === 'insolvency-euni') {
+    res.redirect('insolvency-euni')
   } else {
     res.redirect('others')
   }

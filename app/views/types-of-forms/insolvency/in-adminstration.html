@@ -1,12 +1,12 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  What type of document are you uploading?
+  In administration forms
 {% endblock %}
 
 {% block beforeContent %}
   {{ govukBackLink({
       text: "Back",
-      href: "../../types-of-accounts"
+      href: "insolvency"
     }) }}
 {% endblock %}
 
@@ -19,7 +19,7 @@
           name: "typeInsolve",
           fieldset: {
             legend: {
-              html: "<span class='govuk-caption-xl'>Administration</span>
+              html: "<span class='govuk-caption-xl'>In administration</span>
 Select a document",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--xl"
@@ -33,6 +33,82 @@ Select a document",
             {
               value: "am01s",
               text: "AM01 (Scotland) - Give notice of administrator's appointment"
+            },
+            {
+              value: "am01",
+              text: "AM02 - Give notice of statement of affairs in administration"
+            },
+            {
+              value: "am01",
+              text: "AM03 - Give notice of administrator's proposals"
+            },
+            {
+              value: "am01",
+              text: "AM04 - Give notice of the extension of time to deliver administrator's proposals"
+            },
+            {
+              value: "am01",
+              text: "AM05 - Give notice of extension of time to seek approval"
+            },
+            {
+              value: "am01",
+              text: "AM06 - Give notice of approval of administrator's proposals"
+            },
+            {
+              value: "am01",
+              text: "AM07 - Give notice of creditor's decision on administrator's proposals"
+            },
+            {
+              value: "am01",
+              text: "AM08 - Give notice of revision of administrator's proposals"
+            },
+            {
+              value: "am01",
+              text: "AM09 - Give notice of result of creditor's decision"
+            },
+            {
+              value: "am01",
+              text: "AM10 - Give notice of administrator's progress report"
+            },
+            {
+              value: "am01",
+              text: "AM11 - Give notice of appointment of replacement or additional administrator"
+            },
+            {
+              value: "am01",
+              text: "AM12 - Give notice of order limiting disclosure"
+            },
+            {
+              value: "am01",
+              text: "AM13 - Give notice of rescission or amendment of order limiting disclosure"
+            },
+            {
+              value: "am01",
+              text: "AM14 - Give notice of an order to dispose of charged property"
+            },
+            {
+              value: "am01",
+              text: "AM15 - Give notice of resignation of administrator"
+            },
+            {
+              value: "am01",
+              text: "AM16 - Give notice of order removing administrator from office"
+            },
+            {
+              value: "am01",
+              text: "AM17 - Give notice of vacation of office"
+            },
+            {
+              value: "am01",
+              text: "AM18 - Give notice of deceased administrator"
+            },
+            {
+              value: "am01",
+              text: "AM19 - Give notice of the extension of period of administration"
+            },
+            {
+              value: "am01",
+              text: "AM20 - Give notice of automatic end of administration"
             },
             {
               value: "am20s",
@@ -69,72 +145,7 @@ Select a document",
             {
               value: "am25s",
               text: "AM25 (Scotland) - Give notice of court order ending administration"
-            },
-            {
-              value: "211bs",
-              text: "2.11B (Scotland) - Notice of appointment of administrator"
-            },
-            {
-              value: "212b",
-              text: "2.12B - Give notice of administrator's appointment"
-            },
-
-            {
-              value: "212b",
-              text: "2.12B (Northern Ireland) - Notice of administrator's appointment"
-            },
-            {
-              value: "223bs",
-              text: "2.23B (Scotland) - Notice of end of administration"
-            },
-            {
-              value: "224bs",
-              text: "2.24B (Scotland) - Notice of administrative receiver's report"
-            },
-            {
-              value: "225bs",
-              text: "2.25B (Scotland) - Notice of move from administration to creditors' voluntary liquidation"
-            },
-            {
-              value: "226bs",
-              text: "2.26B (Scotland) - Notice of move from administration to dissolution"
-            },
-            {
-              value: "227bs",
-              text: "2.27B (Scotland) - Notice of court order in respect of date of dissolution"
-            },
-            {
-              value: "230b",
-              text: "2.30B - Notice of automatic end of administration"
-            },
-            {
-              value: "232b",
-              text: "2.32B - Notice of end of administration"
-            },
-            {
-              value: "233b",
-              text: "2.33B - Give notice of court ending administration"
-            },
-
-                        {
-                          value: "233b",
-                          text: "2.33B (Northern Ireland) - Notice of court order ending administration"
-                        },
-            {
-              value: "234b",
-              text: "2.34B - Notice of move from administration to creditors' voluntary liquidation"
-            },
-            {
-              value: "235b",
-              text: "2.35B - Notice of move from administration to dissolution"
             }
-
-
-
-
-
-
-
           ]
         }) }}
         {{ govukButton({

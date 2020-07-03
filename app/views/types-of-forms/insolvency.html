@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  What type of document are you uploading?
+{% endblock %}
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "form-types"
+    }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/insolvency" method="post">
+        {% if errorType == true %}
+          {{ govukErrorSummary({
+            titleText: "There is a problem",
+            errorList: errorList
+          }) }}
+          {{ govukRadios({
+            idPrefix: "typeI",
+            name: "typeI",
+            errorMessage: {
+              text: "Select the *type of form that you want to upload* "
+            },
+            fieldset: {
+              legend: {
+                text: "What type of document are you uploading?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--xl"
+              }
+             },
+             items: [
+
+                     {
+                       value: "insolvency",
+                       text: "Insolvency (2016)"
+                     },
+                     {
+                       value: "insolvency-old",
+                       text: "Insolvency (1986)"
+                     }
+             ]
+           }) }}
+        {% else %}
+          {{ govukRadios({
+        idPrefix: "typeI",
+        name: "typeI",
+        fieldset: {
+          legend: {
+            text: "What type of document are you uploading?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--xl"
+          }
+        },
+
+        items: [
+
+                {
+                  value: "insolvency",
+                  text: "Insolvency (2016)"
+                },
+                {
+                  value: "insolvency-old",
+                  text: "Insolvency (1986)"
+                }
+        ]
+        }) }}
+        {% endif %}
+        {{ govukButton({
+      text: "Continue"
+    }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

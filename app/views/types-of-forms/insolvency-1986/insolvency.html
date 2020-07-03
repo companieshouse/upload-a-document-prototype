@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  What type of insolvency document are you uploading?
+  Insolvency form categories
 {% endblock %}
 {% block beforeContent %}
   {{ govukBackLink({
@@ -11,54 +11,50 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <form action="/types-of-forms/insolvency/insolvency" method="post">
+      <form action="/types-of-forms/insolvency-1986/insolvency" method="post">
         {{ govukRadios({
           idPrefix: "typeInsolve",
           name: "typeInsolve",
           fieldset: {
             legend: {
-              html: "<span class='govuk-caption-xl'>Insolvency (2016)</span>
+              html: "<span class='govuk-caption-xl'>Insolvency (1986)</span>
 What type of document are you uploading?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--xl"
             }
           },
           items: [
-          {
-            value: "cvam",
-            text: "Company voluntary arrangement moratorium"
-          },
-          {
-            value: "cva",
-            text: "Company voluntary arrangement"
-          },
+            {
+              value: "cvam",
+              text: "Company voluntary arrangement and moratoria"
+            },
             {
               value: "in-admin",
-              text: "Administration"
+              text: "In administration"
             },
             {
               value: "receivership",
               text: "Receivership"
             },
             {
-              value: "mva",
-              text: "Members voluntary liquidation / creditors voluntary liquidation"
+              value: "liquidation",
+              text: "Liquidation"
             },
             {
-              value: "wuc",
-              text: "Winding up by the court"
+              value: "liquidation-ews",
+              text: "Liquidation forms that apply to England, Wales and Scotland"
             },
             {
-              value: "committees",
-              text: "Committees"
+              value: "insolvency-euew",
+              text: "Insolvency across EU member states: England and Wales"
             },
             {
-              value: "notice-of-disclaimer",
-              text: "Notice of disclaimer"
+              value: "insolvency-euscot",
+              text: "Insolvency across EU member states: Scotland"
             },
             {
-              value: "exempting-property",
-              text: "Exempting property"
+              value: "insolvency-euni",
+              text: "Insolvency across EU member states: Northern Ireland"
             }
           ]
         }) }}

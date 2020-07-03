@@ -1,0 +1,139 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Liquidation forms
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "insolvency"
+    }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/insolvency/cva" method="post">
+        {{ govukRadios({
+          idPrefix: "typeInsolve",
+          name: "typeInsolve",
+          fieldset: {
+            legend: {
+              html: "<span class='govuk-caption-xl'>Liquidation</span>
+Select a document",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "cva1",
+              text: "4.15A - Give notice of appointment of provisional liquidator"
+            },
+
+            {
+              value: "vam1",
+              text: "4.20 - Make statement of company's affairs"
+            },
+            {
+              value: "vam1s",
+              text: "F4.20 - Give notice of revised account"
+            },
+            {
+              value: "vam7",
+              text: "4.31 - Give notice of appointment of liquidator"
+            },
+
+            {
+              value: "vam7s",
+              text: "4.33 - Give notice of resignation as voluntary liquidator"
+            },
+            {
+              value: "vam8s",
+              text: "4.35 - Give notice of court order granting liquidator to resign"
+            },
+            {
+              value: "vam8s",
+              text: "4.38 - Give notice of removal of voluntary liquidator"
+            },
+            {
+              value: "vam8s",
+              text: "F4.39 - Terminate the appointment of provisional liquidator"
+            },
+            {
+              value: "vam8s",
+              text: "4.40 - Give notice of ceasing to act as voluntary liquidator"
+            },
+            {
+              value: "vam8s",
+              text: "F4.41 - Give notice of the statement of affairs"
+            },
+            {
+              value: "vam8s",
+              text: "4.43 - Give notice of the final meeting of creditors"
+            },
+            {
+              value: "vam8s",
+              text: "4.44 - Give notice of the death of the voluntary liquidator"
+            },
+            {
+              value: "vam8s",
+              text: "4.46 - Give notice of vacation of office by voluntary liquidator"
+            },
+            {
+              value: "vam8s",
+              text: "F4.47 - Give notice of the removal of the liquidator"
+            },
+            {
+              value: "vam8s",
+              text: "4.48 - Give notice of constitution of liquidation committee"
+            },
+            {
+              value: "vam8s",
+              text: "4.49 - Report change in membership of liquidation committee"
+            },
+            {
+              value: "vam8s",
+              text: "4.50 - Give notice by liquidator that creditors have been paid"
+            },
+            {
+              value: "vam8s",
+              text: "4.51 - Give notice by certificate that creditors paid in full"
+            },
+            {
+              value: "vam8s",
+              text: "4.68 - Give notice of the liquidator's progress report"
+            },
+            {
+              value: "vam8s",
+              text: "4.69 - Give notice of order of court on appeal"
+            },
+            {
+              value: "vam8s",
+              text: "4.71 - Give notice of final meeting in members voluntary winding up"
+            },
+            {
+              value: "vam8s",
+              text: "4.72 - Give notice of final meeting in creditors' voluntary winding up"
+            },
+            {
+              value: "vam8s",
+              text: "F9.4 - Give notice of constitution of creditors' or liquidation committee"
+            },
+            {
+              value: "vam8s",
+              text: "F10.2 - Give notice of disclaimer under section 178 of Insolvency Act"
+            },
+            {
+              value: "vam8s",
+              text: "12.1 - Give notice in respect of order under section 176a"
+            }
+          ]
+        }) }}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

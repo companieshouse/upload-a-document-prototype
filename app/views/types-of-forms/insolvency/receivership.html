@@ -1,12 +1,12 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  What type of document are you uploading?
+  Receivership forms
 {% endblock %}
 
 {% block beforeContent %}
   {{ govukBackLink({
       text: "Back",
-      href: "../../types-of-accounts"
+      href: "insolvency"
     }) }}
 {% endblock %}
 
@@ -35,8 +35,20 @@ Select a document",
               text: "REC1 (Scotland) - Notice of administrative receiver's report"
             },
             {
+              value: "carcasses",
+              text: "REC2 - Give notice of summary of receipts and payments"
+            },
+            {
               value: "mines",
-              text: "RM01 - Notice of appointment of receiver or manager"
+              text: "REC3 - Give notice of order of disposal of charged property"
+            },
+            {
+              value: "mines",
+              text: "REC4 - Give notice of statement of affairs in administrative receivership"
+            },
+            {
+              value: "mines",
+              text: "REC5 - Give notice of deceased administrative receiver ()"
             },
             {
               value: "mines",
@@ -45,12 +57,6 @@ Select a document",
             {
               value: "mines",
               text: "RM02 - Notice of ceasing to act as receiver or manager"
-            },
-
-
-            {
-              value: "carcasses",
-              text: "3.10 - Administrative receiver's report"
             }
           ]
         }) }}

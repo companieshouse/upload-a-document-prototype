@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Members voluntary liquidation / creditors voluntary liquidation forms
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "insolvency"
+    }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/insolvency/mva" method="post">
+        {{ govukRadios({
+          idPrefix: "typeInsolve",
+          name: "typeInsolve",
+          fieldset: {
+            legend: {
+              html: "<span class='govuk-caption-xl'>Members voluntary liquidation / creditors voluntary liquidation</span>
+Select a document",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "cva1",
+              text: "600CH - Appoint liquidator in voluntary winding up"
+            },
+            {
+              value: "cva1",
+              text: "LIQ01 - Give notice of statutory declaration of solvency"
+            },
+            {
+              value: "cva1",
+              text: "LIQ02 - Give notice of statement of affairs"
+            },
+            {
+              value: "cva1",
+              text: "LIQ03 - Give notice of progress report in voluntary winding up"
+            },
+            {
+              value: "cva1",
+              text: "LIQ04 - Give notice of order deferring the date of dissolution"
+            },
+            {
+              value: "cva1",
+              text: "LIQ05 - Give notice of order limiting disclosure of statement of affairs in CVL"
+            },
+            {
+              value: "cva1",
+              text: "LIQ06 - Give notice of liquidator's resignation"
+            },
+            {
+              value: "cva1",
+              text: "LIQ07 - Give notice of removal of liquidator by creditors"
+            },
+            {
+              value: "cva1",
+              text: "LIQ08 - Give notice of loss of qualification as insolvency practitioner"
+            },
+            {
+              value: "cva1",
+              text: "LIQ09 - Give notice of deceased liquidator"
+            },
+            {
+              value: "cva1",
+              text: "LIQ10 - Give notice of removal of liquidator by court order"
+            },
+            {
+              value: "cva1",
+              text: "LIQ11 - Give notice of removal of liquidator by company meeting in MVL"
+            },
+            {
+              value: "cva1",
+              text: "LIQ13 - Give notice of final account prior to dissolution in MVL"
+            },
+            {
+              value: "cva1",
+              text: "LIQ14 - Give notice of final account prior to dissolution in CVL ()"
+            }
+          ]
+        }) }}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

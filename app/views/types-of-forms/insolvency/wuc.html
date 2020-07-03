@@ -1,12 +1,12 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  What type of document are you uploading?
+  Winding up by the court forms
 {% endblock %}
 
 {% block beforeContent %}
   {{ govukBackLink({
       text: "Back",
-      href: "../../types-of-accounts"
+      href: "insolvency"
     }) }}
 {% endblock %}
 
@@ -19,30 +19,13 @@
           name: "typeInsolve",
           fieldset: {
             legend: {
-              html: "<span class='govuk-caption-xl'>Winding up</span>
+              html: "<span class='govuk-caption-xl'>Winding up by the court</span>
 Select a document",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--xl"
             }
           },
           items: [
-
-          {
-            value: "mines",
-            text: "Order of court to wind up"
-          },
-          {
-            value: "mines",
-            text: "F14 - Give notice of a winding up order"
-          },
-            {
-              value: "mines",
-              text: "WU01 - Give notice of court order in a winding up"
-            },
-            {
-              value: "carcasses",
-              text: "WU01 (Scotland) - Give notice of a court order in a winding up"
-            },
             {
               value: "mines",
               text: "WU02 - Give notice of order of appointment of provisional liquidator"
@@ -53,14 +36,28 @@ Select a document",
             },
             {
               value: "mines",
+              text: "WU03 - Give notice of termination of appointment of provisional liquidator"
+            },
+            {
+              value: "mines",
               text: "WU04 - Give notice of the appointment of liquidator in a winding up by the court"
+            },
+            {
+              value: "mines",
+              text: "WU07 - Give notice of a progress report in a winding-up by the court"
+            },
+            {
+              value: "mines",
+              text: "WU13 - Give notice of order of court on appeal against decision"
+            },
+            {
+              value: "mines",
+              text: "WU14 - Give notice of an order for removal of liquidator"
             },
             {
               value: "mines",
               text: "WU15 - Give notice of the final account prior to dissolution"
             },
-
-
             {
               value: "mines",
               text: "WU15 (Scotland) - Give notice of the final account prior to the disolution"
