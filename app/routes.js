@@ -148,6 +148,8 @@ router.post('/types-of-forms/insolvency', function (req, res) {
     res.redirect('llp/llp')
   } if (value === 'others') {
     res.redirect('others')
+  } if (value === 'moratorium') {
+    res.redirect('moratorium')
   } else {
     res.redirect('insolvency-scot/insolvency')
   }
@@ -175,8 +177,6 @@ router.post('/types-of-forms/insolvency-1986/insolvency', function (req, res) {
     res.redirect('receivership')
   } if (value === 'mva') {
     res.redirect('mva')
-  } if (value === 'moratorium') {
-    res.redirect('moratorium')
   } if (value === 'liquidation') {
     res.redirect('liquidation')
   } if (value === 'liquidation-ews') {
