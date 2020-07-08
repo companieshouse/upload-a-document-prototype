@@ -73,23 +73,6 @@
         text: "Upload another document",
         classes: "govuk-button--secondary govuk-!-margin-bottom-9"
       }) }}
-      {{ govukCheckboxes({
-        idPrefix: "waste",
-        name: "waste",
-        fieldset: {
-          legend: {
-            text: "Confirm authorisation",
-            isPageHeading: true,
-            classes: "govuk-fieldset__legend--m"
-          }
-        },
-        items: [
-          {
-            value: "carcasses",
-            text: "I confirm I am authorised to send this document for filing."
-          }
-        ]
-      }) }}
       {{ govukButton({
           text: "Submit document",
           href: "confirmation"
