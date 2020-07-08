@@ -146,6 +146,8 @@ router.post('/types-of-forms/insolvency', function (req, res) {
     res.redirect('overseas/overseas')
   } if (value === 'llp') {
     res.redirect('llp/llp')
+  } if (value === 'others') {
+    res.redirect('others')
   } else {
     res.redirect('insolvency-scot/insolvency')
   }

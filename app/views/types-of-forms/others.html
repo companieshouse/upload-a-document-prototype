@@ -1,0 +1,414 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  What type of document are you uploading?
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "../form-types"
+    }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/overseas/overseas" method="post">
+        {{ govukRadios({
+idPrefix: "reg",
+name: "reg",
+fieldset: {
+  legend: {
+    html: "<span class='govuk-caption-xl'>Others</span>
+Select a document",
+    isPageHeading: true,
+    classes: "govuk-fieldset__legend--xl"
+  }
+},
+
+items: [
+{
+  value: "carcasses",
+  text: "L64.01 - 	Early completion of winding up"
+},
+{
+  value: "mines",
+  text: "L64.04 - 	Deferment of dissolution (compulsory)"
+},
+{
+  value: "mines",
+  text: "L64.07 - 	Completion of winding up"
+},
+{
+  value: "mines",
+  text: "L72.18 - 	Winding up covering letter"
+},
+{
+  value: "mines",
+  text: "DETERMINATION - Determination for LLP's"
+},
+{
+  value: "mines",
+  text: "EC REGS D - EC REGS (domestic) onset of insolvency"
+},
+{
+  value: "mines",
+  text: "EC REGS F - EC REGS (foreign) onset of insolvency"
+},
+{
+  value: "mines",
+  text: "COCOMP - Order of court to wind up"
+},
+{
+  value: "mines",
+  text: "COLIQ - Deferment of dissolution"
+},
+{
+  value: "mines",
+  text: "NOCP - 	Notice of an order under section 176A(5)"
+},
+{
+  value: "mines",
+  text: "O/C LTD DISCLOSE - 	Order of court limiting disclosure"
+},
+{
+  value: "mines",
+  text: "O/C STAY - 	Order of court to stay strike off"
+},
+{
+  value: "mines",
+  text: "O/C UNSTAY - 	Order of court to unstay strike off"
+},
+{
+  value: "mines",
+  text: "OC/RESCIND - Order of court to rescind winding up"
+},
+{
+  value: "mines",
+  text: "OC–FRA Restructuring Plan (Reconstruction or Amalgamation)"
+},
+{
+  value: "mines",
+  text: "OC-R Restructuring Plan"
+},
+{
+  value: "mines",
+  text: "RM01 - Notice of appointment of receiver or manager"
+},
+{
+  value: "mines",
+  text: "RM02 - Notice of ceasing to act as receiver or manager"
+},
+{
+  value: "mines",
+  text: "ADD ADMIN - Add Admin"
+},
+{
+  value: "mines",
+  text: "ADD ADMIN REC - Add Admin Rec"
+},
+{
+  value: "mines",
+  text: "ADD COMPULSORY - Add Compulsory"
+},
+{
+  value: "mines",
+  text: "ADD CVA - Add CVA"
+},
+{
+  value: "mines",
+  text: "ADD CVAM - Add CVAM"
+},
+{
+  value: "mines",
+  text: "ADD CVL - Add CVL"
+},
+{
+  value: "mines",
+  text: "ADD FOREIGN - Add Foreign"
+},
+{
+  value: "mines",
+  text: "ADD IN ADMIN - Add In Admin"
+},
+{
+  value: "mines",
+  text: "ADD MVL - Add MVL"
+},
+{
+  value: "mines",
+  text: "ADD REC MAN - Add Rec Man"
+},
+{
+  value: "mines",
+  text: "CO4.2(Scot) - Court order notice of winding up"
+},
+{
+  value: "mines",
+  text: "COLIQ86 - Order of court to dissolve"
+},
+{
+  value: "mines",
+  text: "DETERMINATION - Determination for LLP's"
+},
+{
+  value: "mines",
+  text: "EC REGS D - EC REGS (domestic) onset of insolvency"
+},
+{
+  value: "mines",
+  text: "EC REGS F - EC REGS (foreign) onset of insolvency"
+},
+{
+  value: "mines",
+  text: "Form 1 (Scot) - Notice of appointment of Administrative Receiver, Receiver or Manager"
+},
+{
+  value: "mines",
+  text: "Form 3.5(Scot) - Notice of adminstrative receiver's report"
+},
+{
+  value: "mines",
+  text: "NDISCA - 	Notice attached to NDISC"
+},
+{
+  value: "mines",
+  text: "MISC - Miscellaneous"
+},
+{
+  value: "mines",
+  text:"ML7 - NOTIFICATION OF CROSS BORDER INSOLVENCY"
+},
+{
+  value: "mines",
+  text: "NOCP(Scot) - Notice of an order under section 176A(5)"
+},
+{
+  value: "mines",
+  text: "O/C DISCLOSE - 	Order of court limiting disclosure"
+},
+{
+  value: "mines",
+  text: "O/C EARLY DISS - Order of court - Early dissolution"
+},
+{
+  value: "mines",
+  text: "O/C LTD DISCLOSE - 	Order of court limiting disclosure"
+},
+{
+  value: "mines",
+  text: "O/C PROV RECALL -  Order of court recall of provisional liquidator"
+},
+{
+  value: "mines",
+  text: "O/C STAY - 	Order of court to stay strike off"
+},
+{
+  value: "mines",
+  text: "O/C UNSTAY - 	Order of court to unstay strike off"
+},
+{
+  value: "mines",
+  text: "OC/RESCIND - Order of court to rescind winding up"
+},
+{
+  value: "mines",
+  text: "OC–FRA Restructuring Plan (Reconstruction or Amalgamation)"
+},
+{
+  value: "mines",
+  text: "OC-R Restructuring Plan"
+},
+{
+  value: "mines",
+  text: "STAT DEC - Statutory Declaration"
+},
+{
+  value: "mines",
+  text: "108(NI) - Notice to court of appointment of receiver"
+},
+{
+  value: "mines",
+  text: "11(NI) - Liquidation miscellaneous"
+},
+{
+  value: "mines",
+  text: "12.1(NI) - Notice to registra of companies order under article 150a"
+},
+{
+  value: "mines",
+  text: "15A(NI) - Members return of final meeting"
+},
+{
+  value: "mines",
+  text: "15B(NI) - Creditors return of final meeting"
+},
+{
+  value: "mines",
+  text: "30(NI) - Liquidator's statement of accounts"
+},
+{
+  value: "mines",
+  text: "32(NI) - Liquidation miscellaneous"
+},
+{
+  value: "mines",
+  text: "33(NI) - Liquidation miscellaneous"
+},
+{
+  value: "mines",
+  text: "35(NI)  - Liquidation miscellaneous"
+},
+{
+  value: "mines",
+  text: "37(NI) - Liquidation miscellaneous"
+},
+{
+  value: "mines",
+  text: "39(NI) - Liquidation miscellaneous"
+},
+{
+  value: "mines",
+  text: "39B(NI) - Declaration of solvency"
+},
+{
+  value: "mines",
+  text: "39C(NI) - Appointment of liquidator by members"
+},
+{
+  value: "mines",
+  text: "39D(NI) -  Appointment of liquidator by creditors"
+},
+{
+  value: "mines",
+  text: "413(1)(NI) - Appointment of receiver"
+},
+{
+  value: "mines",
+  text: "413(2)(NI) - Ceasing to act as rec"
+},
+{
+  value: "mines",
+  text: "413(NI) - Appointment of receiver"
+},
+{
+  value: "mines",
+  text: "COLIQ(NI) - Court Order Liquidation Northern Ireland"
+},
+{
+  value: "mines",
+  text: "DETERMINAT(NI) - Determination to wind up"
+},
+{
+  value: "mines",
+  text: "DETERMINATION - Determination for LLP's"
+},
+{
+  value: "mines",
+  text: "EC REGS D - EC REGS (domestic) onset of insolvency"
+},
+{
+  value: "mines",
+  text: "EC REGS D(NI) - Notification of EC regs Insolvency procedurfe for a UK reg company"
+},
+{
+  value: "mines",
+  text: "EC REGS F - EC REGS (foreign) onset of insolvency"
+},
+{
+  value: "mines",
+  text: "EC REGS F(NI) - Notification of EC regs Insolvency procedurfe for a FC company"
+},
+{
+  value: "mines",
+  text: "L131(NI) -  Deferment of dissolution (compulsory)"
+},
+{
+  value: "mines",
+  text: "L21(NI) - Early completion of Winding up"
+},
+{
+  value: "mines",
+  text: "L22(NI) - Completion of Winding up"
+},
+{
+  value: "mines",
+  text: "LRESC (NI)) - Creditors Voluntary Liquidation Resolution"
+},
+{
+  value: "mines",
+  text: "LRESM (NI)) - Members Voluntary Liquidation Resolution"
+},
+{
+  value: "mines",
+  text: "MISC - Miscellaneous"
+},
+{
+  value: "mines",
+  text: "O/C DISCLOSE - 	Order of court limiting disclosure"
+},
+{
+  value: "mines",
+  text: "O/C LTD DISCLOSE - 	Order of court limiting disclosure"
+},
+{
+  value: "mines",
+  text: "O/C STAY - 	Order of court to stay strike off"
+},
+{
+  value: "mines",
+  text: "O/C UNSTAY - 	Order of court to unstay strike off"
+},
+{
+  value: "mines",
+  text: "OC DISCLOSE(NI) - Order of court limiting disclosure?"
+},
+{
+  value: "mines",
+  text: "OC/RESCIND - Order of court to rescind winding up"
+},
+{
+  value: "mines",
+  text: "OC–FRA Restructuring Plan (Reconstruction or Amalgamation)"
+},
+{
+  value: "mines",
+  text: "OC-R Restructuring Plan"
+},
+{
+  value: "mines",
+  text: "R-ORD(NI) - Release order"
+},
+{
+  value: "mines",
+  text: "SOAAR(NI) - Statement of affairs administrative receiver cover sheet"
+},
+{
+  value: "mines",
+  text: "SOAL(NI) - Statement of affairs aliquidation cover sheet"
+},
+{
+  value: "mines",
+  text: "SPEC PEN - Specific penalty bond"
+},
+{
+  value: "mines",
+  text: "STAT DEC - Statutory Declaration"
+},
+{
+  value: "mines",
+  text: "VL1 - Notice of appointment of liquidator voluntary winding-up (members or creditors)"
+},
+{
+  value: "mines",
+  text: "VL2(NI) - Notice to the Gazette of an appointment of a liquidator"
+}
+]
+}) }}
+        {{ govukButton({
+text: "Continue"
+}) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}
