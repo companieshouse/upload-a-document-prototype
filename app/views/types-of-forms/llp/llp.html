@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  What type of document are you uploading?
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "../form-types"
+    }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/slp/limited-partnerships" method="post">
+        {% if errorType == true %}
+          {{ govukErrorSummary({
+            titleText: "There is a problem",
+            errorList: errorList
+          }) }}
+          {{ govukRadios({
+            idPrefix: "slp",
+            name: "slp",
+            errorMessage: {
+              text: "Select the *type of form that you want to upload* "
+            },
+            fieldset: {
+              legend: {
+                html: "<span class='govuk-caption-xl'>Limited partnerships forms</span>
+            Select a document",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--xl"
+              }
+           },
+           items: [
+           {
+             value: "carcasses",
+             text: "LLRM01 - Appoint an administrative receiver, receiver or manager: limited liability partnership"
+           },
+           {
+             value: "mines",
+             text: "LLRM02 - Cease to act as an administrative receiver, receiver or manager: limited liability partnership"
+           }
+           ]
+   }) }}
+        {% else %}
+          {{ govukRadios({
+idPrefix: "reg",
+name: "reg",
+fieldset: {
+  legend: {
+    html: "<span class='govuk-caption-xl'>The Limited Liability Partnerships Regulations 2009</span>
+Select a document",
+    isPageHeading: true,
+    classes: "govuk-fieldset__legend--xl"
+  }
+},
+
+items: [
+{
+  value: "carcasses",
+  text: "LLRM01 - Appoint an administrative receiver, receiver or manager: limited liability partnership"
+},
+{
+  value: "mines",
+  text: "LLRM02 - Cease to act as an administrative receiver, receiver or manager: limited liability partnership"
+}
+]
+}) }}
+        {% endif %}
+        {{ govukButton({
+text: "Continue"
+}) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}
