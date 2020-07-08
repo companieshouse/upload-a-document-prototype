@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Moratorium (COVID-19)
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "insolvency"
+    }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/insolvency/moratorium" method="post">
+        {{ govukRadios({
+          idPrefix: "typeInsolve",
+          name: "typeInsolve",
+          fieldset: {
+            legend: {
+              html: "<span class='govuk-caption-xl'>Moratorium (COVID-19)</span>
+Select a document",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "cva1",
+              text: "MT01 - Notice that Moratorium has come into force"
+            },
+            {
+              value: "cva1",
+              text: "MT02 - Notice that moratorium has ended or been extended"
+            },
+            {
+              value: "cva1",
+              text: "MT03 - Notice of early end of moratorium"
+            },
+            {
+              value: "cva1",
+              text: "MT04 - Notice of end of moratorium by a monitor"
+            },
+            {
+              value: "cva1",
+              text: "MT05 - Notice of end of moratorium by a court"
+            },
+            {
+              value: "cva1",
+              text: "MT06 - Notice of end of moratorium following disposal of application for extension by the court or following CVA proposal taking effect or being withdrawn"
+            },
+            {
+              value: "cva1",
+              text: "MT07 - Court order permitting disposal of property or goods"
+            },
+            {
+              value: "cva1",
+              text: "MT08 - Notice of replacement or additional monitor (following court order)"
+            },
+            {
+              value: "cva1",
+              text: "MT09 - Notice of monitor ceasing to act following court"
+            }
+          ]
+        }) }}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

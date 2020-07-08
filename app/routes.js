@@ -171,6 +171,8 @@ router.post('/types-of-forms/insolvency-1986/insolvency', function (req, res) {
     res.redirect('receivership')
   } if (value === 'mva') {
     res.redirect('mva')
+  } if (value === 'moratorium') {
+    res.redirect('moratorium')
   } if (value === 'liquidation') {
     res.redirect('liquidation')
   } if (value === 'liquidation-ews') {
