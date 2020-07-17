@@ -1,0 +1,21 @@
+{
+  "shortcuts": [
+    {
+      "name": "Upload another document",
+      "description": "Send another document to Companies House",
+      "url": "/play-later",
+      "icons": [
+        {
+          "src": "/icons/play-later.svg",
+          "type": "image/svg+xml",
+          "purpose": "any"
+        }
+      ]
+    },
+    {
+      "name": "Upload a document to Companies House",
+      "description": "Use this service to file certain documents online that would usually be sent to us in a paper format.",
+      "url": "/"
+    }
+  ]
+}
