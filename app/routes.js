@@ -108,6 +108,8 @@ router.post('/types-of-forms/insolvency/insolvency', function (req, res) {
     res.redirect('in-adminstration')
   } if (value === 'receivership') {
     res.redirect('receivership')
+  } if (value === 'mva') {
+    res.redirect('mva')
   } if (value === 'wuc') {
     res.redirect('wuc')
   } if (value === 'committees') {
@@ -175,18 +177,10 @@ router.post('/types-of-forms/insolvency-1986/insolvency', function (req, res) {
     res.redirect('in-admin')
   } if (value === 'receivership') {
     res.redirect('receivership')
-  } if (value === 'mva') {
-    res.redirect('mva')
   } if (value === 'liquidation') {
     res.redirect('liquidation')
   } if (value === 'liquidation-ews') {
     res.redirect('liquidation-ews')
-  } if (value === 'insolvency-euew') {
-    res.redirect('insolvency-euew')
-  } if (value === 'insolvency-euscot') {
-    res.redirect('insolvency-euscot')
-  } if (value === 'insolvency-euni') {
-    res.redirect('insolvency-euni')
   } else {
     res.redirect('others')
   }
