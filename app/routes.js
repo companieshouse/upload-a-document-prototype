@@ -152,6 +152,8 @@ router.post('/types-of-forms/insolvency', function (req, res) {
     res.redirect('others')
   } if (value === 'moratorium') {
     res.redirect('moratorium')
+  } if (value === 'ini') {
+    res.redirect('ini')
   } else {
     res.redirect('insolvency-scot/insolvency')
   }
