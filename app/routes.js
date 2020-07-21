@@ -159,6 +159,40 @@ router.post('/types-of-forms/insolvency', function (req, res) {
   }
 })
 
+router.get('/types-of-forms/ini', function (req, res) {
+  res.render('types-of-forms/ini', {
+  })
+})
+
+router.post('/types-of-forms/ini', function (req, res) {
+  var errors = []
+  var value = req.session.data['typeIni']
+  if (typeof req.session.data['typeIni'] === 'undefined') {
+    errors.push({
+      text: 'Select the *type of form that you want to upload* ',
+      href: '#typeInsolve'
+    })
+    res.render('types-of-forms/ini', {
+      errorType: true,
+      errorList: errors
+    })
+  } if (value === 'cvam') {
+    res.redirect('northern-ireland/cvam')
+  } if (value === 'in-admin') {
+    res.redirect('northern-ireland/in-adminstration')
+  } if (value === 'receivership') {
+    res.redirect('northern-ireland/receivership')
+  } if (value === 'liquidation') {
+    res.redirect('northern-ireland/liquidation')
+  } if (value === 'mvl') {
+    res.redirect('northern-ireland/mvl')
+  } if (value === 'euni') {
+    res.redirect('northern-ireland/euni')
+  } else {
+    res.redirect('northern-ireland/euni')
+  }
+})
+
 router.post('/types-of-forms/insolvency-1986/insolvency', function (req, res) {
   var errors = []
   var value = req.session.data['typeInsolve']
