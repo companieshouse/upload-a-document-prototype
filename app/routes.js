@@ -154,6 +154,8 @@ router.post('/types-of-forms/insolvency', function (req, res) {
     res.redirect('moratorium')
   } if (value === 'ini') {
     res.redirect('ini')
+  } if (value === 'resolutions') {
+    res.redirect('resolutions')
   } else {
     res.redirect('insolvency-scot/insolvency')
   }
@@ -190,6 +192,32 @@ router.post('/types-of-forms/ini', function (req, res) {
     res.redirect('northern-ireland/euni')
   } else {
     res.redirect('northern-ireland/euni')
+  }
+})
+
+router.get('/types-of-forms/resolutions', function (req, res) {
+  res.render('types-of-forms/resolutions', {
+  })
+})
+
+router.post('/types-of-forms/resolutions', function (req, res) {
+  var errors = []
+  var value = req.session.data['typeRes']
+  if (typeof req.session.data['typeRes'] === 'undefined') {
+    errors.push({
+      text: 'Select the *type of form that you want to upload* ',
+      href: '#typeInsolve'
+    })
+    res.render('types-of-forms/resolutions', {
+      errorType: true,
+      errorList: errors
+    })
+  } if (value === 'erwu') {
+    res.redirect('insolvency-resolutions/erwu')
+  } if (value === 'srwu') {
+    res.redirect('insolvency-resolutions/srwu')
+  } else {
+    res.redirect('insolvency-resolutions/srwu')
   }
 })
 

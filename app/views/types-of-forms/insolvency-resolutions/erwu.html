@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Company voluntary arrangement and moratoria forms
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "insolvency"
+    }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/insolvency/cva" method="post">
+        {{ govukRadios({
+          idPrefix: "typeInsolve",
+          name: "typeInsolve",
+          fieldset: {
+            legend: {
+              html: "<span class='govuk-caption-xl'>Company voluntary arrangement and moratoria</span>
+Select a document",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "cva1",
+              text: "1.1 - Notice of voluntary arrangement taking effect"
+            },
+            {
+              value: "cva1",
+              text: "1.1 (Scotland) - Notice of voluntary arrangement taking effect"
+            },
+            {
+              value: "vam7s",
+              text: "1.11 - Notice of commencement of moratorium"
+            },
+            {
+              value: "vam7s",
+              text: "1.11 (Scotland) - Notice of commencement of moratorium"
+            },
+            {
+              value: "vam8s",
+              text: "1.12 - Notice of extension or continuation of moratorium"
+            },
+            {
+              value: "vam7s",
+              text: "1.12 (Scotland) - Notice of extension or continuation of moratorium"
+            },
+            {
+              value: "vam8s",
+              text: "1.14 - Notice of ending of moratorium"
+            },
+            {
+              value: "vam7s",
+              text: "1.14 (Scotland) - Notice of ending of moratorium"
+            },
+            {
+              value: "vam8s",
+              text: "1.16 - Notice of withdrawal of nominee's consent to act"
+            },
+            {
+              value: "vam8s",
+              text: "1.16 (Scotland) - Notice of withdrawal of nominee's consent to act"
+            },
+            {
+              value: "vam8s",
+              text: "1.18 - Notice of the appointment of a replacement nominee"
+            },
+            {
+              value: "vam8s",
+              text: "1.18 (Scotland) - Notice of the appointment of a replacement nominee"
+            },
+            {
+              value: "vam1",
+              text: "1.2 - Notice of order, revocation or suspension of voluntary arrangement"
+            },
+            {
+              value: "vam1",
+              text: "1.2 (Scotland) - Notice of order, revocation or suspension of voluntary arrangement"
+            },
+            {
+              value: "vam1s",
+              text: "1.3 - Notice of supervisor's abstract of receipts and payments"
+            },
+            {
+              value: "vam1s",
+              text: "1.3 (Scotland) - Notice of supervisor’s abstract of receipts and payments"
+            },
+            {
+              value: "vam7",
+              text: "1.4 - Notice of completion of voluntary arrangement"
+            },
+            {
+              value: "vam1s",
+              text: "1.4 (Scotland) - Notice of completion of voluntary arrangement"
+            }
+          ]
+        }) }}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}
