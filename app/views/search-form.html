@@ -1,0 +1,199 @@
+{% extends "layout.html" %}
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <h1 class="govuk-heading-xl">What type of document are you uploading?</h1>
+      <form action="" method="get">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="last-location">Search the form type</label>
+          <div class="autocomplete-wrapper">
+            <select name="last-location" class="govuk-input" id="last-location">
+              <option value="">Select a country</option>
+              <option value="LP5">LP5 - Register a limited partnership</option>
+              <option value="LP6">LP6 - Make changes to a limited partnership</option>
+              <option value="LP7">LP7 - Register a limited partnership as private fund limited partnership
+              </option>
+              <option value="LP8">LP8 - Designate as a private fund limited partnership
+              </option>
+              <option value="SLPPSC01">SLP PSC01 - Give notice of individual person with significant control of a Scottish limited partnership</option>
+              <option value="SLPPSC02">SLP PSC02 - Give notice of relevant legal entity with significant control of a Scottish limited partnership</option>
+              <option value="SLPPSC03">SLP PSC03 - Give notice of other registrable person with significant control of a Scottish limited partnership
+              </option>
+              <option value="SLPPSC04">SLP PSC04 - Give notice to change details of a person with significant control of a Scottish limited partnership</option>
+              <option value="SLPPSC05">SLP PSC05 - Give details of relevant legal entity with significant control of a Scottish limited partnership
+              </option>
+              <option value="SLPPSC06">SLP PSC06 - Give notice changing details of other person with significant control of a Scottish limited partnership
+              </option>
+              <option value="SLPPSC07">SLP PSC07 - Give notice of ceasing to be a PSC, RLE or ORP of a Scottish limited partnership</option>
+              <option value="SLPPSC08">SLP PSC08 - Give notice of a person of PSC statements for a Scottish limited partnership</option>
+              <option value="SLPPSC09">SLP PSC09 - Give notice of update to PSC statements for a Scottish limited partnership</option>
+              <option value="SQP2">SQP2 - Give notice of a change of details for a Scottish qualifying partnership</option>
+              <option value="SQP3">SQP3 - Give notice of ceasing to be a Scottish qualifying partnership</option>
+              <option value="SQPPSC01">SQP PSC01 - Give notice of individual person with significant control of a Scottish qualifying partnership</option>
+              <option value="SQPPSC02">SQP PSC02 - Give notice of relevant legal entity with significant control of a Scottish qualifying partnership</option>
+              <option value="SQPPSC03">SQP PSC03 - Give notice of other registrable person with significant control of a Scottish qualifying partnership</option>
+              <option value="SQPPSC04">SQP PSC04 - Give notice to change details of a person with significant control of a Scottish qualifying partnership</option>
+              <option value="SQPPSC05">SQP PSC05 - Give details of relevant legal entity with significant control of a Scottish qualifying partnership</option>
+              <option value="SQPPSC06">SQP PSC06 - Give notice changing details of other person with significant control of a Scottish qualifying partnership</option>
+              <option value="SQPPSC07">SQP PSC07 - Give notice of ceasing to be a PSC, RLE or ORP of a Scottish Qualifying Partnership</option>
+              <option value="SQPPSC08">SQP PSC08 - Give notice of PSC statements for a Scottish qualifying partnership</option>
+              <option value="SQPPSC09">SQP PSC09 - Give notice of update to PSC statements for a Scottish qualifying partnership</option>
+              <option value="RP02A">RP02A - Apply for rectification by the registrar of companies</option>
+              <option value="RP02B">RP02B - Apply for rectification of a change of registered address</option>
+              <option value="RP03">RP03 - Object to a request to rectify the register</option>
+              <option value="RP06">RP06 - Apply to remove material about a director</option>
+              <option value="RP07">RP07 - Apply to change a company's disputed registered office address</option>
+              <option value="RPCH01">RP CH01 - Correct a director's date of birth</option>
+              <option value="LLRP02A">LL RP02A - Apply for rectification by the registrar for a limited liability partnership</option>
+              <option value="LLRP02B">LL RP02B - Apply for rectification of change of registered address of a limited liability partnership</option>
+              <option value="LLRP03">LL RP03 - Notice of an objection to a request for the Registrar of Companies to rectify the Register for a Limited Liability Partnership</option>
+              <option value="LLRP07">LL RP07 - Apply to change a disputed registered office address of a limited liability partnership</option>
+              <option value="LLRPCH01">LL RP CH01 - Correct the date of birth of an LLP member</option>
+              <option value="CC01">CC01 - Give notice of restriction on the company's articles</option>
+              <option value="CC02">CC02 - Give notice of removal of restriction on company's articles</option>
+              <option value="CC04">CC04 - Notify the change of company's objects</option>
+              <option value="CC05">CC05 - Change constitution by enactment</option>
+              <option value="CC06">CC06 - Change constitution by order of court or other authority</option>
+              <option value="MT01">MT01 - Notice that moratorium has come into force</option>
+              <option value="MT02">MT02 - Notice that moratorium has ended or been extended</option>
+              <option value="MT03">MT03 - Notice of early end of moratorium</option>
+              <option value="MT04">MT04 - Notice of end of moratorium by a monitor</option>
+              <option value="MT05">MT05 - Notice of end of moratorium by a court</option>
+              <option value="MT06">MT06 - Notice of end of moratorium following disposal of application for extension by the court or following CVA proposal taking effect or being withdrawn
+              </option>
+              <option value="MT07">MT07 - Court order permitting disposal of property or goods</option>
+              <option value="MT08">MT08 - Notice of replacement or additional monitor following court order</option>
+              <option value="MT09">
+                MT09 - Notice of monitor ceasing to act following court order
+              </option>
+              <option value="1.1">1.1 - Notice of voluntary arrangement taking effect</option>
+              <option value="1.1 Scot">1.1 (Scotland) - Notice of voluntary arrangement taking effect</option>
+              <option value="1.11">1.11 - Notice of commencement of moratorium</option>
+              <option value="1.11 Scot">1.11 (Scotland) - Notice of commencement of moratorium</option>
+              <option value="1.12">1.12 - Notice of extension or continuation of moratorium</option>
+              <option value="1.12 Scot">1.12 (Scotland) - Notice of extension or continuation of moratorium
+              </option>
+              <option value="1.14">1.14 - Notice of ending of moratorium</option>
+              <option value="1.14 Scot">1.14 (Scotland) - Notice of ending of moratorium</option>
+              <option value="1.16">1.16 - Notice of withdrawal of nominee's consent to act</option>
+              <option value="1.16 Scot">1.16 (Scotland) - Notice of withdrawal of nominee's consent to act</option>
+              <option value="1.18">1.18 - Notice of the appointment of a replacement nominee</option>
+              <option value="1.18 Scot">1.18 (Scotland) - Notice of the appointment of a replacement nominee</option>
+              <option value="1.2">1.2 - Notice of order, revocation or suspension of voluntary arrangement</option>
+              <option value="1.2 Scot">1.2 (Scotland) - Notice of order, revocation or suspension of voluntary arrangement</option>
+              <option value="1.3">1.3 - Notice of supervisor's abstract of receipts and payments</option>
+              <option value="1.3 Scot">1.3 (Scotland) - Notice of supervisor’s abstract of receipts and payments</option>
+              <option value="1.4">1.4 - Notice of completion of voluntary arrangement</option>
+              <option value="1.4 Scot">1.4 (Scotland) - Notice of completion of voluntary arrangement</option>
+              <option value="2 Scot">2 (Scotland) - Notice of the appointment of a receiver by a court</option>
+              <option value="2.1 Scot">2.1 (Scotland) - Notice of petition for administration order</option>
+              <option value="2.11 Scot">2.11 (Scotland) - Notice of order to deal with secured property</option>
+              <option value="2.11B Scot">2.11B (Scotland) - Notice of appointment of administrative receiver, receiver or manager</option>
+              <option value="2.12 Scot">
+                2.12 (Scotland) - Notice of variation of administration order
+              </option>
+              <option value="2.12B">2.12B(CH) - Notice of administrator's appointment</option>
+              <option value="2.13">2.13B (Scotland) - Notice of statement of affairs</option>
+              <option value="2.14">2.14B - Notice of statement of affairs</option>
+              <option value="2.14 Scot">2.14B (Scotland) - Notice of statement of concurrence</option>
+              <option value="2.15B">2.15B - Notice of statement of concurrence</option>
+              <option value="2.15B">2.15B (Scotland) - Notice of statement of affairs</option>
+              <option value="2.16B">2.16B - Notice of statement of affairs</option>
+              <option value="2.16B Scot">2.16B (Scotland) - Statement of administrator's proposal</option>
+              <option value="2.16BZ">2.16BZ (Scotland) - Notice of deemed approval of proposal</option>
+              <option value="country:ET">
+                2.17B - Notice of a statement of administrator's proposals
+              </option>
+              <option value="2.17B Scot">2.17B (Scotland) - Statement of administrator's revised proposal</option>
+              <option value="2.18B">2.18B(CH) - Notice of extension of time period</option>
+              <option value="2.18B Scot">2.18B (Scotland) - Notice of result of meeting of creditors</option>
+              <option value="2.19B">2.19B (Scotland) - Notice of order to deal with secured property</option>
+              <option value="2.2 Scot">2.2 (Scotland) - Notice of administration order</option>
+              <option value="2.2B Scot">2.2B (Scotland) - Notice of petition for administration order</option>
+              <option value="2.20B">2.20B (Scotland) - Administrator's progress report</option>
+              <option value="2.21B Scot">2.21B (Scotland) - Notice of automatic end of administration</option>
+              <option value="2.22B">2.22B(CH) - Notice of administrator's revised proposals</option>
+              <option value="2.22B Scot">2.22B (Scotland) - Notice of extension of period of administration</option>
+              <option value="2.23BCH">2.23B(CH) - Notice of result of creditors' meeting</option>
+              <option value="2.23B">2.23B (Scotland) - Notice of end of administration</option>
+              <option value="2.24BCH">2.24B(CH) - Notice of administrator’s progress report</option>
+              <option value="2.24B">2.24B (Scotland) - Notice of court order ending administration</option>
+              <option value="2.25B">2.25B (Scotland) - Notice of move from administration to creditors' voluntary liquidation</option>
+              <option value="2.26B">2.26B(CH) - Amend certificate of constitution of creditors’ committee</option>
+              <option value="2.26B">2.26B (Scotland) - Notice of move from administration to dissolution</option>
+              <option value="2.27B">2.27B - Notice by administrator of a change in committee</option>
+              <option value="2.27B">2.27B (Scotland) - Notice of court order in respect of date of dissolution</option>
+              <option value="2.28B">2.28B - Notice of order to deal with charged property</option>
+              <option value="2.29B">2.29B (Scotland) - Notice of resignation by administrator</option>
+              <option value="2.3">2.3 (Scotland) - Notice of dismissal of petition for administration order</option>
+              <option value="2.3B">2.3B (Scotland) - Notice of dismissal of petition for administration order</option>
+              <option value="2.30B">2.30B(CH) - Notice of the automatic end of administration</option>
+              <option value="2.30B">2.30B (Scotland) - Notice of vacation of office by administrator</option>
+              <option value="2.31B">2.31B - Notice of the extension of period of administration</option>
+              <option value="2.31B">2.31B (Scotland) - Notice of appointment of replacement/additional administrator</option>
+              <option value="2.32B">2.32B(CH) - Notice of the end of administration</option>
+              <option value="2.32B">2.32B (Scotland) - Notice of insufficient property for distribution to unsecured creditors other than by virtue</option>
+              <option value="2.33B">2.33B - Notice of court order ending administration</option>
+              <option value="2.34B">2.34B - Notice of move from administration to creditors’ voluntary liquidation</option>
+              <option value="2.35B">2.35B - Notice of move from administration to dissolution</option>
+              <option value="2.36B">2.36B - Notice to registrar of companies in respect of date of dissolution</option>
+              <option value="2.38B">2.38B(CH) - Notice of resignation by administrator</option>
+              <option value="2.39B">2.39B - Notice of vacation of office by administrator</option>
+              <option value="2.4">2.4 (Scotland) - Notice of discharge of administration order</option>
+              <option value="2.40B">2.40B - Notice of appointment of replacement/additional administrator</option>
+              <option value="2.7">2.7 (Scotland) - Notice of statement of administrator's proposals</option>
+              <option value="2.8">2.8 (Scotland) - Notice of result of meeting creditors</option>
+              <option value="2.9">2.9 (Scotland) - Administrator's abstract of receipts and payments</option>
+              <option value="3.2">3.2 - Statement of affairs</option>
+              <option value="3.3">3.3 - Make statement of affairs in administrative receivership</option>
+              <option value="3.6">3.6(CH) - Notice of abstract of receipts and payments</option>
+              <option value="3.7">3.7 - Notice of administrative receiver's death</option>
+              <option value="3.8">3.8 - Notice of order to dispose of charged property</option>
+              <option value="3.10">3.10 - Notice of administrative receiver's report</option>
+              <option value="Form 1">Form 1 (Scotland) - Notice of appointment of administrative receiver, receiver or manager</option>
+              <option value="600">600 - Appoint liquidator in voluntary winding up</option>
+              <option value="4.15A">4.15A - Notice of appointment of provisional liquidator</option>
+              <option value="4.17">4.17 (Scotland) - Notice of final account prior to dissolution in a winding up by the court</option>
+              <option value="4.18">4.18 - Statement of affairs: winding up by the court</option>
+              <option value="4.19">4.19 - Statement of affairs: voluntary liquidator</option>
+              <option value="4.2">4.2 (Scotland) - Notice of winding up order</option>
+              <option value="4.20">4.20 - Make statement of company's affairs</option>
+              <option value="4.27">4.27 (Scotland) - Notice of court order staying or sisting proceedings in a winding up by the court</option>
+              <option value="4.31">4.31 - Notice of appointment of liquidator</option>
+              <option value="4.31">4.31 (Scotland) - Notice to registrar of companies in respect of order under section 176A</option>
+              <option value="4.33">4.33 - Notice of resignation as voluntary liquidator</option>
+              <option value="4.35">4.35 - Notice of court order granting liquidator to resign</option>
+              <option value="4.38">4.38 - Notice of removal of voluntary liquidator</option>
+              <option value="4.40">4.40 - Notice of ceasing to act as voluntary liquidator</option>
+              <option value="F4.41">F4.41 - Notice of the statement of affairs</option>
+              <option value="4.43">4.43 - Notice of the final meeting of creditors</option>
+            </select>
+          </div>
+        </div>
+
+        {{ govukDetails({
+          summaryText: "Help finding the form",
+          text: "We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post."
+        }) }}
+        <button class="govuk-button" type="submit">Continue</button>
+      </form>
+
+      <div class="submitted submitted--hidden">
+        <p>You submitted:</p>
+        <ul>
+          <li>
+            <code>"last-location":
+              <span class="submitted__last-location"></span></code>
+          </li>
+        </ul>
+        <hr/>
+      </div>
+    </div>
+  </div>
+{% endblock %}
