@@ -4,5 +4,5 @@ This service was created for users to file certain documents online that would u
 It's built on the Express framework, and uses GOV.UK Frontend.
 ### Install dependencies
 ```npm install```
-### Run the kite
+### Run the kit
 ```npm start```
