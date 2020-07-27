@@ -11,7 +11,7 @@
       <h1 class="govuk-heading-xl">What type of document are you uploading?</h1>
       <form action="" method="get">
         <div class="govuk-form-group">
-          <label class="govuk-label" for="last-location">Search the form type</label>
+          <label class="govuk-label" for="last-location">Start typing the document type or description.</label>
           <div class="autocomplete-wrapper">
             <select name="last-location" class="govuk-input" id="last-location">
               <option value="">Select a country</option>
@@ -178,8 +178,8 @@
         </div>
 
         {{ govukDetails({
-          summaryText: "Help finding the form",
-          text: "We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post."
+          summaryText: "Where can I find the document type and description?",
+          text: "You can find the document type and description at the top of the document you're uploading."
         }) }}
         <button class="govuk-button" type="submit">Continue</button>
       </form>
