@@ -2,50 +2,20 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">{{serviceName}}</h1>
-      <p class="govuk-body-l">Use this service to file certain documents online that would usually be sent to us in a paper format.</p>
-      <p class="govuk-body">
-        <a class="govuk-link" href="static/guidance">Read the guidance to find out how to upload a document</a>, including which documents you can file.</p>
-      {{ govukInsetText({
-        text: "This interim service has been created to enable paperless filing in response to the coronavirus (COVID-19) outbreak."
-      }) }}
-      <p class="govuk-body">You'll need:</p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>the completed document or
-          <a href="https://www.gov.uk/topic/company-registration-filing/forms" class="govuk-link">Companies House form</a>
-        </li>
-        <li>to save the completed document to the device you are using
-        </li>
-      </ul>
-      <p class="govuk-body">For some document types, you'll need:</p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>the company authentication code</li>
-        <li>to pay for the document online before uploading it</li>
-        <li>to include supporting evidence</li>
-      </ul>
-      {{ govukButton({
-        text: "Start now",
-        href: "sign-in",
-        classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-8",
-        isStartButton: true
-      }) }}
-      <h2 class="govuk-heading-m">Before you start</h2>
-      <p class="govuk-body">There are different services available if you need to:</p>
+      <h1 class="govuk-heading-xl">Upload a document to Companies House prototype</h1>
+      <h2 class="govuk-heading-l">Shortcuts</h2>
       <ul class="govuk-list govuk-list--bullet">
         <li>
-          <a href="https://www.gov.uk/limited-company-formation/register-your-company" class="govuk-link">register a company</a>
+          <a href="start.html" class="govuk-link">Upload a document to Companies House service start page</a>
         </li>
         <li>
-          <a href="https://www.gov.uk/file-your-company-annual-accounts" class="govuk-link">file company accounts</a>
+          <a href="govuk/lp5" class="govuk-link">LP5 form type page</a>
         </li>
         <li>
-          <a href="https://www.gov.uk/file-your-confirmation-statement-with-companies-house" class="govuk-link">file a confirmation statement</a>
+          <a href="emails/email-list" class="govuk-link">Emails sent</a>
         </li>
         <li>
-          <a href="https://www.gov.uk/file-changes-to-a-company-with-companies-house" class="govuk-link">make changes to a company</a>
-        </li>
-        <li>
-          <a href="https://guidedfiling.companieshouse.gov.uk/start?t=DS01" class="govuk-link">close a company</a>
+          <a href="search-form" class="govuk-link">Experimental form type search</a>
         </li>
       </ul>
     </div>
