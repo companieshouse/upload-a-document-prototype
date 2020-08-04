@@ -408,6 +408,31 @@ router.post('/auth-screen', function (req, res) {
 })
 
 // Supporting evidence question
+router.get('/types-of-forms/constitution/change-of-constitution', function (req, res) {
+  res.render('types-of-forms/constitution/change-of-constitution', {
+  })
+})
+
+router.post('/types-of-forms/constitution/change-of-constitution', function (req, res) {
+  var errors = []
+  var value = req.session.data['cc']
+  if (req.session.data['cc'] === '') {
+    errors.push({
+      text: 'Enter the company authentication code',
+      href: '#auth-number'
+    })
+    res.render('types-of-forms/constitution/change-of-constitution', {
+      errorAuth: true,
+      errorList: errors
+    })
+  } if (value === 'resolution') {
+    res.redirect('../resolutions/resolutions')
+  } else {
+    res.redirect('../../auth-screen')
+  }
+})
+
+// Supporting evidence question
 router.get('/question-upload-supporting', function (req, res) {
   res.render('question-upload-supporting', {
   })

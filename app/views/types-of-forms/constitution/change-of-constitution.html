@@ -11,15 +11,15 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <form action="/types-of-forms/reg/reg" method="post">
+      <form action="/types-of-forms/constitution/change-of-constitution" method="post">
         {% if errorType == true %}
           {{ govukErrorSummary({
             titleText: "There is a problem",
             errorList: errorList
           }) }}
           {{ govukRadios({
-            idPrefix: "reg",
-            name: "reg",
+            idPrefix: "cc",
+            name: "cc",
             errorMessage: {
               text: "Select the *type of form that you want to upload* "
             },
@@ -55,8 +55,8 @@
            }) }}
         {% else %}
           {{ govukRadios({
-            idPrefix: "reg",
-            name: "reg",
+            idPrefix: "cc",
+            name: "cc",
             fieldset: {
               legend: {
                 html: "<span class='govuk-caption-xl'>Change of constitution</span> Select a document",
@@ -86,11 +86,11 @@
                 text: "CC06 - Change constitution by order of court or other authority"
               },
               {
-                value: "mines",
+                value: "articles",
                 text: "Articles"
               },
               {
-                value: "mines",
+                value: "resolution",
                 text: "Resolution"
               }
             ]
