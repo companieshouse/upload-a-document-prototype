@@ -457,6 +457,31 @@ router.post('/question-upload-supporting', function (req, res) {
   }
 })
 
+// Guest sign in
+router.get('/guest-signin/option', function (req, res) {
+  res.render('guest-signin/option', {
+  })
+})
+
+router.post('/guest-signin/option', function (req, res) {
+  var errors = []
+  var value = req.session.data['guest-signin']
+  if (req.session.data['guest-signin'] === '') {
+    errors.push({
+      text: 'Enter the company authentication code',
+      href: '#auth-number'
+    })
+    res.render('guest-signin/option', {
+      errorAuth: true,
+      errorList: errors
+    })
+  } if (value === 'yes') {
+    res.redirect('../sign-in')
+  } else {
+    res.redirect('email')
+  }
+})
+
 // CVA
 router.get('/types-of-forms/insolvency/cva', function (req, res) {
   res.render('types-of-forms/insolvency/cva', {
