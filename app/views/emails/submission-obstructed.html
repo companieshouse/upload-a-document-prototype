@@ -2,192 +2,26 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      {% set buttonHref = "One or more documents have been moved to the Upload a document to Companies House dead letter queue" %}
-      {{ govukPanel({
-        titleText: "Submission obstructed",
-        classes: "rejected",
-        html: buttonHref
-      }) }}
-      <p class="govuk-body">This email is to advise you that one or more submissions have been delayed for 3 or more days and are currently unable to progress through the upload service.</p>
-<h3 class="govuk-heading-m">Affected documents</h3>
-{{ govukTable({
-  rows: [
-    [
-      {
-        text: "Upload date"
-      },
-      {
-        text: "1 January 2020"
-      }
-    ],
-    [
-      {
-        text: "Company number"
-      },
-      {
-        text: "11223344"
-      }
-    ],
-    [
-      {
-        text: "Type of document"
-      },
-      {
-        text: "SLP CS01"
-      }
-    ],
-    [
-      {
-        text: "Confirmation reference"
-      },
-      {
-        text: "1A2B-3C4D-5E6F-7G8H"
-      }
-    ],
-    [
-      {
-        text: "Customer email"
-      },
-      {
-        text: "testcustomer@testdata.com"
-      }
-    ]
-  ]
-}) }}
-{{ govukTable({
-  rows: [
-    [
-      {
-        text: "Upload date"
-      },
-      {
-        text: "1 January 2020"
-      }
-    ],
-    [
-      {
-        text: "Company number"
-      },
-      {
-        text: "11223344"
-      }
-    ],
-    [
-      {
-        text: "Type of document"
-      },
-      {
-        text: "SLP CS01"
-      }
-    ],
-    [
-      {
-        text: "Confirmation reference"
-      },
-      {
-        text: "1A2B-3C4D-5E6F-7G8H"
-      }
-    ],
-    [
-      {
-        text: "Customer email"
-      },
-      {
-        text: "testcustomer@testdata.com"
-      }
-    ]
-  ]
-}) }}
-{{ govukTable({
-  rows: [
-    [
-      {
-        text: "Upload date"
-      },
-      {
-        text: "1 January 2020"
-      }
-    ],
-    [
-      {
-        text: "Company number"
-      },
-      {
-        text: "11223344"
-      }
-    ],
-    [
-      {
-        text: "Type of document"
-      },
-      {
-        text: "SLP CS01"
-      }
-    ],
-    [
-      {
-        text: "Confirmation reference"
-      },
-      {
-        text: "1A2B-3C4D-5E6F-7G8H"
-      }
-    ],
-    [
-      {
-        text: "Customer email"
-      },
-      {
-        text: "testcustomer@testdata.com"
-      }
-    ]
-  ]
-}) }}
-{{ govukTable({
-  rows: [
-    [
-      {
-        text: "Upload date"
-      },
-      {
-        text: "1 January 2020"
-      }
-    ],
-    [
-      {
-        text: "Company number"
-      },
-      {
-        text: "11223344"
-      }
-    ],
-    [
-      {
-        text: "Type of document"
-      },
-      {
-        text: "SLP CS01"
-      }
-    ],
-    [
-      {
-        text: "Confirmation reference"
-      },
-      {
-        text: "1A2B-3C4D-5E6F-7G8H"
-      }
-    ],
-    [
-      {
-        text: "Customer email"
-      },
-      {
-        text: "testcustomer@testdata.com"
-      }
-    ]
-  ]
-}) }}
+    <h1 class="govuk-heading-xl">EFS submission obstructed</h1>
+<h4 class="govuk-heading-s">The following files have been moved to the EFS dead letter queue because of a system outage. Please investigate the issue and place these files back to the EFS SQS queue.</h4>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>Upload date: 01/01/2020 <br>
+Confirmation reference: 1A2B-3C4D-5E6F-7G8H <br>
+Submission ID: 5f06adea15f96c60ea7da066
+  </li>
+  <br>
+  <li>Upload date: 02/01/2020 <br>
+Confirmation reference: 1A2B-3C4D-5E6F-7G9I <br>
+Submission ID: 5f06adea15f96c60ea7da067
+  </li>
+  <br>
+  <li>Upload date: 03/01/2020 <br>
+Confirmation reference: 1A2B-3C4D-5E6F-7G8J <br>
+Submission ID: 5f06adea15f96c60ea7da068
+  </li>
+</ul>
       </ul>
-      <p class="govuk-body">Contact IT support for the latest update on these submissions.</p>
-    </div>
+
   </div>
 {% endblock %}
