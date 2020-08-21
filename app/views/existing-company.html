@@ -1,0 +1,87 @@
+{% set title = "Tell us your company number" %}
+{% extends "layout.html" %}
+{% block pageTitle %}
+  {{title}}
+{% endblock %}
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "sign-in"
+  }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+      <form action="/existing-company" method="post">
+        {% if errorType == true %}
+          {{ govukErrorSummary({
+            titleText: "There is a problem",
+            errorList: [
+              {
+                text: "The date your passport was issued must be in the past",
+                href: "#passport-issued-error"
+              }
+            ]
+          }) }}
+          {{ govukRadios({
+            classes: "govuk-radios",
+            idPrefix: "existing-company",
+            name: "existing-company",
+            fieldset: {
+              legend: {
+                text: "Are you uploading a document for an registered company?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--xl"
+              }
+            },
+            hint: {
+              text: ""
+            },
+            errorMessage: {
+              text: "Select yes if you have changed your name"
+            },
+            items: [
+            {
+              value: "yes",
+              text: "Yes, the company is registered."
+            },
+            {
+              value: "no",
+              text: "No, the company is not registered."
+            }
+            ]
+          }) }}
+        {% else %}
+          {{ govukRadios({
+            classes: "govuk-radios",
+            idPrefix: "existing-company",
+            name: "existing-company",
+            fieldset: {
+              legend: {
+                text: "Are you uploading a document for an registered company?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--xl"
+              }
+            },
+            hint: {
+              text: ""
+            },
+            items: [
+              {
+                value: "yes",
+                text: "Yes"
+              },
+              {
+                value: "no",
+                text: "No"
+              }
+            ]
+          }) }}
+        {% endif %}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

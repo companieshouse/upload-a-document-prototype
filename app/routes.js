@@ -41,7 +41,26 @@ router.post('/sign-in', function (req, res) {
       errorList: errors
     })
   } else {
+    res.redirect('existing-company')
+  }
+})
+
+router.post('/existing-company', function (req, res) {
+  var errors = []
+  var value = req.session.data['existing-company']
+  if (typeof req.session.data['existing-company'] === 'undefined') {
+    errors.push({
+      text: 'Select the *type of form that you want to upload* ',
+      href: '#type'
+    })
+    res.render('existing-company', {
+      errorType: true,
+      errorList: errors
+    })
+  } if (value === 'yes') {
     res.redirect('company-number')
+  } if (value === 'no') {
+    res.redirect('types-of-forms/form-types')
   }
 })
 
