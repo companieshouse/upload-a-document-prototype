@@ -1,0 +1,55 @@
+{% set title = "Tell us your company number" %}
+{% extends "layout.html" %}
+{% block pageTitle %}
+  {{title}}
+{% endblock %}
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "sign-in"
+  }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/proposed-company-name" method="post">
+        {% if errorAuth == true %}
+          {{ govukErrorSummary({
+            titleText: "There is a problem",
+            errorList: [
+              {
+                text: "Enter the proposed company name",
+                href: "#passport-issued-error"
+              }
+            ]
+          }) }}
+          {{ govukInput({
+            label: {
+              text: "What is the proposed company name?",
+              classes: "govuk-label--xl",
+              isPageHeading: true
+            },
+            errorMessage: {
+              text: "Enter the proposed company name"
+            },
+            id: "proposed-company-name",
+            name: "proposed-company-name"
+          }) }}
+        {% else %}
+          {{ govukInput({
+          label: {
+            text: "What is the proposed company name?",
+            classes: "govuk-label--xl",
+            isPageHeading: true
+          },
+          id: "proposed-company-name",
+          name: "proposed-company-name"
+        }) }}
+        {% endif %}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

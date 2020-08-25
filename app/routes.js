@@ -60,7 +60,7 @@ router.post('/existing-company', function (req, res) {
   } if (value === 'yes') {
     res.redirect('company-number')
   } if (value === 'no') {
-    res.redirect('types-of-forms/form-types')
+    res.redirect('proposed-company-name')
   }
 })
 
@@ -549,6 +549,28 @@ router.get('/types-of-forms/insolvency/wuc', function (req, res) {
 
 router.post('/types-of-forms/insolvency/wuc', function (req, res) {
   res.redirect('../../auth-screen')
+})
+
+// Proposed company name
+router.get('/proposed-company-name', function (req, res) {
+  res.render('proposed-company-name', {
+  })
+})
+
+router.post('/proposed-company-name', function (req, res) {
+  var errors = []
+  if (req.session.data['proposed-company-name'] === '') {
+    errors.push({
+      text: 'Enter the proposed company name',
+      href: '#auth-number'
+    })
+    res.render('proposed-company-name', {
+      errorAuth: true,
+      errorList: errors
+    })
+  } else {
+    res.redirect('/types-of-forms/form-types')
+  }
 })
 
 module.exports = router
