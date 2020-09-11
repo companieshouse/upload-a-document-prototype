@@ -160,7 +160,7 @@ router.post('/types-of-forms/insolvency', function (req, res) {
       errorList: errors
     })
   } if (value === 'AD01') {
-    res.redirect('../upload-accounts')
+    res.redirect('change-of-address')
   } if (value === 'insolvency') {
     res.redirect('insolvency/insolvency')
   } if (value === 'insolvency-old') {
