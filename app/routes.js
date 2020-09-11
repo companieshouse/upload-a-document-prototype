@@ -159,6 +159,8 @@ router.post('/types-of-forms/insolvency', function (req, res) {
       errorType: true,
       errorList: errors
     })
+  } if (value === 'AD01') {
+    res.redirect('../upload-accounts')
   } if (value === 'insolvency') {
     res.redirect('insolvency/insolvency')
   } if (value === 'insolvency-old') {
