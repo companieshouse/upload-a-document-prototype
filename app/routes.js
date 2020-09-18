@@ -84,6 +84,8 @@ router.post('/types-of-forms/form-types', function (req, res) {
     })
   } if (value === 'insolvency') {
     res.redirect('insolvency')
+  } if (value === 'share') {
+    res.redirect('shares/shares.html')
   } if (value === 'resolutions') {
     res.redirect('resolutions/resolutions')
   } if (value === 'articles') {
@@ -239,6 +241,27 @@ router.post('/types-of-forms/resolutions', function (req, res) {
     res.redirect('insolvency-resolutions/srwu')
   } else {
     res.redirect('insolvency-resolutions/srwu')
+  }
+})
+
+router.get('/types-of-forms/shares/shares', function (req, res) {
+  res.render('types-of-forms/shares/shares', {
+  })
+})
+
+router.post('/types-of-forms/shares/shares', function (req, res) {
+  var errors = []
+  if (typeof req.session.data['typeInsolve'] === 'undefined') {
+    errors.push({
+      text: 'Select the *type of form that you want to upload* ',
+      href: '#typeInsolve'
+    })
+    res.render('types-of-forms/shares/shares', {
+      errorType: true,
+      errorList: errors
+    })
+  } else {
+    res.redirect('../../auth-screen')
   }
 })
 
