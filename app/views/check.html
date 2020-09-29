@@ -43,7 +43,7 @@
               text: "Document type"
             },
             value: {
-              text: "RP06 - Application for removal of material about directors who have not consented to act"
+              text: "SQP CS01 - Confirmation statement for a Scottish qualifying partnership"
             },
             actions: {
               items: [
@@ -59,30 +59,22 @@
               text: "Document uploaded"
             },
             value: {
-              html: "<a href='public/pdf/RP06_V1.0_2.pdf'>RP06_V1.0_2.pdf</a> (opens in a new tab)"
+              html: "<a href='public/pdf/RP06_V1.0_2.pdf'>SQP_V1.pdf</a> (opens in a new tab)"
             }
           },
           {
             key: {
-              text: "Authentication code"
+              text: "Payment amount"
             },
             value: {
-              html: "19760"
-            }
-          },
-          {
-            key: {
-              text: "Payment reference"
-            },
-            value: {
-              html: ""
+              html: "£17"
             }
           }
         ]
       }) }}
       {{ govukButton({
-          text: "Submit document",
-          href: "confirmation"
+          text: "Pay for uploaded document",
+          href: "https://products.payments.service.gov.uk/pay/aa61285cbc0442bbabcde9be6587e447"
         }) }}
     </form>
   </div>

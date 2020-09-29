@@ -19,23 +19,23 @@
         </li>
         <li>upload one document that is less than 4MB
         </li>
-          <li>use a PDF format
-      </li>
-    </ul>
-    {{ govukInsetText({
+        <li>use a PDF format
+        </li>
+      </ul>
+      {{ govukInsetText({
         text: "Some documents require supporting evidence. You can upload evidence later in this service if required."
     }) }}
-    {{ govukFileUpload({
+      {{ govukFileUpload({
         id: "file-upload-1",
         name: "file-upload-1",
         label: {
           text: "Upload document"
         }
     }) }}
-    {{ govukButton({
+      {{ govukButton({
         text: "Continue",
-        href: "payment"
+        href: "check"
     }) }}
+    </div>
   </div>
-</div>
 {% endblock %}
