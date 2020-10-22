@@ -39,7 +39,12 @@
 
 {% block header %}
   {% include "includes/cookie-banner.html" %}
-  {% include "includes/ch-header.html" %}
+  {{ govukHeader({
+    homepageUrl: "https://www.gov.uk/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
   {% include "includes/phase-banner.html" %}
 {% endblock %}
 
