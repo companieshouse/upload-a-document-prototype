@@ -37,67 +37,70 @@
              },
              {
                value: "limited-companies",
-               text: "Limited company"
+               text: "Limited company",
+               hint: {
+                 text: "CC forms, SH forms, articles and resolutions"
+               }
              },
-                             {
-                               value: "slp",
-                               text: "Scottish limited partnership",
-                               hint: {
-                                text: "SLP forms"
-                               }
-                             },
-                             {
-                               value: "sqp",
-                               text: "Scottish qualifying partnership",
-                               hint: {
-                                text: "SQP forms"
-                               }
-                             }
+             {
+               value: "slp",
+               text: "Scottish limited partnership",
+               hint: {
+                 text: "SLP forms"
+               }
+              },
+              {
+                value: "sqp",
+                text: "Scottish qualifying partnership",
+                hint: {
+                  text: "SQP forms"
+                }
+              }
              ]
            }) }}
         {% else %}
           {{ govukRadios({
-        idPrefix: "type",
-        name: "type",
-        fieldset: {
-          legend: {
-            text: "What type of document are you uploading?",
-            isPageHeading: true,
-            classes: "govuk-fieldset__legend--xl"
-          }
-        },
-
-        items: [
-        {
-          value: "insolvency",
-          text: "Insolvency"
-        },
-        {
-          value: "limited-companies",
-          text: "Limited company"
-        },
-
-
-                        {
-                          value: "slp",
-                          text: "Scottish limited partnership",
-                          hint: {
-                           text: "SLP forms"
-                          }
-                        },
-                        {
-                          value: "sqp",
-                          text: "Scottish qualifying partnership",
-                          hint: {
-                           text: "SQP forms"
-                          }
-                        }
-        ]
+            idPrefix: "type",
+            name: "type",
+            fieldset: {
+              legend: {
+                text: "What type of document are you uploading?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--xl"
+              }
+            },
+            items: [
+              {
+                value: "insolvency",
+                text: "Insolvency"
+              },
+              {
+                value: "limited-companies",
+                text: "Limited company",
+                hint: {
+                  text: "CC forms, SH forms, articles and resolutions"
+                }
+              },
+              {
+                value: "slp",
+                text: "Scottish limited partnership",
+                hint: {
+                  text: "SLP forms"
+                }
+               },
+               {
+                 value: "sqp",
+                 text: "Scottish qualifying partnership",
+                 hint: {
+                   text: "SQP forms"
+                 }
+               }
+          ]
         }) }}
         {% endif %}
         {{ govukButton({
-      text: "Continue"
-    }) }}
+          text: "Continue"
+        }) }}
       </form>
     </div>
   </div>

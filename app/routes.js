@@ -123,6 +123,8 @@ router.post('/types-of-forms/limited', function (req, res) {
     res.redirect('reg/reg')
   } if (value === 'share') {
     res.redirect('shares/shares')
+  } if (value === 'res-articles') {
+    res.redirect('res-articles')
   }
 })
 
