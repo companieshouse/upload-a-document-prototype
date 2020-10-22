@@ -84,22 +84,45 @@ router.post('/types-of-forms/form-types', function (req, res) {
     })
   } if (value === 'insolvency') {
     res.redirect('insolvency')
-  } if (value === 'share') {
-    res.redirect('shares/shares.html')
   } if (value === 'resolutions') {
     res.redirect('resolutions/resolutions')
   } if (value === 'articles') {
     res.redirect('../auth-screen')
-  } if (value === 'constitution') {
-    res.redirect('constitution/change-of-constitution')
-  } if (value === 'reg') {
-    res.redirect('reg/reg')
+  } if (value === 'limited-companies') {
+    res.redirect('limited')
   } if (value === 'lp') {
     res.redirect('lp/limited-partnerships')
   } if (value === 'slp') {
     res.redirect('slp/scottish-limited-partnership')
   } if (value === 'sqp') {
     res.redirect('sqp/sqp-forms')
+  }
+})
+
+// Type of document
+router.get('/types-of-forms/limited', function (req, res) {
+  res.render('types-of-forms/limited', {
+  })
+})
+
+router.post('/types-of-forms/limited', function (req, res) {
+  var errors = []
+  var value = req.session.data['type']
+  if (typeof req.session.data['type'] === 'undefined') {
+    errors.push({
+      text: 'Select the *type of form that you want to upload* ',
+      href: '#type'
+    })
+    res.render('/types-of-forms/limited', {
+      errorType: true,
+      errorList: errors
+    })
+  } if (value === 'constitution') {
+    res.redirect('constitution/change-of-constitution')
+  } if (value === 'reg') {
+    res.redirect('reg/reg')
+  } if (value === 'share') {
+    res.redirect('shares/shares')
   }
 })
 

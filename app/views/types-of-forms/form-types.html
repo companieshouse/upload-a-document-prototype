@@ -31,26 +31,28 @@
               }
              },
              items: [
-               {
-                 value: "reg",
-                 text: "Registrar's powers"
-               },
-               {
-                 value: "resolutions",
-                 text: "Resolutions"
-               },
-               {
-                 value: "articles",
-                 text: "Articles"
-               },
-               {
-                 value: "constitution",
-                 text: "Change of constitution"
-               },
-               {
-                 value: "insolvency",
-                 text: "Insolvency"
-               }
+             {
+               value: "insolvency",
+               text: "Insolvency"
+             },
+             {
+               value: "limited-companies",
+               text: "Limited company"
+             },
+                             {
+                               value: "slp",
+                               text: "Scottish limited partnership",
+                               hint: {
+                                text: "SLP forms"
+                               }
+                             },
+                             {
+                               value: "sqp",
+                               text: "Scottish qualifying partnership",
+                               hint: {
+                                text: "SQP forms"
+                               }
+                             }
              ]
            }) }}
         {% else %}
@@ -71,34 +73,11 @@
           text: "Insolvency"
         },
         {
-          value: "share",
-          text: "Share capital",
-          hint: {
-           text: "SH forms, statement by directors, solvency statement and resolutions "
-          }
-        },
-        {
-          value: "reg",
-          text: "Registrar's powers",
-          hint: {
-           text: "RP forms"
-          }
-        },
-        {
-          value: "constitution",
-          text: "Change of constitution",
-          hint: {
-           text: "CC forms, articles and resolutions"
-          }
+          value: "limited-companies",
+          text: "Limited company"
         },
 
-       {
-                          value: "lp",
-                          text: "Limited partnership",
-                          hint: {
-                           text: "LP forms"
-                          }
-                        },
+
                         {
                           value: "slp",
                           text: "Scottish limited partnership",
