@@ -2,41 +2,38 @@
 {% block pageTitle %}
   Change a company registered office address form
 {% endblock %}
-
 {% block beforeContent %}
   {{ govukBackLink({
       text: "Back",
       href: "../insolvency"
     }) }}
 {% endblock %}
-
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/types-of-forms/overseas/overseas" method="post">
         {{ govukRadios({
-idPrefix: "reg",
-name: "reg",
-fieldset: {
-  legend: {
-    html: "<span class='govuk-caption-xl'>Change a company's registered office address</span>
-Select a document",
-    isPageHeading: true,
-    classes: "govuk-fieldset__legend--xl"
-  }
-},
-
-items: [
-{
-  value: "ad01",
-  text: "AD01 - Change a company's registered office address"
-}
-]
-}) }}
+          idPrefix: "reg",
+          name: "reg",
+          fieldset: {
+            legend: {
+              html: "<span class='govuk-caption-l'>Change a company's registered office address</span>
+              Select a document",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "ad01",
+              text: "AD01 - Change a company's registered office address"
+            }
+          ]
+        }) }}
         {{ govukButton({
-text: "Continue",
-href: "../upload-accounts"
-}) }}
+          text: "Continue",
+          href: "../upload-accounts"
+        }) }}
       </form>
     </div>
   </div>

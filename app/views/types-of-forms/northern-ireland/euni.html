@@ -2,14 +2,12 @@
 {% block pageTitle %}
   In administration forms
 {% endblock %}
-
 {% block beforeContent %}
   {{ govukBackLink({
       text: "Back",
       href: "insolvency"
     }) }}
 {% endblock %}
-
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
@@ -19,10 +17,10 @@
           name: "typeInsolve",
           fieldset: {
             legend: {
-              html: "<span class='govuk-caption-xl'>In administration</span>
+              html: "<span class='govuk-caption-l'>In administration</span>
 Select a document",
               isPageHeading: true,
-              classes: "govuk-fieldset__legend--xl"
+              classes: "govuk-fieldset__legend--l"
             }
           },
           items: [

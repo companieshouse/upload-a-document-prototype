@@ -25,9 +25,10 @@
             },
             fieldset: {
               legend: {
-                text: "What type of document are you uploading?",
+                html: "<span class='govuk-caption-l'>Document category</span>
+What type of document are you uploading?",
                 isPageHeading: true,
-                classes: "govuk-fieldset__legend--xl"
+                classes: "govuk-fieldset__legend--l"
               }
              },
              items: [
@@ -36,10 +37,10 @@
                text: "Insolvency"
              },
              {
-               value: "limited-companies",
-               text: "Limited company",
+               value: "reg",
+               text: "Registrar's powers",
                hint: {
-                 text: "CC forms, SH forms, articles and resolutions"
+                text: "RP forms"
                }
              },
              {
@@ -55,6 +56,13 @@
                 hint: {
                   text: "SQP forms"
                 }
+              },
+              {
+                value: "limited-companies",
+                text: "Limited company",
+                hint: {
+                  text: "CC forms, SH forms, articles and resolutions"
+                }
               }
              ]
            }) }}
@@ -64,9 +72,10 @@
             name: "type",
             fieldset: {
               legend: {
-                text: "What type of document are you uploading?",
+                html: "<span class='govuk-caption-l'>Document category</span>
+What type of document are you uploading?",
                 isPageHeading: true,
-                classes: "govuk-fieldset__legend--xl"
+                classes: "govuk-fieldset__legend--l"
               }
             },
             items: [
@@ -75,10 +84,10 @@
                 text: "Insolvency"
               },
               {
-                value: "limited-companies",
-                text: "Limited company",
+                value: "reg",
+                text: "Registrar's powers",
                 hint: {
-                  text: "CC forms, SH forms, articles and resolutions"
+                 text: "RP forms"
                 }
               },
               {
@@ -93,6 +102,13 @@
                  text: "Scottish qualifying partnership",
                  hint: {
                    text: "SQP forms"
+                 }
+               },
+               {
+                 value: "limited-companies",
+                 text: "Document for a limited company",
+                 hint: {
+                   text: "SH forms, CC forms, articles and resolutions"
                  }
                }
           ]

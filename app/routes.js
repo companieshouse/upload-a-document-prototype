@@ -96,6 +96,8 @@ router.post('/types-of-forms/form-types', function (req, res) {
     res.redirect('slp/scottish-limited-partnership')
   } if (value === 'sqp') {
     res.redirect('sqp/sqp-forms')
+  } if (value === 'reg') {
+    res.redirect('reg/reg')
   }
 })
 
@@ -119,8 +121,6 @@ router.post('/types-of-forms/limited', function (req, res) {
     })
   } if (value === 'constitution') {
     res.redirect('constitution/change-of-constitution')
-  } if (value === 'reg') {
-    res.redirect('reg/reg')
   } if (value === 'share') {
     res.redirect('shares/shares')
   } if (value === 'res-articles') {
