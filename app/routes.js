@@ -276,7 +276,7 @@ router.get('/types-of-forms/shares/shares', function (req, res) {
 
 router.post('/types-of-forms/shares/shares', function (req, res) {
   var errors = []
-  if (typeof req.session.data['typeInsolve'] === 'undefined') {
+  if (typeof req.session.data['SH'] === 'undefined') {
     errors.push({
       text: 'Select the *type of form that you want to upload* ',
       href: '#typeInsolve'

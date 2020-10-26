@@ -22,9 +22,15 @@
         <li>use a PDF format
         </li>
       </ul>
-      {{ govukInsetText({
+      {% if data['SH'] == "SH19 - Statement of capital when reducing capital in a company" %}
+        {{ govukInsetText({
+          text: "Some documents require supporting evidence. You can upload evidence later in this service if required."
+        }) }}
+      {% else %}
+        {{ govukInsetText({
         text: "Some documents require supporting evidence. You can upload evidence later in this service if required."
-    }) }}
+        }) }}
+      {% endif %}
       {{ govukFileUpload({
         id: "file-upload-1",
         name: "file-upload-1",
