@@ -18,7 +18,6 @@ router.post('/sign-in', function (req, res) {
   var errors = []
   var emailHasError = false
   var passwordHasError = false
-
   if (req.session.data['email'] === '') {
     emailHasError = true
     errors.push({
@@ -33,7 +32,6 @@ router.post('/sign-in', function (req, res) {
       href: '#password-error'
     })
   }
-
   if (emailHasError || passwordHasError) {
     res.render('sign-in', {
       errorEmail: emailHasError,
@@ -45,6 +43,7 @@ router.post('/sign-in', function (req, res) {
   }
 })
 
+// Is it for an existing company question
 router.post('/existing-company', function (req, res) {
   var errors = []
   var value = req.session.data['existing-company']
@@ -169,6 +168,7 @@ router.post('/types-of-forms/insolvency/insolvency', function (req, res) {
   }
 })
 
+// Insolvency document types
 router.get('/types-of-forms/insolvency', function (req, res) {
   res.render('types-of-forms/insolvency', {
   })
@@ -209,6 +209,7 @@ router.post('/types-of-forms/insolvency', function (req, res) {
   }
 })
 
+// Northern Ireland insolvency forms
 router.get('/types-of-forms/ini', function (req, res) {
   res.render('types-of-forms/ini', {
   })
