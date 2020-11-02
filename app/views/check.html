@@ -13,27 +13,32 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <h1 class="govuk-heading-l">Check your details before paying for and submitting your document</h1>
       <h2 class="govuk-heading-m">Company details</h2>
-      {{ govukSummaryList({
-        classes: 'govuk-!-margin-bottom-9',
-        rows: [
-          {
-            key: {
-              text: "Company name"
-            },
-            value: {
-              html: "ZLC LTD"
-            }
-          },
-          {
-            key: {
-              text: "Company number"
-            },
-            value: {
-              text: "09393288"
-            }
-          }
-        ]
-      }) }}
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Company name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            ZLC LTD
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Company number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['company-number'] }}
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Authentication code
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['authNumber'] }}
+          </dd>
+        </div>
+      </dl>
       <h2 class="govuk-heading-m">Document details</h2>
       {{ govukSummaryList({
         classes: 'govuk-!-margin-bottom-4',
