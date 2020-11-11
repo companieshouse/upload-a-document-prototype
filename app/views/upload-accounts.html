@@ -24,11 +24,11 @@
       </ul>
       {% if data['SH'] == "SH19 - Statement of capital when reducing capital in a company" %}
         {{ govukInsetText({
-          text: "You can only upload one document at a time. If you need to upload more documents as part of a package with this SH19 form, you must upload each document separately in a new transaction."
+          text: "You can only upload one document at a time. If you need to upload more documents with this SH19 form, you must start a new transaction for each document you upload."
         }) }}
       {% elseif data['SH'] == "Solvency statement" %}
         {{ govukInsetText({
-            text: "You can only upload one document at a time. If you need to upload more documents as part of a package with this solvency statement, you must upload each document separately in a new transaction."
+            text: "You can only upload one document at a time. If you need to upload more documents with this solvency statement, you must start a new transaction for each document you upload."
           }) }}
       {% else %}
         {{ govukInsetText({
