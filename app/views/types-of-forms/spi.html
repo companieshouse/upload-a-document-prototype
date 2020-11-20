@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Moratorium (COVID-19) forms
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "insolvency"
+    }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/spi" method="post">
+        {{ govukRadios({
+          idPrefix: "spi",
+          name: "spi",
+          fieldset: {
+            legend: {
+              html: "<span class='govuk-caption-l'>Scottish Partnership Incorporation</span>
+Select a document",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "lp5s",
+              text: "LP5(s) - Application for registration of a limited partnership in Scotland"
+            },
+            {
+              value: "cva1",
+              text: "LP7(s) - Apply for registration as a private fund limited partnership in Scotland"
+            },
+            {
+              value: "cva1",
+              text: "SQP1 - Register a Scottish qualifying partnership"
+            }
+          ]
+        }) }}
+        {{ govukButton({
+          text: "Continue",
+          href: "../upload-accounts"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

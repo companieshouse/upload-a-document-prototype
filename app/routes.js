@@ -97,6 +97,8 @@ router.post('/types-of-forms/form-types', function (req, res) {
     res.redirect('sqp/sqp-forms')
   } if (value === 'reg') {
     res.redirect('reg/reg')
+  } if (value === 'spij') {
+    res.redirect('spi')
   }
 })
 
