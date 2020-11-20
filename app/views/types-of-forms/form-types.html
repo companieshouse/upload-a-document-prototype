@@ -12,12 +12,89 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/types-of-forms/form-types" method="post">
-        {% if errorType == true %}
-          {{ govukErrorSummary({
+        {% if data['existing-company'] == "no" %}
+          {% if errorType == true %}
+            {{ govukErrorSummary({
+          titleText: "There is a problem",
+          errorList: errorList
+        }) }}
+            {{ govukRadios({
+          idPrefix: "type",
+          name: "type",
+          errorMessage: {
+            text: "Select the *type of form that you want to upload* "
+          },
+          fieldset: {
+            legend: {
+              html: "<span class='govuk-caption-l'>Document category</span>
+What type of document are you uploading?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+           },
+           items: [
+           {
+             value: "insolvency",
+             text: "Insolvency"
+           },
+           {
+             value: "reg",
+             text: "Registrar's powers",
+             hint: {
+              text: "RP forms"
+             }
+           },
+           {
+             value: "slp",
+             text: "Scottish limited partnership",
+             hint: {
+               text: "SLP forms"
+             }
+            },
+            {
+              value: "sqp",
+              text: "Scottish qualifying partnership",
+              hint: {
+                text: "SQP forms"
+              }
+            },
+            {
+              value: "limited-companies",
+              text: "Limited company",
+              hint: {
+                text: "CC forms, SH forms, articles and resolutions"
+              }
+            }
+           ]
+         }) }}
+          {% else %}
+            {{ govukRadios({
+          idPrefix: "type",
+          name: "type",
+          fieldset: {
+            legend: {
+              html: "<span class='govuk-caption-l'>Document category</span>
+What type of document are you uploading?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "spij",
+              text: "Scottish Partnership Incorporation Journey"
+            }
+        ]
+      }) }}
+          {% endif %}
+        {% endif %}
+        {% if data['existing-company'] == "yes" %}
+          {% if errorType == true %}
+            {{ govukErrorSummary({
             titleText: "There is a problem",
             errorList: errorList
           }) }}
-          {{ govukRadios({
+            {{ govukRadios({
             idPrefix: "type",
             name: "type",
             errorMessage: {
@@ -66,8 +143,8 @@ What type of document are you uploading?",
               }
              ]
            }) }}
-        {% else %}
-          {{ govukRadios({
+          {% else %}
+            {{ govukRadios({
             idPrefix: "type",
             name: "type",
             fieldset: {
@@ -113,6 +190,7 @@ What type of document are you uploading?",
                }
           ]
         }) }}
+          {% endif %}
         {% endif %}
         {{ govukButton({
           text: "Continue"
