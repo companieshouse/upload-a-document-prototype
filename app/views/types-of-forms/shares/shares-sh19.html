@@ -20,24 +20,25 @@
           fieldset: {
             legend: {
               html: "<span class='govuk-caption-l'>Share capital</span>
- What type of document are you uploading?",
+Select a document",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
           },
           items: [
           {
-            value: "shares-other",
-            text: "Shares other cat"
+            value: "sh19",
+            text: "SH19 - Statement of capital when reducing capital in a company"
           },
           {
-            value: "shares-sh19",
-            text: "SH19 cat"
+            value: "resolution",
+            text: "Resolution"
           }
           ]
         }) }}
         {{ govukButton({
-          text: "Continue"
+          text: "Continue",
+          href: "../../auth-screen"
         }) }}
       </form>
     </div>

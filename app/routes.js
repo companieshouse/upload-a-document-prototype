@@ -99,16 +99,14 @@ router.post('/types-of-forms/form-types', function (req, res) {
     res.redirect('reg/reg')
   } if (value === 'spij') {
     res.redirect('spi')
-
-} if (value === 'constitution') {
-  res.redirect('constitution/change-of-constitution')
-} if (value === 'share') {
-  res.redirect('shares/shares')
-} if (value === 'res-articles') {
-  res.redirect('res-articles')
-}
+  } if (value === 'constitution') {
+    res.redirect('constitution/change-of-constitution')
+  } if (value === 'share') {
+    res.redirect('shares/shares')
+  } if (value === 'res-articles') {
+    res.redirect('res-articles')
+  }
 })
-
 
 // Insolvency
 router.get('/types-of-forms/insolvency/insolvency', function (req, res) {
@@ -260,6 +258,7 @@ router.get('/types-of-forms/shares/shares', function (req, res) {
 
 router.post('/types-of-forms/shares/shares', function (req, res) {
   var errors = []
+  var value = req.session.data['SH']
   if (typeof req.session.data['SH'] === 'undefined') {
     errors.push({
       text: 'Select the *type of form that you want to upload* ',
@@ -269,10 +268,10 @@ router.post('/types-of-forms/shares/shares', function (req, res) {
       errorType: true,
       errorList: errors
     })
-  } if (value === 'resolution') {
-    res.redirect('../res-share')
+  } if (value === 'shares-sh19') {
+    res.redirect('shares-sh19')
   } else {
-    res.redirect('../../auth-screen')
+    res.redirect('shares-other')
   }
 })
 

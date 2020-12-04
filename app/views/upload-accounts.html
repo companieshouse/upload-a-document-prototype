@@ -24,15 +24,15 @@
       </ul>
       {% if data['SH'] == "SH19 - Statement of capital when reducing capital in a company" %}
         {{ govukInsetText({
-          text: "You can only upload one document at a time. If you need to upload more than one document, you must upload each one separately. This means you must start the service again for each document you need to upload."
+          text: "If you need to upload more than one document, you must upload each one separately. This means you must start the service again for each document you need to upload."
         }) }}
       {% elseif data['SH'] == "Solvency statement" %}
         {{ govukInsetText({
-            text: "You can only upload one document at a time. If you need to upload more than one document, you must upload each one separately. This means you must start the service again for each document you need to upload."
+            text: "If you need to upload more than one document, you must upload each one separately. This means you must start the service again for each document you need to upload."
           }) }}
       {% else %}
         {{ govukInsetText({
-        text: "Some documents require supporting evidence. You can upload evidence later in this service if required."
+        text: "Some documents require supporting evidence. You can upload up to 9 files."
         }) }}
       {% endif %}
       {{ govukFileUpload({
