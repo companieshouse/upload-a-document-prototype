@@ -99,35 +99,16 @@ router.post('/types-of-forms/form-types', function (req, res) {
     res.redirect('reg/reg')
   } if (value === 'spij') {
     res.redirect('spi')
-  }
+
+} if (value === 'constitution') {
+  res.redirect('constitution/change-of-constitution')
+} if (value === 'share') {
+  res.redirect('shares/shares')
+} if (value === 'res-articles') {
+  res.redirect('res-articles')
+}
 })
 
-// Type of document
-router.get('/types-of-forms/limited', function (req, res) {
-  res.render('types-of-forms/limited', {
-  })
-})
-
-router.post('/types-of-forms/limited', function (req, res) {
-  var errors = []
-  var value = req.session.data['type']
-  if (typeof req.session.data['type'] === 'undefined') {
-    errors.push({
-      text: 'Select the *type of form that you want to upload* ',
-      href: '#type'
-    })
-    res.render('/types-of-forms/limited', {
-      errorType: true,
-      errorList: errors
-    })
-  } if (value === 'constitution') {
-    res.redirect('constitution/change-of-constitution')
-  } if (value === 'share') {
-    res.redirect('shares/shares')
-  } if (value === 'res-articles') {
-    res.redirect('res-articles')
-  }
-})
 
 // Insolvency
 router.get('/types-of-forms/insolvency/insolvency', function (req, res) {
@@ -288,6 +269,8 @@ router.post('/types-of-forms/shares/shares', function (req, res) {
       errorType: true,
       errorList: errors
     })
+  } if (value === 'resolution') {
+    res.redirect('../res-share')
   } else {
     res.redirect('../../auth-screen')
   }

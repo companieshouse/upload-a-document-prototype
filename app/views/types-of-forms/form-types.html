@@ -138,12 +138,20 @@ What type of document are you uploading?",
                 }
               },
               {
-                value: "limited-companies",
-                text: "Limited company",
+                value: "constitution",
+                text: "Change of constitution",
                 hint: {
-                  text: "CC forms, SH forms, articles and resolutions"
+                 text: "CC forms, articles and resolution"
+                }
+              },
+              {
+                value: "share",
+                text: "Share capital",
+                hint: {
+                 text: "SH forms, statement by directors and solvency statement"
                 }
               }
+
              ]
            }) }}
           {% else %}
@@ -185,12 +193,20 @@ What type of document are you uploading?",
                  }
                },
                {
-                 value: "limited-companies",
-                 text: "Document for a limited company",
+                 value: "constitution",
+                 text: "Change of constitution",
                  hint: {
-                   text: "Share capital forms, change of constitution forms, articles and resolutions"
+                  text: "CC forms, articles and resolution"
+                 }
+               },
+               {
+                 value: "share",
+                 text: "Share capital",
+                 hint: {
+                  text: "SH forms, statement by directors and solvency statement"
                  }
                }
+
           ]
         }) }}
           {% endif %}
