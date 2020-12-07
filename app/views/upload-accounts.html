@@ -22,25 +22,32 @@
         <li>use a PDF format
         </li>
       </ul>
+            <p class="govuk-body">You can only upload one document at a time.</p>
       {% if data['SH-sh19'] == "SH19 - Statement of capital when reducing capital in a company" %}
         {{ govukInsetText({
-          text: "If you need to upload more than one document, you must upload each one separately. This means you must start the service again for each document you need to upload."
+          text: "If you need to upload more documents that would usually be filed with this document, you must start the service again to upload each one separately.
+          You should do this as soon as possible after you’ve uploaded this document.
+"
         }) }}
       {% elseif data['SH-sh19'] == "Solvency statement" %}
         {{ govukInsetText({
-            text: "If you need to upload more than one document, you must upload each one separately. This means you must start the service again for each document you need to upload."
+            text: "If you need to upload more documents that would usually be filed with this document, you must start the service again to upload each one separately.
+            You should do this as soon as possible after you’ve uploaded this document."
           }) }}
       {% elseif data['SH-sh19'] == "Statement by directors" %}
         {{ govukInsetText({
-          text: "If you need to upload more than one document, you must upload each one separately. This means you must start the service again for each document you need to upload."
+          text: "If you need to upload more documents that would usually be filed with this document, you must start the service again to upload each one separately.
+          You should do this as soon as possible after you’ve uploaded this document."
         }) }}
       {% elseif data['SH-sh19'] == "Resolution - To form part of a reduction of capital submission" %}
         {{ govukInsetText({
-            text: "If you need to upload more than one document, you must upload each one separately. This means you must start the service again for each document you need to upload."
+            text: "If you need to upload more documents that would usually be filed with this document, you must start the service again to upload each one separately.
+            You should do this as soon as possible after you’ve uploaded this document."
           }) }}
       {% else %}
         {{ govukInsetText({
-        text: "Some documents require supporting evidence. You can upload up to 9 files."
+        text: "If you need to upload more documents, you must start the service again to upload each one separately.
+"
         }) }}
       {% endif %}
       {{ govukFileUpload({
