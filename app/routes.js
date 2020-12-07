@@ -384,6 +384,24 @@ router.post('/types-of-forms/slp/limited-partnerships', function (req, res) {
   }
 })
 
+
+router.post('/types-of-forms/shares/shares-sh19', function (req, res) {
+  var errors = []
+  if (typeof req.session.data['SH-sh19'] === 'undefined') {
+    errors.push({
+      text: 'Select the *type of form that you want to upload* ',
+      href: '#typeInsolve'
+    })
+    res.render('types-of-forms/shares/shares-sh19', {
+      errorType: true,
+      errorList: errors
+    })
+  } else {
+    res.redirect('/auth-screen')
+  }
+})
+
+
 // SQP Forms
 router.post('/types-of-forms/sqp/scottish-limited-partnerships', function (req, res) {
   var errors = []

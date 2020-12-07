@@ -22,11 +22,11 @@
         <li>use a PDF format
         </li>
       </ul>
-      {% if data['SH'] == "SH19 - Statement of capital when reducing capital in a company" %}
+      {% if data['SH-sh19'] == "SH19 - Statement of capital when reducing capital in a company" %}
         {{ govukInsetText({
           text: "If you need to upload more than one document, you must upload each one separately. This means you must start the service again for each document you need to upload."
         }) }}
-      {% elseif data['SH'] == "Solvency statement" %}
+      {% elseif data['SH-sh19'] == "Solvency statement" %}
         {{ govukInsetText({
             text: "If you need to upload more than one document, you must upload each one separately. This means you must start the service again for each document you need to upload."
           }) }}

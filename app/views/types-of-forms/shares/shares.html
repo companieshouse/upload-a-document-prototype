@@ -17,35 +17,36 @@
         <span class="govuk-caption-l">Share capital</span>
 <h2 class="govuk-heading-l">What type of document are you uploading?</h2>
 
-
-    </legend>
-    {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-
+    <form action="/types-of-forms/shares/shares" method="post">
     {{ govukInsetText({
       text: "If you are uploading a resolution, you must select the relevant category the resolution is related to. Otherwise, it may be rejected."
     }) }}
-    <div class="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
-        <label class="govuk-label govuk-radios__label" for="sign-in">
-          Reduction of capital documents
-        </label>
-        <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-        Form SH19, statement by directors, solvency statement and resolution
-        </div>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
-        <label class="govuk-label govuk-radios__label" for="sign-in-2">
-          Other share capital documents
-        </label>
-        <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
-          Form SH02, SH04, SH05, SH06, SH07, SH08, SH09, SH10, SH11, SH12, SH13, SH14, SH15, SH16, SH17 and resolution
-        </div>
-      </div>
-    </div>
 
-<br>
+    {{ govukRadios({
+  idPrefix: "SH",
+  name: "SH",
+  fieldset: {
+    legend: {
+      text: ""
+    }
+  },
+  items: [
+    {
+      value: "shares-sh19",
+      text: "Reduction of capital documents",
+      hint: {
+        text: "Form SH19, statement by directors, solvency statement and resolution"
+      }
+    },
+    {
+      value: "shares-other",
+      text: "Other share capital documents",
+      hint: {
+        text: "Form SH02, SH04, SH05, SH06, SH07, SH08, SH09, SH10, SH11, SH12, SH13, SH14, SH15, SH16, SH17 and resolution"
+      }
+    }
+  ]
+}) }}
         {{ govukButton({
           text: "Continue"
         }) }}
