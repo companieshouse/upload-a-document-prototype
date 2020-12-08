@@ -32,19 +32,25 @@
             errorMessage: {
               text: "Enter the proposed company name"
             },
+
             id: "proposed-company-name",
             name: "proposed-company-name"
           }) }}
         {% else %}
-          {{ govukInput({
-          label: {
-            text: "What is the proposed company name?",
-            classes: "govuk-label--l",
-            isPageHeading: true
-          },
-          id: "proposed-company-name",
-          name: "proposed-company-name"
-        }) }}
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
+              What is the proposed company name?
+            </label>
+          </h1>
+          <p class="govuk-body">Use the <a href="https://find-and-update.company-information.service.gov.uk/company-name-availability" class="govuk-link" rel="noreferrer noopener" target="_blank">company name availability checker (opens in a new tab)</a> to find out if the proposed name is currently available.</p>
+
+          <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+        </div>
+
+
         {% endif %}
         {{ govukButton({
           text: "Continue"
