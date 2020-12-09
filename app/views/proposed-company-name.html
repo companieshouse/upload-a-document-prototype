@@ -19,38 +19,37 @@
             errorList: [
               {
                 text: "Enter the proposed company name",
-                href: "#passport-issued-error"
+                href: "#proposed-company-name"
               }
             ]
           }) }}
-          {{ govukInput({
-            label: {
-              text: "What is the proposed company name?",
-              classes: "govuk-label--l",
-              isPageHeading: true
-            },
-            errorMessage: {
-              text: "Enter the proposed company name"
-            },
-
-            id: "proposed-company-name",
-            name: "proposed-company-name"
-          }) }}
+          <div class="govuk-form-group govuk-form-group--error">
+            <h1 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--l" for="proposed-company-name">
+                What is the proposed company name?
+              </label>
+            </h1>
+            <p class="govuk-body">Use the
+              <a href="https://find-and-update.company-information.service.gov.uk/company-name-availability" class="govuk-link" rel="noreferrer noopener" target="_blank">company name availability checker (opens in a new tab)</a>
+              to find out if the proposed name is currently available.</p>
+            <span id="proposed-company-name-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span>
+              Enter the proposed company name
+            </span>
+            <input class="govuk-input govuk-input--error" id="proposed-company-name" name="proposed-company-name" type="text" aria-describedby="proposed-company-name-hint proposed-company-name-error">
+          </div>
         {% else %}
-        {% from "govuk/components/input/macro.njk" import govukInput %}
-
-        {% from "govuk/components/input/macro.njk" import govukInput %}
-        <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
-              What is the proposed company name?
-            </label>
-          </h1>
-          <p class="govuk-body">Use the <a href="https://find-and-update.company-information.service.gov.uk/company-name-availability" class="govuk-link" rel="noreferrer noopener" target="_blank">company name availability checker (opens in a new tab)</a> to find out if the proposed name is currently available.</p>
-
-          <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
-        </div>
-
-
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--l" for="proposed-company-name">
+                What is the proposed company name?
+              </label>
+            </h1>
+            <p class="govuk-body">Use the
+              <a href="https://find-and-update.company-information.service.gov.uk/company-name-availability" class="govuk-link" rel="noreferrer noopener" target="_blank">company name availability checker (opens in a new tab)</a>
+              to find out if the proposed name is currently available.</p>
+            <input class="govuk-input" id="proposed-company-name" name="proposed-company-name" type="text" aria-describedby="proposed-company-name-hint">
+          </div>
         {% endif %}
         {{ govukButton({
           text: "Continue"
