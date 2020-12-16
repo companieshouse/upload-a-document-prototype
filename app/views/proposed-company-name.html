@@ -1,7 +1,7 @@
 {% set title = "Tell us your company number" %}
 {% extends "layout.html" %}
 {% block pageTitle %}
-  What is the proposed company name? - Upload a document to Companies House - GOV.UK
+  What is the name of the firm or partnership? - Upload a document to Companies House - GOV.UK
 {% endblock %}
 {% block beforeContent %}
   {{ govukBackLink({
@@ -18,7 +18,7 @@
             titleText: "There is a problem",
             errorList: [
               {
-                text: "Enter the proposed company name",
+                text: "Enter the name of the firm or partnership",
                 href: "#proposed-company-name"
               }
             ]
@@ -26,15 +26,14 @@
           <div class="govuk-form-group govuk-form-group--error">
             <h1 class="govuk-label-wrapper">
               <label class="govuk-label govuk-label--l" for="proposed-company-name">
-                What is the proposed company name?
+                What is the name of the firm or partnership?
               </label>
             </h1>
-            <p class="govuk-body">Use the
-              <a href="https://find-and-update.company-information.service.gov.uk/company-name-availability" class="govuk-link" rel="noreferrer noopener" target="_blank">company name availability checker (opens in a new tab)</a>
-              to find out if the proposed name is currently available.</p>
+    
+
             <span id="proposed-company-name-error" class="govuk-error-message">
               <span class="govuk-visually-hidden">Error:</span>
-              Enter the proposed company name
+              Enter the name of the firm or partnership
             </span>
             <input class="govuk-input govuk-input--error" id="proposed-company-name" name="proposed-company-name" type="text" aria-describedby="proposed-company-name-hint proposed-company-name-error">
           </div>
@@ -42,12 +41,10 @@
           <div class="govuk-form-group">
             <h1 class="govuk-label-wrapper">
               <label class="govuk-label govuk-label--l" for="proposed-company-name">
-                What is the proposed company name?
+                What is the name of the firm or partnership?
               </label>
             </h1>
-            <p class="govuk-body">Use the
-              <a href="https://find-and-update.company-information.service.gov.uk/company-name-availability" class="govuk-link" rel="noreferrer noopener" target="_blank">company name availability checker (opens in a new tab)</a>
-              to find out if the proposed name is currently available.</p>
+
             <input class="govuk-input" id="proposed-company-name" name="proposed-company-name" type="text" aria-describedby="proposed-company-name-hint">
           </div>
         {% endif %}
