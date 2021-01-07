@@ -57,9 +57,9 @@ router.post('/existing-company', function (req, res) {
       errorList: errors
     })
   } if (value === 'yes') {
-    res.redirect('company-number')
-  } if (value === 'no') {
     res.redirect('proposed-company-name')
+  } if (value === 'no') {
+    res.redirect('company-number')
   }
 })
 

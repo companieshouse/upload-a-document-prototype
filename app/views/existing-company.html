@@ -18,7 +18,7 @@
             titleText: "There is a problem",
             errorList: [
               {
-                text: "Select whether you are uploading a document for a registered company or not",
+                text: "Select yes if you are uploading a document to register a Scottish limited partnership or a Scottish qualifying partnership",
                 href: "#passport-issued-error"
               }
             ]
@@ -29,13 +29,13 @@
             name: "existing-company",
             fieldset: {
               legend: {
-                text: "Are you uploading a document for an registered company?",
+                text: "Are you uploading a document to register a Scottish limited partnership or a Scottish qualifying partnership?",
                 isPageHeading: true,
                 classes: "govuk-fieldset__legend--l"
               }
             },
             errorMessage: {
-              text: "Select yes if you are uploading a document for a registered company"
+              text: "Select yes if you are uploading a document to register a Scottish limited partnership or Scottish qualifying partnership"
             },
             hint: {
               html: "A registered company has a company number and is on the <a href='https://beta.companieshouse.gov.uk/search/companies'>Companies House register</a>."
@@ -53,33 +53,28 @@
           }) }}
         {% else %}
           {{ govukRadios({
-            classes: "govuk-radios",
+            classes: "govuk-radios--inline",
             idPrefix: "existing-company",
             name: "existing-company",
             fieldset: {
               legend: {
-                text: "Are you uploading a document for a registered company?",
+                text: "Are you uploading a document to register a Scottish limited partnership or Scottish qualifying partnership?",
                 isPageHeading: true,
                 classes: "govuk-fieldset__legend--l"
               }
             },
-            hint: {
-              html: "A registered company has a company number and is on the
 
-              <a href='https://beta.companieshouse.gov.uk/search/companies'>Companies House register (opens in a new tab)</a>."
-            },
             items: [
-              {
-                value: "yes",
-                text: "Yes, I'm uploading a document for a registered company"
-              },
-
-              {
-                value: "no",
-                text: "No, I'm uploading a document to register a Scottish limited partnership or Scottish qualifying partnership"
-              }
-            ]
-          }) }}
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    }
+  ]
+}) }}
         {% endif %}
         {{ govukButton({
           text: "Continue"
