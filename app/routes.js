@@ -99,6 +99,8 @@ router.post('/types-of-forms/form-types', function (req, res) {
     res.redirect('reg/reg')
   } if (value === 'spij') {
     res.redirect('spi')
+  } if (value === 'sqp') {
+    res.redirect('sqp')
   } if (value === 'constitution') {
     res.redirect('constitution/change-of-constitution')
   } if (value === 'share') {
@@ -384,7 +386,6 @@ router.post('/types-of-forms/slp/limited-partnerships', function (req, res) {
   }
 })
 
-
 router.post('/types-of-forms/shares/shares-sh19', function (req, res) {
   var errors = []
   if (typeof req.session.data['SH-sh19'] === 'undefined') {
@@ -400,7 +401,6 @@ router.post('/types-of-forms/shares/shares-sh19', function (req, res) {
     res.redirect('/auth-screen')
   }
 })
-
 
 // SQP Forms
 router.post('/types-of-forms/sqp/scottish-limited-partnerships', function (req, res) {
