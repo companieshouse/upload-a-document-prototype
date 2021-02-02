@@ -93,8 +93,6 @@ router.post('/types-of-forms/form-types', function (req, res) {
     res.redirect('lp/limited-partnerships')
   } if (value === 'slp') {
     res.redirect('slp/scottish-limited-partnership')
-  } if (value === 'sqp') {
-    res.redirect('sqp/sqp-forms')
   } if (value === 'reg') {
     res.redirect('reg/reg')
   } if (value === 'spij') {
