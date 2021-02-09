@@ -157,8 +157,12 @@ Select a document",
         <h3 class="govuk-heading-m">How to upload 2.14B and 2.16B documents</h3>
                 <p class="govuk-body">You must merge these documents first and upload them as a single PDF document.</p>
                 <div class="govuk-inset-text">
-                  <p class="govuk-body">
-          Form 2.16B should be at the front, followed by form 2.14B.</p>
+                  <p class="govuk-body govuk-!-font-weight-bold">To upload form 2.16B with form 2.14B:</p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>select form '2.16B' from the list</li>
+                    <li>merge the documents with form 2.16B at the front, followed by form 2.14B</li>
+                  </ul>
+
 </div>
 
 <details class="govuk-details" data-module="govuk-details">
@@ -177,6 +181,8 @@ Help with merging documents
 </ul>
 </div>
 </details>
+<br>
+<br>
         {{ govukButton({
           text: "Continue",
           href: "../../auth-screen"
