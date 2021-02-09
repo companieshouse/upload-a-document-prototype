@@ -17,11 +17,6 @@
         <span class="govuk-caption-l">Share capital</span>
 <h2 class="govuk-heading-l">What type of document are you uploading?</h2>
 
-    <form action="/types-of-forms/shares/shares" method="post">
-    {{ govukInsetText({
-      text: "If you are uploading a resolution, you must select the relevant category the resolution is related to. Otherwise, it may be rejected."
-    }) }}
-
     {{ govukRadios({
   idPrefix: "SH",
   name: "SH",
@@ -42,7 +37,7 @@
       value: "shares-other",
       text: "Other share capital documents",
       hint: {
-        text: "Form SH02, SH04, SH05, SH06, SH07, SH08, SH09, SH10, SH11, SH12, SH13, SH14, SH15, SH16, SH17 and resolution"
+        text: "Form SH02, SH04, SH05, SH06, SH07, SH08, SH09, SH10, SH11, SH12, SH13, SH14, SH15, SH16 and SH17"
       }
     }
   ]
