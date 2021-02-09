@@ -105,6 +105,8 @@ router.post('/types-of-forms/form-types', function (req, res) {
     res.redirect('shares/shares')
   } if (value === 'res-articles') {
     res.redirect('res-articles')
+  } if (value === 'articles and resolutions') {
+    res.redirect('articles-and-resolutions')
   }
 })
 
@@ -272,6 +274,27 @@ router.post('/types-of-forms/shares/shares', function (req, res) {
     res.redirect('shares-sh19')
   } else {
     res.redirect('shares-other')
+  }
+})
+router.get('/types-of-forms/articles-and-resolutions', function (req, res) {
+  res.render('types-of-forms/articles-and-resolutions', {
+  })
+})
+
+router.post('/types-of-forms/articles-and-resolutions', function (req, res) {
+  var errors = []
+  var value = req.session.data['articles-and-resolutions']
+  if (typeof req.session.data['articles-and-resolutions'] === 'undefined') {
+    errors.push({
+      text: 'Select the *type of form that you want to upload* ',
+      href: '#articles-and-resolutions'
+    })
+    res.render('types-of-forms/articles-and-resolutions', {
+      errorType: true,
+      errorList: errors
+    })
+  } else {
+    res.redirect('../auth-screen')
   }
 })
 
