@@ -1,11 +1,13 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  Upload a document to Companies House prototype
+  {{serviceName}}
+  prototype
 {% endblock %}
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <h1 class="govuk-heading-xl">Upload a document to Companies House prototype</h1>
+      <h1 class="govuk-heading-xl">{{serviceName}}
+        prototype</h1>
       <h2 class="govuk-heading-l">Shortcuts in the service</h2>
       <ul class="govuk-list govuk-list--bullet">
         <li>
@@ -65,6 +67,43 @@
         </li>
         <li>
           <a href="emails/email-list" class="govuk-link">Emails sent</a>
+        </li>
+      </ul>
+      <h2 class="govuk-heading-l">Emails</h2>
+      <h3 class="govuk-heading-m">External</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="emails/confirmation-email">Confirmation email</a>
+        </li>
+        <li>
+          <a href="emails/confirmation-email-sqp-slp">Confirmation email for a SQP or SLP document</a>
+        </li>
+        <li>
+          <a href="emails/accepted">Accepted email</a>
+        </li>
+        <li>
+          <a href="emails/accepted-sqp-slp">Accepted email for a SQP or SLP document</a>
+        </li>
+        <li>
+          <a href="emails/rejection-email">Rejected email</a>
+        </li>
+        <li>
+          <a href="emails/rejection-email-sqp-slp">Rejected email for a SQP or SLP document</a>
+        </li>
+      </ul>
+      <h3 class="govuk-heading-m">Internal</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="emails/submission-obstructed">Obstructed - dead letter queue</a>
+        </li>
+        <li>
+          <a href="emails/submission-delayed">Delayed - email for business</a>
+        </li>
+        <li>
+          <a href="emails/internal-rejected-antivirus">Rejected - failed antivirus scan</a>
+        </li>
+        <li>
+          <a href="emails/internal-reject-conversion">Rejected - conversion issues</a>
         </li>
       </ul>
     </div>

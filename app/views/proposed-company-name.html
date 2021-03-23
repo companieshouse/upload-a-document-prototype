@@ -1,57 +1,64 @@
-{% set title = "Tell us your company number" %}
 {% extends "layout.html" %}
 {% block pageTitle %}
-  What is the name of the firm or partnership? - Upload a document to Companies House - GOV.UK
+  What is the name of the firm or partnership? -
+  {{serviceName}}
+  - GOV.UK
 {% endblock %}
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
-    href: "sign-in"
+    href: "company-number"
   }) }}
 {% endblock %}
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <form action="/proposed-company-name" method="post">
-        {% if errorAuth == true %}
-          {{ govukErrorSummary({
-            titleText: "There is a problem",
-            errorList: [
-              {
-                text: "Enter the name of the firm or partnership",
-                href: "#proposed-company-name"
-              }
-            ]
-          }) }}
-          <div class="govuk-form-group govuk-form-group--error">
-            <h1 class="govuk-label-wrapper">
-              <label class="govuk-label govuk-label--l" for="proposed-company-name">
-                What is the name of the firm or partnership?
-              </label>
-            </h1>
-    
-
-            <span id="proposed-company-name-error" class="govuk-error-message">
-              <span class="govuk-visually-hidden">Error:</span>
-              Enter the name of the firm or partnership
-            </span>
-            <input class="govuk-input govuk-input--error" id="proposed-company-name" name="proposed-company-name" type="text" aria-describedby="proposed-company-name-hint proposed-company-name-error">
-          </div>
-        {% else %}
-          <div class="govuk-form-group">
-            <h1 class="govuk-label-wrapper">
-              <label class="govuk-label govuk-label--l" for="proposed-company-name">
-                What is the name of the firm or partnership?
-              </label>
-            </h1>
-
-            <input class="govuk-input" id="proposed-company-name" name="proposed-company-name" type="text" aria-describedby="proposed-company-name-hint">
-          </div>
-        {% endif %}
-        {{ govukButton({
-          text: "Continue"
+      {% set emailHtml %}
+      {{ govukInput({
+          id: "contact-by-email",
+          name: "contact-by-email",
+          type: "email",
+          spellcheck: false,
+          classes: "govuk-!-width-two-thirds",
+          label: {
+            text: " What is the name of the firm or partnership?"
+          }
         }) }}
-      </form>
+      {% endset -%}
+      {% set phoneHtml %}
+      <p class="govuk-body">Content needed please</p>
+      {% endset -%}
+      {{ govukRadios({
+        idPrefix: "contact",
+        name: "contact",
+        fieldset: {
+          legend: {
+            text: "Are you uploading a document to register a Scottish limited partnership or a Scottish qualifying partnership?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Yes",
+            conditional: {
+              html: emailHtml
+            }
+        },
+        {
+          value: "no",
+          text: "No",
+          conditional: {
+            html: phoneHtml
+          }
+        }
+      ]
+    }) }}
+      {{ govukButton({
+      text: "Continue",
+      href: "/types-of-forms/form-types-sqp"
+    }) }}
     </div>
   </div>
 {% endblock %}

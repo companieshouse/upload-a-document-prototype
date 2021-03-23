@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  What type of document are you uploading? - Upload a document to Companies House - GOV.UK
+{% endblock %}
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "../confirm-company"
+    }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/types-of-forms/form-types" method="post">
+        {% if errorType == true %}
+          {{ govukErrorSummary({
+          titleText: "There is a problem",
+          errorList: errorList
+        }) }}
+          {{ govukRadios({
+          idPrefix: "type",
+          name: "type",
+          errorMessage: {
+            text: "Select the *type of form that you want to upload* "
+          },
+          fieldset: {
+            legend: {
+              html: "<span class='govuk-caption-l'>Document category</span>
+What type of document are you uploading?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+           },
+           items: [
+           {
+             value: "insolvency",
+             text: "Insolvency"
+           },
+           {
+             value: "reg",
+             text: "Registrar's powers",
+             hint: {
+              text: "RP forms"
+             }
+           },
+           {
+             value: "slp",
+             text: "Scottish limited partnership",
+             hint: {
+               text: "SLP forms"
+             }
+            },
+            {
+              value: "sqp",
+              text: "Scottish qualifying partnership",
+              hint: {
+                text: "SQP forms"
+              }
+            },
+            {
+              value: "limited-companies",
+              text: "Limited company",
+              hint: {
+                text: "CC forms, SH forms, articles and resolutions"
+              }
+            }
+           ]
+         }) }}
+        {% else %}
+          {{ govukRadios({
+          idPrefix: "type",
+          name: "type",
+          fieldset: {
+            legend: {
+              html: "<span class='govuk-caption-l'>Document category</span>
+What type of document are you uploading?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "spij",
+              text: "Registration of a Scottish limited partnership",
+              hint: {
+               text: "LP5(s) and LP7(s) forms"
+              }
+            },
+            {
+              value: "sqp",
+              text: "Registration of a Scottish qualifying partnership",
+              hint: {
+               text: "SQP1 form"
+              }
+            }
+        ]
+      }) }}
+        {% endif %}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

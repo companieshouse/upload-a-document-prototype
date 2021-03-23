@@ -1,7 +1,9 @@
 {% set title = "Upload the completed document" %}
 {% extends "layout.html" %}
 {% block pageTitle %}
-  Upload the completed document - Upload a document to Companies House - GOV.UK
+  Upload the completed document -
+  {{serviceName}}
+  - GOV.UK
 {% endblock %}
 {% block beforeContent %}
   {{ govukBackLink({

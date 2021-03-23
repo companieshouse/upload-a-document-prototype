@@ -1,6 +1,8 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  Start page - Upload a document to Companies House - GOV.UK
+  Start page -
+  {{serviceName}}
+  - GOV.UK
 {% endblock %}
 {% block content %}
   <div class="govuk-grid-row">
@@ -18,8 +20,8 @@
       </ul>
       <p class="govuk-body">
         <a class="govuk-link" href="static/guidance">Read the guidance to find out how to upload a document</a>, including which documents you can file.</p>
-        <p class="govuk-body">There is separate
-          <a class="govuk-link" href="static/insolvency-guidance">guidance for uploading insolvency documents</a>.</p>
+      <p class="govuk-body">There is separate
+        <a class="govuk-link" href="static/insolvency-guidance">guidance for uploading insolvency documents</a>.</p>
       {{ govukInsetText({
         text: "This service was created to enable paperless filing in response to the coronavirus (COVID-19) outbreak. It's quicker to upload your documents than to send them by post."
       }) }}

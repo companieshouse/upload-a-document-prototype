@@ -39,7 +39,7 @@ router.post('/sign-in', function (req, res) {
       errorList: errors
     })
   } else {
-    res.redirect('existing-company')
+    res.redirect('company-number')
   }
 })
 
@@ -107,6 +107,31 @@ router.post('/types-of-forms/form-types', function (req, res) {
     res.redirect('res-articles')
   } if (value === 'articles and resolutions') {
     res.redirect('articles-and-resolutions')
+  }
+})
+
+// Type of document
+router.get('/types-of-forms/form-types-sqp', function (req, res) {
+  res.render('types-of-forms/form-types-sqp', {
+  })
+})
+
+router.post('/types-of-forms/form-types-sqp', function (req, res) {
+  var errors = []
+  var value = req.session.data['type']
+  if (typeof req.session.data['type'] === 'undefined') {
+    errors.push({
+      text: 'Select the *type of form that you want to upload* ',
+      href: '#type'
+    })
+    res.render('/types-of-forms/form-types-sqp', {
+      errorType: true,
+      errorList: errors
+    })
+  } if (value === 'spij') {
+    res.redirect('spi')
+  } if (value === 'sqp') {
+    res.redirect('sqp')
   }
 })
 
