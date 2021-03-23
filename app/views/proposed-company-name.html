@@ -13,7 +13,7 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      {% set emailHtml %}
+      {% set yes %}
       {{ govukInput({
           id: "contact-by-email",
           name: "contact-by-email",
@@ -25,7 +25,7 @@
           }
         }) }}
       {% endset -%}
-      {% set phoneHtml %}
+      {% set no %}
       <p class="govuk-body">Content needed please</p>
       {% endset -%}
       {{ govukRadios({
@@ -43,14 +43,14 @@
             value: "yes",
             text: "Yes",
             conditional: {
-              html: emailHtml
+              html: yes
             }
         },
         {
           value: "no",
           text: "No",
           conditional: {
-            html: phoneHtml
+            html: no
           }
         }
       ]
