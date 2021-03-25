@@ -1,6 +1,8 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  Select a document - In administration - Upload a document to Companies House - GOV.UK
+  Select a document - In administration -
+  {{serviceName}}
+  - GOV.UK
 {% endblock %}
 {% block beforeContent %}
   {{ govukBackLink({
@@ -150,35 +152,35 @@ Select a document",
             }
           ]
         }) }}
-                <div class="govuk-inset-text">
-                      <h3 class="govuk-heading-m">How to upload 2.14B and 2.16B documents</h3>
-                  <p class="govuk-body govuk-!-font-weight-normal">You must:</p>
-                  <ul class="govuk-list govuk-list--bullet">
-                    <li>select form '2.16B' from the list</li>
-                    <li>merge the documents so that you can upload them as a single PDF</li>
-                    <li>place form 2.16B at the front when you merge the documents, followed by form 2.14B</li>
-                  </ul>
+        <div class="govuk-inset-text">
+          <h3 class="govuk-heading-m">How to upload 2.14B and 2.16B documents</h3>
+          <p class="govuk-body govuk-!-font-weight-normal">You must:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>select form '2.16B' from the list</li>
+            <li>merge the documents so that you can upload them as a single PDF</li>
+            <li>place form 2.16B at the front when you merge the documents, followed by form 2.14B</li>
+          </ul>
 
-</div>
+        </div>
 
-<details class="govuk-details" data-module="govuk-details">
-<summary class="govuk-details__summary">
-<span class="govuk-details__summary-text">
-Help with merging documents
-</span>
-</summary>
-<div class="govuk-details__text">
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Help with merging documents
+            </span>
+          </summary>
+          <div class="govuk-details__text">
 
-<p class="govuk-body">To merge these documents, you could:</p>
-<ul class="govuk-list govuk-list--bullet">
-<li>use an online tool or app that merges PDF documents</li>
-<li>create a new document and combine saved files into a single PDF</li>
-<li>scan documents together if you have access to a printer or photocopier, and save the scan as a single PDF</li>
-</ul>
-</div>
-</details>
-<br>
-<br>
+            <p class="govuk-body">To merge these documents, you could:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>use an online tool or app that merges PDF documents</li>
+              <li>create a new document and combine saved files into a single PDF</li>
+              <li>scan documents together if you have access to a printer or photocopier, and save the scan as a single PDF</li>
+            </ul>
+          </div>
+        </details>
+        <br>
+        <br>
         {{ govukButton({
           text: "Continue",
           href: "../../auth-screen"

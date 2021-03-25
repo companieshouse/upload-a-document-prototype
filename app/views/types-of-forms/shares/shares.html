@@ -1,6 +1,8 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  What type of document are you uploading? - Share capital - Upload a document to Companies House - GOV.UK
+  What type of document are you uploading? - Share capital -
+  {{serviceName}}
+  - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -12,17 +14,17 @@
 
 {% block content %}
 
-<div class="govuk-form-group">
-      <div class="govuk-grid-column-two-thirds-from-desktop">
-        <span class="govuk-caption-l">Share capital</span>
-<h2 class="govuk-heading-l">What type of document are you uploading?</h2>
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+  <div class="govuk-form-group">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <span class="govuk-caption-l">Share capital</span>
+      <h2 class="govuk-heading-l">What type of document are you uploading?</h2>
+      {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
-{{ govukInsetText({
+      {{ govukInsetText({
   text: "If you are uploading a resolution, you must select the relevant category the resolution is related to. Otherwise, it may be rejected."
 }) }}
-    <form action="/types-of-forms/shares/shares" method="post">
-    {{ govukRadios({
+      <form action="/types-of-forms/shares/shares" method="post">
+        {{ govukRadios({
   idPrefix: "SH",
   name: "SH",
   fieldset: {

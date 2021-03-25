@@ -1,6 +1,8 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  Select a document - Reduction of capital documents - Upload a document to Companies House - GOV.UK
+  Select a document - Reduction of capital documents -
+  {{serviceName}}
+  - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -44,15 +46,14 @@ Select a document",
           }
           ]
         }) }}
-  <p class="govuk-body">You can only upload one document at a time.</p>
-      <p class="govuk-body">If you need associated reduction of capital documents to be processed together, you should:</p>
+        <p class="govuk-body">You can only upload one document at a time.</p>
+        <p class="govuk-body">If you need associated reduction of capital documents to be processed together, you should:</p>
         <ul class="govuk-list govuk-list--bullet">
           <li>upload supporting documents first, one at a time (the resolution, solvency statement and statement by directors as applicable)</li>
           <li>upload the SH19 form last, after you have uploaded the supporting documents</li>
 
         </ul>
-          <p class="govuk-body">You should upload each document as soon as possible after the previous document was uploaded.</p>
-
+        <p class="govuk-body">You should upload each document as soon as possible after the previous document was uploaded.</p>
 
         {{ govukButton({
           text: "Continue"

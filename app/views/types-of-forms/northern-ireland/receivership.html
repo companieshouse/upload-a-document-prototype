@@ -1,6 +1,8 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  Select a document - Receivership - Upload a document to Companies House - GOV.UK
+  Select a document - Receivership -
+  {{serviceName}}
+  - GOV.UK
 {% endblock %}
 {% block beforeContent %}
   {{ govukBackLink({
@@ -55,50 +57,49 @@ Select a document",
           ]
         }) }}
 
+        <div class="govuk-inset-text">
+          <h3 class="govuk-heading-m">How to upload 3.04, 3.05 and 3.12 documents</h3>
+          <p class="govuk-body govuk-!-font-weight-bold">To upload form 3.05 with form 3.04, you must:</p>
 
-                <div class="govuk-inset-text">
-                  <h3 class="govuk-heading-m">How to upload 3.04, 3.05 and 3.12 documents</h3>
-                  <p class="govuk-body govuk-!-font-weight-bold">To upload form 3.05 with form 3.04, you must:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>select form '3.05' from the list</li>
+            <li>merge the documents so that you can upload them as a single PDF</li>
+            <li>place form 3.05 at the front when you merge the documents, followed by form 3.04</li>
+          </ul>
 
-                    <ul class="govuk-list govuk-list--bullet">
-                      <li>select form '3.05' from the list</li>
-                      <li>merge the documents so that you can upload them as a single PDF</li>
-                        <li>place form 3.05 at the front when you merge the documents, followed by form 3.04</li>
-                    </ul>
+          <p class="govuk-body govuk-!-font-weight-bold">To upload form 3.12 with an administrative receiver's report, you must:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>select form '3.12' from the list</li>
+            <li>merge the documents so that you can upload them as a single PDF</li>
+            <li>place form 3.12 at the front when you merge the documents, followed by the report</li>
+          </ul>
 
-            <p class="govuk-body govuk-!-font-weight-bold">To upload form 3.12 with an administrative receiver's report, you must:</p>
+          <p class="govuk-body govuk-!-font-weight-bold">To upload form 3.12 with form 3.04 and an administrative receiver's report, you must:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>select form '3.12' from the list</li>
+            <li>merge the documents so that you can upload them as a single PDF</li>
+            <li>place form 3.12 at the front when you merge the documents, followed by form 3.04, then the report</li>
+          </ul>
+        </div>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Help with merging documents
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+
+            <p class="govuk-body">To merge these documents, you could:</p>
             <ul class="govuk-list govuk-list--bullet">
-              <li>select form '3.12' from the list</li>
-              <li>merge the documents so that you can upload them as a single PDF</li>
-              <li>place form 3.12 at the front when you merge the documents, followed by the report</li>
+              <li>use an online tool or app that merges PDF documents</li>
+              <li>create a new document and combine saved files into a single PDF</li>
+              <li>scan documents together if you have access to a printer or photocopier, and save the scan as a single PDF</li>
             </ul>
-
-            <p class="govuk-body govuk-!-font-weight-bold">To upload form 3.12 with form 3.04 and an administrative receiver's report, you must:</p>
-            <ul class="govuk-list govuk-list--bullet">
-              <li>select form '3.12' from the list</li>
-              <li>merge the documents so that you can upload them as a single PDF</li>
-              <li>place form 3.12 at the front when you merge the documents, followed by form 3.04, then the report</li>
-            </ul>
-</div>
-
-<details class="govuk-details" data-module="govuk-details">
-<summary class="govuk-details__summary">
-<span class="govuk-details__summary-text">
-Help with merging documents
-</span>
-</summary>
-<div class="govuk-details__text">
-
-<p class="govuk-body">To merge these documents, you could:</p>
-<ul class="govuk-list govuk-list--bullet">
-<li>use an online tool or app that merges PDF documents</li>
-<li>create a new document and combine saved files into a single PDF</li>
-<li>scan documents together if you have access to a printer or photocopier, and save the scan as a single PDF</li>
-</ul>
-</div>
-</details>
-<br>
-<br>
+          </div>
+        </details>
+        <br>
+        <br>
         {{ govukButton({
           text: "Continue",
           href: "../../auth-screen"
