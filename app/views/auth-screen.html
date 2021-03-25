@@ -1,7 +1,8 @@
 {% set title = "Enter the company authentication code" %}
 {% extends "layout.html" %}
 {% block pageTitle %}
-  Enter the company authentication code -
+  {{title}}
+  -
   {{serviceName}}
   - GOV.UK
 {% endblock %}
@@ -22,7 +23,7 @@
           }) }}
           {{ govukInput({
             label: {
-              text: "Enter the company authentication code",
+              text: title,
               classes: "govuk-label--l"
             },
             classes: "govuk-input--width-5",
@@ -38,7 +39,7 @@
         {% else %}
           {{ govukInput({
             label: {
-              text: "Enter the company authentication code ",
+              text: title,
               classes: "govuk-label--l"
             },
             classes: "govuk-input--width-5",

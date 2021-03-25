@@ -1,6 +1,8 @@
+{% set title = "Are you uploading a document to register a Scottish limited partnership or a Scottish qualifying partnership?" %}
 {% extends "layout.html" %}
 {% block pageTitle %}
-Are you uploading a document to register a Scottish limited partnership or a Scottish qualifying partnership? -
+  {{title}}
+  -
   {{serviceName}}
   - GOV.UK
 {% endblock %}
@@ -27,14 +29,15 @@ Are you uploading a document to register a Scottish limited partnership or a Sco
       {% endset -%}
       {% set no %}
       <p class="govuk-body">You can only upload documents to register Scottish limited partnerships or Scottish qualifying partnerships in this service.</p>
-        <p class="govuk-body">There is a different service if you want to <a href="https://www.gov.uk/limited-company-formation/register-your-company" class="govuk-link" rel="noreferrer noopener" target="_blank">register a company (opens in new tab)</a>.</p>
+      <p class="govuk-body">There is a different service if you want to
+        <a href="https://www.gov.uk/limited-company-formation/register-your-company" class="govuk-link" rel="noreferrer noopener" target="_blank">register a company (opens in new tab)</a>.</p>
       {% endset -%}
       {{ govukRadios({
         idPrefix: "contact",
         name: "contact",
         fieldset: {
           legend: {
-            text: "Are you uploading a document to register a Scottish limited partnership or a Scottish qualifying partnership?",
+            text: title,
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
