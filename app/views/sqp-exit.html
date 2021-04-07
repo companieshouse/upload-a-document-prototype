@@ -1,0 +1,29 @@
+{% set title = "What is the company number?" %}
+{% extends "layout.html" %}
+{% block pageTitle %}
+  {{title}}
+  -
+  {{serviceName}}
+  - GOV.UK
+{% endblock %}
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "sign-in"
+  }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      {{ govukPanel({
+              titleText: "Application complete",
+              html: "Your reference number<br><strong>HDJ2123F</strong>",
+              classes: "grey-box"
+            }) }}
+
+      <p class="govuk-body">You can only upload documents to register Scottish limited partnerships or Scottish qualifying partnerships in this service.</p>
+      <p class="govuk-body">There is a different service if you want to
+        <a href="https://www.gov.uk/limited-company-formation/register-your-company" class="govuk-link" rel="noreferrer noopener" target="_blank">register a company (opens in new tab)</a>.</p>
+    </div>
+  </div>
+{% endblock %}

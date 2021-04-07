@@ -15,24 +15,18 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      {% set yes %}
-      {{ govukInput({
+      <form action="/proposed-company-name" method="post">
+        {% set yes %}
+        {{ govukInput({
           id: "contact-by-email",
           name: "contact-by-email",
-          type: "email",
-          spellcheck: false,
           classes: "govuk-!-width-two-thirds",
           label: {
             text: " What is the proposed name of the firm or partnership?"
           }
         }) }}
-      {% endset -%}
-      {% set no %}
-      <p class="govuk-body">You can only upload documents to register Scottish limited partnerships or Scottish qualifying partnerships in this service.</p>
-      <p class="govuk-body">There is a different service if you want to
-        <a href="https://www.gov.uk/limited-company-formation/register-your-company" class="govuk-link" rel="noreferrer noopener" target="_blank">register a company (opens in new tab)</a>.</p>
-      {% endset -%}
-      {{ govukRadios({
+        {% endset -%}
+        {{ govukRadios({
         idPrefix: "contact",
         name: "contact",
         fieldset: {
@@ -52,17 +46,14 @@
         },
         {
           value: "no",
-          text: "No",
-          conditional: {
-            html: no
-          }
+          text: "No"
         }
       ]
     }) }}
-      {{ govukButton({
-      text: "Continue",
-      href: "/types-of-forms/form-types-sqp"
+        {{ govukButton({
+      text: "Continue"
     }) }}
+      </form>
     </div>
   </div>
 {% endblock %}

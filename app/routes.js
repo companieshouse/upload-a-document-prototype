@@ -109,7 +109,7 @@ router.get('/proposed-company-name', function (req, res) {
 
 router.post('/proposed-company-name', function (req, res) {
   var errors = []
-  if (req.session.data['proposed-company-name'] === '') {
+  if (req.session.data['contact'] === '') {
     errors.push({
       text: 'Enter the proposed company name',
       href: '#auth-number'
@@ -118,8 +118,10 @@ router.post('/proposed-company-name', function (req, res) {
       errorAuth: true,
       errorList: errors
     })
+  } else if (req.session.data['contact'] === 'no') {
+    res.redirect('/sqp-exit.html')
   } else {
-    res.redirect('/types-of-forms/form-types')
+    res.redirect('/types-of-forms/form-types-sqp')
   }
 })
 
