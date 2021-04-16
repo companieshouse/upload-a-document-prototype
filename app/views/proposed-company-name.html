@@ -18,47 +18,77 @@
       <form action="/proposed-company-name" method="post">
         {% set yes %}
         {{ govukInput({
-          id: "contact-by-email",
-          name: "contact-by-email",
+          id: "proposedNameInput",
+          name: "proposedNameInput",
           classes: "govuk-!-width-two-thirds",
 
           label: {
             text: " What is the proposed name of the firm or partnership?"
           },
           hint: {
-    text: "An examiner will check if the proposed name is acceptable"
-  }
+            text: "An examiner will check if the proposed name is acceptable"
+          }
         }) }}
         {% endset -%}
         {% if errorproposedName == true %}
           {{ govukErrorSummary({
           titleText: "There is a problem",
           errorList: errorList
-        }) }}
+          }) }}
           {{ govukRadios({
-      idPrefix: "proposedName",
-      name: "proposedName",
-      fieldset: {
-        legend: {
-          text: title,
-          isPageHeading: true,
-          classes: "govuk-fieldset__legend--l"
-        }
-      },
-      items: [
-        {
-          value: "yes",
-          text: "Yes",
-          conditional: {
-            html: yes
-          }
-      },
-      {
-        value: "no",
-        text: "No"
-      }
-    ]
-  }) }}
+            idPrefix: "proposedName",
+            name: "proposedName",
+            fieldset: {
+              legend: {
+                text: title,
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            items: [
+              {
+                value: "yes",
+                text: "Yes",
+                conditional: {
+                  html: yes
+                }
+              },
+              {
+                value: "no",
+                text: "No"
+              }
+            ]
+          }) }}
+        {% elif errorproposedNameInput == true %}
+          {{ govukErrorSummary({
+            titleText: "There is a problem",
+            errorList: errorList
+            }) }}
+          {{ govukRadios({
+              idPrefix: "proposedName",
+              name: "proposedName",
+              fieldset: {
+                legend: {
+                  text: title,
+                  isPageHeading: true,
+                  classes: "govuk-fieldset__legend--l"
+                }
+              },
+              items: [
+                {
+                  value: "yes",
+                  text: "Yes",
+                  checked: true,
+                  conditional: {
+                    html: yes
+                  }
+                },
+                {
+                  value: "no",
+                  text: "No"
+                }
+              ]
+            }) }}
         {% else %}
           {{ govukRadios({
         idPrefix: "proposedName",

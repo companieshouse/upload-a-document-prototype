@@ -118,7 +118,19 @@ router.post('/proposed-company-name', function (req, res) {
       errorproposedName: true,
       errorList: errors
     })
-  } else if (req.session.data['proposedName'] === 'no') {
+    return
+  } if (req.session.data['proposedName'] === 'yes' && req.session.data['proposedNameInput'] === '') {
+    errors.push({
+      text: 'Enter the proposed company name input',
+      href: '#proposedNameInput'
+    })
+    res.render('proposed-company-name', {
+      errorproposedNameInput: true,
+      errorList: errors,
+      proposedName: true
+    })
+    return
+  } if (req.session.data['proposedName'] === 'no') {
     res.redirect('/sqp-exit.html')
   } else {
     res.redirect('/types-of-forms/form-types-sqp')
