@@ -113,7 +113,7 @@ router.post('/proposed-company-name', function (req, res) {
   // Create if condition the user hasn't selected a radio option
   if (typeof req.session.data['proposedName'] === 'undefined') {
     errors.push({
-      text: 'Enter the proposed company name',
+      text: 'Select yes if you are uploading a document to register a Scottish limited partnership or a Scottish qualifying partnership',
       href: '#proposedName'
     })
     res.render('proposed-company-name', {
@@ -124,7 +124,7 @@ router.post('/proposed-company-name', function (req, res) {
   // Create if condition the user has selected yes for the radio but hasn't entered a proposed name
   } if (req.session.data['proposedName'] === 'yes' && req.session.data['proposedNameInput'] === '') {
     errors.push({
-      text: 'Enter the proposed company name input',
+      text: 'Enter the proposed name of the firm or partnership',
       href: '#proposedNameInput'
     })
     res.render('proposed-company-name', {
