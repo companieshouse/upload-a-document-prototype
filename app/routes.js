@@ -107,8 +107,10 @@ router.get('/proposed-company-name', function (req, res) {
   })
 })
 
+// Proposed company name page when the user submits the data
 router.post('/proposed-company-name', function (req, res) {
   var errors = []
+  // Create if condition the user hasn't selected a radio option
   if (typeof req.session.data['proposedName'] === 'undefined') {
     errors.push({
       text: 'Enter the proposed company name',
@@ -119,6 +121,7 @@ router.post('/proposed-company-name', function (req, res) {
       errorList: errors
     })
     return
+  // Create if condition the user has selected yes for the radio but hasn't entered a proposed name
   } if (req.session.data['proposedName'] === 'yes' && req.session.data['proposedNameInput'] === '') {
     errors.push({
       text: 'Enter the proposed company name input',
@@ -130,9 +133,12 @@ router.post('/proposed-company-name', function (req, res) {
       proposedName: true
     })
     return
+  // Create if condition the user selects no
   } if (req.session.data['proposedName'] === 'no') {
+    // Redirect the user to the drop out page
     res.redirect('/sqp-exit.html')
   } else {
+    // If everything is fine go to the form types page
     res.redirect('/types-of-forms/form-types-sqp')
   }
 })

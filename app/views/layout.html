@@ -35,6 +35,14 @@
   {% include "includes/head.html" %}
 {% endblock %}
 
+{#- Create a reuseable macro for page titles -#}
+{% macro pageTitle(title) %}
+  {{title}}
+  -
+  {{serviceName}}
+  - GOV.UK
+{% endmacro %}
+
 {% block pageTitle %}
   {{serviceName}}
 {% endblock %}

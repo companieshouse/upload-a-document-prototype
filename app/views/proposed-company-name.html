@@ -1,27 +1,29 @@
 {% set title = "Are you uploading a document to register a Scottish limited partnership or a Scottish qualifying partnership?" %}
+
 {% extends "layout.html" %}
+
 {% block pageTitle %}
-  {{title}}
-  -
-  {{serviceName}}
-  - GOV.UK
+  {{ pageTitle(title) }}
 {% endblock %}
+
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
     href: "company-number"
   }) }}
 {% endblock %}
+
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/proposed-company-name" method="post">
+
+        {# Content for the question of what is the proposed name of the firm or partnership #}
         {% set yes %}
         {{ govukInput({
           id: "proposedNameInput",
           name: "proposedNameInput",
           classes: "govuk-!-width-two-thirds",
-
           label: {
             text: " What is the proposed name of the firm or partnership?"
           },
@@ -30,10 +32,30 @@
           }
         }) }}
         {% endset -%}
+
+        {# Error content for the question of what is the proposed name of the firm or partnership #}
+        {% set yesError %}
+        {{ govukInput({
+          id: "proposedNameInput",
+          name: "proposedNameInput",
+          classes: "govuk-!-width-two-thirds",
+          label: {
+            text: " What is the proposed name of the firm or partnership?"
+          },
+          hint: {
+            text: "An examiner will check if the proposed name is acceptable"
+          },
+          errorMessage: {
+            text: "Enter an event name"
+          }
+        }) }}
+        {% endset -%}
+
+        {# Error if the radio is blank #}
         {% if errorproposedName == true %}
           {{ govukErrorSummary({
-          titleText: "There is a problem",
-          errorList: errorList
+            titleText: "There is a problem",
+            errorList: errorList
           }) }}
           {{ govukRadios({
             idPrefix: "proposedName",
@@ -59,36 +81,38 @@
               }
             ]
           }) }}
+          {# Error if the proposed company name is blank #}
         {% elif errorproposedNameInput == true %}
           {{ govukErrorSummary({
             titleText: "There is a problem",
             errorList: errorList
-            }) }}
+          }) }}
           {{ govukRadios({
-              idPrefix: "proposedName",
-              name: "proposedName",
-              fieldset: {
-                legend: {
-                  text: title,
-                  isPageHeading: true,
-                  classes: "govuk-fieldset__legend--l"
-                }
-              },
-              items: [
-                {
-                  value: "yes",
-                  text: "Yes",
-                  checked: true,
-                  conditional: {
-                    html: yes
-                  }
-                },
-                {
-                  value: "no",
-                  text: "No"
-                }
-              ]
-            }) }}
+            idPrefix: "proposedName",
+            name: "proposedName",
+            fieldset: {
+              legend: {
+                text: title,
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+              }
+             },
+             items: [
+               {
+                 value: "yes",
+                 text: "Yes",
+                 checked: true,
+                 conditional: {
+                   html: yesError
+                 }
+               },
+               {
+                 value: "no",
+                 text: "No"
+               }
+             ]
+           }) }}
+          {# else show the default radio options #}
         {% else %}
           {{ govukRadios({
         idPrefix: "proposedName",
@@ -114,10 +138,12 @@
         }
       ]
     }) }}
+          {# End the if conditions #}
         {% endif %}
         {{ govukButton({
       text: "Continue"
     }) }}
+
       </form>
     </div>
   </div>
