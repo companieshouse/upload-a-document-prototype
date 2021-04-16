@@ -26,9 +26,39 @@
           }
         }) }}
         {% endset -%}
-        {{ govukRadios({
-        idPrefix: "contact",
-        name: "contact",
+        {% if errorproposedName == true %}
+          {{ govukErrorSummary({
+          titleText: "There is a problem",
+          errorList: errorList
+        }) }}
+          {{ govukRadios({
+      idPrefix: "proposedName",
+      name: "proposedName",
+      fieldset: {
+        legend: {
+          text: title,
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Yes",
+          conditional: {
+            html: yes
+          }
+      },
+      {
+        value: "no",
+        text: "No"
+      }
+    ]
+  }) }}
+        {% else %}
+          {{ govukRadios({
+        idPrefix: "proposedName",
+        name: "proposedName",
         fieldset: {
           legend: {
             text: title,
@@ -50,6 +80,7 @@
         }
       ]
     }) }}
+        {% endif %}
         {{ govukButton({
       text: "Continue"
     }) }}
