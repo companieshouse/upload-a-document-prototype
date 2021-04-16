@@ -60,6 +60,9 @@
           {{ govukRadios({
             idPrefix: "proposedName",
             name: "proposedName",
+            errorMessage: {
+              text: "Select yes if you have changed your name"
+            },
             fieldset: {
               legend: {
                 text: title,
