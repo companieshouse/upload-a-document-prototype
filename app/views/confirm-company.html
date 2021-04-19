@@ -1,10 +1,7 @@
 {% set title = "Confirm this is the correct company" %}
 {% extends "layout.html" %}
 {% block pageTitle %}
-  {{title}}
-  -
-  {{serviceName}}
-  - GOV.UK
+  {{ pageTitle(title) }}
 {% endblock %}
 {% block beforeContent %}
   {{ govukBackLink({

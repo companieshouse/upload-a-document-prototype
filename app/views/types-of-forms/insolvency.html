@@ -1,9 +1,9 @@
 {% extends "layout.html" %}
+
 {% block pageTitle %}
-  What type of document are you uploading? - Insolvency -
-  {{serviceName}}
-  - GOV.UK
+  {{ pageTitle("What type of document are you uploading? - Insolvency") }}
 {% endblock %}
+
 {% block beforeContent %}
   {{ govukBackLink({
       text: "Back",

@@ -1,9 +1,7 @@
 {% set title = "Upload the completed document" %}
 {% extends "layout.html" %}
 {% block pageTitle %}
-  Upload the completed document -
-  {{serviceName}}
-  - GOV.UK
+  {{ pageTitle(title) }}
 {% endblock %}
 {% block beforeContent %}
   {{ govukBackLink({

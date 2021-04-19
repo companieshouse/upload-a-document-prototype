@@ -1,9 +1,9 @@
 {% extends "layout.html" %}
+
 {% block pageTitle %}
-  Select a document - Change a company's registered office address -
-  {{serviceName}}
-  - GOV.UK
+  {{ pageTitle("Select a document - Change a company's registered office address") }}
 {% endblock %}
+
 {% block beforeContent %}
   {{ govukBackLink({
       text: "Back",

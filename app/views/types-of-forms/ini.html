@@ -1,15 +1,16 @@
 {% extends "layout.html" %}
+
 {% block pageTitle %}
-  What type of document are you uploading? - The Insolvency (Northern Ireland) Order 1989 -
-  {{serviceName}}
-  - GOV.UK
+  {{ pageTitle("What type of document are you uploading? - The Insolvency (Northern Ireland) Order 1989") }}
 {% endblock %}
+
 {% block beforeContent %}
   {{ govukBackLink({
       text: "Back",
       href: "insolvency"
     }) }}
 {% endblock %}
+
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">

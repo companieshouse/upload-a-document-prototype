@@ -1,17 +1,17 @@
 {% set title = "What type of document are you uploading?" %}
 {% extends "layout.html" %}
+
 {% block pageTitle %}
-  {{title}}
-  -
-  {{serviceName}}
-  - GOV.UK
+  {{ pageTitle(title) }}
 {% endblock %}
+
 {% block beforeContent %}
   {{ govukBackLink({
       text: "Back",
       href: "../confirm-company"
     }) }}
 {% endblock %}
+
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">

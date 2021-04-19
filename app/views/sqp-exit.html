@@ -1,10 +1,7 @@
 {% set title = "What is the company number?" %}
 {% extends "layout.html" %}
 {% block pageTitle %}
-  {{title}}
-  -
-  {{serviceName}}
-  - GOV.UK
+  {{ pageTitle(title) }}
 {% endblock %}
 {% block beforeContent %}
   {{ govukBackLink({

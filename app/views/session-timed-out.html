@@ -1,8 +1,6 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  Session timed out due to inactivity -
-  {{serviceName}}
-  - GOV.UK
+  {{ pageTitle("Session timed out due to inactivity") }}
 {% endblock %}
 {% block content %}
   <div class="govuk-grid-row">
