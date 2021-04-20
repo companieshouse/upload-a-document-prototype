@@ -32,18 +32,18 @@ module.exports = function (router) {
     } if (value === 'reg') {
       res.redirect('reg/reg')
     } if (value === 'spij') {
-    res.redirect('spi')
-  } if (value === 'sqp') {
-    res.redirect('sqp')
-  } if (value === 'constitution') {
-    res.redirect('constitution/change-of-constitution')
-  } if (value === 'share') {
-    res.redirect('shares/shares')
-  } if (value === 'res-articles') {
-    res.redirect('res-articles')
-  } if (value === 'articles and resolutions') {
-    res.redirect('articles-and-resolutions')
-  }
+      res.redirect('spi')
+    } if (value === 'sqp') {
+      res.redirect('sqp')
+    } if (value === 'constitution') {
+      res.redirect('constitution/change-of-constitution')
+    } if (value === 'share') {
+      res.redirect('shares/shares')
+    } if (value === 'res-articles') {
+      res.redirect('res-articles')
+    } if (value === 'articles and resolutions') {
+      res.redirect('articles-and-resolutions')
+    }
   })
 
 // Type of document
@@ -104,12 +104,12 @@ module.exports = function (router) {
     } if (value === 'committees') {
       res.redirect('committees')
     } if (value === 'notice-of-disclaimer') {
-    res.redirect('notice-of-disclaimer')
-  } if (value === 'exempting-property') {
-    res.redirect('exempting-property')
-  } else {
-    res.redirect('others')
-  }
+      res.redirect('notice-of-disclaimer')
+    } if (value === 'exempting-property') {
+      res.redirect('exempting-property')
+    } else {
+      res.redirect('others')
+    }
   })
 
 // Insolvency document types
@@ -145,12 +145,12 @@ module.exports = function (router) {
     } if (value === 'moratorium') {
       res.redirect('moratorium')
     } if (value === 'ini') {
-    res.redirect('ini')
-  } if (value === 'resolutions') {
-    res.redirect('resolutions')
-  } else {
-    res.redirect('insolvency-scot/insolvency')
-  }
+      res.redirect('ini')
+    } if (value === 'resolutions') {
+      res.redirect('resolutions')
+    } else {
+      res.redirect('insolvency-scot/insolvency')
+    }
   })
 
 // Northern Ireland insolvency forms
@@ -315,10 +315,10 @@ module.exports = function (router) {
     } if (value === 'receivership') {
       res.redirect('receivership')
     } if (value === 'wuc') {
-    res.redirect('wuc')
-  } else {
-    res.redirect('others')
-  }
+      res.redirect('wuc')
+    } else {
+      res.redirect('others')
+    }
   })
 
 // Reg
@@ -345,11 +345,11 @@ module.exports = function (router) {
 
 // SLP Forms
   router.post('/types-of-forms/slp/scottish-limited-partnership', function (req, res) {
-    res.redirect('/upload-accounts')
+    res.redirect('/upload-documents')
   })
 
   router.post('/types-of-forms/sqp/sqp-forms', function (req, res) {
-    res.redirect('/upload-accounts')
+    res.redirect('/upload-documents')
   })
 
   router.post('/types-of-forms/slp/limited-partnerships', function (req, res) {
@@ -428,7 +428,7 @@ module.exports = function (router) {
       res.redirect('../../auth-screen')
     }
   })
-// CVA
+  // CVA
   router.get('/types-of-forms/insolvency/cva', function (req, res) {
     res.render('types-of-forms/insolvency/cva', {
     })
@@ -438,7 +438,7 @@ module.exports = function (router) {
     res.redirect('../../auth-screen')
   })
 
-// Insolvency - Adminstration Forms
+  // Insolvency - Adminstration Forms
   router.get('/types-of-forms/insolvency/in-adminstration', function (req, res) {
     res.render('types-of-forms/insolvency/in-adminstration', {
     })
@@ -458,7 +458,7 @@ module.exports = function (router) {
     res.redirect('../../auth-screen')
   })
 
-// Insolvency - Receivership Forms
+  // Insolvency - Receivership Forms
   router.get('/types-of-forms/insolvency/receivership', function (req, res) {
     res.render('types-of-forms/insolvency/receivership', {
     })

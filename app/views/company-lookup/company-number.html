@@ -12,7 +12,7 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <form action="/company-number" method="post">
+      <form action="/company-lookup/company-number" method="post">
         {% if errorNum == true %}
           {{ govukErrorSummary({
             titleText: "There is a problem",
@@ -53,7 +53,7 @@
           text: "Continue"
         }) }}
         <p class="govuk-body">
-          <a href="/proposed-company-name" class="govuk-link govuk-link--no-visited-state">The company or entity does not have a company number</a>
+          <a href="../proposed-company-name" class="govuk-link govuk-link--no-visited-state">The company or entity does not have a company number</a>
         </p>
       </form>
     </div>

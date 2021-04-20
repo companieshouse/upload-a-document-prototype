@@ -1,11 +1,11 @@
 module.exports = function (router) {
   // Sign in
-  router.get('/sign-in', function (req, res) {
-    res.render('sign-in', {
+  router.get('/sign-in/sign-in', function (req, res) {
+    res.render('sign-in/sign-in', {
     })
   })
 
-  router.post('/sign-in', function (req, res) {
+  router.post('/sign-in/sign-in', function (req, res) {
     var errors = []
     var emailHasError = false
     var passwordHasError = false
@@ -24,13 +24,13 @@ module.exports = function (router) {
       })
     }
     if (emailHasError || passwordHasError) {
-      res.render('sign-in', {
+      res.render('sign-in/sign-in', {
         errorEmail: emailHasError,
         errorPassword: passwordHasError,
         errorList: errors
       })
     } else {
-      res.redirect('company-number')
+      res.redirect('../company-lookup/company-number')
     }
   })
 }

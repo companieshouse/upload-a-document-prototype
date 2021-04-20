@@ -1,11 +1,11 @@
 module.exports = function (router) {
 // Company number
-  router.get('/company-number', function (req, res) {
-    res.render('company-number', {
+  router.get('/company-lookup/company-number', function (req, res) {
+    res.render('company-lookup/company-number', {
     })
   })
 
-  router.post('/company-number', function (req, res) {
+  router.post('/company-lookup/company-number', function (req, res) {
     var errors = []
     var str = req.session.data['company-number']
     var n = str.length
@@ -24,7 +24,7 @@ module.exports = function (router) {
         text: 'Company number must be 8 characters ',
         href: '#company-number'
       })
-      res.render('company-number', {
+      res.render('company-lookup/company-number', {
         errorNum: true,
         errorList: errors
       })
