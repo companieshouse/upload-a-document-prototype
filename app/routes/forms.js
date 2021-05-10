@@ -22,7 +22,7 @@ module.exports = function (router) {
     } if (value === 'resolutions') {
       res.redirect('resolutions/resolutions')
     } if (value === 'articles') {
-      res.redirect('../auth-screen')
+      res.redirect('../auth/auth-screen')
     } if (value === 'limited-companies') {
       res.redirect('limited')
     } if (value === 'lp') {
@@ -255,7 +255,7 @@ module.exports = function (router) {
         errorList: errors
       })
     } else {
-      res.redirect('../auth-screen')
+      res.redirect('../auth/auth-screen')
     }
   })
 
@@ -339,7 +339,7 @@ module.exports = function (router) {
         errorList: errors
       })
     } else {
-      res.redirect('/auth-screen')
+      res.redirect('/auth/auth-screen')
     }
   })
 
@@ -364,7 +364,7 @@ module.exports = function (router) {
         errorList: errors
       })
     } else {
-      res.redirect('/auth-screen')
+      res.redirect('/auth/auth-screen')
     }
   })
 
@@ -380,7 +380,7 @@ module.exports = function (router) {
         errorList: errors
       })
     } else {
-      res.redirect('/auth-screen')
+      res.redirect('/auth/auth-screen')
     }
   })
 
@@ -397,12 +397,12 @@ module.exports = function (router) {
         errorList: errors
       })
     } else {
-      res.redirect('/auth-screen')
+      res.redirect('/auth/auth-screen')
     }
   })
 
   router.post('/types-of-forms/resolutions/resolutions', function (req, res) {
-    res.redirect('/auth-screen')
+    res.redirect('/auth/auth-screen')
   })
 
   router.get('/types-of-forms/constitution/change-of-constitution', function (req, res) {
@@ -425,7 +425,7 @@ module.exports = function (router) {
     } if (value === 'resolution') {
       res.redirect('../resolutions/resolutions')
     } else {
-      res.redirect('../../auth-screen')
+      res.redirect('../../auth/auth-screen')
     }
   })
   // CVA
@@ -435,7 +435,7 @@ module.exports = function (router) {
   })
 
   router.post('/types-of-forms/insolvency/cva', function (req, res) {
-    res.redirect('../../auth-screen')
+    res.redirect('../../auth/auth-screen')
   })
 
   // Insolvency - Adminstration Forms
@@ -445,7 +445,7 @@ module.exports = function (router) {
   })
 
   router.post('/types-of-forms/insolvency/in-adminstration', function (req, res) {
-    res.redirect('../../auth-screen')
+    res.redirect('../../auth/auth-screen')
   })
 
 // Insolvency - Liquidation Forms
@@ -455,7 +455,7 @@ module.exports = function (router) {
   })
 
   router.post('/types-of-forms/insolvency/liquidation', function (req, res) {
-    res.redirect('../../auth-screen')
+    res.redirect('../../auth/auth-screen')
   })
 
   // Insolvency - Receivership Forms
@@ -465,7 +465,7 @@ module.exports = function (router) {
   })
 
   router.post('/types-of-forms/insolvency/receivership', function (req, res) {
-    res.redirect('../../auth-screen')
+    res.redirect('../../auth/auth-screen')
   })
 
 // Insolvency - WUC Forms
@@ -475,6 +475,6 @@ module.exports = function (router) {
   })
 
   router.post('/types-of-forms/insolvency/wuc', function (req, res) {
-    res.redirect('../../auth-screen')
+    res.redirect('../../auth/auth-screen')
   })
 }

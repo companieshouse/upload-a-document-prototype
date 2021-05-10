@@ -1,0 +1,54 @@
+{% set title = "Which service do you require to process your SH19?" %}
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  {{ pageTitle(title) }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "company-number"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/sh19-delivery" method="post">
+        {{ govukRadios({
+          idPrefix: "delivery",
+          name: "delivery",
+          fieldset: {
+            legend: {
+              text: "Which service do you require to process your SH19?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "standard",
+              text: "Standard - £10",
+              hint: {
+  text: "The SH19 is processed within 10-14 days."
+}
+            },
+            {
+              value: "same-day",
+              text: "Same day - £50",
+              hint: {
+  text: "The SH19 is processed on the same day if we receive it by 1pm. It’s processed the next working day if we receive it after 1pm."
+}
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+  text: "Continue"
+}) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}
