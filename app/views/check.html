@@ -27,7 +27,7 @@
             Company name
           </dt>
           <dd class="govuk-summary-list__value">
-            ZLC LTD
+            {{company.company_name}}
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -35,7 +35,7 @@
             Company number
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['company-number'] }}
+            {{company.company_number}}
           </dd>
         </div>
         {% if data['authNumber'] %}
@@ -49,44 +49,39 @@
           </div>
         {% endif %}
       </dl>
+
       <h2 class="govuk-heading-m">Document details</h2>
-      {{ govukSummaryList({
-        classes: 'govuk-!-margin-bottom-4',
-        rows: [
-          {
-            key: {
-              text: "Document type"
-            },
-            value: {
-              text: data['formType']
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  visuallyHiddenText: "contact details"
-                }
-              ]
-            }
-          },
-          {
-            key: {
-              text: "Document uploaded"
-            },
-            value: {
-              html: "<a href='public/pdf/RP06_V1.0_2.pdf'>SH19.pdf (opens in a new tab)</a>"
-            }
-          },
-          {
-            key: {
-              text: "Amount to pay"
-            },
-            value: {
-              html: "£10"
-            }
-          }
-        ]
-      }) }}
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Document type
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['formType']}}
+          </dd>
+          <dd class="govuk-summary-list__actions"></dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Document uploaded
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <a href='public/pdf/RP06_V1.0_2.pdf'>{{data['formType']}}.pdf (opens in a new tab)</a>
+          </dd>
+          <dd class="govuk-summary-list__actions"></dd>
+        </div>
+        {% if data['formType'] == "SH19 - Statement of capital when reducing capital in a company" %}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Amount to pay
+            </dt>
+            <dd class="govuk-summary-list__value">
+              £10
+            </dd>
+            <dd class="govuk-summary-list__actions"></dd>
+          </div>
+        {% endif %}
+      </dl>
 
       {% if data['formType'] == "SH19 - Statement of capital when reducing capital in a company" %}
         {{ govukButton({

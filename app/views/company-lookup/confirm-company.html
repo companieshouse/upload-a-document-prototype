@@ -15,55 +15,48 @@
       <h1 class="govuk-heading-l">{{title}}</h1>
       <dl class="govuk-summary-list">
         <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Company name
-          </dt>
+          <dt class="govuk-summary-list__key">Company name</dt>
+          <dd class="govuk-summary-list__value">{{company.company_name}}</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Company number</dt>
+          <dd class="govuk-summary-list__value">{{company.company_number}}</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Status</dt>
           <dd class="govuk-summary-list__value">
-            ZLC LTD
+            <!-- a set of if and elif conditions depending on the company status-->
+            {% if company.company_status === 'active' %}
+              <strong class="govuk-tag">{{company.company_status | upper}}</strong>
+            {% elif company.company_status === 'dissolved' or company.company_status === 'closed' %}
+              <strong class="govuk-tag govuk-tag--grey">{{company.company_status | upper}}</strong>
+            {% else %}
+              {{company.company_status | capitalize}}
+            {% endif %}
           </dd>
         </div>
         <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Company number
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['company-number'] }}
-          </dd>
+          <dt class="govuk-summary-list__key">Incorporation date</dt>
+          <dd class="govuk-summary-list__value">{{companyIncorp}}</dd>
         </div>
         <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Status
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Active
-          </dd>
+          <dt class="govuk-summary-list__key">Company type</dt>
+          <!-- upper is a way in Nunjucks to convert text into uppercase-->
+          <dd class="govuk-summary-list__value">{{company.type | upper}}</dd>
         </div>
         <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Incorporation date
-          </dt>
+          <dt class="govuk-summary-list__key">Registered office address</dt>
           <dd class="govuk-summary-list__value">
-            <p class="govuk-body">7 November 2011</p>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Company type
-          </dt>
-          <dd class="govuk-summary-list__value">
-            <p class="govuk-body">Private Limited Company</p>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Registered office address
-          </dt>
-          <dd class="govuk-summary-list__value">
-            <p class="govuk-body">Delta 606 Welton Road<br/>
-              Delta Office Park<br/>
-              Swindon<br/>
-              United Kingdom<br/>
-              SN5 7XF</p>
+            <!-- if statements are used to stop gaps showing where there is missing information -->
+            {% if company.registered_office_address.address_line_1 %}
+              {{company.registered_office_address.address_line_1}}
+            {% endif %}
+            {% if company.registered_office_address.address_line_2 %}
+              <br>{{company.registered_office_address.address_line_2}}
+            {% endif %}
+            {% if company.registered_office_address.postal_code %}
+              <br>{{company.registered_office_address.postal_code}}
+            {% endif %}
           </dd>
         </div>
       </dl>

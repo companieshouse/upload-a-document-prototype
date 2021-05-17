@@ -6,30 +6,65 @@ module.exports = function (router) {
   })
 
   router.post('/company-lookup/company-number', function (req, res) {
+    // Capture the entered company number using req.body.number the 'number' should match the ID of the input. The uppercase is to deal with company numbers that have letters as it needs to be all uppercase
     var errors = []
-    var str = req.session.data['company-number']
-    var n = str.length
-
-    if (req.session.data['company-number'] === '') {
+    var companyNumber = req.body.companynumber.toUpperCase().trim()
+    req.session.number = companyNumber
+    var apiKey = process.env.CHS_API_KEY
+    var n = companyNumber.length
+    if (req.session.data['number'] === '') {
       errors.push({
         text: 'Enter the company number',
-        href: '#company-number'
+        href: '#number'
       })
-      res.render('company-number', {
+      res.render('company-lookup', {
         errorNum: true,
         errorList: errors
       })
     } else if (n !== 8) {
       errors.push({
-        text: 'Company number must be 8 characters ',
-        href: '#company-number'
+        text: 'Company number must be 8 characters',
+        href: '#number'
       })
-      res.render('company-lookup/company-number', {
+      res.render('company-lookup', {
         errorNum: true,
         errorList: errors
       })
     } else {
-      res.redirect('confirm-company')
+      // Require the request node module, you may need to install this if it's a new prototype
+      var request = require('request')
+      // Construct the API request
+      // This will only pull back the company data found here: https://developer.company-information.service.gov.uk/api/docs/company/company_number/companyProfile-resource.html
+      var options = {
+        'method': 'GET',
+        'url': 'https://api.company-information.service.gov.uk/company/' + companyNumber + '',
+        'headers': {
+          'Authorization': apiKey
+        },
+        'json': true
+      }
+
+      request(options, function (error, response) {
+        if (error) throw new Error(error)
+        // With the response put that as a session variable so it can be used across all pages
+        req.session.company = response.body
+        // Format date of incorporation
+        const dayOfIncorporation = req.session.company.date_of_creation.slice(-2)
+        const monthOfIncorporation = req.session.company.date_of_creation.slice(5, 7)
+        const yearOfIncorporation = req.session.company.date_of_creation.slice(0, 4)
+        req.session.companyIncorp = dayOfIncorporation + ' ' + monthOfIncorporation + ' ' + yearOfIncorporation
+        // Redirect to the company lookup page
+        res.redirect('/confirm-company')
+      })
     }
+  })
+
+  router.get('/confirm-company', function (req, res) {
+    // Render the confirm company page
+    res.render('company-lookup/confirm-company', {
+      // To use the company data on that page use the following
+      company: req.session.company,
+      companyIncorp: req.session.companyIncorp
+    })
   })
 }

@@ -38,4 +38,11 @@ router.post('/upload-documents', function (req, res) {
   }
 })
 
+router.get('/check', function (req, res) {
+  res.render('check', {
+    company: req.session.company,
+    companyIncorp: req.session.companyIncorp
+  })
+})
+
 module.exports = router
