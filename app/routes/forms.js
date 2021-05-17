@@ -195,8 +195,8 @@ module.exports = function (router) {
 
   router.post('/types-of-forms/resolutions', function (req, res) {
     var errors = []
-    var value = req.session.data['typeRes']
-    if (typeof req.session.data['typeRes'] === 'undefined') {
+    var value = req.session.data['formType']
+    if (typeof req.session.data['formType'] === 'undefined') {
       errors.push({
         text: 'Select the *type of form that you want to upload* ',
         href: '#typeInsolve'
@@ -205,9 +205,9 @@ module.exports = function (router) {
         errorType: true,
         errorList: errors
       })
-    } if (value === 'erwu') {
+    } if (value === `Extraordinary resolution to wind up (creditors' voluntary liquidation)`) {
       res.redirect('insolvency-resolutions/erwu')
-    } if (value === 'srwu') {
+    } if (value === `Special resolution to wind up (members' voluntary liquidation)`) {
       res.redirect('insolvency-resolutions/srwu')
     } else {
       res.redirect('insolvency-resolutions/srwu')
@@ -221,8 +221,8 @@ module.exports = function (router) {
 
   router.post('/types-of-forms/shares/shares', function (req, res) {
     var errors = []
-    var value = req.session.data['SH']
-    if (typeof req.session.data['SH'] === 'undefined') {
+    var value = req.session.data['formType']
+    if (typeof req.session.data['formType'] === 'undefined') {
       errors.push({
         text: 'Select the *type of form that you want to upload* ',
         href: '#typeInsolve'
@@ -267,20 +267,20 @@ module.exports = function (router) {
         text: 'Select the *type of form that you want to upload* ',
         href: '#typeInsolve'
       })
-      res.render('types-of-forms/insolvency/insolvency', {
+      res.render('types-of-forms/insolvency-1986/insolvency', {
         errorType: true,
         errorList: errors
       })
-    } if (value === 'notice-of-disclaimer') {
+    } if (value === 'Notice of disclaimer') {
       res.redirect('notice-of-disclaimer')
-    } if (value === 'cvam') {
+    } if (value === 'Company voluntary arrangement and moratoria') {
       res.redirect('cvam')
-    } if (value === 'in-admin') {
+    } if (value === 'In administration') {
       res.redirect('in-admin')
-    } if (value === 'receivership') {
+    } if (value === 'Receivership') {
       res.redirect('receivership')
     } if (value === 'liquidation') {
-      res.redirect('liquidation')
+      res.redirect('Liquidation')
     } if (value === 'liquidation-ews') {
       res.redirect('liquidation-ews')
     } else {
@@ -329,7 +329,7 @@ module.exports = function (router) {
 
   router.post('/types-of-forms/reg/reg', function (req, res) {
     var errors = []
-    if (typeof req.session.data['reg'] === 'undefined') {
+    if (typeof req.session.data['formType'] === 'undefined') {
       errors.push({
         text: 'Select the *type of form that you want to upload* ',
         href: '#typeInsolve'
@@ -349,12 +349,17 @@ module.exports = function (router) {
   })
 
   router.post('/types-of-forms/sqp/sqp-forms', function (req, res) {
-    res.redirect('/upload-documents')
+    res.redirect('../upload-documents')
+  })
+
+  // SQP Forms
+  router.post('/types-of-forms/sqp', function (req, res) {
+    res.redirect('../upload-documents')
   })
 
   router.post('/types-of-forms/slp/limited-partnerships', function (req, res) {
     var errors = []
-    if (typeof req.session.data['reg'] === 'undefined') {
+    if (typeof req.session.data['formType'] === 'undefined') {
       errors.push({
         text: 'Select the *type of form that you want to upload* ',
         href: '#typeInsolve'
@@ -370,7 +375,7 @@ module.exports = function (router) {
 
   router.post('/types-of-forms/shares/shares-sh19', function (req, res) {
     var errors = []
-    if (typeof req.session.data['SH-sh19'] === 'undefined') {
+    if (typeof req.session.data['formType'] === 'undefined') {
       errors.push({
         text: 'Select the *type of form that you want to upload* ',
         href: '#typeInsolve'
@@ -412,8 +417,8 @@ module.exports = function (router) {
 
   router.post('/types-of-forms/constitution/change-of-constitution', function (req, res) {
     var errors = []
-    var value = req.session.data['cc']
-    if (req.session.data['cc'] === '') {
+    var value = req.session.data['formType']
+    if (req.session.data['formType'] === '') {
       errors.push({
         text: 'Enter the company authentication code',
         href: '#auth-number'
@@ -422,13 +427,13 @@ module.exports = function (router) {
         errorAuth: true,
         errorList: errors
       })
-    } if (value === 'resolution') {
+    } if (value === 'Articles and resolutions') {
       res.redirect('../resolutions/resolutions')
     } else {
       res.redirect('../../auth/auth-screen')
     }
   })
-  // CVA
+  // Insolvency - CVA
   router.get('/types-of-forms/insolvency/cva', function (req, res) {
     res.render('types-of-forms/insolvency/cva', {
     })
@@ -476,5 +481,271 @@ module.exports = function (router) {
 
   router.post('/types-of-forms/insolvency/wuc', function (req, res) {
     res.redirect('../../auth/auth-screen')
+  })
+
+  // Corporate Insolvency and Governance Act 2020
+  router.get('/types-of-forms/moratorium', function (req, res) {
+    res.render('types-of-forms/moratorium', {
+    })
+  })
+
+  router.post('/types-of-forms/moratorium', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+
+  // Corporate Insolvency and Governance Act 2020
+  router.get('/types-of-forms/insolvency/cvam', function (req, res) {
+    res.render('types-of-forms/insolvency/cvam', {
+    })
+  })
+
+  router.post('/types-of-forms/insolvency/cvam', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+
+  // Insolvency - Committees
+  router.get('/types-of-forms/insolvency/committees', function (req, res) {
+    res.render('types-of-forms/insolvency/committees', {
+    })
+  })
+
+  router.post('/types-of-forms/insolvency/committees', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+
+  // Insolvency - Exempting property
+  router.get('/types-of-forms/insolvency/exempting-property', function (req, res) {
+    res.render('types-of-forms/insolvency/exempting-property', {
+    })
+  })
+
+  router.post('/types-of-forms/insolvency/exempting-property', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+
+  // Insolvency - MVA
+  router.get('/types-of-forms/insolvency/mva', function (req, res) {
+    res.render('types-of-forms/insolvency/mva', {
+    })
+  })
+
+  router.post('/types-of-forms/insolvency/mva', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+
+  // Insolvency 1986 - In Admin
+  router.get('/types-of-forms/insolvency-1986/in-admin', function (req, res) {
+    res.render('types-of-forms/insolvency-1986/in-admin', {
+    })
+  })
+
+  router.post('/types-of-forms/insolvency-1986/in-admin', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+
+  // Insolvency 1986 - Liquidation EWS
+  router.get('/types-of-forms/insolvency-1986/liquidation-ews', function (req, res) {
+    res.render('types-of-forms/insolvency-1986/liquidation-ews', {
+    })
+  })
+
+  router.post('/types-of-forms/insolvency-1986/liquidation-ews', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+
+  // Insolvency 1986 - Liquidation
+  router.get('/types-of-forms/insolvency-1986/liquidation', function (req, res) {
+    res.render('types-of-forms/insolvency-1986/liquidation', {
+    })
+  })
+
+  router.post('/types-of-forms/insolvency-1986/liquidation', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+
+  // Insolvency 1986 - Notice of disclaimer
+  router.get('/types-of-forms/insolvency-1986/notice-of-disclaimer', function (req, res) {
+    res.render('types-of-forms/insolvency-1986/notice-of-disclaimer', {
+    })
+  })
+
+  router.post('/types-of-forms/insolvency-1986/notice-of-disclaimer', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+
+  // Insolvency 1986 - Receivership
+  router.get('/types-of-forms/insolvency-1986/receivership', function (req, res) {
+    res.render('types-of-forms/insolvency-1986/receivership', {
+    })
+  })
+
+  router.post('/types-of-forms/insolvency-1986/receivership', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+
+  // Insolvency Resolutions - ERWU
+  router.get('/types-of-forms/insolvency-resolutions/erwu', function (req, res) {
+    res.render('types-of-forms/insolvency-resolutions/erwu', {
+    })
+  })
+
+  router.post('/types-of-forms/insolvency-resolutions/erwu', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+
+  // Insolvency Resolutions - SRWU
+  router.get('/types-of-forms/insolvency-resolutions/srwu', function (req, res) {
+    res.render('types-of-forms/insolvency-resolutions/srwu', {
+    })
+  })
+
+  router.post('/types-of-forms/insolvency-resolutions/srwu', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+
+  // Insolvency Scotland - Committees
+  router.get('/types-of-forms/insolvency-scot/committees', function (req, res) {
+    res.render('types-of-forms/insolvency-scot/committees', {
+    })
+  })
+
+  router.post('/types-of-forms/insolvency-scot/committees', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+
+  // Insolvency Scotland - CVA
+  router.get('/types-of-forms/insolvency-scot/cva', function (req, res) {
+    res.render('types-of-forms/insolvency-scot/cva', {
+    })
+  })
+
+  router.post('/types-of-forms/insolvency-scot/cva', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+
+  // Insolvency Scotland - CVAM
+  router.get('/types-of-forms/insolvency-scot/cvam', function (req, res) {
+    res.render('types-of-forms/insolvency-scot/cvam', {
+    })
+  })
+
+  router.post('/types-of-forms/insolvency-scot/cvam', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+
+  // Insolvency Scotland - Exempting
+  router.get('/types-of-forms/insolvency-scot/exempting', function (req, res) {
+    res.render('types-of-forms/insolvency-scot/exempting', {
+    })
+  })
+
+  router.post('/types-of-forms/insolvency-scot/exempting', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+
+  // Insolvency Scotland - In Admin
+  router.get('/types-of-forms/insolvency-scot/in-admin', function (req, res) {
+    res.render('types-of-forms/insolvency-scot/in-admin', {
+    })
+  })
+
+  router.post('/types-of-forms/insolvency-scot/in-admin', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+
+  // Insolvency Scotland - MVL
+  router.get('/types-of-forms/insolvency-scot/mvl', function (req, res) {
+    res.render('types-of-forms/insolvency-scot/mvl', {
+    })
+  })
+
+  router.post('/types-of-forms/insolvency-scot/mvl', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+
+  // Insolvency Scotland - Receivership
+  router.get('/types-of-forms/insolvency-scot/receivership', function (req, res) {
+    res.render('types-of-forms/insolvency-scot/receivership', {
+    })
+  })
+
+  router.post('/types-of-forms/insolvency-scot/receivership', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+
+  // Insolvency Scotland - WUC
+  router.get('/types-of-forms/insolvency-scot/wuc', function (req, res) {
+    res.render('types-of-forms/insolvency-scot/wuc', {
+    })
+  })
+
+  router.post('/types-of-forms/insolvency-scot/wuc', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+
+  // LLP - LLP
+  router.get('/types-of-forms/llp/llp', function (req, res) {
+    res.render('types-of-forms/llp/llp', {
+    })
+  })
+
+  router.post('/types-of-forms/llp/llp', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+
+  // Overseas
+  router.get('/types-of-forms/overseas/overseas', function (req, res) {
+    res.render('types-of-forms/overseas/overseas', {
+    })
+  })
+
+  router.post('/types-of-forms/overseas/overseas', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+  // Shares
+  router.get('/types-of-forms/shares/shares-other', function (req, res) {
+    res.render('types-of-forms/shares/shares-other', {
+    })
+  })
+
+  router.post('/types-of-forms/shares/shares-other', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+  // Shares SH19
+  router.get('/types-of-forms/shares/shares-sh19', function (req, res) {
+    res.render('types-of-forms/shares/shares-sh19', {
+    })
+  })
+
+  router.post('/types-of-forms/shares/shares-sh19', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+  // Shares
+  router.get('/types-of-forms/shares/shares', function (req, res) {
+    res.render('types-of-forms/shares/shares', {
+    })
+  })
+
+  router.post('/types-of-forms/shares/shares', function (req, res) {
+    res.redirect('../../auth/auth-screen')
+  })
+
+  // Shares other
+  router.get('/types-of-forms/shares/shares-other', function (req, res) {
+    res.render('types-of-forms/shares/shares-other', {
+    })
+  })
+
+  router.post('/types-of-forms/shares/shares/shares-other', function (req, res) {
+    res.redirect('../../upload-documents')
+  })
+  // Change of address
+  router.get('/types-of-forms/change-of-address', function (req, res) {
+    res.render('types-of-forms/change-of-address', {
+    })
+  })
+
+  router.post('/types-of-forms/change-of-address', function (req, res) {
+    res.redirect('../upload-documents')
   })
 }

@@ -15,8 +15,8 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/types-of-forms/resolutions" method="post">
         {{ govukRadios({
-          idPrefix: "typeRes",
-          name: "typeRes",
+          idPrefix: "formType",
+          name: "formType",
           fieldset: {
             legend: {
               html: "<span class='govuk-caption-l'>Resolutions</span>
@@ -27,11 +27,11 @@
           },
           items: [
             {
-              value: "erwu",
+              value: "Extraordinary resolution to wind up (creditors' voluntary liquidation)",
               text: "Extraordinary resolution to wind up (creditors' voluntary liquidation)"
             },
             {
-              value: "srwu",
+              value: "Special resolution to wind up (members' voluntary liquidation)",
               text: "Special resolution to wind up (members' voluntary liquidation)"
             }
           ]

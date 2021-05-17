@@ -15,8 +15,8 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/types-of-forms/insolvency/receivership" method="post">
         {{ govukRadios({
-          idPrefix: "typeInsolve",
-          name: "typeInsolve",
+          idPrefix: "formType",
+          name: "formType",
           fieldset: {
             legend: {
               html: "<span class='govuk-caption-l'>Receivership</span>
@@ -27,31 +27,31 @@ Select a document",
           },
           items: [
             {
-              value: "cva1",
+              value: "3.05 -  Statement of affairs in administrative receivership following report to creditors",
               text: "3.05 -  Statement of affairs in administrative receivership following report to creditors"
             },
             {
-              value: "cva1",
+              value: "3.06 - Certificate of constitution (amended certificate) of creditors' committee",
               text: "3.06 - Certificate of constitution (amended certificate) of creditors' committee"
             },
             {
-              value: "cva1",
+              value: "3.07 - Administrative receiver's report as to change in membership of creditors' committee",
               text: "3.07 - Administrative receiver's report as to change in membership of creditors' committee"
             },
             {
-              value: "cva1",
+              value: "3.08 - Receiver or manager or administrative receiver's abstract of receipts and payment",
               text: "3.08 - Receiver or manager or administrative receiver's abstract of receipts and payment"
             },
             {
-              value: "cva1",
+              value: "3.09 - Notice of administrative receiver's death",
               text: "3.09 - Notice of administrative receiver's death"
             },
             {
-              value: "cva1",
+              value: "3.10 - Notice of order to dispose of charged property",
               text: "3.10 - Notice of order to dispose of charged property"
             },
             {
-              value: "cva1",
+              value: "3.12 - Administrative receiver's report",
               text: "3.12 - Administrative receiver's report"
             }
           ]
@@ -101,8 +101,7 @@ Select a document",
         <br>
         <br>
         {{ govukButton({
-          text: "Continue",
-          href: "../../auth-screen"
+          text: "Continue"
         }) }}
       </form>
     </div>

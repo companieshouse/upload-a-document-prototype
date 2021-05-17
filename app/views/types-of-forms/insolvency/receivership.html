@@ -13,8 +13,8 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/types-of-forms/insolvency/receivership" method="post">
         {{ govukRadios({
-          idPrefix: "typeInsolve",
-          name: "typeInsolve",
+          idPrefix: "formType",
+          name: "formType",
           fieldset: {
             legend: {
               html: "<span class='govuk-caption-l'>Receivership</span>
@@ -25,31 +25,31 @@ Select a document",
           },
           items: [
             {
-              value: "carcasses",
+              value: "REC1 - Notice of administrative receiver's report",
               text: "REC1 - Notice of administrative receiver's report"
             },
             {
-              value: "carcasses",
+              value: "REC2 - Notice of summary of receipts and payments",
               text: "REC2 - Notice of summary of receipts and payments"
             },
             {
-              value: "mines",
+              value: "REC3 - Notice of order of disposal of charged property",
               text: "REC3 - Notice of order of disposal of charged property"
             },
             {
-              value: "mines",
+              value: "REC4 - Notice of statement of affairs in administrative receivership",
               text: "REC4 - Notice of statement of affairs in administrative receivership"
             },
             {
-              value: "mines",
+              value: "REC5 - Notice of deceased administrative receiver",
               text: "REC5 - Notice of deceased administrative receiver"
             },
             {
-              value: "mines",
+              value: "RM01 - Notice of appointment of receiver or manager",
               text: "RM01 - Notice of appointment of receiver or manager"
             },
             {
-              value: "mines",
+              value: "RM02 - Notice of ceasing to act as receiver or manager",
               text: "RM02 - Notice of ceasing to act as receiver or manager"
             }
           ]

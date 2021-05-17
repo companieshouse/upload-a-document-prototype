@@ -13,8 +13,8 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/types-of-forms/insolvency/cva" method="post">
         {{ govukRadios({
-          idPrefix: "typeInsolve",
-          name: "typeInsolve",
+          idPrefix: "formType",
+          name: "formType",
           fieldset: {
             legend: {
               html: "<span class='govuk-caption-l'>Company voluntary arrangement</span>
@@ -25,19 +25,19 @@ Select a document",
           },
           items: [
             {
-              value: "cva1",
+              value: "CVA1 - Notice of voluntary arrangement taking effect",
               text: "CVA1 - Notice of voluntary arrangement taking effect"
             },
             {
-              value: "vam1",
+              value: "CVA2 - Notice of order of revocation or suspension of voluntary arrangement",
               text: "CVA2 - Notice of order of revocation or suspension of voluntary arrangement"
             },
             {
-              value: "vam1s",
+              value: "CVA3 - Notice of supervisor's progress report in voluntary arrangement",
               text: "CVA3 - Notice of supervisor's progress report in voluntary arrangement"
             },
             {
-              value: "vam7",
+              value: "CVA4 - Notice of termination or full implementation of voluntary arrangement",
               text: "CVA4 - Notice of termination or full implementation of voluntary arrangement"
             }
           ]

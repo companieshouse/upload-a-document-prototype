@@ -15,8 +15,8 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/types-of-forms/spi" method="post">
         {{ govukRadios({
-          idPrefix: "spi",
-          name: "spi",
+          idPrefix: "formType",
+          name: "formType",
           fieldset: {
             legend: {
               html: "<span class='govuk-caption-l'>Registration of a Scottish limited partnership</span>
@@ -27,11 +27,11 @@ Select a document",
           },
           items: [
             {
-              value: "lp5s",
+              value: "LP5(s) - Apply for a registration of a limited partnership in Scotland",
               text: "LP5(s) - Apply for a registration of a limited partnership in Scotland"
             },
             {
-              value: "cva1",
+              value: "LP7(s) - Apply for registration as a private fund limited partnership in Scotland",
               text: "LP7(s) - Apply for registration as a private fund limited partnership in Scotland"
             }
           ]

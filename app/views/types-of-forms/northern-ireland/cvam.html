@@ -15,8 +15,8 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/types-of-forms/insolvency/cvam" method="post">
         {{ govukRadios({
-          idPrefix: "typeInsolve",
-          name: "typeInsolve",
+          idPrefix: "formType",
+          name: "formType",
           fieldset: {
             legend: {
               html: "<span class='govuk-caption-l'>Company voluntary arrangement moratorium</span>
@@ -27,46 +27,45 @@ Select a document",
           },
           items: [
             {
-              value: "cva1",
+              value: "1.1 - Notice of voluntary arrangement taking effect",
               text: "1.1 - Notice of voluntary arrangement taking effect"
             },
             {
-              value: "vam7s",
+              value: "1.11 - Notice of commencement of moratorium",
               text: "1.11 - Notice of commencement of moratorium"
             },
             {
-              value: "vam7s",
+              value: "1.12 - Notice of extension or continuation of moratorium",
               text: "1.12 - Notice of extension or continuation of moratorium"
             },
             {
-              value: "vam7s",
+              value: "1.14 - Notice of ending of moratorium",
               text: "1.14 - Notice of ending of moratorium"
             },
             {
-              value: "vam8s",
+              value: "1.16 - Notice of withdrawal of nominee's consent to act",
               text: "1.16 - Notice of withdrawal of nominee's consent to act"
             },
             {
-              value: "vam8s",
+              value: "1.18 - Notice of the appointment of a replacement nominee",
               text: "1.18 - Notice of the appointment of a replacement nominee"
             },
             {
-              value: "vam1",
+              value: "1.2 - Notice of order, revocation or suspension of voluntary arrangement",
               text: "1.2 - Notice of order, revocation or suspension of voluntary arrangement"
             },
             {
-              value: "vam1s",
+              value: "1.3 - Notice of supervisor’s abstract of receipts and payments",
               text: "1.3 - Notice of supervisor’s abstract of receipts and payments"
             },
             {
-              value: "vam1s",
+              value: "1.4 - Notice of completion of voluntary arrangement",
               text: "1.4 - Notice of completion of voluntary arrangement"
             }
           ]
         }) }}
         {{ govukButton({
-          text: "Continue",
-          href: "../../auth-screen"
+          text: "Continue"
         }) }}
       </form>
     </div>

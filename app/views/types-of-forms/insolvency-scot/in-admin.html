@@ -13,8 +13,8 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/types-of-forms/insolvency/wuc" method="post">
         {{ govukRadios({
-          idPrefix: "typeInsolve",
-          name: "typeInsolve",
+          idPrefix: "formType",
+          name: "formType",
           fieldset: {
             legend: {
               html: "<span class='govuk-caption-l'>In administration</span>
@@ -25,110 +25,109 @@ Select a document",
           },
           items: [
             {
-              value: "mines",
+              value: "AM01 (Scot) - Notice of administrator's appointment",
               text: "AM01 (Scot) - Notice of administrator's appointment"
             },
             {
-              value: "mines",
+              value: "AM02 (Scot) - Notice of statement of affairs in administration",
               text: "AM02 (Scot) - Notice of statement of affairs in administration"
             },
             {
-              value: "mines",
+              value: "AM03 (Scot) - Notice of administrator's proposals",
               text: "AM03 (Scot) - Notice of administrator's proposals"
             },
             {
-              value: "mines",
+              value: "AM04 (Scot) - Notice of the extension of time to deliver administrator's proposals",
               text: "AM04 (Scot) - Notice of the extension of time to deliver administrator's proposals"
             },
             {
-              value: "mines",
+              value: "AM05 (Scot) - Notice of extension of time to seek approval",
               text: "AM05 (Scot) - Notice of extension of time to seek approval"
             },
             {
-              value: "mines",
+              value: "AM06 (Scot) - Notice of approval of administrator's proposals",
               text: "AM06 (Scot) - Notice of approval of administrator's proposals"
             },
             {
-              value: "mines",
+              value: "AM07 (Scot) - Notice of creditor's decision on administrator's proposals",
               text: "AM07 (Scot) - Notice of creditor's decision on administrator's proposals"
             },
             {
-              value: "mines",
+              value: "AM08 (Scot) - Notice of revision of administrator's proposals",
               text: "AM08 (Scot) - Notice of revision of administrator's proposals"
             },
             {
-              value: "mines",
+              value: "AM09 (Scot) - Notice of result of a creditor's decision",
               text: "AM09 (Scot) - Notice of result of a creditor's decision"
             },
             {
-              value: "mines",
+              value: "AM10 (Scot) - Notice of administrator's progress report",
               text: "AM10 (Scot) - Notice of administrator's progress report"
             },
             {
-              value: "mines",
+              value: "AM11 (Scot) - Appoint a replacement or additional administrator",
               text: "AM11 (Scot) - Appoint a replacement or additional administrator"
             },
             {
-              value: "mines",
+              value: "AM12 (Scot) - Notice of order limiting disclosure",
               text: "AM12 (Scot) - Notice of order limiting disclosure"
             },
             {
-              value: "mines",
+              value: "AM13 (Scot) - Rescission or amendment of order limiting disclosure",
               text: "AM13 (Scot) - Rescission or amendment of order limiting disclosure"
             },
             {
-              value: "mines",
+              value: "AM14 (Scot) - Notice of an order to dispose of charged property",
               text: "AM14 (Scot) - Notice of an order to dispose of charged property"
             },
             {
-              value: "mines",
+              value: "AM15 (Scot) - Resignation of administrator",
               text: "AM15 (Scot) - Resignation of administrator"
             },
             {
-              value: "mines",
+              value: "AM16 (Scot) - Notice of order removing administrator from office",
               text: "AM16 (Scot) - Notice of order removing administrator from office"
             },
             {
-              value: "mines",
+              value: "AM17 (Scot) - Notice of vacation of office",
               text: "AM17 (Scot) - Notice of vacation of office"
             },
             {
-              value: "mines",
+              value: "AM18 (Scot) - Notice of a deceased administrator",
               text: "AM18 (Scot) - Notice of a deceased administrator"
             },
             {
-              value: "mines",
+              value: "AM19 (Scot) - Extend the period of administration",
               text: "AM19 (Scot) - Extend the period of administration"
             },
             {
-              value: "mines",
+              value: "AM20 (Scot) - Notice of automatic end of administration",
               text: "AM20 (Scot) - Notice of automatic end of administration"
             },
             {
-              value: "mines",
+              value: "AM21 (Scot) - Notice of end of administration",
               text: "AM21 (Scot) - Notice of end of administration"
             },
             {
-              value: "mines",
+              value: "AM22 (Scot) - Move a Scottish company from administration to creditors' voluntary liquidation",
               text: "AM22 (Scot) - Move a Scottish company from administration to creditors' voluntary liquidation"
             },
             {
-              value: "mines",
+              value: "AM23 (Scot) - Move a Scottish company from administration to dissolution",
               text: "AM23 (Scot) - Move a Scottish company from administration to dissolution"
             },
             {
-              value: "mines",
+              value: "AM24 (Scot) - Notice of a court order in respect of date of dissolution",
               text: "AM24 (Scot) - Notice of a court order in respect of date of dissolution"
             },
             {
-              value: "mines",
+              value: "AM25 (Scot) - Notice of court order ending administration",
               text: "AM25 (Scot) - Notice of court order ending administration"
             }
           ]
         }) }}
         {{ govukButton({
-          text: "Continue",
-          href: "../../auth-screen"
+          text: "Continue"
         }) }}
       </form>
     </div>

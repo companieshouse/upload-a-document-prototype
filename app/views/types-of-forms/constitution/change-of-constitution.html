@@ -18,8 +18,8 @@
             errorList: errorList
           }) }}
           {{ govukRadios({
-            idPrefix: "cc",
-            name: "cc",
+            idPrefix: "formType",
+            name: "formType",
             errorMessage: {
               text: "Select the *type of form that you want to upload* "
             },
@@ -32,35 +32,35 @@
              },
              items: [
                {
-                 value: "carcasses",
+                 value: "CC01 - Give notice of restriction on the company's articles",
                  text: "CC01 - Give notice of restriction on the company's articles"
                },
                {
-                 value: "mines",
+                 value: "CC02 - Give notice of removal of restriction on company's articles",
                  text: "CC02 - Give notice of removal of restriction on company's articles"
                },
                {
-                 value: "mines",
+                 value: "CC04 - Notify the change of company's objects",
                  text: "CC04 - Notify the change of company's objects"
                },
                {
-                 value: "mines",
+                 value: "CC05 - Change constitution by enactment",
                  text: "CC05 - Change constitution by enactment"
                },
                {
-                 value: "mines",
+                 value: "CC06 - Change constitution by order of court or other authority",
                  text: "CC06 - Change constitution by order of court or other authority"
                },
                {
-                 value: "res-articles",
+                 value: "Articles and resolutions",
                  text: "Articles and resolutions"
                }
              ]
            }) }}
         {% else %}
           {{ govukRadios({
-            idPrefix: "cc",
-            name: "cc",
+            idPrefix: "formType",
+            name: "formType",
             fieldset: {
               legend: {
                 html: "<span class='govuk-caption-l'>Change of constitution</span> Select a document",
@@ -70,31 +70,31 @@
             },
             items: [
               {
-                value: "carcasses",
+                value: "CC01 - Give notice of restriction on the company's articles",
                 text: "CC01 - Give notice of restriction on the company's articles"
               },
               {
-                value: "mines",
+                value: "CC02 - Give notice of removal of restriction on company's articles",
                 text: "CC02 - Give notice of removal of restriction on company's articles"
               },
               {
-                value: "mines",
+                value: "CC04 - Notify the change of company's objects",
                 text: "CC04 - Notify the change of company's objects"
               },
               {
-                value: "mines",
+                value: "CC05 - Change constitution by enactment",
                 text: "CC05 - Change constitution by enactment"
               },
               {
-                value: "mines",
+                value: "CC06 - Change constitution by order of court or other authority",
                 text: "CC06 - Change constitution by order of court or other authority"
               },
               {
-                value: "res-articles",
+                value: "Articles",
                 text: "Articles"
               },
               {
-                value: "res-articles",
+                value: "Resolution",
                 text: "Resolution"
               }
             ]

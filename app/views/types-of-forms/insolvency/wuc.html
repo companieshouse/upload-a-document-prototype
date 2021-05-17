@@ -13,8 +13,8 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/types-of-forms/insolvency/wuc" method="post">
         {{ govukRadios({
-          idPrefix: "typeInsolve",
-          name: "typeInsolve",
+          idPrefix: "formType",
+          name: "formType",
           fieldset: {
             legend: {
               html: "<span class='govuk-caption-l'>Winding up by the court</span>
@@ -25,35 +25,35 @@ Select a document",
           },
           items: [
           {
-            value: "mines",
+            value: "WU01 - Notice of court order in a winding up",
             text: "WU01 - Notice of court order in a winding up"
           },
             {
-              value: "mines",
+              value: "WU02 - Notice of order of appointment of provisional liquidator",
               text: "WU02 - Notice of order of appointment of provisional liquidator"
             },
             {
-              value: "mines",
+              value: "WU03 - Notice of termination of appointment of provisional liquidator",
               text: "WU03 - Notice of termination of appointment of provisional liquidator"
             },
             {
-              value: "mines",
+              value: "WU04 - Notice of the appointment of liquidator in a winding up by the court",
               text: "WU04 - Notice of the appointment of liquidator in a winding up by the court"
             },
             {
-              value: "mines",
+              value: "WU07 - Notice of a progress report in a winding up by the court",
               text: "WU07 - Notice of a progress report in a winding up by the court"
             },
             {
-              value: "mines",
+              value: "WU13 - Notice of order of court on appeal against decision",
               text: "WU13 - Notice of order of court on appeal against decision"
             },
             {
-              value: "mines",
+              value: "WU14 - Notice of an order for removal of liquidator",
               text: "WU14 - Notice of an order for removal of liquidator"
             },
             {
-              value: "mines",
+              value: "WU15 - Notice of the final account prior to dissolution",
               text: "WU15 - Notice of the final account prior to dissolution"
             }
           ]

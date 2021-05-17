@@ -13,8 +13,8 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/types-of-forms/insolvency/wuc" method="post">
         {{ govukRadios({
-          idPrefix: "typeInsolve",
-          name: "typeInsolve",
+          idPrefix: "formType",
+          name: "formType",
           fieldset: {
             legend: {
               html: "<span class='govuk-caption-l'>Company voluntary arrangement moratorium</span>
@@ -25,46 +25,45 @@ Select a document",
           },
           items: [
             {
-              value: "mines",
+              value: "VAM1 (Scot) - Notice of the commencement of moratorium",
               text: "VAM1 (Scot) - Notice of the commencement of moratorium"
             },
             {
-              value: "mines",
+              value: "VAM2 (Scot) - Notice of continuation of moratorium",
               text: "VAM2 (Scot) - Notice of continuation of moratorium"
             },
             {
-              value: "mines",
+              value: "VAM3 (Scot) - Notice of decision extending or further extending moratorium",
               text: "VAM3 (Scot) - Notice of decision extending or further extending moratorium"
             },
             {
-              value: "mines",
+              value: "VAM4 (Scot) - Notice of a court order in relation to a moratorium",
               text: "VAM4 (Scot) - Notice of a court order in relation to a moratorium"
             },
             {
-              value: "mines",
+              value: "VAM5 (Scot) - Withdrawal of nominee's consent to act",
               text: "VAM5 (Scot) - Withdrawal of nominee's consent to act"
             },
             {
-              value: "mines",
+              value: "VAM6 (Scot) - Appoint a replacement nominee",
               text: "VAM6 (Scot) - Appoint a replacement nominee"
             },
             {
-              value: "mines",
+              value: "VAM7 (Scot) - Notice of the end of moratorium",
               text: "VAM7 (Scot) - Notice of the end of moratorium"
             },
             {
-              value: "mines",
+              value: "VAM8 (Scot) - Notice of disposal of charged property during a moratorium",
               text: "VAM8 (Scot) - Notice of disposal of charged property during a moratorium"
             },
             {
-              value: "mines",
+              value: "VAMC (Scot) - Notice of a court order in respect of a voluntary arrangement or moratorium",
               text: "VAMC (Scot) - Notice of a court order in respect of a voluntary arrangement or moratorium"
             }
           ]
         }) }}
         {{ govukButton({
-          text: "Continue",
-          href: "../../auth-screen"
+          text: "Continue"
         }) }}
       </form>
     </div>

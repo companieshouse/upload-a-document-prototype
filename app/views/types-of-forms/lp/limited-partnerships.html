@@ -18,8 +18,8 @@
             errorList: errorList
           }) }}
           {{ govukRadios({
-            idPrefix: "slp",
-            name: "slp",
+            idPrefix: "formType",
+            name: "formType",
             errorMessage: {
               text: "Select the *type of form that you want to upload* "
             },
@@ -33,27 +33,27 @@
            },
            items: [
            {
-             value: "carcasses",
+             value: "LP5 - Register a limited partnership",
              text: "LP5 - Register a limited partnership"
            },
            {
-             value: "mines",
+             value: "LP6 - Make changes to a limited partnership",
              text: "LP6 - Make changes to a limited partnership"
            },
            {
-             value: "mines",
+             value: "LP7 - Register a limited partnership as private fund limited partnership",
              text: "LP7 - Register a limited partnership as private fund limited partnership"
            },
            {
-             value: "mines",
+             value: "LP8 - Designate as a private fund limited partnership",
              text: "LP8 - Designate as a private fund limited partnership"
            }
            ]
    }) }}
         {% else %}
           {{ govukRadios({
-idPrefix: "reg",
-name: "reg",
+idPrefix: "formType",
+name: "formType",
 fieldset: {
   legend: {
     html: "<span class='govuk-caption-l'>Limited partnerships</span>
@@ -65,19 +65,19 @@ Select a document",
 
 items: [
 {
-  value: "carcasses",
+  value: "LP5 - Register a limited partnership",
   text: "LP5 - Register a limited partnership"
 },
 {
-  value: "mines",
+  value: "LP6 - Make changes to a limited partnership",
   text: "LP6 - Make changes to a limited partnership"
 },
 {
-  value: "mines",
+  value: "LP7 - Register a limited partnership as private fund limited partnership",
   text: "LP7 - Register a limited partnership as private fund limited partnership"
 },
 {
-  value: "mines",
+  value: "LP8 - Designate as a private fund limited partnership",
   text: "LP8 - Designate as a private fund limited partnership"
 }
 ]

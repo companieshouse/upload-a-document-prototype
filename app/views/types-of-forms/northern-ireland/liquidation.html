@@ -15,8 +15,8 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/types-of-forms/insolvency/cva" method="post">
         {{ govukRadios({
-          idPrefix: "typeInsolve",
-          name: "typeInsolve",
+          idPrefix: "formType",
+          name: "formType",
           fieldset: {
             legend: {
               html: "<span class='govuk-caption-l'>Liquidation</span>
@@ -27,107 +27,107 @@ Select a document",
           },
           items: [
           {
-            value: "mines",
+            value: "Creditors' voluntary liquidation resolution",
             text: "Creditors' voluntary liquidation resolution"
           },
           {
-            value: "mines",
+            value: "Members' voluntary liquidation resolution",
             text: "Members' voluntary liquidation resolution"
           },
           {
-            value: "mines",
+            value: "L21 - Early completion of winding up",
             text: "L21 - Early completion of winding up"
           },
           {
-            value: "mines",
+            value: "L22 - Completion of winding up",
             text: "L22 - Completion of winding up"
           },
           {
-            value: "mines",
+            value: "L131 -  Deferment of dissolution (compulsory)",
             text: "L131 -  Deferment of dissolution (compulsory)"
           },
           {
-            value: "mines",
+            value: "VL1 - Notice of appointment of liquidator: voluntary winding up (members or creditors)",
             text: "VL1 - Notice of appointment of liquidator: voluntary winding up (members or creditors)"
           },
           {
-            value: "cva1",
+            value: "4.16 - Notice of appointment of provisional liquidator",
             text: "4.16 - Notice of appointment of provisional liquidator"
           },
           {
-            value: "cva1",
+            value: "4.16A - Notice of appointment of provisional liquidator in winding up by the court",
             text: "4.16A - Notice of appointment of provisional liquidator in winding up by the court"
           },
           {
-            value: "cva1",
+            value: "4.21 - Statement of affairs",
             text: "4.21 - Statement of affairs"
           },
           {
-            value: "cva1",
+            value: "4.23 - Deferment of dissolution",
             text: "4.23 - Deferment of dissolution"
           },
           {
-            value: "cva1",
+            value: "4.26 - Proof of debt",
             text: "4.26 - Proof of debt"
           },
           {
-            value: "vam7",
+            value: "4.32 - Notice of appointment of a liquidator in winding up by the court",
             text: "4.32 - Notice of appointment of a liquidator in winding up by the court"
           },
           {
-            value: "vam7s",
+            value: "4.34 - Notice of resignation as voluntary liquidator under Article 145(5) of the Insolvency (Northern Ireland) Order 1989",
             text: "4.34 - Notice of resignation as voluntary liquidator under Article 145(5) of the Insolvency (Northern Ireland) Order 1989"
           },
           {
-            value: "vam8s",
+            value: "4.36 - Notice of order of court granting liquidator leave to resign",
             text: "4.36 - Notice of order of court granting liquidator leave to resign"
           },
           {
-            value: "vam8s",
+            value: "4.39 - Certificate of removal of voluntary liquidator",
             text: "4.39 - Certificate of removal of voluntary liquidator"
           },
           {
-            value: "vam8s",
+            value: "4.41 - Notice of ceasing to act as voluntary liquidator",
             text: "4.41 - Notice of ceasing to act as voluntary liquidator"
           },
           {
-            value: "vam8s",
+            value: "4.44 - Notice of final meeting of creditors",
             text: "4.44 - Notice of final meeting of creditors"
           },
           {
-            value: "vam8s",
+            value: "4.45 - Notice of death of voluntary liquidator",
             text: "4.45 - Notice of death of voluntary liquidator"
           },
           {
-            value: "vam8s",
+            value: "4.47 - Notice of vacation of office by voluntary liquidator",
             text: "4.47 - Notice of vacation of office by voluntary liquidator"
           },
           {
-            value: "vam8s",
+            value: "4.52 - Certificate that creditors have been paid in full",
             text: "4.52 - Certificate that creditors have been paid in full"
           },
           {
-            value: "vam8s",
+            value: "4.53 - Liquidator's certificate of continuance of liquidation committee",
             text: "4.53 - Liquidator's certificate of continuance of liquidation committee"
           },
           {
-            value: "vam8s",
+            value: "4.69 - Liquidator's statement of receipts and payments",
             text: "4.69 - Liquidator's statement of receipts and payments"
           },
           {
-            value: "vam8s",
+            value: "4.70 - Order of court on appeal against secretary of state's decision",
             text: "4.70 - Order of court on appeal against secretary of state's decision"
           },
           {
-            value: "vam8s",
+            value: "4.71 - Declaration of solvency",
             text: "4.71 - Declaration of solvency"
           },
           {
-            value: "vam8s",
+            value: "4.72 - Return of final meeting in a members' voluntary winding up",
             text: "4.72 - Return of final meeting in a members' voluntary winding up"
           },
           {
-            value: "vam8s",
+            value: "4.73 - Return of final meeting in a creditors' voluntary winding up",
             text: "4.73 - Return of final meeting in a creditors' voluntary winding up"
           }
           ]
@@ -170,8 +170,7 @@ Select a document",
         <br>
         <br>
         {{ govukButton({
-          text: "Continue",
-          href: "../../auth-screen"
+          text: "Continue"
         }) }}
       </form>
     </div>

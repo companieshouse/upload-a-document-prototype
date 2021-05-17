@@ -14,10 +14,10 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <form action="/types-of-forms/insolvency/moratorium" method="post">
+      <form action="/types-of-forms/moratorium" method="post">
         {{ govukRadios({
-          idPrefix: "typeInsolve",
-          name: "typeInsolve",
+          idPrefix: "formType",
+          name: "formType",
           fieldset: {
             legend: {
               html: "<span class='govuk-caption-l'>Corporate Insolvency and Governance Act 2020</span>
@@ -28,46 +28,45 @@ Select a document",
           },
           items: [
             {
-              value: "cva1",
+              value: "MT01 - Notice that moratorium has come into force",
               text: "MT01 - Notice that moratorium has come into force"
             },
             {
-              value: "cva1",
+              value: "MT02 - Notice that moratorium has ended or been extended",
               text: "MT02 - Notice that moratorium has ended or been extended"
             },
             {
-              value: "cva1",
+              value: "MT03 - Notice of early end of moratorium",
               text: "MT03 - Notice of early end of moratorium"
             },
             {
-              value: "cva1",
+              value: "MT04 - Notice of end of moratorium by a monitor",
               text: "MT04 - Notice of end of moratorium by a monitor"
             },
             {
-              value: "cva1",
+              value: "MT05 - Notice of end of moratorium by a court",
               text: "MT05 - Notice of end of moratorium by a court"
             },
             {
-              value: "cva1",
+              value: "MT06 - Notice of end of moratorium following disposal of application for extension by the court or following CVA proposal taking effect or being withdrawn",
               text: "MT06 - Notice of end of moratorium following disposal of application for extension by the court or following CVA proposal taking effect or being withdrawn"
             },
             {
-              value: "cva1",
+              value: "MT07 - Court order permitting disposal of property or goods",
               text: "MT07 - Court order permitting disposal of property or goods"
             },
             {
-              value: "cva1",
+              value: "MT08 - Notice of replacement or additional monitor following court order",
               text: "MT08 - Notice of replacement or additional monitor following court order"
             },
             {
-              value: "cva1",
+              value: "MT09 - Notice of monitor ceasing to act following court order",
               text: "MT09 - Notice of monitor ceasing to act following court order"
             }
           ]
         }) }}
         {{ govukButton({
-          text: "Continue",
-          href: "../auth-screen"
+          text: "Continue"
         }) }}
       </form>
     </div>

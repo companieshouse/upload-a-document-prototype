@@ -13,8 +13,8 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/types-of-forms/insolvency/wuc" method="post">
         {{ govukRadios({
-          idPrefix: "typeInsolve",
-          name: "typeInsolve",
+          idPrefix: "formType",
+          name: "formType",
           fieldset: {
             legend: {
               html: "<span class='govuk-caption-l'>Company voluntary arrangement</span>
@@ -25,26 +25,25 @@ Select a document",
           },
           items: [
             {
-              value: "mines",
+              value: "CVA1 (Scot) - Notice of voluntary arrangement taking effect",
               text: "CVA1 (Scot) - Notice of voluntary arrangement taking effect"
             },
             {
-              value: "mines",
+              value: "CVA2 (Scot) - Notice of an order of revocation or suspension of voluntary arrangement",
               text: "CVA2 (Scot) - Notice of an order of revocation or suspension of voluntary arrangement"
             },
             {
-              value: "mines",
+              value: "CVA3 (Scot) - Notice of a supervisor's progress report in voluntary arrangement",
               text: "CVA3 (Scot) - Notice of a supervisor's progress report in voluntary arrangement"
             },
             {
-              value: "mines",
+              value: "CVA4 (Scot) - Terminate or fully implement voluntary arrangement",
               text: "CVA4 (Scot) - Terminate or fully implement voluntary arrangement"
             }
           ]
         }) }}
         {{ govukButton({
-          text: "Continue",
-          href: "../../auth-screen"
+          text: "Continue"
         }) }}
       </form>
     </div>

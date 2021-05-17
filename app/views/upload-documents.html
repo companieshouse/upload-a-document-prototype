@@ -17,7 +17,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/upload-documents" method="post">
-        {% if data['SH-sh19'] == "SH19 - Statement of capital when reducing capital in a company" %}
+        {% if data['formType'] == "SH19 - Statement of capital when reducing capital in a company" %}
           <h1 class="govuk-heading-l govuk-!-margin-bottom-5">Upload the completed SH19 document</h1>
         {% else %}
           <h1 class="govuk-heading-l govuk-!-margin-bottom-5">{{title}}</h1>
@@ -32,24 +32,24 @@
           </li>
         </ul>
         <p class="govuk-body">You can only upload one document at a time.</p>
-        {% if data['SH-sh19'] == "SH19 - Statement of capital when reducing capital in a company" %}
+        {% if data['formType'] == "SH19 - Statement of capital when reducing capital in a company" %}
           {{ govukInsetText({
           text: "If you need to upload more documents that would usually be filed with this SH19, you must start the service again to upload each one separately. You can either restart the service or use the link on the confirmation page after you've uploaded this document.
         "
         }) }}
           <p class="govuk-body">You should do this as soon as possible after you’ve uploaded this document.</p>
-        {% elseif data['SH-sh19'] == "Solvency statement" %}
+        {% elseif data['formType'] == "Solvency statement" %}
           {{ govukInsetText({
             text: "If you need to upload more documents that would usually be filed with this document, you must start the service again to upload each one separately. You can either restart the service or use the link on the confirmation page after you've uploaded this document.
           "
           }) }}
           <p class="govuk-body">You should do this as soon as possible after you’ve uploaded this document.</p>
-        {% elseif data['SH-sh19'] == "Statement by directors" %}
+        {% elseif data['formType'] == "Statement by directors" %}
           {{ govukInsetText({
           text: "If you need to upload more documents that would usually be filed with this document, you must start the service again to upload each one separately. You can either restart the service or use the link on the confirmation page after you've uploaded this document."
         }) }}
           <p class="govuk-body">You should do this as soon as possible after you’ve uploaded this document.</p>
-        {% elseif data['SH-sh19'] == "Resolution - To form part of a reduction of capital submission" %}
+        {% elseif data['formType'] == "Resolution - To form part of a reduction of capital submission" %}
           {{ govukInsetText({
             text: "If you need to upload more documents that would usually be filed with this document, you must start the service again to upload each one separately. You can either restart the service or use the link on the confirmation page after you've uploaded this document."
           }) }}

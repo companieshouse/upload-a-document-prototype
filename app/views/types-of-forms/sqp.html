@@ -15,8 +15,8 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/types-of-forms/sqp" method="post">
         {{ govukRadios({
-          idPrefix: "sqp",
-          name: "sqp",
+          idPrefix: "formType",
+          name: "formType",
           fieldset: {
             legend: {
               html: "<span class='govuk-caption-l'>Registration of a Scottish qualifying partnership</span>
@@ -27,14 +27,13 @@ Select a document",
           },
           items: [
             {
-              value: "cva1",
+              value: "SQP1 - Registration of a Scottish qualifying partnership",
               text: "SQP1 - Registration of a Scottish qualifying partnership"
             }
           ]
         }) }}
         {{ govukButton({
-          text: "Continue",
-          href: "../upload-accounts"
+          text: "Continue"
         }) }}
       </form>
     </div>

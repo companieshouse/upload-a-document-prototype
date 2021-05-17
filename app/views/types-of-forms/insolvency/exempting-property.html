@@ -13,8 +13,8 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/types-of-forms/insolvency/exempting-property" method="post">
         {{ govukRadios({
-          idPrefix: "typeInsolve",
-          name: "typeInsolve",
+          idPrefix: "formType",
+          name: "formType",
           fieldset: {
             legend: {
               html: "<span class='govuk-caption-l'>Exempting property</span>
@@ -25,7 +25,7 @@ Select a document",
           },
           items: [
             {
-              value: "cva1",
+              value: "NOCP - Give notice of a court order under section 176A (5)",
               text: "NOCP - Give notice of a court order under section 176A (5)"
             }
           ]

@@ -17,8 +17,8 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/types-of-forms/sqp/sqp-forms" method="post">
         {{ govukRadios({
-          idPrefix: "typeInsolve",
-          name: "typeInsolve",
+          idPrefix: "formType",
+          name: "formType",
           fieldset: {
             legend: {
               html: "<span class='govuk-caption-l'>Scottish qualifying partnership</span>
@@ -29,60 +29,59 @@ Select a document",
           },
           items: [
           {
-            value: "cva1",
+            value: "SQP CS01 - Confirmation statement for a Scottish qualifying partnership",
             text: "SQP CS01 - Confirmation statement for a Scottish qualifying partnership"
           },
             {
-              value: "cva1",
+              value: "SQP2 - Give notice of a change of details for a Scottish qualifying partnership",
               text: "SQP2 - Give notice of a change of details for a Scottish qualifying partnership"
             },
 
             {
-              value: "vam1",
+              value: "SQP3 - Give notice of ceasing to be a Scottish qualifying partnership",
               text: "SQP3 - Give notice of ceasing to be a Scottish qualifying partnership"
             },
             {
-              value: "vam1s",
+              value: "SQP PSC01 - Give notice of individual person with significant control of a Scottish qualifying partnership",
               text: "SQP PSC01 - Give notice of individual person with significant control of a Scottish qualifying partnership"
             },
             {
-              value: "vam7",
+              value: "SQP PSC02 - Give notice of relevant legal entity with significant control of a Scottish qualifying partnership",
               text: "SQP PSC02 - Give notice of relevant legal entity with significant control of a Scottish qualifying partnership"
             },
 
             {
-              value: "vam7s",
+              value: "SQP PSC03 - Give notice of other registrable person with significant control of a Scottish qualifying partnership",
               text: "SQP PSC03 - Give notice of other registrable person with significant control of a Scottish qualifying partnership"
             },
             {
-              value: "vam8s",
+              value: "SQP PSC04 - Give notice to change details of a person with significant control of a Scottish qualifying partnership",
               text: "SQP PSC04 - Give notice to change details of a person with significant control of a Scottish qualifying partnership"
             },
             {
-              value: "vam8s",
+              value: "SQP PSC05 - Give details of relevant legal entity with significant control of a Scottish qualifying partnership",
               text: "SQP PSC05 - Give details of relevant legal entity with significant control of a Scottish qualifying partnership"
             },
             {
-              value: "vam8s",
+              value: "SQP PSC06 - Give notice changing details of other person with significant control of a Scottish qualifying partnership",
               text: "SQP PSC06 - Give notice changing details of other person with significant control of a Scottish qualifying partnership"
             },
             {
-              value: "vam8s",
+              value: "SQP PSC07 - Give notice of ceasing to be a PSC, RLE or ORP of a Scottish Qualifying Partnership",
               text: "SQP PSC07 - Give notice of ceasing to be a PSC, RLE or ORP of a Scottish Qualifying Partnership"
             },
             {
-              value: "vam8s",
+              value: "SQP PSC08 - Give notice of PSC statements for a Scottish qualifying partnership",
               text: "SQP PSC08 - Give notice of PSC statements for a Scottish qualifying partnership"
             },
             {
-              value: "vam8s",
+              value: "SQP PSC09 - Give notice of update to PSC statements for a Scottish qualifying partnership",
               text: "SQP PSC09 - Give notice of update to PSC statements for a Scottish qualifying partnership"
             }
           ]
         }) }}
         {{ govukButton({
-          text: "Continue",
-          href: "../../auth-screen"
+          text: "Continue"
         }) }}
       </form>
     </div>

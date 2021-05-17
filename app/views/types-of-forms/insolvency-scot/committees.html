@@ -15,8 +15,8 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/types-of-forms/insolvency/wuc" method="post">
         {{ govukRadios({
-          idPrefix: "typeInsolve",
-          name: "typeInsolve",
+          idPrefix: "formType",
+          name: "formType",
           fieldset: {
             legend: {
               html: "<span class='govuk-caption-l'>Committees</span>
@@ -27,18 +27,17 @@ Select a document",
           },
           items: [
             {
-              value: "mines",
+              value: "COM1 (Scot) - Notice of establishment of creditors’ committee (administration)",
               text: "COM1 (Scot) - Notice of establishment of creditors’ committee (administration)"
             },
             {
-              value: "mines",
+              value: "COM2 (Scot) - Notice of change of membership of a creditors’ committee (administration)",
               text: "COM2 (Scot) - Notice of change of membership of a creditors’ committee (administration)"
             }
           ]
         }) }}
         {{ govukButton({
-          text: "Continue",
-          href: "../../auth-screen"
+          text: "Continue"
         }) }}
       </form>
     </div>

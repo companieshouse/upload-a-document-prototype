@@ -13,8 +13,8 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/types-of-forms/insolvency/cvam" method="post">
         {{ govukRadios({
-          idPrefix: "typeInsolve",
-          name: "typeInsolve",
+          idPrefix: "formType",
+          name: "formType",
           fieldset: {
             legend: {
               html: "<span class='govuk-caption-l'>Company voluntary arrangement moratorium</span>
@@ -25,35 +25,35 @@ Select a document",
           },
           items: [
             {
-              value: "cva1",
+              value: "VAM1 - Notice of the commencement of moratorium",
               text: "VAM1 - Notice of the commencement of moratorium"
             },
             {
-              value: "vam1",
+              value: "VAM2 - Notice of continuation of moratorium",
               text: "VAM2 - Notice of continuation of moratorium"
             },
             {
-              value: "vam1s",
+              value: "VAM3 - Notice of decision extending or further extending moratorium",
               text: "VAM3 - Notice of decision extending or further extending moratorium"
             },
             {
-              value: "vam7",
+              value: "VAM4 - Notice of a court order in relation to a moratorium",
               text: "VAM4 - Notice of a court order in relation to a moratorium"
             },
             {
-              value: "vam7",
+              value: "VAM5 - Notice of the withdrawal of nominee's consent to act",
               text: "VAM5 - Notice of the withdrawal of nominee's consent to act"
             },
             {
-              value: "vam7",
+              value: "VAM6 - Notice of the appointment of a replacement nominee",
               text: "VAM6 - Notice of the appointment of a replacement nominee"
             },
             {
-              value: "vam7",
+              value: "VAM7 - Notice of the end of moratorium",
               text: "VAM7 - Notice of the end of moratorium"
             },
             {
-              value: "vam7",
+              value: "VAMC - Notice of a court order in respect of a voluntary arrangement or moratorium",
               text: "VAMC - Notice of a court order in respect of a voluntary arrangement or moratorium"
             }
           ]

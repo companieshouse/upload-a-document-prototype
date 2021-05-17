@@ -13,10 +13,10 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <form action="/types-of-forms/overseas/overseas" method="post">
+      <form action="/types-of-forms/change-of-address" method="post">
         {{ govukRadios({
-          idPrefix: "reg",
-          name: "reg",
+          idPrefix: "formType",
+          name: "formType",
           fieldset: {
             legend: {
               html: "<span class='govuk-caption-l'>Change a company's registered office address</span>
@@ -27,14 +27,13 @@
           },
           items: [
             {
-              value: "ad01",
+              value: "AD01 - Change a company's registered office address",
               text: "AD01 - Change a company's registered office address"
             }
           ]
         }) }}
         {{ govukButton({
-          text: "Continue",
-          href: "../upload-accounts"
+          text: "Continue"
         }) }}
       </form>
     </div>

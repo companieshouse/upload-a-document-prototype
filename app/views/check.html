@@ -1,4 +1,8 @@
-{% set title = "Check your details before paying for and submitting your document" %}
+{% if data['formType'] == "SH19 - Statement of capital when reducing capital in a company" %}
+  {% set title = "Check your details before paying for and submitting your document" %}
+{% else %}
+  {% set title = "Check your details before submitting your document" %}
+{% endif %}
 {% extends "layout.html" %}
 {% block pageTitle %}
   {{title}}
@@ -34,6 +38,16 @@
             {{ data['company-number'] }}
           </dd>
         </div>
+        {% if data['authNumber'] %}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Authentication number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['authNumber'] }}
+            </dd>
+          </div>
+        {% endif %}
       </dl>
       <h2 class="govuk-heading-m">Document details</h2>
       {{ govukSummaryList({
@@ -44,7 +58,7 @@
               text: "Document type"
             },
             value: {
-              text: "SH19 - Statement of capital when reducing capital in a company"
+              text: data['formType']
             },
             actions: {
               items: [
@@ -73,10 +87,18 @@
           }
         ]
       }) }}
-      {{ govukButton({
+
+      {% if data['formType'] == "SH19 - Statement of capital when reducing capital in a company" %}
+        {{ govukButton({
           text: "Pay for and submit document",
           href: "https://products.payments.service.gov.uk/pay/1053e4e0262247a69d301b92a9fe439c"
         }) }}
+      {% else %}
+        {{ govukButton({
+             text: "Submit document",
+             href: "confirmation"
+           }) }}
+      {% endif %}
     </form>
   </div>
 </div>

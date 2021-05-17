@@ -13,8 +13,8 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/types-of-forms/resolutions" method="post">
         {{ govukRadios({
-          idPrefix: "typeRes",
-          name: "typeRes",
+          idPrefix: "formType",
+          name: "formType",
           fieldset: {
             legend: {
               html: "<span class='govuk-caption-l'>Articles and resolutions</span>
@@ -25,11 +25,11 @@
           },
           items: [
             {
-              value: "article",
+              value: "Articles",
               text: "Articles"
             },
             {
-              value: "res",
+              value: "Resolution",
               text: "Resolution"
             }
           ]

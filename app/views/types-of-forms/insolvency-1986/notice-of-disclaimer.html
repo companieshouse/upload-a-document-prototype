@@ -13,8 +13,8 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/types-of-forms/insolvency/exempting-property" method="post">
         {{ govukRadios({
-          idPrefix: "typeInsolve",
-          name: "typeInsolve",
+          idPrefix: "formType",
+          name: "formType",
           fieldset: {
             legend: {
               html: "<span class='govuk-caption-l'>Notice of disclaimer</span>
@@ -25,18 +25,17 @@ Select a document",
           },
           items: [
             {
-              value: "cva1",
+              value: "NDISC - Notice of disclaimer under section 178 of the Insolvency Act 1986",
               text: "NDISC - Notice of disclaimer under section 178 of the Insolvency Act 1986"
             },
             {
-              value: "mines",
+              value: "NDISCA - 	Notice attached to NDISC",
               text: "NDISCA - 	Notice attached to NDISC"
             }
           ]
         }) }}
         {{ govukButton({
-          text: "Continue",
-          href: "../../auth-screen"
+          text: "Continue"
         }) }}
       </form>
     </div>

@@ -22,8 +22,8 @@
             errorList: errorList
           }) }}
           {{ govukRadios({
-            idPrefix: "reg",
-            name: "reg",
+            idPrefix: "formType",
+            name: "formType",
             errorMessage: {
               text: "Select the *type of form that you want to upload* "
             },
@@ -37,115 +37,113 @@
            },
            items: [
              {
-               value: "carcasses",
+               value: "RP02A - Apply for rectification by the registrar of companies",
                text: "RP02A - Apply for rectification by the registrar of companies"
              },
              {
-               value: "mines",
+               value: "RP02B - Apply for rectification of a change of registered address",
                text: "RP02B - Apply for rectification of a change of registered address"
              },
              {
-               value: "mines",
+               value: "RP03 - Object to a request to rectify the register",
                text: "RP03 - Object to a request to rectify the register"
              },
              {
-               value: "mines",
+               value: "RP06 - Apply to remove material about a director",
                text: "RP06 - Apply to remove material about a director"
              },
              {
-               value: "mines",
+               value: "RP07 - Apply to change a company's disputed registered office address",
                text: "RP07 - Apply to change a company's disputed registered office address"
              },
              {
-               value: "mines",
+               value: "RP CH01 - Correct a director's date of birth",
                text: "RP CH01 - Correct a director's date of birth"
              },
              {
-               value: "mines",
+               value: "LL RP02A - Apply for rectification by the registrar for a limited liability partnership",
                text: "LL RP02A - Apply for rectification by the registrar for a limited liability partnership"
              },
              {
-       value: "mines",
-       text: "LL RP02B - Apply for rectification of change of registered address of a limited liability partnership"
-     },
-     {
-       value: "mines",
-       text: "LL RP03 - Notice of an objection to a request for the Registrar of Companies to rectify the Register for a Limited Liability Partnership "
-     },
-     {
-       value: "mines",
-       text: "LL RP07 - Apply to change a disputed registered office address of a limited liability partnership"
-     },
-     {
-       value: "mines",
-       text: "RP LL CH01 - Correct the date of birth of an LLP member"
-     }
-     ]
-   }) }}
+               value: "LL RP02B - Apply for rectification of change of registered address of a limited liability partnership",
+               text: "LL RP02B - Apply for rectification of change of registered address of a limited liability partnership"
+             },
+             {
+               value: "LL RP03 - Notice of an objection to a request for the Registrar of Companies to rectify the Register for a Limited Liability Partnership",
+               text: "LL RP03 - Notice of an objection to a request for the Registrar of Companies to rectify the Register for a Limited Liability Partnership"
+             },
+             {
+               value: "LL RP07 - Apply to change a disputed registered office address of a limited liability partnership",
+               text: "LL RP07 - Apply to change a disputed registered office address of a limited liability partnership"
+             },
+             {
+               value: "RP LL CH01 - Correct the date of birth of an LLP member",
+               text: "RP LL CH01 - Correct the date of birth of an LLP member"
+             }
+           ]
+         }) }}
         {% else %}
           {{ govukRadios({
-idPrefix: "reg",
-name: "reg",
-fieldset: {
-  legend: {
-    html: "<span class='govuk-caption-l'>Registrar's powers</span>
-Select a document",
-    isPageHeading: true,
-    classes: "govuk-fieldset__legend--l"
-  }
-},
-
-items: [
-  {
-    value: "carcasses",
-    text: "RP02A - Apply for rectification by the registrar of companies"
-  },
-  {
-    value: "mines",
-    text: "RP02B - Apply for rectification of a change of registered address"
-  },
-  {
-    value: "mines",
+          idPrefix: "formType",
+          name: "formType",
+          fieldset: {
+            legend: {
+              html: "<span class='govuk-caption-l'>Registrar's powers</span>
+              Select a document",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "RP02A - Apply for rectification by the registrar of companies",
+              text: "RP02A - Apply for rectification by the registrar of companies"
+            },
+            {
+              value: "RP02B - Apply for rectification of a change of registered address",
+              text: "RP02B - Apply for rectification of a change of registered address"
+            },
+            {
+              value: "RP03 - Object to a request to rectify the register",
     text: "RP03 - Object to a request to rectify the register"
   },
   {
-    value: "mines",
+    value: "RP06 - Apply to remove material about a director",
     text: "RP06 - Apply to remove material about a director"
   },
   {
-    value: "mines",
+    value: "RP07 - Apply to change a company's disputed registered office address",
     text: "RP07 - Apply to change a company's disputed registered office address"
   },
   {
-    value: "mines",
+    value: "RP CH01 - Correct a director's date of birth",
     text: "RP CH01 - Correct a director's date of birth"
   },
   {
-    value: "mines",
+    value: "LL RP02A - Apply for rectification by the registrar for a limited liability partnership",
     text: "LL RP02A - Apply for rectification by the registrar for a limited liability partnership"
   },
   {
-    value: "mines",
+    value: "LL RP02B - Apply for rectification of change of registered address of a limited liability partnership",
     text: "LL RP02B - Apply for rectification of change of registered address of a limited liability partnership"
   },
   {
-    value: "mines",
-    text: "LL RP03 - Notice of an objection to a request for the Registrar of Companies to rectify the Register for a Limited Liability Partnership "
+    value: "LL RP03 - Notice of an objection to a request for the Registrar of Companies to rectify the Register for a Limited Liability Partnership",
+    text: "LL RP03 - Notice of an objection to a request for the Registrar of Companies to rectify the Register for a Limited Liability Partnership"
   },
   {
-    value: "mines",
+    value: "LL RP07 - Apply to change a disputed registered office address of a limited liability partnership",
     text: "LL RP07 - Apply to change a disputed registered office address of a limited liability partnership"
   },
   {
-    value: "mines",
+    value: "RP LL CH01 - Correct the date of birth of an LLP member",
     text: "RP LL CH01 - Correct the date of birth of an LLP member"
   }
 ]
 }) }}
         {% endif %}
         {{ govukButton({
-text: "Continue",
-href: "../../auth-screen"
+text: "Continue"
 }) }}
       </form>
     </div>

@@ -13,8 +13,8 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/types-of-forms/insolvency-scot/insolvency" method="post">
         {{ govukRadios({
-          idPrefix: "typeInsolveS",
-          name: "typeInsolveS",
+          idPrefix: "formType",
+          name: "formType",
           fieldset: {
             legend: {
               html: "<span class='govuk-caption-l'>Insolvency (Scotland Rules 2018)</span>
@@ -25,42 +25,41 @@ What type of document are you uploading?",
           },
           items: [
           {
-            value: "in-admin",
+            value: "In administration",
             text: "In administration"
           },
           {
-            value: "committees",
+            value: "Committees",
             text: "Committees"
           },
             {
-              value: "cva",
+              value: "Company voluntary arrangement",
               text: "Company voluntary arrangement"
             },
             {
-              value: "cvam",
+              value: "Company voluntary arrangement moratorium",
               text: "Company voluntary arrangement moratorium"
             },
             {
-              value: "exempting",
+              value: "Exempting property",
               text: "Exempting property"
             },
             {
-              value: "mvl",
+              value: "Members' voluntary liquidation (MVL) and creditors' voluntary liquidation (CVL)",
               text: "Members' voluntary liquidation (MVL) and creditors' voluntary liquidation (CVL)"
             },
             {
-              value: "receivership",
+              value: "Receivership",
               text: "Receivership"
             },
             {
-              value: "wuc",
+              value: "Winding up by the court",
               text: "Winding up by the court"
             }
           ]
         }) }}
         {{ govukButton({
-          text: "Continue",
-          href: "../../auth-screen"
+          text: "Continue"
         }) }}
       </form>
     </div>

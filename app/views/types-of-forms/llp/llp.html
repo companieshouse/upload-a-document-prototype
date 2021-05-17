@@ -18,8 +18,8 @@
             errorList: errorList
           }) }}
           {{ govukRadios({
-            idPrefix: "slp",
-            name: "slp",
+            idPrefix: "formType",
+            name: "formType",
             errorMessage: {
               text: "Select the *type of form that you want to upload* "
             },
@@ -33,19 +33,19 @@
            },
            items: [
            {
-             value: "carcasses",
+             value: "LLRM01 - Appoint an administrative receiver, receiver or manager: limited liability partnership",
              text: "LLRM01 - Appoint an administrative receiver, receiver or manager: limited liability partnership"
            },
            {
-             value: "mines",
+             value: "LLRM02 - Cease to act as an administrative receiver, receiver or manager: limited liability partnership",
              text: "LLRM02 - Cease to act as an administrative receiver, receiver or manager: limited liability partnership"
            }
            ]
    }) }}
         {% else %}
           {{ govukRadios({
-idPrefix: "reg",
-name: "reg",
+idPrefix: "formType",
+name: "formType",
 fieldset: {
   legend: {
     html: "<span class='govuk-caption-l'>The Limited Liability Partnerships Regulations 2009</span>
@@ -57,11 +57,11 @@ Select a document",
 
 items: [
 {
-  value: "carcasses",
+  value: "LL RM01 - Notice of appointment of an administrative receiver, receiver or manager",
   text: "LL RM01 - Notice of appointment of an administrative receiver, receiver or manager"
 },
 {
-  value: "mines",
+  value: "LL RM02 - Notice of ceasing to act as an administrative receiver, receiver or manager",
   text: "LL RM02 - Notice of ceasing to act as an administrative receiver, receiver or manager"
 }
 ]

@@ -13,8 +13,8 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/types-of-forms/insolvency/wuc" method="post">
         {{ govukRadios({
-          idPrefix: "typeInsolve",
-          name: "typeInsolve",
+          idPrefix: "formType",
+          name: "formType",
           fieldset: {
             legend: {
               html: "<span class='govuk-caption-l'>Winding up by the court</span>
@@ -25,38 +25,37 @@ Select a document",
           },
           items: [
             {
-              value: "mines",
+              value: "WU01 (Scot) -  Notice of a court order in a winding up",
               text: "WU01 (Scot) -  Notice of a court order in a winding up"
             },
             {
-              value: "mines",
+              value: "WU02 (Scot) - Notice of order of appointment of a provisional liquidator",
               text: "WU02 (Scot) - Notice of order of appointment of a provisional liquidator"
             },
             {
-              value: "mines",
+              value: "WU03 (Scot) - Notice of termination of appointment of provisional liquidator",
               text: "WU03 (Scot) - Notice of termination of appointment of provisional liquidator"
             },
             {
-              value: "mines",
+              value: "WU15 (Scot) - Notice of the final account prior to the dissolution",
               text: "WU15 (Scot) - Notice of the final account prior to the dissolution"
             },
             {
-              value: "mines",
+              value: "WU16 (Scot) - Early dissolution of a Scottish company in a winding up by the court",
               text: "WU16 (Scot) - Early dissolution of a Scottish company in a winding up by the court"
             },
             {
-              value: "mines",
+              value: "WU17 (Scot) - Defer the dissolution of a Scottish company in a winding up by the court",
               text: "WU17 (Scot) - Defer the dissolution of a Scottish company in a winding up by the court"
             },
             {
-              value: "mines",
+              value: "WU18 (Scot) - Notice of a court order staying or sisting proceedings in a winding up order by the court",
               text: "WU18 (Scot) - Notice of a court order staying or sisting proceedings in a winding up order by the court"
             }
           ]
         }) }}
         {{ govukButton({
-          text: "Continue",
-          href: "../../auth-screen"
+          text: "Continue"
         }) }}
       </form>
     </div>

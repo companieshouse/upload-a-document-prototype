@@ -13,8 +13,8 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/types-of-forms/insolvency/cva" method="post">
         {{ govukRadios({
-          idPrefix: "typeInsolve",
-          name: "typeInsolve",
+          idPrefix: "formType",
+          name: "formType",
           fieldset: {
             legend: {
               html: "<span class='govuk-caption-l'>Liquidation</span>
@@ -25,166 +25,165 @@ Select a document",
           },
           items: [
           {
-            value: "cva1",
+            value: "600 (England and Wales) - Appoint liquidator in voluntary winding up",
             text: "600 (England and Wales) - Appoint liquidator in voluntary winding up"
           },
             {
-              value: "cva1",
+              value: "4.15A - Notice of appointment of provisional liquidator",
               text: "4.15A - Notice of appointment of provisional liquidator"
             },
             {
-              value: "cva1",
+              value: "4.17 (Scotland) - Notice of final account prior to dissolution in a winding up by the court",
               text: "4.17 (Scotland) - Notice of final account prior to dissolution in a winding up by the court"
             },
             {
-              value: "cva1",
+              value: "4.2 (Scotland) - Notice of winding up order",
               text: "4.2 (Scotland) - Notice of winding up order"
             },
             {
-              value: "vam1",
+              value: "4.20 - Make statement of company's affairs",
               text: "4.20 - Make statement of company's affairs"
             },
             {
-              value: "cva1",
+              value: "4.27 (Scotland) - Notice of court order staying or sisting proceedings in a winding up by the court",
               text: "4.27 (Scotland) - Notice of court order staying or sisting proceedings in a winding up by the court"
             },
             {
-              value: "vam7",
+              value: "4.31 - Notice of appointment of liquidator",
               text: "4.31 - Notice of appointment of liquidator"
             },
             {
-              value: "vam7",
+              value: "4.31 (Scotland) - Notice to registrar of companies in respect of order under section 176A",
               text: "4.31 (Scotland) - Notice to registrar of companies in respect of order under section 176A"
             },
             {
-              value: "vam7s",
+              value: "4.33 - Notice of resignation as voluntary liquidator",
               text: "4.33 - Notice of resignation as voluntary liquidator"
             },
             {
-              value: "vam8s",
+              value: "4.35 - Notice of court order granting liquidator to resign",
               text: "4.35 - Notice of court order granting liquidator to resign"
             },
             {
-              value: "vam8s",
+              value: "4.38 - Notice of removal of voluntary liquidator",
               text: "4.38 - Notice of removal of voluntary liquidator"
             },
             {
-              value: "vam8s",
+              value: "4.40 - Notice of ceasing to act as voluntary liquidator",
               text: "4.40 - Notice of ceasing to act as voluntary liquidator"
             },
             {
-              value: "vam8s",
+              value: "F4.41 - Notice of the statement of affairs",
               text: "F4.41 - Notice of the statement of affairs"
             },
             {
-              value: "vam8s",
+              value: "4.43 - Notice of the final meeting of creditors",
               text: "4.43 - Notice of the final meeting of creditors"
             },
             {
-              value: "vam8s",
+              value: "4.44 - Notice of the death of the voluntary liquidator",
               text: "4.44 - Notice of the death of the voluntary liquidator"
             },
             {
-              value: "vam8s",
+              value: "4.51 - Notice by certificate that creditors paid in full",
               text: "4.51 - Notice by certificate that creditors paid in full"
             },
             {
-              value: "vam8s",
+              value: "4.68 - Notice of the liquidator's progress report",
               text: "4.68 - Notice of the liquidator's progress report"
             },
             {
-              value: "vam8s",
+              value: "4.69 - Notice of order of court on appeal",
               text: "4.69 - Notice of order of court on appeal"
             },
             {
-              value: "vam8s",
+              value: "4.70 - Declaration of solvency",
               text: "4.70 - Declaration of solvency"
             },
             {
-              value: "vam8s",
+              value: "4.71 - Notice of final meeting in members' voluntary winding up",
               text: "4.71 - Notice of final meeting in members' voluntary winding up"
             },
             {
-              value: "vam8s",
+              value: "4.72 - Notice of final meeting in creditors' voluntary winding up",
               text: "4.72 - Notice of final meeting in creditors' voluntary winding up"
             },
             {
-              value: "cva1",
+              value: "4.9 (Scotland) - Notice of order of appointment of provisional liquidator in a winding up by the court",
               text: "4.9 (Scotland) - Notice of order of appointment of provisional liquidator in a winding up by the court"
             },
             {
-              value: "vam8s",
+              value: "F10.2 - Notice of disclaimer under section 178 of Insolvency Act",
               text: "F10.2 - Notice of disclaimer under section 178 of Insolvency Act"
             },
             {
-              value: "vam8s",
+              value: "12.1 - Notice in respect of order under section 176a",
               text: "12.1 - Notice in respect of order under section 176a"
             },
             {
-              value: "vam8s",
+              value: "F14 - Notice of a winding up order",
               text: "F14 - Notice of a winding up order"
             },
             {
-              value: "carcasses",
+              value: "L64.01 - 	Early completion of winding up",
               text: "L64.01 - 	Early completion of winding up"
             },
             {
-              value: "mines",
+              value: "L64.04 - 	Deferment of dissolution (compulsory)",
               text: "L64.04 - 	Deferment of dissolution (compulsory)"
             },
             {
-              value: "mines",
+              value: "L64.07 - 	Completion of winding up",
               text: "L64.07 - 	Completion of winding up"
             },
             {
-              value: "mines",
+              value: "L72.18 - 	Winding up covering letter",
               text: "L72.18 - 	Winding up covering letter"
             },
             {
-              value: "mines",
+              value: "COCOMP - Order of court to wind up",
               text: "COCOMP - Order of court to wind up"
             },
             {
-              value: "mines",
+              value: "COLIQ - Deferment of dissolution",
               text: "COLIQ - Deferment of dissolution"
             },
             {
-              value: "mines",
+              value: "DETERMINATION - Determination for LLPs",
               text: "DETERMINATION - Determination for LLPs"
             },
             {
-              value: "mines",
+              value: "O/C DISCLOSE - Order of court limiting disclosure",
               text: "O/C DISCLOSE - Order of court limiting disclosure"
             },
             {
-              value: "mines",
+              value: "O/C LTD DISCLOSE - Order of court limiting disclosure",
               text: "O/C LTD DISCLOSE - Order of court limiting disclosure"
             },
             {
-              value: "mines",
+              value: "O/C EARLY DISS - Order of court: early dissolution",
               text: "O/C EARLY DISS - Order of court: early dissolution"
             },
             {
-              value: "mines",
+              value: "O/C PROV RECALL -  Order of court: recall of provisional liquidator",
               text: "O/C PROV RECALL -  Order of court: recall of provisional liquidator"
             },
             {
-              value: "mines",
+              value: "O/C RESCIND - Order of court to rescind winding up",
               text: "O/C RESCIND - Order of court to rescind winding up"
             },
             {
-              value: "mines",
+              value: "O/C STAY - 	Order of court to stay strike off",
               text: "O/C STAY - 	Order of court to stay strike off"
             },
             {
-              value: "mines",
+              value: "O/C UNSTAY - 	Order of court to unstay strike off",
               text: "O/C UNSTAY - 	Order of court to unstay strike off"
             }
           ]
         }) }}
         {{ govukButton({
-          text: "Continue",
-          href: "../../auth-screen"
+          text: "Continue"
         }) }}
       </form>
     </div>
