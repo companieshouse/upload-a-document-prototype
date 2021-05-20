@@ -2,6 +2,8 @@ module.exports = function (router) {
   // Authentication
   router.get('/auth/auth-screen', function (req, res) {
     res.render('auth/auth-screen', {
+      company: req.session.company,
+      companyIncorp: req.session.companyIncorp
     })
   })
 

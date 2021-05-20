@@ -31,7 +31,7 @@ router.post('/upload-documents', function (req, res) {
       errorAuth: true,
       errorList: errors
     })
-  } if (req.session.data['SH-sh19'] === 'SH19 - Statement of capital when reducing capital in a company') {
+  } if (req.session.data['formType'] === 'SH19 - Statement of capital when reducing capital in a company') {
     res.redirect('sh19-delivery')
   } else {
     res.redirect('check')
@@ -40,6 +40,13 @@ router.post('/upload-documents', function (req, res) {
 
 router.get('/check', function (req, res) {
   res.render('check', {
+    company: req.session.company,
+    companyIncorp: req.session.companyIncorp
+  })
+})
+
+router.get('/confirmation', function (req, res) {
+  res.render('confirmation', {
     company: req.session.company,
     companyIncorp: req.session.companyIncorp
   })
