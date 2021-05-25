@@ -1,7 +1,7 @@
 {% extends "emails/layout-email.html" %}
 {% block content %}
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
       {% set buttonHref = "One or more submissions are delayed in the Upload a document to Companies House service" %}
       {{ govukPanel({
         titleText: "Submission delay alert",
@@ -9,8 +9,8 @@
         html: buttonHref
       }) }}
       <p class="govuk-body">This email is to advise you that one or more submissions have been delayed for 3 or more days and are currently unable to progress through the upload service.</p>
-<h3 class="govuk-heading-m">Affected documents</h3>
-{{ govukTable({
+      <h3 class="govuk-heading-m">Affected documents</h3>
+      {{ govukTable({
   rows: [
     [
       {
@@ -54,7 +54,7 @@
     ]
   ]
 }) }}
-{{ govukTable({
+      {{ govukTable({
   rows: [
     [
       {
@@ -98,7 +98,7 @@
     ]
   ]
 }) }}
-{{ govukTable({
+      {{ govukTable({
   rows: [
     [
       {
@@ -142,7 +142,7 @@
     ]
   ]
 }) }}
-{{ govukTable({
+      {{ govukTable({
   rows: [
     [
       {
@@ -186,8 +186,8 @@
     ]
   ]
 }) }}
-      </ul>
-      <p class="govuk-body">Contact IT support for the latest update on these submissions.</p>
-    </div>
-  </div>
+  </ul>
+  <p class="govuk-body">Contact IT support for the latest update on these submissions.</p>
+</div>
+</div>
 {% endblock %}

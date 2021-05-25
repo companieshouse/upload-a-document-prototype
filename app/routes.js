@@ -38,6 +38,28 @@ router.post('/upload-documents', function (req, res) {
   }
 })
 
+// SH19 Delivery
+router.get('sh19-delivery', function (req, res) {
+  res.render('sh19-delivery', {
+  })
+})
+
+router.post('/sh19-delivery', function (req, res) {
+  var errors = []
+  if (req.session.data['authNumber'] === '') {
+    errors.push({
+      text: 'Enter the company authentication code',
+      href: '#auth-number'
+    })
+    res.render('sh19-delivery', {
+      errorAuth: true,
+      errorList: errors
+    })
+  } else {
+    res.redirect('check')
+  }
+})
+
 router.get('/check', function (req, res) {
   res.render('check', {
     company: req.session.company,

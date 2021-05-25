@@ -38,16 +38,6 @@
             {{company.company_number}}
           </dd>
         </div>
-        {% if data['authNumber'] %}
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Authentication number
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['authNumber'] }}
-            </dd>
-          </div>
-        {% endif %}
       </dl>
 
       <h2 class="govuk-heading-m">Document details</h2>
@@ -76,7 +66,11 @@
               Amount to pay
             </dt>
             <dd class="govuk-summary-list__value">
-              £10
+              {% if data['delivery'] == "Standard delivery" %}
+                £10 ({{data['delivery']}})
+              {% else %}
+                £50 ({{data['delivery']}})
+              {% endif %}
             </dd>
             <dd class="govuk-summary-list__actions"></dd>
           </div>
