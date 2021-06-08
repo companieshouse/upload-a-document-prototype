@@ -17,7 +17,43 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/sh19-delivery" method="post">
-        {{ govukRadios({
+        {% if errorDelivery == true %}
+          {{ govukErrorSummary({
+            titleText: "There is a problem",
+            errorList: errorList
+}) }}
+          {{ govukRadios({
+          idPrefix: "delivery",
+          name: "delivery",
+          errorMessage: {
+            text: "Select the service you require"
+          },
+          fieldset: {
+            legend: {
+              text: "Which service do you require to process your SH19?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "Standard service",
+              text: "Standard - £10",
+              hint: {
+        text: "The SH19 is processed within 10 to 14 days."
+        }
+            },
+            {
+              value: "Same day service",
+              text: "Same day - £50",
+              hint: {
+                        text: "The SH19 is processed on the same working day if we receive it by 11am. You must also upload the relevant resolution and solvency statement by this time. If you upload the SH19 and relevant documents after 11am, we will process them the next working day."
+                      }
+            }
+          ]
+        }) }}
+        {% else %}
+          {{ govukRadios({
           idPrefix: "delivery",
           name: "delivery",
           fieldset: {
@@ -44,7 +80,7 @@
             }
           ]
         }) }}
-
+        {% endif %}
         {{ govukButton({
   text: "Continue"
 }) }}

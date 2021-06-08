@@ -46,13 +46,13 @@ router.get('sh19-delivery', function (req, res) {
 
 router.post('/sh19-delivery', function (req, res) {
   var errors = []
-  if (req.session.data['authNumber'] === '') {
+  if (typeof req.session.data['delivery'] === 'undefined') {
     errors.push({
-      text: 'Enter the company authentication code',
-      href: '#auth-number'
+      text: 'Select the service you require',
+      href: '#delivery'
     })
     res.render('sh19-delivery', {
-      errorAuth: true,
+      errorDelivery: true,
       errorList: errors
     })
   } else {
