@@ -1,0 +1,147 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <title>Submission delay alert</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+      .govuk-warning-text__icon {
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        display: inline-block;
+        top: 50%;
+        left: 0;
+        min-width: 32px;
+        min-height: 29px;
+        margin-top: 10px;
+        padding-top: 3px;
+        border: 3px solid #0b0c0c;
+        border-radius: 50%;
+        color: #ffffff;
+        background: #0b0c0c;
+        font-size: 1.4em;
+        line-height: 29px;
+        text-align: center;
+      }
+      ​ .govuk-warning-text__text {
+        display: block;
+      }
+      ​ p {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 19px;
+        line-height: 1.315789474;
+        color: #000000;
+        margin: 15px 0 0;
+        font-weight: normal;
+      }
+    </style>
+  </head>
+  <body style="font-family: Helvetica, Arial, sans-serif;font-size: 19px;margin: 0;padding: 0;color:#0b0c0c;-ms-text-size-adjust: 100%;mso-line-height-rule: exactly;">
+    <!--[if (gte mso 9)|(IE)]> <table width="580" align="center" cellpadding="0" cellspacing="0" border="0"> <tr> <td> <![endif]-->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td width="100%" height="53" bgcolor="#0b0c0c">
+          <table role="presentation" width="580" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
+            <tr>
+              <td width="70" bgcolor="#0b0c0c" valign="middle">
+                <a href="https://beta.companieshouse.gov.uk" style="text-decoration: none;">
+                  <img src="https://d3uvya5a8a1ncx.cloudfront.net/images/royal-coat-of-arms-white.png" alt="Companies House Crest" height="32" border="0"></a>
+              </td>
+              <td width="100%" bgcolor="#0b0c0c" valign="middle" align="left">
+                <span style="padding-left: 5px;">
+                  <a href="https://www.gov.uk/government/organisations/companies-house" style="font-family: Helvetica, Arial, sans-serif; font-size: 28px; line-height: 38px; font-weight:700; color: #efefef; text-decoration: none;">Companies House</a>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    ​
+    <table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" style="max-width:620px;min-width:620px;margin:0 auto 0 auto">
+      <tr>
+        <td bgcolor="#005EA5" style="height:10px;background-color: #005EA5" colspan="2"></td>
+      </tr>
+      <tr>
+        <td style="padding-top:40px"></td>
+      </tr>
+      <tr>
+        <td colspan="2" bgcolor="#28a197" style="box-sizing: border-box;padding-bottom: 15px;padding-top: 10px;padding: 15px;border: 5px solid red;text-align: center;background-color: #ffffff;color: #ffffff;">
+          <h1 style="margin:0 0 10px 0;padding-top:5px;font-size: 38px;mso-line-height-rule:exactly;color:red">
+            Sameday SH19 delay alert</h1>
+          <h2 style="margin:0 0 30px 0;padding-top:30px;font-size: 26px;font-weight:normal;mso-line-height-rule:exactly;color:red">
+            One or more Sameday SH19 submissions are delayed in the Upload a document service<br/></h2>
+        </td>
+      </tr>
+    </table>
+    ​
+    <table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" style="max-width:580px;min-width:580px;margin:0 auto 0 auto;border-collapse: collapse;">
+      <tr>
+        <td style="padding-top: 20px">
+          <p>This is to advise that one or more submissions have been delayed for
+            {{delayInMinutes}}
+            and are currently unable to progress through the upload service.
+          </p>
+          ​
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td style="padding-bottom: 30px">
+                <p>The affected documents are:</p>
+              </td>
+            </tr>
+          </table>
+          ​
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+            {{range .submissions}}
+              <tr>
+                <td style="padding-bottom: 60px">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                      <td style="display: table-cell;border-bottom: 1px solid #bfc1c3;padding:10px 20px 10px 0;margin-right: 0;font-size:19px;" width="50%">Upload date/time
+                      </td>
+                      <td style="display: table-cell;border-bottom: 1px solid #bfc1c3;padding:10px 20px 10px 0;margin-right: 0;font-size:19px;" width="50%">{{submissionDate}}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="display: table-cell;border-bottom: 1px solid #bfc1c3;padding:10px 20px 10px 0;margin-right: 0;font-size:19px;" width="50%">Company number
+                      </td>
+                      <td style="display: table-cell;border-bottom: 1px solid #bfc1c3;padding:10px 20px 10px 0;margin-right: 0;font-size:19px;" width="50%">{{companyNumber}}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="display: table-cell;border-bottom: 1px solid #bfc1c3;padding:10px 20px 10px 0;margin-right: 0;font-size:19px;" width="50%">Submission ID:
+                      </td>
+                      <td style="display: table-cell;border-bottom: 1px solid #bfc1c3;padding:10px 20px 10px 0;margin-right: 0;font-size:19px;" width="50%">{{submissionId}}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="display: table-cell;border-bottom: 1px solid #bfc1c3;padding:10px 20px 10px 0;margin-right: 0;font-size:19px;" width="50%">Confirmation reference
+                      </td>
+                      <td style="display: table-cell;border-bottom: 1px solid #bfc1c3;padding:10px 20px 10px 0;margin-right: 0;font-size:19px;" width="50%">{{confirmationReference}}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="display: table-cell;border-bottom: 1px solid #bfc1c3;padding:10px 20px 10px 0;margin-right: 0;font-size:19px;" width="50%">Customer email
+                      </td>
+                      <td style="display: table-cell;border-bottom: 1px solid #bfc1c3;padding:10px 20px 10px 0;margin-right: 0;font-size:19px;" width="50%">{{email}}
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            {{ end }}
+          </table>
+        </td>
+      </tr>
+    </table>
+    ​
+    <table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" style="max-width:580px;min-width:580px;margin:0 auto 40px auto;border-collapse: collapse;">
+      <tr>
+        <td>
+          <p>IT support are aware and seeking to resolve the issue.</p>
+        </td>
+      </tr>
+    </table>
+    <!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]-->
+  </body>
+</html>
