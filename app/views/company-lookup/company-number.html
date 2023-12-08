@@ -1,7 +1,7 @@
 {% set title = "What is the company number?" %}
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
 {% block pageTitle %}
-  {{ pageTitle(title) }}
+  Upload a document to Companies House - GOV.UK
 {% endblock %}
 {% block beforeContent %}
   {{ govukBackLink({
@@ -12,7 +12,7 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <form action="/company-lookup/company-number" method="post">
+      <form action="confirm-company" method="post">
         {% if errorNum == true %}
           {{ govukErrorSummary({
             titleText: "There is a problem",
